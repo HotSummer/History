@@ -1,0 +1,21 @@
+//
+//  MainViewController.h
+//  History_Iphone
+//
+//  Created by zbq on 14-5-20.
+//  Copyright (c) 2014年 zbq. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface MainViewController : UIViewController{
+    IBOutlet UIButton *btnDynastyMap;
+    IBOutlet UIButton *btnDynastyStory;
+    IBOutlet UIButton *btnPersonStory;
+}
+
+- (IBAction)didPressedBtnDynastyMap:(id)sender;
+- (IBAction)didPressedBtnDynastyStory:(id)sender;
+- (IBAction)didPressedBtnPersonStory:(id)sender;
+
+@end
