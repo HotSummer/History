@@ -99,7 +99,20 @@
     switch (mode) {
         case Day:
         {
-            
+            textColor = [UIColor whiteColor];
+            backgroundColor = [UIColor blackColor];
+        }
+            break;
+        case Color:
+        {
+            textColor = [UIColor colorWithRed:63.0/255.0 green:42.0/255.0 blue:25.0/255.0 alpha:1.0];
+            backgroundColor = [UIColor colorWithRed:244.0/255.0 green:239.0/255.0 blue:211.0/255.0 alpha:1.0];
+        }
+            break;
+        case Black:
+        {
+            textColor = [UIColor blackColor];
+            backgroundColor = [UIColor whiteColor];
         }
             break;
             

@@ -8,7 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ChapterManager : NSObject
+typedef enum {
+    Day = 0,
+    Color,
+    Black
+}ReadMode;
+
+@interface ChapterManager : NSObject{
+    
+}
+@property(nonatomic) ReadMode readMode;
 
 + (ChapterManager *)shareInstance;
 
