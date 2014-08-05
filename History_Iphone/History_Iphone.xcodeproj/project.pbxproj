@@ -52,6 +52,7 @@
 		4ECDAA2119907A62005F72B6 /* CollectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECDAA2019907A62005F72B6 /* CollectManager.m */; };
 		4ECDAA2619907A7E005F72B6 /* CollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECDAA2419907A7E005F72B6 /* CollectViewController.m */; };
 		4ECDAA2719907A7E005F72B6 /* CollectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ECDAA2519907A7E005F72B6 /* CollectViewController.xib */; };
+		4ECDAA2A1990B97F005F72B6 /* ChapterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECDAA291990B97F005F72B6 /* ChapterManager.m */; };
 		790AE1E6192CED3200FC4668 /* History.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 790AE1E4192CED3200FC4668 /* History.xcdatamodeld */; };
 		790AE1EB192CFB5800FC4668 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 790AE1EA192CFB5800FC4668 /* CoreDataManager.m */; };
 		790AE1ED192D025800FC4668 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 790AE1EC192D025800FC4668 /* CoreData.framework */; };
@@ -171,6 +172,8 @@
 		4ECDAA2319907A7E005F72B6 /* CollectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectViewController.h; sourceTree = "<group>"; };
 		4ECDAA2419907A7E005F72B6 /* CollectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectViewController.m; sourceTree = "<group>"; };
 		4ECDAA2519907A7E005F72B6 /* CollectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectViewController.xib; sourceTree = "<group>"; };
+		4ECDAA281990B97F005F72B6 /* ChapterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChapterManager.h; sourceTree = "<group>"; };
+		4ECDAA291990B97F005F72B6 /* ChapterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChapterManager.m; sourceTree = "<group>"; };
 		790AE1E5192CED3200FC4668 /* History.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = History.xcdatamodel; sourceTree = "<group>"; };
 		790AE1E9192CFB5800FC4668 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
 		790AE1EA192CFB5800FC4668 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
@@ -593,6 +596,8 @@
 				4ECDAA2019907A62005F72B6 /* CollectManager.m */,
 				790AE1FF192E4BAF00FC4668 /* UIController.h */,
 				790AE200192E4BAF00FC4668 /* UIController.m */,
+				4ECDAA281990B97F005F72B6 /* ChapterManager.h */,
+				4ECDAA291990B97F005F72B6 /* ChapterManager.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -842,6 +847,7 @@
 				79A66327192BA3FB00B7170E /* MainViewController.m in Sources */,
 				79F2FB271940A91800780F2A /* PersonListViewController.m in Sources */,
 				79E07BE419377B03008EA875 /* PagedFlowView.m in Sources */,
+				4ECDAA2A1990B97F005F72B6 /* ChapterManager.m in Sources */,
 				4ECDAA2619907A7E005F72B6 /* CollectViewController.m in Sources */,
 				79E07BE319377B03008EA875 /* DynastyView.m in Sources */,
 				79F2FB341944A18500780F2A /* DynastyPersonList.m in Sources */,

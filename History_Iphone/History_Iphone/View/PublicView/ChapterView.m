@@ -92,6 +92,22 @@
     return iCurrentIndex;
 }
 
+- (void)setReadMode:(ReadMode)mode{
+    UIColor *textColor = nil;
+    UIColor *backgroundColor = nil;
+    
+    switch (mode) {
+        case Day:
+        {
+            
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+
 - (void)reusePagesView:(NSInteger)index{
     if (iCurrentIndex < index) {//往后滑动
         if (![self hasPageViewAfter:index]) {
