@@ -6,6 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StoryViewController">
             <connections>
+                <outlet property="btnCollect" destination="awJ-D3-GPk" id="oQ3-X6-ZDU"/>
+                <outlet property="btnCollectList" destination="6V8-5s-cR8" id="hf0-le-hK2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -24,6 +26,9 @@
                             <state key="normal" title="收藏">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="didPressedBtnCollect:" destination="-1" eventType="touchUpInside" id="ax8-lV-kF2"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBZ-Mb-LPa">
                             <rect key="frame" x="137" y="10" width="46" height="30"/>
@@ -31,6 +36,9 @@
                             <state key="normal" title="分享">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="didPressedBtnShare:" destination="-1" eventType="touchUpInside" id="ghu-NZ-xq1"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k92-r6-ady">
                             <rect key="frame" x="254" y="10" width="46" height="30"/>
@@ -47,5 +55,17 @@
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6V8-5s-cR8">
+            <rect key="frame" x="0.0" y="0.0" width="52" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+            <state key="normal" title="收藏">
+                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+            </state>
+            <connections>
+                <action selector="didPressedBtnCollectList:" destination="-1" eventType="touchUpInside" id="oSS-25-kl5"/>
+            </connections>
+        </button>
     </objects>
 </document>

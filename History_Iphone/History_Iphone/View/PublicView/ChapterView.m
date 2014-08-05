@@ -52,7 +52,6 @@
         iPageNumers ++;
         NSString *strLeft = [self.strContent substringFromIndex:iTotalTextNumber];
         NSInteger iPageContentNumber = [[TextKitManager shareInstance] getShowNumbers:strLeft rect:scrollText.bounds attribute:nil];
-        NSLog(@"%d", iPageContentNumber);
         NSString *strContentPage = [strLeft substringToIndex:iPageContentNumber];
         [_pageContents addObject:strContentPage];
         iTotalTextNumber += iPageContentNumber;

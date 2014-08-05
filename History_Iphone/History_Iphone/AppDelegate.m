@@ -18,6 +18,9 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
+    //ShareSDK
+    [self initShareConfig];
+    
     MainViewController *mainVC = [[MainViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:mainVC];
     self.window.rootViewController = nav;
@@ -50,6 +53,13 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - ShareSDK
+- (void)initShareConfig{
+    [ShareSDK registerApp:@"28c1f554769a"];
+    
+    [ShareSDK connectSinaWeiboWithAppKey:@"543371755" appSecret:@"fbff33068d1418f3bd189cf76d5f4ff1" redirectUri:@"http://"];
 }
 
 @end

@@ -10,11 +10,13 @@
 #import "ChapterView.h"
 
 @interface StoryViewController : UIViewController
-<
-NSLayoutManagerDelegate
->{
-    IBOutlet UITextView *txtContent;
-    IBOutlet UITextView *txtContentText;
+{
+    IBOutlet UIButton *btnCollectList;
+    IBOutlet UIButton *btnCollect;
 }
+
+- (IBAction)didPressedBtnShare:(id)sender;
+- (IBAction)didPressedBtnCollectList:(id)sender;
+- (IBAction)didPressedBtnCollect:(id)sender;
 
 @end

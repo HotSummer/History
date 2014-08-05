@@ -8,6 +8,9 @@
 
 #import "StoryViewController.h"
 #import "UIController.h"
+#import "CollectionEntity.h"
+#import "CollectManager.h"
+#import "CollectViewController.h"
 
 @interface StoryViewController ()
 
@@ -28,6 +31,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    UIBarButtonItem *rightbar = [[UIBarButtonItem alloc] initWithCustomView:btnCollectList];
+    self.navigationItem.rightBarButtonItem = rightbar;
+    
     self.navigationController.navigationBarHidden = NO;
     DynastyStory *story = [[UIController shareInstance] getStory];
     self.navigationItem.title = story.storyTitle;
@@ -36,6 +42,12 @@
     [self.view addSubview:chapterView];
     chapterView.frame = CGRectMake(0, 64, 320, 454);
     chapterView.strContent = story.storyContent;
+    
+    if ([[CollectManager shareInstance] collect:story.storyId]) {
+        [btnCollect setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    }else{
+        [btnCollect setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,10 +56,77 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - NSLayoutManagerDelegate
-- (CGFloat)layoutManager:(NSLayoutManager *)layoutManager lineSpacingAfterGlyphAtIndex:(NSUInteger)glyphIndex withProposedLineFragmentRect:(CGRect)rect
-{
-	return 25;//floorf(glyphIndex / 50);
+- (IBAction)didPressedBtnCollectList:(id)sender{
+    //    NSLog(@"collect list");
+    CollectViewController *collectVC = [[CollectViewController alloc] initWithNibName:@"CollectViewController" bundle:nil];
+    [self.navigationController pushViewController:collectVC animated:YES];
+}
+
+- (IBAction)didPressedBtnCollect:(id)sender{
+    DynastyStory *story = [[UIController shareInstance] getStory];
+    if ([[CollectManager shareInstance] collect:story.storyId]) {
+        [[CollectManager shareInstance] cancelCollect:story.storyId];
+        [btnCollect setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    }else{
+        CollectionEntity *collectEntity = [[CollectionEntity alloc] init];
+        collectEntity.contentId = story.storyId;
+        NSDateFormatter *dateformatter = [[NSDateFormatter alloc] init];
+        [dateformatter setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
+        NSString *strTimer = [dateformatter stringFromDate:[NSDate date]];
+        collectEntity.collectTime = strTimer;
+        
+        [[CollectManager shareInstance] addCollect:collectEntity];
+        [btnCollect setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    }
+}
+
+- (IBAction)didPressedBtnShare:(id)sender{
+    DynastyStory *story = [[UIController shareInstance] getStory];
+    id<ISSContent> publishContent = [ShareSDK content:story.storyTitle
+                                       defaultContent:@"我在看微看历史"
+                                                image:[self getShareImage]
+                                                title:@"微看历史"
+                                                  url:@"http://www.sharesdk.cn"
+                                          description:@"家天下开始"
+                                            mediaType:SSPublishContentMediaTypeNews];
+    
+    [ShareSDK showShareActionSheet:nil
+                         shareList:nil
+                           content:publishContent
+                     statusBarTips:YES
+                       authOptions:nil
+                      shareOptions: nil
+                            result:^(ShareType type, SSResponseState state, id<ISSPlatformShareInfo> statusInfo, id<ICMErrorInfo> error, BOOL end) {
+                                if (state == SSResponseStateSuccess)
+                                {
+                                    UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:@"分享成功" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+                                    [alertview show];
+                                }
+                                else if (state == SSResponseStateFail)
+                                {
+                                    UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:@"分享失败" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+                                    [alertview show];
+                                    //                                    NSLog(@"分享失败,错误码:%d,错误描述:%@", [error errorCode], [error errorDescription]);
+                                }
+                            }];
+}
+
+- (id<ISSCAttachment>)getShareImage{
+    CGSize imageSize = [[UIScreen mainScreen] bounds].size;
+    if (NULL != UIGraphicsBeginImageContextWithOptions) {
+        UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0);
+    }
+    else
+    {
+        UIGraphicsBeginImageContext(imageSize);
+    }
+    [[self.view layer] renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    id<ISSCAttachment> shareImage = nil;
+    shareImage = [ShareSDK pngImageWithImage:newImage];
+    return shareImage;
 }
 
 @end
