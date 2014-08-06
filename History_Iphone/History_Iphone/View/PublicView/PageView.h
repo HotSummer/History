@@ -12,11 +12,12 @@
 <
 NSLayoutManagerDelegate
 >{
-    UITextView *txtContent;
+    
     NSInteger iShowNumbers;
     NSTextContainer *textContainer;
     
 }
+@property(nonatomic, strong) UITextView *txtContent;
 
 @property(nonatomic, strong) NSString *strContent;
 

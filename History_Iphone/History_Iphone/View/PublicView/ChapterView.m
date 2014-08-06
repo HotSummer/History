@@ -119,6 +119,18 @@
         default:
             break;
     }
+    
+    for (int i=0; i<_pageViews.count; i++) {
+        PageView *pageView = _pageViews[i];
+        pageView.txtContent.textColor = textColor;
+        pageView.txtContent.backgroundColor = backgroundColor;
+    }
+    
+    for (int i=0; i<_pageReuseView.count; i++) {
+        PageView *pageView = _pageReuseView[i];
+        pageView.txtContent.textColor = textColor;
+        pageView.txtContent.backgroundColor = backgroundColor;
+    }
 }
 
 - (void)reusePagesView:(NSInteger)index{

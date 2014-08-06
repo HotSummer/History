@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EAB47B41992290A00C8DD7D /* ChapterConfigView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB47B31992290A00C8DD7D /* ChapterConfigView.m */; };
+		4EAB47B61992291A00C8DD7D /* ChapterConfigView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EAB47B51992291A00C8DD7D /* ChapterConfigView.xib */; };
 		4ECDA9BE199071CD005F72B6 /* ChapterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECDA9B9199071CD005F72B6 /* ChapterView.m */; };
 		4ECDA9BF199071CD005F72B6 /* ChapterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ECDA9BA199071CD005F72B6 /* ChapterView.xib */; };
 		4ECDA9C0199071CD005F72B6 /* PageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECDA9BC199071CD005F72B6 /* PageView.m */; };
@@ -117,6 +119,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4EAB47B21992290A00C8DD7D /* ChapterConfigView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChapterConfigView.h; sourceTree = "<group>"; };
+		4EAB47B31992290A00C8DD7D /* ChapterConfigView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChapterConfigView.m; sourceTree = "<group>"; };
+		4EAB47B51992291A00C8DD7D /* ChapterConfigView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChapterConfigView.xib; sourceTree = "<group>"; };
 		4ECDA9B8199071CD005F72B6 /* ChapterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChapterView.h; sourceTree = "<group>"; };
 		4ECDA9B9199071CD005F72B6 /* ChapterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChapterView.m; sourceTree = "<group>"; };
 		4ECDA9BA199071CD005F72B6 /* ChapterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChapterView.xib; sourceTree = "<group>"; };
@@ -310,6 +315,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4EAB47B1199228EB00C8DD7D /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				4EAB47B21992290A00C8DD7D /* ChapterConfigView.h */,
+				4EAB47B31992290A00C8DD7D /* ChapterConfigView.m */,
+				4EAB47B51992291A00C8DD7D /* ChapterConfigView.xib */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
 		4ECDA9B7199071CD005F72B6 /* PublicView */ = {
 			isa = PBXGroup;
 			children = (
@@ -644,6 +659,7 @@
 		79E07BBE19362E71008EA875 /* Story */ = {
 			isa = PBXGroup;
 			children = (
+				4EAB47B1199228EB00C8DD7D /* UIView */,
 				79E07BE519377B09008EA875 /* Cell */,
 				79E07BBF19362E8A008EA875 /* StoryListViewController.h */,
 				79E07BC019362E8A008EA875 /* StoryListViewController.m */,
@@ -809,6 +825,7 @@
 				79E07B831933A493008EA875 /* now_xizhou_map.png in Resources */,
 				79F2FB3B194620CB00780F2A /* PersonDetailViewController.xib in Resources */,
 				79E07BBD19362047008EA875 /* DynastyMapViewController.xib in Resources */,
+				4EAB47B61992291A00C8DD7D /* ChapterConfigView.xib in Resources */,
 				4ECDA9F819907444005F72B6 /* ShareSDKiPhoneSimpleShareViewUI.bundle in Resources */,
 				79E07B811933A493008EA875 /* now_shang_map.png in Resources */,
 				79F2FB22193F6EC300780F2A /* StoryViewController.xib in Resources */,
@@ -846,6 +863,7 @@
 				79E07BE919377B3A008EA875 /* StoryTitleTableViewCell.m in Sources */,
 				79A66327192BA3FB00B7170E /* MainViewController.m in Sources */,
 				79F2FB271940A91800780F2A /* PersonListViewController.m in Sources */,
+				4EAB47B41992290A00C8DD7D /* ChapterConfigView.m in Sources */,
 				79E07BE419377B03008EA875 /* PagedFlowView.m in Sources */,
 				4ECDAA2A1990B97F005F72B6 /* ChapterManager.m in Sources */,
 				4ECDAA2619907A7E005F72B6 /* CollectViewController.m in Sources */,

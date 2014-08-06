@@ -7,18 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ChapterView.h"
 
-typedef enum {
-    Day = 0,
-    Color,
-    Black
-}ReadMode;
+@interface ChapterConfig : NSObject
+
+@property(nonatomic, strong) NSString *content;
+@property(nonatomic) ReadMode readMode;
+
+@end
 
 @interface ChapterManager : NSObject{
     
 }
-@property(nonatomic) ReadMode readMode;
 
 + (ChapterManager *)shareInstance;
+
+- (ChapterView *)createChapterView:(ChapterConfig *)config;
 
 @end

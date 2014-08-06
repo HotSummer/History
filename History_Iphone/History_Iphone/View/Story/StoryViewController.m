@@ -11,8 +11,11 @@
 #import "CollectionEntity.h"
 #import "CollectManager.h"
 #import "CollectViewController.h"
+#import "ChapterManager.h"
 
-@interface StoryViewController ()
+@interface StoryViewController (){
+    ChapterView *chapterView;
+}
 
 @end
 
@@ -38,10 +41,13 @@
     DynastyStory *story = [[UIController shareInstance] getStory];
     self.navigationItem.title = story.storyTitle;
     
-    ChapterView *chapterView = [[[NSBundle mainBundle] loadNibNamed:@"ChapterView" owner:self options:nil] lastObject];
+    //工厂模式
+    ChapterConfig *config = [[ChapterConfig alloc] init];
+    config.readMode = Day;
+    config.content = story.storyContent;
+    chapterView = [[ChapterManager shareInstance] createChapterView:config];//[[[NSBundle mainBundle] loadNibNamed:@"ChapterView" owner:self options:nil] lastObject];
     [self.view addSubview:chapterView];
     chapterView.frame = CGRectMake(0, 64, 320, 454);
-    chapterView.strContent = story.storyContent;
     
     if ([[CollectManager shareInstance] collect:story.storyId]) {
         [btnCollect setTitleColor:[UIColor redColor] forState:UIControlStateNormal];

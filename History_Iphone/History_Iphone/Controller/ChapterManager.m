@@ -8,6 +8,10 @@
 
 #import "ChapterManager.h"
 
+@implementation ChapterConfig
+
+@end
+
 @implementation ChapterManager
 
 + (ChapterManager *)shareInstance{
@@ -17,6 +21,13 @@
         chapterManager = [[ChapterManager alloc] init];
     });
     return chapterManager;
+}
+
+- (ChapterView *)createChapterView:(ChapterConfig *)config{
+    ChapterView *chapterView = [[[NSBundle mainBundle] loadNibNamed:@"ChapterView" owner:self options:nil] lastObject];
+    chapterView.strContent = config.content;
+    [chapterView setReadMode:config.readMode];
+    return chapterView;
 }
 
 @end
