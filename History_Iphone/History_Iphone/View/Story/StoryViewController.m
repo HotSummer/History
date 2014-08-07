@@ -12,6 +12,7 @@
 #import "CollectManager.h"
 #import "CollectViewController.h"
 #import "ChapterManager.h"
+#import "ChapterConfigView.h"
 
 @interface StoryViewController (){
     ChapterView *chapterView;
@@ -84,6 +85,11 @@
         [[CollectManager shareInstance] addCollect:collectEntity];
         [btnCollect setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     }
+}
+
+- (IBAction)didPressedBtnChapterConfig:(id)sender{
+    ChapterConfigView *chapterConfigView = [[[NSBundle mainBundle] loadNibNamed:@"ChapterConfigView" owner:self options:nil] firstObject];
+    [self.view addSubview:chapterConfigView];
 }
 
 - (IBAction)didPressedBtnShare:(id)sender{

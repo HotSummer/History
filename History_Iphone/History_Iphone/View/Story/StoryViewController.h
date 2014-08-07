@@ -18,5 +18,6 @@
 - (IBAction)didPressedBtnShare:(id)sender;
 - (IBAction)didPressedBtnCollectList:(id)sender;
 - (IBAction)didPressedBtnCollect:(id)sender;
+- (IBAction)didPressedBtnChapterConfig:(id)sender;
 
 @end

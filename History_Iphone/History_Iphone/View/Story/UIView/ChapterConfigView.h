@@ -10,4 +10,6 @@
 
 @interface ChapterConfigView : UIView
 
+- (IBAction)didPressedBtnBg:(id)sender;
+
 @end
