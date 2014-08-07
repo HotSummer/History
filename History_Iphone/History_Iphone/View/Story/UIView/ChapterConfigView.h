@@ -8,8 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol ChapterConfigDelegate <NSObject>
+
+@optional
+- (void)selectColor:(NSInteger)iColor;
+
+@end
+
 @interface ChapterConfigView : UIView
+@property(nonatomic, weak) id<ChapterConfigDelegate> delegate;
 
 - (IBAction)didPressedBtnBg:(id)sender;
+- (IBAction)didPressedBtnColor:(id)sender;
 
 @end

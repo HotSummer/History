@@ -8,17 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "ChapterView.h"
-
-@interface ChapterConfig : NSObject
-
-@property(nonatomic, strong) NSString *content;
-@property(nonatomic) ReadMode readMode;
-
-@end
+#import "ChapterConfig.h"
 
 @interface ChapterManager : NSObject{
     
 }
+@property(nonatomic, strong) ChapterConfig *chapterConfig;
 
 + (ChapterManager *)shareInstance;
 

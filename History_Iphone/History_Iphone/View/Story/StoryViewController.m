@@ -12,7 +12,6 @@
 #import "CollectManager.h"
 #import "CollectViewController.h"
 #import "ChapterManager.h"
-#import "ChapterConfigView.h"
 
 @interface StoryViewController (){
     ChapterView *chapterView;
@@ -89,6 +88,7 @@
 
 - (IBAction)didPressedBtnChapterConfig:(id)sender{
     ChapterConfigView *chapterConfigView = [[[NSBundle mainBundle] loadNibNamed:@"ChapterConfigView" owner:self options:nil] firstObject];
+    chapterConfigView.delegate = self;
     [self.view addSubview:chapterConfigView];
 }
 
@@ -139,6 +139,11 @@
     id<ISSCAttachment> shareImage = nil;
     shareImage = [ShareSDK pngImageWithImage:newImage];
     return shareImage;
+}
+
+#pragma mark - ChapterConfigDelegate
+- (void)selectColor:(NSInteger)iColor{
+    [chapterView setReadMode:(ReadMode)iColor];
 }
 
 @end

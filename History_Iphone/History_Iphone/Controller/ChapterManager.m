@@ -8,9 +8,6 @@
 
 #import "ChapterManager.h"
 
-@implementation ChapterConfig
-
-@end
 
 @implementation ChapterManager
 
@@ -23,11 +20,33 @@
     return chapterManager;
 }
 
+- (id)init{
+    if (self = [super init]) {
+        [self loadConfigFromLocal];
+        if (self.chapterConfig == nil) {
+            self.chapterConfig = [[ChapterConfig alloc] init];
+            self.chapterConfig.readMode = Day;
+            [self saveConfig];
+        }
+    }
+    return self;
+}
+
 - (ChapterView *)createChapterView:(ChapterConfig *)config{
     ChapterView *chapterView = [[[NSBundle mainBundle] loadNibNamed:@"ChapterView" owner:self options:nil] lastObject];
     chapterView.strContent = config.content;
     [chapterView setReadMode:config.readMode];
     return chapterView;
+}
+
+- (void)loadConfigFromLocal{
+    self.chapterConfig = [[NSUserDefaults standardUserDefaults] objectForKey:@"ChapterConfig"];
+}
+
+//保存用户的阅读设置
+- (void)saveConfig{
+    [[NSUserDefaults standardUserDefaults] setObject:self.chapterConfig forKey:@"ChapterConfig"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 @end

@@ -39,4 +39,11 @@
     [self removeFromSuperview];
 }
 
+- (IBAction)didPressedBtnColor:(id)sender{
+    UIButton *btn = (UIButton *)sender;
+    if ([self.delegate respondsToSelector:@selector(selectColor:)]) {
+        [self.delegate selectColor:btn.tag];
+    }
+}
+
 @end

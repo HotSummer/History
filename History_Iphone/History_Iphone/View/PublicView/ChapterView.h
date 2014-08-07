@@ -10,12 +10,7 @@
 #define textSize 14
 
 #import <UIKit/UIKit.h>
-
-typedef enum {
-    Day = 0,
-    Color,
-    Black
-}ReadMode;
+#import "ChapterConfig.h"
 
 @interface ChapterView : UIView
 <
