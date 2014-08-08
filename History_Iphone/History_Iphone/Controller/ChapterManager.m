@@ -8,7 +8,6 @@
 
 #import "ChapterManager.h"
 
-
 @implementation ChapterManager
 
 + (ChapterManager *)shareInstance{
@@ -23,9 +22,9 @@
 - (id)init{
     if (self = [super init]) {
         [self loadConfigFromLocal];
-        if (self.chapterConfig == nil) {
-            self.chapterConfig = [[ChapterConfig alloc] init];
-            self.chapterConfig.readMode = Day;
+        if (self.chapterConfig == nil) {//设置默认
+            _chapterConfig = [[ChapterConfig alloc] init];
+            _chapterConfig.readMode = Day;
             [self saveConfig];
         }
     }
@@ -40,12 +39,14 @@
 }
 
 - (void)loadConfigFromLocal{
-    self.chapterConfig = [[NSUserDefaults standardUserDefaults] objectForKey:@"ChapterConfig"];
+    NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:@"ChapterConfig"];
+    self.chapterConfig = [NSKeyedUnarchiver unarchiveObjectWithData:data];
 }
 
 //保存用户的阅读设置
 - (void)saveConfig{
-    [[NSUserDefaults standardUserDefaults] setObject:self.chapterConfig forKey:@"ChapterConfig"];
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:_chapterConfig];
+    [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"ChapterConfig"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 

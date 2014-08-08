@@ -13,6 +13,7 @@
 @interface ChapterManager : NSObject{
     
 }
+
 @property(nonatomic, strong) ChapterConfig *chapterConfig;
 
 + (ChapterManager *)shareInstance;
