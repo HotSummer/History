@@ -12,6 +12,4 @@
     IBOutlet UIScrollView *scrollViewTimeLine;
 }
 
-- (void)setTimeLines:(NSArray *)timeLines;
-
 @end
