@@ -9,6 +9,17 @@
 /* Begin PBXBuildFile section */
 		4EAB47B41992290A00C8DD7D /* ChapterConfigView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB47B31992290A00C8DD7D /* ChapterConfigView.m */; };
 		4EAB47B61992291A00C8DD7D /* ChapterConfigView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EAB47B51992291A00C8DD7D /* ChapterConfigView.xib */; };
+		4EAB4888199DAF6E00C8DD7D /* TimeLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB4886199DAF6E00C8DD7D /* TimeLineViewController.m */; };
+		4EAB4889199DAF6E00C8DD7D /* TimeLineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EAB4887199DAF6E00C8DD7D /* TimeLineViewController.xib */; };
+		4EAB488C199DB02500C8DD7D /* PagedFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB488B199DB02500C8DD7D /* PagedFlowView.m */; };
+		4EAB4890199DB31900C8DD7D /* story1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EAB488D199DB31900C8DD7D /* story1@2x.png */; };
+		4EAB4891199DB31900C8DD7D /* story2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EAB488E199DB31900C8DD7D /* story2@2x.png */; };
+		4EAB4892199DB31900C8DD7D /* story3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EAB488F199DB31900C8DD7D /* story3@2x.png */; };
+		4EAB4896199DF8A900C8DD7D /* WhiteCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB4895199DF8A900C8DD7D /* WhiteCircle.m */; };
+		4EAB4899199E004500C8DD7D /* TimeLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB4898199E004500C8DD7D /* TimeLineView.m */; };
+		4EAB489B199E005100C8DD7D /* TimeLineView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EAB489A199E005100C8DD7D /* TimeLineView.xib */; };
+		4EAB48A1199E05DD00C8DD7D /* TimeLineEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB48A0199E05DD00C8DD7D /* TimeLineEntity.m */; };
+		4EAB48A4199E069500C8DD7D /* TimeLineManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB48A3199E069500C8DD7D /* TimeLineManager.m */; };
 		4ECDA9BE199071CD005F72B6 /* ChapterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECDA9B9199071CD005F72B6 /* ChapterView.m */; };
 		4ECDA9BF199071CD005F72B6 /* ChapterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ECDA9BA199071CD005F72B6 /* ChapterView.xib */; };
 		4ECDA9C0199071CD005F72B6 /* PageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECDA9BC199071CD005F72B6 /* PageView.m */; };
@@ -93,7 +104,6 @@
 		79E07BD619376DD8008EA875 /* DynastyList.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E07BCB19376DD8008EA875 /* DynastyList.m */; };
 		79E07BDA19376DD8008EA875 /* DynastyStoryList.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E07BD319376DD8008EA875 /* DynastyStoryList.m */; };
 		79E07BE319377B03008EA875 /* DynastyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E07BE019377B03008EA875 /* DynastyView.m */; };
-		79E07BE419377B03008EA875 /* PagedFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E07BE219377B03008EA875 /* PagedFlowView.m */; };
 		79E07BE919377B3A008EA875 /* StoryTitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E07BE719377B3A008EA875 /* StoryTitleTableViewCell.m */; };
 		79E07BEA19377B3A008EA875 /* StoryTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79E07BE819377B3A008EA875 /* StoryTitleTableViewCell.xib */; };
 		79F2FB1D193F68FF00780F2A /* DynastyStory.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F2FB1C193F68FF00780F2A /* DynastyStory.m */; };
@@ -123,6 +133,23 @@
 		4EAB47B21992290A00C8DD7D /* ChapterConfigView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChapterConfigView.h; sourceTree = "<group>"; };
 		4EAB47B31992290A00C8DD7D /* ChapterConfigView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChapterConfigView.m; sourceTree = "<group>"; };
 		4EAB47B51992291A00C8DD7D /* ChapterConfigView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChapterConfigView.xib; sourceTree = "<group>"; };
+		4EAB4885199DAF6E00C8DD7D /* TimeLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineViewController.h; sourceTree = "<group>"; };
+		4EAB4886199DAF6E00C8DD7D /* TimeLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineViewController.m; sourceTree = "<group>"; };
+		4EAB4887199DAF6E00C8DD7D /* TimeLineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimeLineViewController.xib; sourceTree = "<group>"; };
+		4EAB488A199DB02500C8DD7D /* PagedFlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagedFlowView.h; sourceTree = "<group>"; };
+		4EAB488B199DB02500C8DD7D /* PagedFlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagedFlowView.m; sourceTree = "<group>"; };
+		4EAB488D199DB31900C8DD7D /* story1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "story1@2x.png"; sourceTree = "<group>"; };
+		4EAB488E199DB31900C8DD7D /* story2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "story2@2x.png"; sourceTree = "<group>"; };
+		4EAB488F199DB31900C8DD7D /* story3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "story3@2x.png"; sourceTree = "<group>"; };
+		4EAB4894199DF8A800C8DD7D /* WhiteCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhiteCircle.h; sourceTree = "<group>"; };
+		4EAB4895199DF8A900C8DD7D /* WhiteCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhiteCircle.m; sourceTree = "<group>"; };
+		4EAB4897199E004500C8DD7D /* TimeLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineView.h; sourceTree = "<group>"; };
+		4EAB4898199E004500C8DD7D /* TimeLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineView.m; sourceTree = "<group>"; };
+		4EAB489A199E005100C8DD7D /* TimeLineView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimeLineView.xib; sourceTree = "<group>"; };
+		4EAB489F199E05DD00C8DD7D /* TimeLineEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineEntity.h; sourceTree = "<group>"; };
+		4EAB48A0199E05DD00C8DD7D /* TimeLineEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineEntity.m; sourceTree = "<group>"; };
+		4EAB48A2199E069500C8DD7D /* TimeLineManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineManager.h; sourceTree = "<group>"; };
+		4EAB48A3199E069500C8DD7D /* TimeLineManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineManager.m; sourceTree = "<group>"; };
 		4ECDA9B8199071CD005F72B6 /* ChapterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChapterView.h; sourceTree = "<group>"; };
 		4ECDA9B9199071CD005F72B6 /* ChapterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChapterView.m; sourceTree = "<group>"; };
 		4ECDA9BA199071CD005F72B6 /* ChapterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChapterView.xib; sourceTree = "<group>"; };
@@ -237,8 +264,6 @@
 		79E07BD319376DD8008EA875 /* DynastyStoryList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynastyStoryList.m; sourceTree = "<group>"; };
 		79E07BDF19377B03008EA875 /* DynastyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynastyView.h; sourceTree = "<group>"; };
 		79E07BE019377B03008EA875 /* DynastyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynastyView.m; sourceTree = "<group>"; };
-		79E07BE119377B03008EA875 /* PagedFlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagedFlowView.h; sourceTree = "<group>"; };
-		79E07BE219377B03008EA875 /* PagedFlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagedFlowView.m; sourceTree = "<group>"; };
 		79E07BE619377B3A008EA875 /* StoryTitleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryTitleTableViewCell.h; sourceTree = "<group>"; };
 		79E07BE719377B3A008EA875 /* StoryTitleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryTitleTableViewCell.m; sourceTree = "<group>"; };
 		79E07BE819377B3A008EA875 /* StoryTitleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoryTitleTableViewCell.xib; sourceTree = "<group>"; };
@@ -328,9 +353,34 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
+		4EAB4884199DAF3F00C8DD7D /* TimeLine */ = {
+			isa = PBXGroup;
+			children = (
+				4EAB4893199DF87200C8DD7D /* UIView */,
+				4EAB4885199DAF6E00C8DD7D /* TimeLineViewController.h */,
+				4EAB4886199DAF6E00C8DD7D /* TimeLineViewController.m */,
+				4EAB4887199DAF6E00C8DD7D /* TimeLineViewController.xib */,
+			);
+			path = TimeLine;
+			sourceTree = "<group>";
+		};
+		4EAB4893199DF87200C8DD7D /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				4EAB4894199DF8A800C8DD7D /* WhiteCircle.h */,
+				4EAB4895199DF8A900C8DD7D /* WhiteCircle.m */,
+				4EAB4897199E004500C8DD7D /* TimeLineView.h */,
+				4EAB4898199E004500C8DD7D /* TimeLineView.m */,
+				4EAB489A199E005100C8DD7D /* TimeLineView.xib */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
 		4ECDA9B7199071CD005F72B6 /* PublicView */ = {
 			isa = PBXGroup;
 			children = (
+				4EAB488A199DB02500C8DD7D /* PagedFlowView.h */,
+				4EAB488B199DB02500C8DD7D /* PagedFlowView.m */,
 				4ECDA9B8199071CD005F72B6 /* ChapterView.h */,
 				4ECDA9B9199071CD005F72B6 /* ChapterView.m */,
 				4ECDA9BA199071CD005F72B6 /* ChapterView.xib */,
@@ -444,6 +494,8 @@
 				4ECDAA1D19907A37005F72B6 /* CollectionEntity.m */,
 				79989A8C1993D0CF00A8D6E5 /* ChapterConfig.h */,
 				79989A8D1993D0CF00A8D6E5 /* ChapterConfig.m */,
+				4EAB489F199E05DD00C8DD7D /* TimeLineEntity.h */,
+				4EAB48A0199E05DD00C8DD7D /* TimeLineEntity.m */,
 			);
 			path = Bll;
 			sourceTree = "<group>";
@@ -618,6 +670,8 @@
 				790AE200192E4BAF00FC4668 /* UIController.m */,
 				4ECDAA281990B97F005F72B6 /* ChapterManager.h */,
 				4ECDAA291990B97F005F72B6 /* ChapterManager.m */,
+				4EAB48A2199E069500C8DD7D /* TimeLineManager.h */,
+				4EAB48A3199E069500C8DD7D /* TimeLineManager.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -625,6 +679,7 @@
 		79A66323192BA39B00B7170E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4EAB4884199DAF3F00C8DD7D /* TimeLine */,
 				4ECDAA2219907A7E005F72B6 /* Collect */,
 				4ECDA9B7199071CD005F72B6 /* PublicView */,
 				79F2FB231940A90300780F2A /* Person */,
@@ -640,6 +695,9 @@
 		79E07B791933A493008EA875 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				4EAB488D199DB31900C8DD7D /* story1@2x.png */,
+				4EAB488E199DB31900C8DD7D /* story2@2x.png */,
+				4EAB488F199DB31900C8DD7D /* story3@2x.png */,
 				79F2FB351945EF3A00780F2A /* yiyin@2x.png */,
 				79E07B7A1933A493008EA875 /* now_dongzhou_map.png */,
 				79E07B7B1933A493008EA875 /* now_qin_map.png */,
@@ -702,8 +760,6 @@
 			children = (
 				79E07BDF19377B03008EA875 /* DynastyView.h */,
 				79E07BE019377B03008EA875 /* DynastyView.m */,
-				79E07BE119377B03008EA875 /* PagedFlowView.h */,
-				79E07BE219377B03008EA875 /* PagedFlowView.m */,
 			);
 			path = customerView;
 			sourceTree = "<group>";
@@ -821,6 +877,7 @@
 				79F2FB361945EF3A00780F2A /* yiyin@2x.png in Resources */,
 				79E07B821933A493008EA875 /* now_xia_map.png in Resources */,
 				4ECDA9BF199071CD005F72B6 /* ChapterView.xib in Resources */,
+				4EAB4892199DB31900C8DD7D /* story3@2x.png in Resources */,
 				79A662FE192BA32100B7170E /* InfoPlist.strings in Resources */,
 				79F2FB281940A91800780F2A /* PersonListViewController.xib in Resources */,
 				79E07B801933A493008EA875 /* now_qin_map.png in Resources */,
@@ -833,6 +890,7 @@
 				4EAB47B61992291A00C8DD7D /* ChapterConfigView.xib in Resources */,
 				4ECDA9F819907444005F72B6 /* ShareSDKiPhoneSimpleShareViewUI.bundle in Resources */,
 				79E07B811933A493008EA875 /* now_shang_map.png in Resources */,
+				4EAB4889199DAF6E00C8DD7D /* TimeLineViewController.xib in Resources */,
 				79F2FB22193F6EC300780F2A /* StoryViewController.xib in Resources */,
 				79F2FB2E1944997F00780F2A /* PersonListTableViewCell.xib in Resources */,
 				4ECDA9F619907444005F72B6 /* ShareSDKFlatShareViewUI.bundle in Resources */,
@@ -840,8 +898,11 @@
 				4ECDA9C1199071CD005F72B6 /* PageView.xib in Resources */,
 				79E07BEA19377B3A008EA875 /* StoryTitleTableViewCell.xib in Resources */,
 				4ECDA9F019907444005F72B6 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
+				4EAB4890199DB31900C8DD7D /* story1@2x.png in Resources */,
+				4EAB489B199E005100C8DD7D /* TimeLineView.xib in Resources */,
 				4ECDA9F219907444005F72B6 /* WeiboSDK.bundle in Resources */,
 				4ECDAA2719907A7E005F72B6 /* CollectViewController.xib in Resources */,
+				4EAB4891199DB31900C8DD7D /* story2@2x.png in Resources */,
 				79A66306192BA32100B7170E /* Images.xcassets in Resources */,
 				4ECDA9ED19907444005F72B6 /* Resource.bundle in Resources */,
 			);
@@ -864,16 +925,19 @@
 			files = (
 				79F2FB3A194620CB00780F2A /* PersonDetailViewController.m in Sources */,
 				79A66304192BA32100B7170E /* AppDelegate.m in Sources */,
+				4EAB48A1199E05DD00C8DD7D /* TimeLineEntity.m in Sources */,
 				4ECDA9BE199071CD005F72B6 /* ChapterView.m in Sources */,
 				79E07BE919377B3A008EA875 /* StoryTitleTableViewCell.m in Sources */,
 				79A66327192BA3FB00B7170E /* MainViewController.m in Sources */,
+				4EAB4896199DF8A900C8DD7D /* WhiteCircle.m in Sources */,
 				79F2FB271940A91800780F2A /* PersonListViewController.m in Sources */,
 				4EAB47B41992290A00C8DD7D /* ChapterConfigView.m in Sources */,
-				79E07BE419377B03008EA875 /* PagedFlowView.m in Sources */,
 				4ECDAA2A1990B97F005F72B6 /* ChapterManager.m in Sources */,
+				4EAB488C199DB02500C8DD7D /* PagedFlowView.m in Sources */,
 				4ECDAA2619907A7E005F72B6 /* CollectViewController.m in Sources */,
 				79E07BE319377B03008EA875 /* DynastyView.m in Sources */,
 				79F2FB341944A18500780F2A /* DynastyPersonList.m in Sources */,
+				4EAB48A4199E069500C8DD7D /* TimeLineManager.m in Sources */,
 				4ECDAA2119907A62005F72B6 /* CollectManager.m in Sources */,
 				790AE201192E4BAF00FC4668 /* UIController.m in Sources */,
 				79E07BD619376DD8008EA875 /* DynastyList.m in Sources */,
@@ -885,8 +949,10 @@
 				790AE1E6192CED3200FC4668 /* History.xcdatamodeld in Sources */,
 				79410895194F3CF200C0D438 /* DynastyPersonDetail.m in Sources */,
 				79E07BBC19362047008EA875 /* DynastyMapViewController.m in Sources */,
+				4EAB4888199DAF6E00C8DD7D /* TimeLineViewController.m in Sources */,
 				79E07BD419376DD8008EA875 /* Comment.m in Sources */,
 				79F2FB1D193F68FF00780F2A /* DynastyStory.m in Sources */,
+				4EAB4899199E004500C8DD7D /* TimeLineView.m in Sources */,
 				4ECDA9C0199071CD005F72B6 /* PageView.m in Sources */,
 				790AE1FE192E459500FC4668 /* MakeData.m in Sources */,
 				79A66300192BA32100B7170E /* main.m in Sources */,

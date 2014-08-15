@@ -61,15 +61,18 @@
     _scrollView.clipsToBounds = NO;
     _scrollView.showsHorizontalScrollIndicator = NO;
     _scrollView.showsVerticalScrollIndicator = NO;
+    [_scrollView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
 
     /*由于UIScrollView在滚动之后会调用自己的layoutSubviews以及父View的layoutSubviews
     这里为了避免scrollview滚动带来自己layoutSubviews的调用,所以给scrollView加了一层父View
      */
-    UIView *superViewOfScrollView = [[UIView alloc] initWithFrame:self.bounds];
-    [superViewOfScrollView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
-    [superViewOfScrollView setBackgroundColor:[UIColor clearColor]];
-    [superViewOfScrollView addSubview:_scrollView];
-    [self addSubview:superViewOfScrollView];
+//    UIView *superViewOfScrollView = [[UIView alloc] initWithFrame:self.bounds];
+//    [superViewOfScrollView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
+//    [superViewOfScrollView setBackgroundColor:[UIColor clearColor]];
+//    [superViewOfScrollView addSubview:_scrollView];
+//    [self addSubview:superViewOfScrollView];
+    
+    [self addSubview:_scrollView];
     
 }
 
@@ -99,7 +102,6 @@
 }
 
 - (void)refreshVisibleCellAppearance{
-    
     if (_minimumPageAlpha == 1.0 && _minimumPageScale == 1.0) {
         return;//无需更新
     }
@@ -163,13 +165,20 @@
         NSAssert(cell!=nil, @"datasource must not return nil");
         [_cells replaceObjectAtIndex:pageIndex withObject:cell];
         
-        
         switch (orientation) {
             case PagedFlowViewOrientationHorizontal:
-                cell.frame = CGRectMake(_pageSize.width * pageIndex, 0, _pageSize.width, _pageSize.height);
+                if (pageIndex > 0) {
+                    cell.frame = CGRectMake(_pageSize.width * pageIndex+self.cellXOffSet*pageIndex, self.cellYOffSet, _pageSize.width, _pageSize.height);
+                }else{
+                    cell.frame = CGRectMake(_pageSize.width * pageIndex, 0, _pageSize.width, _pageSize.height);
+                }
                 break;
             case PagedFlowViewOrientationVertical:
-                cell.frame = CGRectMake(0, _pageSize.height * pageIndex, _pageSize.width, _pageSize.height);
+                if (pageIndex > 0) {
+                    cell.frame = CGRectMake(self.cellXOffSet*pageIndex, _pageSize.height * pageIndex+self.cellYOffSet* pageIndex, _pageSize.width, _pageSize.height);
+                }else{
+                    cell.frame = CGRectMake(0, _pageSize.height * pageIndex, _pageSize.width, _pageSize.height);
+                }
                 break;
             default:
                 break;
@@ -355,6 +364,7 @@
                 _scrollView.center = theCenter;
                 break;
             case PagedFlowViewOrientationVertical:{
+                
                 _scrollView.frame = CGRectMake(0, 0, _pageSize.width, _pageSize.height);
                 _scrollView.contentSize = CGSizeMake(_pageSize.width ,_pageSize.height * _pageCount);
                 CGPoint theCenter = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
@@ -366,11 +376,10 @@
         }
     }
     
-
+    _scrollView.contentOffset = CGPointMake(0, 0);
     [self setPagesAtContentOffset:_scrollView.contentOffset];//根据当前scrollView的offset设置cell
     
     [self refreshVisibleCellAppearance];//更新各个可见Cell的显示外貌
-    
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -405,6 +414,7 @@
                 [_scrollView setContentOffset:CGPointMake(0, _pageSize.height * pageNumber) animated:YES];
                 break;
         }
+        NSLog(@"offset.y : %f", _scrollView.contentOffset.y);
         [self setPagesAtContentOffset:_scrollView.contentOffset];
         [self refreshVisibleCellAppearance];
     }
@@ -462,6 +472,15 @@
     
     if ([_delegate respondsToSelector:@selector(flowView:didScrollToPageAtIndex:)] && _currentPageIndex != pageIndex) {
         [_delegate flowView:self didScrollToPageAtIndex:pageIndex];
+    }
+    
+#warning 不知道怎么出现-1的情况（这个情况下_scrollview的contentoffSet为（0, -64））
+    if (pageIndex < 0) {
+        _scrollView.contentOffset = CGPointMake(0, 0);
+        [self setPagesAtContentOffset:scrollView.contentOffset];
+        [self refreshVisibleCellAppearance];
+        pageIndex = 0;
+        
     }
     
     _currentPageIndex = pageIndex;

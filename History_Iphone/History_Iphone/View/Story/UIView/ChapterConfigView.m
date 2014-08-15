@@ -35,6 +35,11 @@
 }
 */
 
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    slider.value = [UIScreen mainScreen].brightness;
+}
+
 - (IBAction)didPressedBtnBg:(id)sender{
     [self removeFromSuperview];
 }
@@ -43,6 +48,17 @@
     UIButton *btn = (UIButton *)sender;
     if ([self.delegate respondsToSelector:@selector(selectColor:)]) {
         [self.delegate selectColor:btn.tag];
+    }
+}
+
+- (IBAction)swipeBrightness:(id)sender{
+    [UIScreen mainScreen].brightness = slider.value;
+}
+
+- (IBAction)didPressedBtnSize:(id)sender{
+    UIButton *btn = (UIButton *)sender;
+    if ([self.delegate respondsToSelector:@selector(selectFont:)]) {
+        [self.delegate selectFont:btn.tag];
     }
 }
 

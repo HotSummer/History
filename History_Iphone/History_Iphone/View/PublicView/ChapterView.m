@@ -9,6 +9,7 @@
 #import "ChapterView.h"
 #import "PageView.h"
 #import "TextKitManager.h"
+#import "ChapterManager.h"
 
 @implementation ChapterView
 
@@ -44,14 +45,32 @@
     }
 }
 
+- (void)reloadData{
+    for (PageView *page in _pageReuseView) {
+        [page removeFromSuperview];
+    }
+    for (PageView *page in _pageViews) {
+        [page removeFromSuperview];
+    }
+    [_pageReuseView removeAllObjects];
+    [_pageViews removeAllObjects];
+    [_pageContents removeAllObjects];
+    
+    [self loadPagesView];
+    [self setReadMode:[ChapterManager shareInstance].chapterConfig.readMode];
+}
+
 //计算页面及数据
 - (NSInteger)calcPages{
     NSInteger iTotalTextNumber = 0;
     NSInteger iPageNumers = 0;
+    NSDictionary *dic = nil;
+    dic = @{@"font":[[ChapterManager shareInstance] getTextFont]};
+    
     while (iTotalTextNumber < self.strContent.length) {
         iPageNumers ++;
         NSString *strLeft = [self.strContent substringFromIndex:iTotalTextNumber];
-        NSInteger iPageContentNumber = [[TextKitManager shareInstance] getShowNumbers:strLeft rect:scrollText.bounds attribute:nil];
+        NSInteger iPageContentNumber = [[TextKitManager shareInstance] getShowNumbers:strLeft rect:scrollText.bounds attribute:dic];
         NSString *strContentPage = [strLeft substringToIndex:iPageContentNumber];
         [_pageContents addObject:strContentPage];
         iTotalTextNumber += iPageContentNumber;
@@ -62,6 +81,7 @@
     if (iPageNumers > 2) {
         PageView *pageView = [[[NSBundle mainBundle] loadNibNamed:@"PageView" owner:self options:nil] lastObject];
         [_pageReuseView addObject:pageView];
+        pageView.font = [[ChapterManager shareInstance] getTextFont];
     }
     
     return iPageNumers>3?3:iPageNumers;
@@ -73,6 +93,7 @@
     for (int i=0; i<iPages; i++) {
         PageView *pageView = [[[NSBundle mainBundle] loadNibNamed:@"PageView" owner:self options:nil] lastObject];
         [_pageViews addObject:pageView];
+        pageView.font = [[ChapterManager shareInstance] getTextFont];
     }
 }
 
@@ -83,9 +104,21 @@
     for (int i=0; i<_pageViews.count; i++) {
         PageView *pageView = _pageViews[i];
         [scrollText addSubview:pageView];
+        
         pageView.frame = CGRectMake(i*320, 0, pageView.frame.size.width, pageView.frame.size.height);
         pageView.strContent = _pageContents[i];
     }
+    
+    //需要使用重用的cell
+    if (iCurrentIndex >= 2) {
+        NSInteger iCurrentCopy = iCurrentIndex;
+        iCurrentIndex = 1;
+        for (int i=2; i<=iCurrentCopy; i++) {
+            [self reusePagesView:i];
+            iCurrentIndex ++;
+        }
+    }
+    [scrollText setContentOffset:CGPointMake(iCurrentIndex*320, 0)];
 }
 
 - (NSInteger)getCurrentPageIndex{
@@ -133,35 +166,43 @@
     }
 }
 
+- (void)setSizeMode{
+    [self reloadData];
+}
+
 - (void)reusePagesView:(NSInteger)index{
     if (iCurrentIndex < index) {//往后滑动
         if (![self hasPageViewAfter:index]) {
             PageView *visibleFirstPageView = [self getVisibleFirstPageView];
-            PageView *reusePageView = _pageReuseView[0];
-            [_pageReuseView removeObject:reusePageView];
-            [_pageViews removeObject:visibleFirstPageView];
-            [_pageReuseView addObject:visibleFirstPageView];
-            [_pageViews addObject:reusePageView];
-            reusePageView.frame = CGRectMake((index+1)*320, 0, reusePageView.frame.size.width, reusePageView.frame.size.height);
-            [scrollText addSubview:reusePageView];
-            reusePageView.strContent = _pageContents[index+1];
-            [visibleFirstPageView removeFromSuperview];
+            if (visibleFirstPageView) {
+                PageView *reusePageView = _pageReuseView[0];
+                [_pageReuseView removeObject:reusePageView];
+                [_pageViews removeObject:visibleFirstPageView];
+                [_pageReuseView addObject:visibleFirstPageView];
+                [_pageViews addObject:reusePageView];
+                reusePageView.frame = CGRectMake((index+1)*320, 0, reusePageView.frame.size.width, reusePageView.frame.size.height);
+                [scrollText addSubview:reusePageView];
+                reusePageView.strContent = _pageContents[index+1];
+                [visibleFirstPageView removeFromSuperview];
+            }
         }
     }else{
         if (![self hasPageViewBefore:index]) {
             PageView *visibleFirstPageView = [self getVisibleLastPageView];
-            PageView *reusePageView = _pageReuseView[0];
-            [_pageReuseView removeObject:reusePageView];
-            [_pageViews removeObject:visibleFirstPageView];
-            [_pageReuseView addObject:visibleFirstPageView];
-            [_pageViews addObject:reusePageView];
-            reusePageView.frame = CGRectMake((index-1)*320, 0, reusePageView.frame.size.width, reusePageView.frame.size.height);
-            [scrollText addSubview:reusePageView];
-            reusePageView.strContent = _pageContents[index-1];
-            [visibleFirstPageView removeFromSuperview];
+            if (visibleFirstPageView) {
+                PageView *reusePageView = _pageReuseView[0];
+                [_pageReuseView removeObject:reusePageView];
+                [_pageViews removeObject:visibleFirstPageView];
+                [_pageReuseView addObject:visibleFirstPageView];
+                [_pageViews addObject:reusePageView];
+                reusePageView.frame = CGRectMake((index-1)*320, 0, reusePageView.frame.size.width, reusePageView.frame.size.height);
+                [scrollText addSubview:reusePageView];
+                reusePageView.strContent = _pageContents[index-1];
+                [visibleFirstPageView removeFromSuperview];
+            }
         }
     }
-    iCurrentIndex = index;
+    
 }
 
 //index后面还有没有PageView（如果index=最后一个，则认为有）
@@ -231,6 +272,7 @@
     NSInteger index = (NSInteger)(contentOffSet/320);
     if (index != iCurrentIndex) {
         [self reusePagesView:index];
+        iCurrentIndex = index;
     }
 }
 
@@ -238,6 +280,7 @@
     CGFloat contentOffSet = scrollView.contentOffset.x;
     NSInteger index = (NSInteger)(contentOffSet/320);
     [self reusePagesView:index];
+    iCurrentIndex = index;
 }
 
 @end

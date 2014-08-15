@@ -65,6 +65,8 @@ typedef enum{
 @property (nonatomic, assign) CGFloat minimumPageScale;
 @property (nonatomic, assign) PagedFlowViewOrientation orientation;
 @property (nonatomic, assign, readonly) NSInteger currentPageIndex;
+@property(nonatomic, assign) CGFloat cellYOffSet;
+@property(nonatomic, assign) CGFloat cellXOffSet;
 
 - (void)reloadData;
 

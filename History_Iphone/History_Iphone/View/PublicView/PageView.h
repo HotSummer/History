@@ -18,7 +18,7 @@ NSLayoutManagerDelegate
     
 }
 @property(nonatomic, strong) UITextView *txtContent;
-
 @property(nonatomic, strong) NSString *strContent;
+@property(nonatomic, strong) UIFont *font;
 
 @end

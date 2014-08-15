@@ -12,13 +12,17 @@
 
 @optional
 - (void)selectColor:(NSInteger)iColor;
+- (void)selectFont:(NSInteger)iSize;
 
 @end
 
-@interface ChapterConfigView : UIView
+@interface ChapterConfigView : UIView{
+    IBOutlet UISlider *slider;
+}
 @property(nonatomic, weak) id<ChapterConfigDelegate> delegate;
 
 - (IBAction)didPressedBtnBg:(id)sender;
 - (IBAction)didPressedBtnColor:(id)sender;
+- (IBAction)swipeBrightness:(id)sender;
 
 @end

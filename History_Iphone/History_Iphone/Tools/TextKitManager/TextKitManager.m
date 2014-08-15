@@ -21,8 +21,10 @@
 
 - (NSInteger)getShowNumbers:(NSString *)strContent rect:(CGRect)rect attribute:(NSDictionary *)dic{
     
+    UIFont *font = dic[@"font"];
+    
     NSTextStorage *textStorage = [[NSTextStorage alloc] initWithString:strContent];
-    [textStorage addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14] range:NSMakeRange(0, strContent.length)];
+    [textStorage addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, strContent.length)];
     
     NSLayoutManager *layoutManager = [[NSLayoutManager alloc] init];
     [textStorage addLayoutManager:layoutManager];

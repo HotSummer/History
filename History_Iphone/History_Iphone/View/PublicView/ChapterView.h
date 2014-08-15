@@ -34,8 +34,12 @@ UIScrollViewDelegate
 //获取当前的pageview
 - (NSInteger)getCurrentPageIndex;
 
+- (void)reloadData;
+
 //设置阅读模式
 - (void)setReadMode:(ReadMode)mode;
+//设置文字大小
+- (void)setSizeMode;
 
 
 @end

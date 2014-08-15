@@ -13,11 +13,18 @@
 @interface ChapterManager : NSObject{
     
 }
-
+@property(nonatomic, strong) NSString *content;
 @property(nonatomic, strong) ChapterConfig *chapterConfig;
 
 + (ChapterManager *)shareInstance;
 
-- (ChapterView *)createChapterView:(ChapterConfig *)config;
+- (ChapterView *)createChapterView;
+
+- (void)setChapterConfigReadMode:(ReadMode)readMode;
+- (void)setChapterConfigReadSize:(ReadSize)readSize;
+
+- (UIFont *)getTextFont;
+
+- (void)saveConfig;
 
 @end

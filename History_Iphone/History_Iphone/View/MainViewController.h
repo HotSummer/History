@@ -17,5 +17,6 @@
 - (IBAction)didPressedBtnDynastyMap:(id)sender;
 - (IBAction)didPressedBtnDynastyStory:(id)sender;
 - (IBAction)didPressedBtnPersonStory:(id)sender;
+- (IBAction)didPressedBtnTimeLine:(id)sender;
 
 @end

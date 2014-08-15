@@ -34,7 +34,6 @@
         _txtContent = [[UITextView alloc] initWithFrame:self.bounds textContainer:textContainer];//设置textView样式
         _txtContent.editable = NO;
         _txtContent.scrollEnabled = NO;
-        _txtContent.font = [UIFont systemFontOfSize:14];
     }
     return self;
 }
@@ -52,6 +51,11 @@
 - (void)setStrContent:(NSString *)strContent{
     _strContent = strContent;
     _txtContent.text = strContent;
+}
+
+- (void)setFont:(UIFont *)font{
+    _font = font;
+    _txtContent.font = _font;
 }
 
 #pragma mark - NSLayoutManagerDelegate

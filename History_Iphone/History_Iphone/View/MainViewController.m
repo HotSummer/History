@@ -10,6 +10,7 @@
 #import "DynastyMapViewController.h"
 #import "StoryListViewController.h"
 #import "PersonListViewController.h"
+#import "TimeLineViewController.h"
 #import "UIController.h"
 
 @interface MainViewController ()
@@ -51,6 +52,10 @@
 - (IBAction)didPressedBtnPersonStory:(id)sender{
     PersonListViewController *personListVC = [[PersonListViewController alloc] initWithNibName:@"PersonListViewController" bundle:nil];
     [self.navigationController pushViewController:personListVC animated:YES];
+}
+- (IBAction)didPressedBtnTimeLine:(id)sender{
+    TimeLineViewController *timeLineVC = [[TimeLineViewController alloc] initWithNibName:@"TimeLineViewController" bundle:nil];
+    [self.navigationController pushViewController:timeLineVC animated:YES];
 }
 
 @end

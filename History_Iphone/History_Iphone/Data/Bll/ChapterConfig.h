@@ -14,9 +14,17 @@ typedef enum {
     Black
 }ReadMode;
 
+
+typedef enum {
+    Small = 0,
+    Big
+}ReadSize;
+
 @interface ChapterConfig : NSObject<NSCoding, NSCopying>
 
-@property(nonatomic, strong) NSString *content;
+@property(nonatomic) ReadSize readSize;
 @property(nonatomic) ReadMode readMode;
+
+- (UIFont *)getFont;
 
 @end

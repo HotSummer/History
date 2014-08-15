@@ -42,10 +42,8 @@
     self.navigationItem.title = story.storyTitle;
     
     //工厂模式
-    ChapterConfig *config = [[ChapterConfig alloc] init];
-    config.readMode = Day;
-    config.content = story.storyContent;
-    chapterView = [[ChapterManager shareInstance] createChapterView:config];//[[[NSBundle mainBundle] loadNibNamed:@"ChapterView" owner:self options:nil] lastObject];
+    [ChapterManager shareInstance].content = story.storyContent;
+    chapterView = [[ChapterManager shareInstance] createChapterView];
     [self.view addSubview:chapterView];
     chapterView.frame = CGRectMake(0, 64, 320, 454);
     
@@ -143,7 +141,14 @@
 
 #pragma mark - ChapterConfigDelegate
 - (void)selectColor:(NSInteger)iColor{
-    [chapterView setReadMode:(ReadMode)iColor];
+    [[ChapterManager shareInstance] setChapterConfigReadMode:(ReadMode)iColor];
+    [chapterView setReadMode:(ReadMode)iColor];   
 }
+
+- (void)selectFont:(NSInteger)iSize{
+    [[ChapterManager shareInstance] setChapterConfigReadSize:(ReadSize)iSize];
+    [chapterView setSizeMode];
+}
+
 
 @end

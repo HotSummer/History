@@ -13,22 +13,30 @@
 
 - (id)initWithCoder:(NSCoder *)aDecoder{
     if (self = [super init]) {
-        self.content = [aDecoder decodeObjectForKey:@"content"];
+        self.readSize = [aDecoder decodeIntForKey:@"readSize"];
         self.readMode = [aDecoder decodeIntForKey:@"readMode"];
     }
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder{
-    [aCoder encodeObject:self.content forKey:@"content"];
-    [aCoder encodeInteger:self.readMode forKey:@"readMode"];
+    [aCoder encodeInt:self.readSize forKey:@"readSize"];
+    [aCoder encodeInt:self.readMode forKey:@"readMode"];
 }
 
 - (id)copyWithZone:(NSZone *)zone{
     ChapterConfig *copy = [[[self class] allocWithZone:zone] init];
-    copy.content = [_content copyWithZone:zone];
     copy.readMode = self.readMode;
+    copy.readSize = self.readSize;
     return copy;
+}
+
+- (UIFont *)getFont{
+    if (_readSize == Small) {
+        return [UIFont systemFontOfSize:14.0];
+    }else{
+        return [UIFont systemFontOfSize:16.0];
+    }
 }
 
 @end
