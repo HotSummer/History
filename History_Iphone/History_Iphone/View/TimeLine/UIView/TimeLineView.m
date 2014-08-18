@@ -96,8 +96,20 @@
     [_viewTimeLine addSubview:lbl];
     
     NSArray *arrEntity = [TimeLineManager shareInstance].timeLines;
+    CGFloat fYPosition = 0;
     for (int i=0; i<arrEntity.count; i++) {
+        TimeLineEntity *entity = arrEntity[i];
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        if (i==0) {
+            btn.frame = CGRectMake(4, 6, 68, 12);
+            fYPosition = 6;
+        }else{
+            btn.frame = CGRectMake(4, _fTotalTimeLineLength*[_arrRate[i-1] floatValue]+fYPosition-6, 68, 12);
+            fYPosition += _fTotalTimeLineLength*[_arrRate[i-1] floatValue];
+        }
         
+        [btn setTitle:entity.name forState:UIControlStateNormal];
+        [_viewTimeLine addSubview:btn];
     }
 }
 
