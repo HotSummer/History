@@ -7,9 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TimeLineSlideView.h"
 
-@interface TimeLineView : UIView{
+@protocol TimeLineDelegate <NSObject>
+
+@optional
+- (void)selectTime:(NSInteger)iTimeNumber;
+
+@end
+
+@interface TimeLineView : UIView
+<
+TimeLineSlideDelegate
+>{
     IBOutlet UIScrollView *scrollViewTimeLine;
+    TimeLineSlideView *timeLineSlideView;
 }
+@property(nonatomic, weak) id<TimeLineDelegate> delegate;
+
+- (void)scrollToTime:(NSInteger)timeNumber;
 
 @end

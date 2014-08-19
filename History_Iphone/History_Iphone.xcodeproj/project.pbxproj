@@ -20,6 +20,9 @@
 		4EAB489B199E005100C8DD7D /* TimeLineView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EAB489A199E005100C8DD7D /* TimeLineView.xib */; };
 		4EAB48A1199E05DD00C8DD7D /* TimeLineEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB48A0199E05DD00C8DD7D /* TimeLineEntity.m */; };
 		4EAB48A4199E069500C8DD7D /* TimeLineManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB48A3199E069500C8DD7D /* TimeLineManager.m */; };
+		4EC9895B19A334EA00878B84 /* GrayCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC9895A19A334EA00878B84 /* GrayCircle.m */; };
+		4EC9895E19A3388B00878B84 /* TimeLineSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC9895D19A3388B00878B84 /* TimeLineSlideView.m */; };
+		4EC9896119A33B4E00878B84 /* TimeLineScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC9896019A33B4E00878B84 /* TimeLineScrollView.m */; };
 		4ECDA9BE199071CD005F72B6 /* ChapterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECDA9B9199071CD005F72B6 /* ChapterView.m */; };
 		4ECDA9BF199071CD005F72B6 /* ChapterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ECDA9BA199071CD005F72B6 /* ChapterView.xib */; };
 		4ECDA9C0199071CD005F72B6 /* PageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECDA9BC199071CD005F72B6 /* PageView.m */; };
@@ -150,6 +153,12 @@
 		4EAB48A0199E05DD00C8DD7D /* TimeLineEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineEntity.m; sourceTree = "<group>"; };
 		4EAB48A2199E069500C8DD7D /* TimeLineManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineManager.h; sourceTree = "<group>"; };
 		4EAB48A3199E069500C8DD7D /* TimeLineManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineManager.m; sourceTree = "<group>"; };
+		4EC9895919A334EA00878B84 /* GrayCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrayCircle.h; sourceTree = "<group>"; };
+		4EC9895A19A334EA00878B84 /* GrayCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrayCircle.m; sourceTree = "<group>"; };
+		4EC9895C19A3388B00878B84 /* TimeLineSlideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineSlideView.h; sourceTree = "<group>"; };
+		4EC9895D19A3388B00878B84 /* TimeLineSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineSlideView.m; sourceTree = "<group>"; };
+		4EC9895F19A33B4E00878B84 /* TimeLineScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineScrollView.h; sourceTree = "<group>"; };
+		4EC9896019A33B4E00878B84 /* TimeLineScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineScrollView.m; sourceTree = "<group>"; };
 		4ECDA9B8199071CD005F72B6 /* ChapterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChapterView.h; sourceTree = "<group>"; };
 		4ECDA9B9199071CD005F72B6 /* ChapterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChapterView.m; sourceTree = "<group>"; };
 		4ECDA9BA199071CD005F72B6 /* ChapterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChapterView.xib; sourceTree = "<group>"; };
@@ -372,6 +381,12 @@
 				4EAB4897199E004500C8DD7D /* TimeLineView.h */,
 				4EAB4898199E004500C8DD7D /* TimeLineView.m */,
 				4EAB489A199E005100C8DD7D /* TimeLineView.xib */,
+				4EC9895919A334EA00878B84 /* GrayCircle.h */,
+				4EC9895A19A334EA00878B84 /* GrayCircle.m */,
+				4EC9895C19A3388B00878B84 /* TimeLineSlideView.h */,
+				4EC9895D19A3388B00878B84 /* TimeLineSlideView.m */,
+				4EC9895F19A33B4E00878B84 /* TimeLineScrollView.h */,
+				4EC9896019A33B4E00878B84 /* TimeLineScrollView.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -932,6 +947,7 @@
 				4EAB4896199DF8A900C8DD7D /* WhiteCircle.m in Sources */,
 				79F2FB271940A91800780F2A /* PersonListViewController.m in Sources */,
 				4EAB47B41992290A00C8DD7D /* ChapterConfigView.m in Sources */,
+				4EC9895E19A3388B00878B84 /* TimeLineSlideView.m in Sources */,
 				4ECDAA2A1990B97F005F72B6 /* ChapterManager.m in Sources */,
 				4EAB488C199DB02500C8DD7D /* PagedFlowView.m in Sources */,
 				4ECDAA2619907A7E005F72B6 /* CollectViewController.m in Sources */,
@@ -945,7 +961,9 @@
 				79F2FB21193F6EC300780F2A /* StoryViewController.m in Sources */,
 				790AE1EB192CFB5800FC4668 /* CoreDataManager.m in Sources */,
 				79989A8E1993D0CF00A8D6E5 /* ChapterConfig.m in Sources */,
+				4EC9895B19A334EA00878B84 /* GrayCircle.m in Sources */,
 				4ECDAA1E19907A37005F72B6 /* CollectionEntity.m in Sources */,
+				4EC9896119A33B4E00878B84 /* TimeLineScrollView.m in Sources */,
 				790AE1E6192CED3200FC4668 /* History.xcdatamodeld in Sources */,
 				79410895194F3CF200C0D438 /* DynastyPersonDetail.m in Sources */,
 				79E07BBC19362047008EA875 /* DynastyMapViewController.m in Sources */,

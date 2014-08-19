@@ -84,7 +84,7 @@
         entity5.story_id = @"17";
         entity5.name = @"Story6";
         entity5.image = @"story3.png";
-        entity5.length = 70;
+        entity5.length = 20;
         
         _timeLines = @[entity, entity1, entity2, entity3, entity4, entity5];
     }

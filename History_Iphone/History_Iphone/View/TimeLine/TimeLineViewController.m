@@ -31,12 +31,13 @@
     self.navigationItem.title = @"时间轴";
     pageView.dataSource = self;
     pageView.delegate = self;
-    pageView.minimumPageScale = 0.7;//0.7;
-    pageView.minimumPageAlpha = 0.8;//0.3;
+    pageView.minimumPageScale = 0.7;
+    pageView.minimumPageAlpha = 0.8;
     pageView.orientation = PagedFlowViewOrientationVertical;
     
-    TimeLineView *timeLineView = [[[NSBundle mainBundle] loadNibNamed:@"TimeLineView" owner:self options:nil] lastObject];
+    timeLineView = [[[NSBundle mainBundle] loadNibNamed:@"TimeLineView" owner:self options:nil] lastObject];
     timeLineView.frame = CGRectMake(0, 64, timeLineView.frame.size.width, timeLineView.frame.size.height);
+    timeLineView.delegate = self;
     [self.view addSubview:timeLineView];
 }
 
@@ -67,10 +68,16 @@
 
 - (void)flowView:(PagedFlowView *)flowView didScrollToPageAtIndex:(NSInteger)index {
     //    NSLog(@"Scrolled to page # %ld", (long)index);
+    [timeLineView scrollToTime:index];
 }
 
 - (void)flowView:(PagedFlowView *)flowView didTapPageAtIndex:(NSInteger)index{
     //    NSLog(@"Tapped on page # %ld", (long)index);
+}
+
+#pragma mark - TimeLineDelegate
+- (void)selectTime:(NSInteger)iTimeNumber{
+    [pageView scrollToPage:iTimeNumber];
 }
 
 @end

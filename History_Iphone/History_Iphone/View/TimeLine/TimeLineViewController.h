@@ -13,9 +13,11 @@
 @interface TimeLineViewController : UIViewController
 <
 PagedFlowViewDataSource,
-PagedFlowViewDelegate
+PagedFlowViewDelegate,
+TimeLineDelegate
 >{
     IBOutlet PagedFlowView *pageView;
+    TimeLineView *timeLineView;
 }
 
 @end
