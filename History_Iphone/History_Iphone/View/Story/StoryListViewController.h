@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface StoryListViewController : UIViewController
+@interface StoryListViewController : BaseViewController
 <
 UISearchBarDelegate,
 UITableViewDataSource,

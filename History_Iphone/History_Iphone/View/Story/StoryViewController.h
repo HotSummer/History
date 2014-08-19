@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "ChapterConfigView.h"
+#import "BaseViewController.h"
 
-@interface StoryViewController : UIViewController
+@interface StoryViewController : BaseViewController
 <
 ChapterConfigDelegate
 >{
