@@ -23,6 +23,10 @@
 		4EC9895B19A334EA00878B84 /* GrayCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC9895A19A334EA00878B84 /* GrayCircle.m */; };
 		4EC9895E19A3388B00878B84 /* TimeLineSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC9895D19A3388B00878B84 /* TimeLineSlideView.m */; };
 		4EC9896119A33B4E00878B84 /* TimeLineScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC9896019A33B4E00878B84 /* TimeLineScrollView.m */; };
+		4EC9896419A43B8700878B84 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC9896319A43B8700878B84 /* BaseViewController.m */; };
+		4EC9897019A47AD300878B84 /* STHeiti-Medium.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 4EC9896F19A47AD300878B84 /* STHeiti-Medium.ttc */; };
+		4EC9897619A4893200878B84 /* DynastyCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC9897519A4893200878B84 /* DynastyCellView.m */; };
+		4EC9897D19A4911400878B84 /* DynastyCollectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC9897C19A4911400878B84 /* DynastyCollectView.m */; };
 		4ECDA9BE199071CD005F72B6 /* ChapterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECDA9B9199071CD005F72B6 /* ChapterView.m */; };
 		4ECDA9BF199071CD005F72B6 /* ChapterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ECDA9BA199071CD005F72B6 /* ChapterView.xib */; };
 		4ECDA9C0199071CD005F72B6 /* PageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECDA9BC199071CD005F72B6 /* PageView.m */; };
@@ -79,7 +83,6 @@
 		795F0B79195C7E0F00D5874B /* TextKitManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 795F0B78195C7E0F00D5874B /* TextKitManager.m */; };
 		7995F09119A3A86100D37E2B /* btn_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 7995F08F19A3A86100D37E2B /* btn_back.png */; };
 		7995F09219A3A86100D37E2B /* btn_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7995F09019A3A86100D37E2B /* btn_back@2x.png */; };
-		7995F09519A3A8A700D37E2B /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7995F09419A3A8A700D37E2B /* BaseViewController.m */; };
 		79989A8E1993D0CF00A8D6E5 /* ChapterConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 79989A8D1993D0CF00A8D6E5 /* ChapterConfig.m */; };
 		79A662F4192BA32100B7170E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A662F3192BA32100B7170E /* Foundation.framework */; };
 		79A662F6192BA32100B7170E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A662F5192BA32100B7170E /* CoreGraphics.framework */; };
@@ -162,6 +165,14 @@
 		4EC9895D19A3388B00878B84 /* TimeLineSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineSlideView.m; sourceTree = "<group>"; };
 		4EC9895F19A33B4E00878B84 /* TimeLineScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineScrollView.h; sourceTree = "<group>"; };
 		4EC9896019A33B4E00878B84 /* TimeLineScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineScrollView.m; sourceTree = "<group>"; };
+		4EC9896219A43B8700878B84 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		4EC9896319A43B8700878B84 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		4EC9896F19A47AD300878B84 /* STHeiti-Medium.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "STHeiti-Medium.ttc"; sourceTree = "<group>"; };
+		4EC9897419A4893200878B84 /* DynastyCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynastyCellView.h; sourceTree = "<group>"; };
+		4EC9897519A4893200878B84 /* DynastyCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynastyCellView.m; sourceTree = "<group>"; };
+		4EC9897A19A48DCB00878B84 /* HistoryDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryDefine.h; sourceTree = "<group>"; };
+		4EC9897B19A4911400878B84 /* DynastyCollectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynastyCollectView.h; sourceTree = "<group>"; };
+		4EC9897C19A4911400878B84 /* DynastyCollectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynastyCollectView.m; sourceTree = "<group>"; };
 		4ECDA9B8199071CD005F72B6 /* ChapterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChapterView.h; sourceTree = "<group>"; };
 		4ECDA9B9199071CD005F72B6 /* ChapterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChapterView.m; sourceTree = "<group>"; };
 		4ECDA9BA199071CD005F72B6 /* ChapterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChapterView.xib; sourceTree = "<group>"; };
@@ -235,8 +246,6 @@
 		795F0B78195C7E0F00D5874B /* TextKitManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextKitManager.m; sourceTree = "<group>"; };
 		7995F08F19A3A86100D37E2B /* btn_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_back.png; sourceTree = "<group>"; };
 		7995F09019A3A86100D37E2B /* btn_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_back@2x.png"; sourceTree = "<group>"; };
-		7995F09319A3A8A700D37E2B /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
-		7995F09419A3A8A700D37E2B /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		79989A8C1993D0CF00A8D6E5 /* ChapterConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChapterConfig.h; sourceTree = "<group>"; };
 		79989A8D1993D0CF00A8D6E5 /* ChapterConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChapterConfig.m; sourceTree = "<group>"; };
 		79A662F0192BA32100B7170E /* History_Iphone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = History_Iphone.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -365,6 +374,10 @@
 				4EAB47B21992290A00C8DD7D /* ChapterConfigView.h */,
 				4EAB47B31992290A00C8DD7D /* ChapterConfigView.m */,
 				4EAB47B51992291A00C8DD7D /* ChapterConfigView.xib */,
+				4EC9897419A4893200878B84 /* DynastyCellView.h */,
+				4EC9897519A4893200878B84 /* DynastyCellView.m */,
+				4EC9897B19A4911400878B84 /* DynastyCollectView.h */,
+				4EC9897C19A4911400878B84 /* DynastyCollectView.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -396,6 +409,14 @@
 				4EC9896019A33B4E00878B84 /* TimeLineScrollView.m */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		4EC9897719A48D7600878B84 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4EC9897A19A48DCB00878B84 /* HistoryDefine.h */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		4ECDA9B7199071CD005F72B6 /* PublicView */ = {
@@ -574,6 +595,7 @@
 		7931654F192BB60700F7D365 /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				4EC9896F19A47AD300878B84 /* STHeiti-Medium.ttc */,
 				79E07B791933A493008EA875 /* images */,
 				790AE1E4192CED3200FC4668 /* History.xcdatamodeld */,
 			);
@@ -640,6 +662,7 @@
 		79A662F9192BA32100B7170E /* History_Iphone */ = {
 			isa = PBXGroup;
 			children = (
+				4EC9897719A48D7600878B84 /* Utilities */,
 				790AE1F1192E430400FC4668 /* Business */,
 				790AE1F2192E430400FC4668 /* Data */,
 				790AE1E7192CF74400FC4668 /* Tools */,
@@ -701,6 +724,8 @@
 		79A66323192BA39B00B7170E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4EC9896219A43B8700878B84 /* BaseViewController.h */,
+				4EC9896319A43B8700878B84 /* BaseViewController.m */,
 				4EAB4884199DAF3F00C8DD7D /* TimeLine */,
 				4ECDAA2219907A7E005F72B6 /* Collect */,
 				4ECDA9B7199071CD005F72B6 /* PublicView */,
@@ -710,8 +735,6 @@
 				79A66324192BA3FB00B7170E /* MainViewController.h */,
 				79A66325192BA3FB00B7170E /* MainViewController.m */,
 				79A66326192BA3FB00B7170E /* MainViewController.xib */,
-				7995F09319A3A8A700D37E2B /* BaseViewController.h */,
-				7995F09419A3A8A700D37E2B /* BaseViewController.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -919,6 +942,7 @@
 				79E07B811933A493008EA875 /* now_shang_map.png in Resources */,
 				4EAB4889199DAF6E00C8DD7D /* TimeLineViewController.xib in Resources */,
 				79F2FB22193F6EC300780F2A /* StoryViewController.xib in Resources */,
+				4EC9897019A47AD300878B84 /* STHeiti-Medium.ttc in Resources */,
 				79F2FB2E1944997F00780F2A /* PersonListTableViewCell.xib in Resources */,
 				7995F09119A3A86100D37E2B /* btn_back.png in Resources */,
 				4ECDA9F619907444005F72B6 /* ShareSDKFlatShareViewUI.bundle in Resources */,
@@ -962,6 +986,7 @@
 				4EAB47B41992290A00C8DD7D /* ChapterConfigView.m in Sources */,
 				4EC9895E19A3388B00878B84 /* TimeLineSlideView.m in Sources */,
 				4ECDAA2A1990B97F005F72B6 /* ChapterManager.m in Sources */,
+				4EC9897619A4893200878B84 /* DynastyCellView.m in Sources */,
 				4EAB488C199DB02500C8DD7D /* PagedFlowView.m in Sources */,
 				4ECDAA2619907A7E005F72B6 /* CollectViewController.m in Sources */,
 				79E07BE319377B03008EA875 /* DynastyView.m in Sources */,
@@ -970,9 +995,11 @@
 				4ECDAA2119907A62005F72B6 /* CollectManager.m in Sources */,
 				790AE201192E4BAF00FC4668 /* UIController.m in Sources */,
 				79E07BD619376DD8008EA875 /* DynastyList.m in Sources */,
+				4EC9896419A43B8700878B84 /* BaseViewController.m in Sources */,
 				79E07BC219362E8A008EA875 /* StoryListViewController.m in Sources */,
 				79F2FB21193F6EC300780F2A /* StoryViewController.m in Sources */,
 				790AE1EB192CFB5800FC4668 /* CoreDataManager.m in Sources */,
+				4EC9897D19A4911400878B84 /* DynastyCollectView.m in Sources */,
 				79989A8E1993D0CF00A8D6E5 /* ChapterConfig.m in Sources */,
 				4EC9895B19A334EA00878B84 /* GrayCircle.m in Sources */,
 				4ECDAA1E19907A37005F72B6 /* CollectionEntity.m in Sources */,

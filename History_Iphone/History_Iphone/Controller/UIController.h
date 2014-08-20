@@ -19,6 +19,8 @@ typedef enum {
 
 @interface UIController : NSObject
 
+@property(nonatomic, strong) NSString *selectedDynastyId;
+
 @property(nonatomic, strong, readonly) NSArray *arrDynasties;
 
 //故事列表中的搜索关键词
@@ -35,7 +37,7 @@ typedef enum {
 //当前选择的人物id
 @property(nonatomic, strong) NSString *currentPersonId;
 
-+ (id)shareInstance;
++ (UIController *)shareInstance;
 
 //添加数据到数据库
 - (void)addDataToDB;
@@ -48,6 +50,8 @@ typedef enum {
 - (NSArray *)getStoryTitles;
 //获取包含搜索条件的朝代数据（显示section）
 - (NSArray *)getStoriesDynastyList;
+//根据朝代id获取朝代
+- (NSArray *)getStoriesDynastyListByDynastyId:(NSString *)dynastyId;
 //获取某个朝代下的历史故事
 - (NSArray *)getStoriesByDynastyId:(NSString *)dynastyId;
 //获取某个故事

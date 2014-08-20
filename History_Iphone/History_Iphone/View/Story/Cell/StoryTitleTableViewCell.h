@@ -11,7 +11,9 @@
 
 @interface StoryTitleTableViewCell : UITableViewCell{
     IBOutlet UILabel *lblTitle;
+    UILabel *lbl;
 }
 @property(nonatomic, strong) DynastyStoryList *storyTitle;
+@property(nonatomic) BOOL bLast;
 
 @end

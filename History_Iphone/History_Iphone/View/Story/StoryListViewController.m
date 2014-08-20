@@ -32,13 +32,52 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.navigationController.navigationBarHidden = NO;
-    self.navigationItem.title = @"历史故事";
+    UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 44)];
+    lbl.font = [UIFont fontWithName:@"DIN Alternate" size:22.0];
+    lbl.textColor = [UIColor whiteColor];
+    lbl.text = @"历史故事";
+    lbl.textAlignment = NSTextAlignmentCenter;
+    self.navigationItem.titleView = lbl;
+    
+    [self loadDynastyCell];
+    tableStoryList.contentOffset = CGPointMake(0, 0);
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)loadDynastyCell{
+    NSArray *arrDynasties = [[UIController shareInstance] getStoriesDynastyList];
+    
+    CGFloat fTotalLength = 20;
+    for (int i=0; i<arrDynasties.count+1; i++) {
+        fTotalLength += 98;
+    }
+    fTotalLength += 15;
+    
+    DynastyCollectView *dynastyCollectView = [[DynastyCollectView alloc] initWithFrame:CGRectMake(0, 0, fTotalLength, 44)];
+    dynastyCollectView.arrDynasties = arrDynasties;
+    [scrollDynasty addSubview:dynastyCollectView];
+    dynastyCollectView.delegate = self;
+    [scrollDynasty setContentSize:CGSizeMake(fTotalLength, 42)];
+    
+    UILabel *lblSeparete = [[UILabel alloc] initWithFrame:CGRectMake(0, 44-thinLineHeight, 320, thinLineHeight)];
+    lblSeparete.backgroundColor = [UIColor colorWithRed:136.0/255.0 green:136.0/255.0 blue:136.0/255.0 alpha:1.0];
+    [cellDynasty addSubview:lblSeparete];
+    [tableStoryList reloadData];
+}
+
+#pragma mark - DynastyCollectDelegate
+- (void)didSelectedDynasty:(DynastyList *)dynasty{
+    if (!dynasty) {
+        [UIController shareInstance].selectedDynastyId = nil;
+    }else{
+        [UIController shareInstance].selectedDynastyId = dynasty.dynastyId;
+    }
+    [tableStoryList reloadData];
 }
 
 #pragma mark - search delegate
@@ -69,78 +108,60 @@
 
 #pragma mark - table view delegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return [[UIController shareInstance] getStoriesDynastyList].count;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 20.0;
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    DynastyList *dynastyList = (DynastyList *)[[UIController shareInstance] getStoriesDynastyList][section];
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 20)];
-    view.backgroundColor = [UIColor clearColor];
-    UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 310, 20)];
-    lbl.backgroundColor = [UIColor grayColor];
-    lbl.textColor = [UIColor blackColor];
-    lbl.text = dynastyList.dynastyName;
-    [view addSubview:lbl];
-    return view;
-}
-
-//点击索引
-- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index{
-    NSInteger count = 0;
-    for (DynastyList *dynastyList in [[UIController shareInstance] getStoriesDynastyList]) {
-        if ([dynastyList.dynastyName isEqualToString:title]) {
-            return count;
-        }
-        count ++;
-    }
-    return count;
-}
-//索引
-- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
-    NSArray *arrStoriesTitles = [[UIController shareInstance] getStoriesDynastyList];
-    NSMutableArray *arrTitles = [[NSMutableArray alloc] initWithCapacity:arrStoriesTitles.count];
-    for (DynastyList *dynastyList in arrStoriesTitles) {
-        [arrTitles addObject:dynastyList.dynastyName];
-    }
-    return arrTitles;
+    return [[UIController shareInstance] getStoriesDynastyListByDynastyId:[UIController shareInstance].selectedDynastyId].count+1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    DynastyList *dynastyList = (DynastyList *)[[UIController shareInstance] getStoriesDynastyList][section];
-    NSArray *arrStoroes = [[UIController shareInstance] getStoriesByDynastyId:dynastyList.dynastyId];
-    return arrStoroes.count;
+    if (section == 0) {
+        return 1;
+    }else{
+        DynastyList *dynastyList = (DynastyList *)[[UIController shareInstance] getStoriesDynastyListByDynastyId:[UIController shareInstance].selectedDynastyId][section-1];
+        NSArray *arrStoroes = [[UIController shareInstance] getStoriesByDynastyId:dynastyList.dynastyId];
+        return arrStoroes.count;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    DynastyList *dynastyList = (DynastyList *)[[UIController shareInstance] getStoriesDynastyList][indexPath.section];
-    NSArray *arrStoroes = [[UIController shareInstance] getStoriesByDynastyId:dynastyList.dynastyId];
-    
-    static NSString *cellIndentifier = @"StoryTitleTableViewCellIndentifier";
-    StoryTitleTableViewCell *cell = (StoryTitleTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIndentifier];
-    if (cell == nil) {
-        NSArray *nibs = [[NSBundle mainBundle] loadNibNamed:@"StoryTitleTableViewCell" owner:self options:nil];
-        for (id nib in nibs) {
-            if ([nib isKindOfClass:[StoryTitleTableViewCell class]]) {
-                cell = nib;
+    if (indexPath.section == 0) {
+        return cellDynasty;
+    }else{
+        DynastyList *dynastyList = (DynastyList *)[[UIController shareInstance] getStoriesDynastyListByDynastyId:[UIController shareInstance].selectedDynastyId][indexPath.section-1];
+        NSArray *arrStoroes = [[UIController shareInstance] getStoriesByDynastyId:dynastyList.dynastyId];
+        
+        static NSString *cellIndentifier = @"StoryTitleTableViewCellIndentifier";
+        StoryTitleTableViewCell *cell = (StoryTitleTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIndentifier];
+        if (cell == nil) {
+            NSArray *nibs = [[NSBundle mainBundle] loadNibNamed:@"StoryTitleTableViewCell" owner:self options:nil];
+            for (id nib in nibs) {
+                if ([nib isKindOfClass:[StoryTitleTableViewCell class]]) {
+                    cell = nib;
+                }
             }
         }
+        cell.storyTitle = [arrStoroes objectAtIndex:indexPath.row];
+        if (indexPath.row == arrStoroes.count-1 && indexPath.section == [[UIController shareInstance] getStoriesDynastyListByDynastyId:[UIController shareInstance].selectedDynastyId].count) {
+            cell.bLast = YES;
+        }else{
+            cell.bLast = NO;
+        }
+        return cell;
     }
-    cell.storyTitle = [arrStoroes objectAtIndex:indexPath.row];
-    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    DynastyList *dynastyList = (DynastyList *)[[UIController shareInstance] getStoriesDynastyList][indexPath.section];
-    NSArray *arrStoroes = [[UIController shareInstance] getStoriesByDynastyId:dynastyList.dynastyId];
-    DynastyStoryList *entity = [arrStoroes objectAtIndex:indexPath.row];
-    [[UIController shareInstance] setCurrentStoryId:entity.storyId];
-    
-    StoryViewController *storyVC = [[StoryViewController alloc] initWithNibName:@"StoryViewController" bundle:nil];
-    [self.navigationController pushViewController:storyVC animated:YES];
+    if (indexPath.section > 0) {
+        DynastyList *dynastyList = (DynastyList *)[[UIController shareInstance] getStoriesDynastyListByDynastyId:[UIController shareInstance].selectedDynastyId][indexPath.section-1];
+        NSArray *arrStoroes = [[UIController shareInstance] getStoriesByDynastyId:dynastyList.dynastyId];
+        DynastyStoryList *entity = [arrStoroes objectAtIndex:indexPath.row];
+        [[UIController shareInstance] setCurrentStoryId:entity.storyId];
+        
+        StoryViewController *storyVC = [[StoryViewController alloc] initWithNibName:@"StoryViewController" bundle:nil];
+        [self.navigationController pushViewController:storyVC animated:YES];
+    }
+}
+
+#pragma mark - scrollview delegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     
 }
 

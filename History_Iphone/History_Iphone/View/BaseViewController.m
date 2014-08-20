@@ -28,6 +28,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame = CGRectMake(0, 0, 50, 30);
     [btn setImage:[UIImage imageNamed:@"btn_back.png"] forState:UIControlStateNormal];
@@ -36,7 +38,7 @@
     UIBarButtonItem *leftBar = [[UIBarButtonItem alloc] initWithCustomView:btn];
     self.navigationItem.leftBarButtonItem = leftBar;
     
-    self.navigationController.navigationBar.backgroundColor = [UIColor yellowColor];
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:67.0/255.0 green:6.0/255.0 blue:9.0/255.0 alpha:1.0]];
 }
 
 - (void)back:(id)sender{

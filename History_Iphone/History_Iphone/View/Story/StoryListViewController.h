@@ -8,13 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
+#import "DynastyCollectView.h"
 
 @interface StoryListViewController : BaseViewController
 <
 UISearchBarDelegate,
 UITableViewDataSource,
-UITableViewDelegate
+UITableViewDelegate,
+DynastyCollectDelegate
 >{
+//    IBOutlet UISearchBar *searchBar;
+    IBOutlet UIScrollView *scrollDynasty;
+    IBOutlet UITableViewCell *cellDynasty;
     IBOutlet UITableView *tableStoryList;
 }
 

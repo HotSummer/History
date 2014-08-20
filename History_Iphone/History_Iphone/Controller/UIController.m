@@ -26,7 +26,7 @@
 @synthesize personListSearchWord;
 @synthesize currentPersonId;
 
-+ (id)shareInstance{
++ (UIController *)shareInstance{
     static UIController *controller = nil;
     static dispatch_once_t predicate;
     dispatch_once(&predicate, ^{
@@ -76,6 +76,21 @@
             }
         }
         return arrDynasty;
+    }
+}
+
+- (NSArray *)getStoriesDynastyListByDynastyId:(NSString *)dynastyId{
+    NSArray *arrTotalDynasties = [[UIController shareInstance] getStoriesDynastyList];
+    if (dynastyId.length == 0) {
+        return arrTotalDynasties;
+    }else{
+        NSMutableArray *arrSelectedDynasty = [[NSMutableArray alloc] init];
+        for (DynastyList *dynasty in arrTotalDynasties) {
+            if ([dynasty.dynastyId isEqualToString:dynastyId]) {
+                [arrSelectedDynasty addObject:dynasty];
+            }
+        }
+        return arrSelectedDynasty;
     }
 }
 

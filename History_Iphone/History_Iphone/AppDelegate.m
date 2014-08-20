@@ -25,7 +25,27 @@
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:mainVC];
     self.window.rootViewController = nav;
     
+//    [self findFont];
+    
     return YES;
+}
+
+- (void)findFont{
+    NSArray *familyNames = [[NSArray alloc] initWithArray:[UIFont familyNames]];
+    NSArray *fontNames;
+    NSInteger indFamily, indFont;
+    for (indFamily=0; indFamily<[familyNames count]; ++indFamily)
+    {
+        NSLog(@"Family name: %s", [[familyNames objectAtIndex:indFamily] UTF8String]);
+        fontNames = [[NSArray alloc] initWithArray:
+                     [UIFont fontNamesForFamilyName:
+                      [familyNames objectAtIndex:indFamily]]];
+        for (indFont=0; indFont<[fontNames count]; ++indFont)
+        {
+            NSLog(@"    Font name: %@", [fontNames objectAtIndex:indFont]);
+        }
+        NSLog(@"%d", indFamily);
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
