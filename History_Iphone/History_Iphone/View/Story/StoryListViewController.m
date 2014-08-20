@@ -32,7 +32,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.navigationController.navigationBarHidden = NO;
-    UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 44)];
+    UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(0, 64, 100, 44)];
     lbl.font = [UIFont fontWithName:@"DIN Alternate" size:22.0];
     lbl.textColor = [UIColor whiteColor];
     lbl.text = @"历史故事";
@@ -40,13 +40,20 @@
     self.navigationItem.titleView = lbl;
     
     [self loadDynastyCell];
-    tableStoryList.contentOffset = CGPointMake(0, 0);
+    [self loadSearchView];
+    tableStoryList.frame = CGRectMake(0, 98, 320, 470);
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)loadSearchView{
+    SearchView *searchView = [[[NSBundle mainBundle] loadNibNamed:@"SearchView" owner:self options:nil] lastObject];//[[SearchView alloc] initWithFrame:CGRectMake(0, 0, 320, 34)];
+    searchView.frame = CGRectMake(0, 64, searchView.frame.size.width, searchView.frame.size.height);
+    [self.view addSubview:searchView];
 }
 
 - (void)loadDynastyCell{

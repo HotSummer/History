@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
 #import "DynastyCollectView.h"
+#import "SearchView.h"
 
 @interface StoryListViewController : BaseViewController
 <

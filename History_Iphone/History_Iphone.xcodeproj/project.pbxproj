@@ -83,6 +83,10 @@
 		795F0B79195C7E0F00D5874B /* TextKitManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 795F0B78195C7E0F00D5874B /* TextKitManager.m */; };
 		7995F09119A3A86100D37E2B /* btn_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 7995F08F19A3A86100D37E2B /* btn_back.png */; };
 		7995F09219A3A86100D37E2B /* btn_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7995F09019A3A86100D37E2B /* btn_back@2x.png */; };
+		7995F09C19A5049C00D37E2B /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 7995F09A19A5049C00D37E2B /* search.png */; };
+		7995F09D19A5049C00D37E2B /* search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7995F09B19A5049C00D37E2B /* search@2x.png */; };
+		7995F0A019A504EA00D37E2B /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7995F09F19A504EA00D37E2B /* SearchView.m */; };
+		7995F0A419A5052900D37E2B /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7995F0A319A5052900D37E2B /* SearchView.xib */; };
 		79989A8E1993D0CF00A8D6E5 /* ChapterConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 79989A8D1993D0CF00A8D6E5 /* ChapterConfig.m */; };
 		79A662F4192BA32100B7170E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A662F3192BA32100B7170E /* Foundation.framework */; };
 		79A662F6192BA32100B7170E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A662F5192BA32100B7170E /* CoreGraphics.framework */; };
@@ -246,6 +250,11 @@
 		795F0B78195C7E0F00D5874B /* TextKitManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextKitManager.m; sourceTree = "<group>"; };
 		7995F08F19A3A86100D37E2B /* btn_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_back.png; sourceTree = "<group>"; };
 		7995F09019A3A86100D37E2B /* btn_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_back@2x.png"; sourceTree = "<group>"; };
+		7995F09A19A5049C00D37E2B /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
+		7995F09B19A5049C00D37E2B /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@2x.png"; sourceTree = "<group>"; };
+		7995F09E19A504EA00D37E2B /* SearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchView.h; sourceTree = "<group>"; };
+		7995F09F19A504EA00D37E2B /* SearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchView.m; sourceTree = "<group>"; };
+		7995F0A319A5052900D37E2B /* SearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
 		79989A8C1993D0CF00A8D6E5 /* ChapterConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChapterConfig.h; sourceTree = "<group>"; };
 		79989A8D1993D0CF00A8D6E5 /* ChapterConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChapterConfig.m; sourceTree = "<group>"; };
 		79A662F0192BA32100B7170E /* History_Iphone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = History_Iphone.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -430,6 +439,9 @@
 				4ECDA9BB199071CD005F72B6 /* PageView.h */,
 				4ECDA9BC199071CD005F72B6 /* PageView.m */,
 				4ECDA9BD199071CD005F72B6 /* PageView.xib */,
+				7995F09E19A504EA00D37E2B /* SearchView.h */,
+				7995F09F19A504EA00D37E2B /* SearchView.m */,
+				7995F0A319A5052900D37E2B /* SearchView.xib */,
 			);
 			path = PublicView;
 			sourceTree = "<group>";
@@ -742,6 +754,8 @@
 		79E07B791933A493008EA875 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				7995F09A19A5049C00D37E2B /* search.png */,
+				7995F09B19A5049C00D37E2B /* search@2x.png */,
 				7995F08F19A3A86100D37E2B /* btn_back.png */,
 				7995F09019A3A86100D37E2B /* btn_back@2x.png */,
 				4EAB488D199DB31900C8DD7D /* story1@2x.png */,
@@ -923,6 +937,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7995F09D19A5049C00D37E2B /* search@2x.png in Resources */,
 				79F2FB361945EF3A00780F2A /* yiyin@2x.png in Resources */,
 				79E07B821933A493008EA875 /* now_xia_map.png in Resources */,
 				4ECDA9BF199071CD005F72B6 /* ChapterView.xib in Resources */,
@@ -933,6 +948,7 @@
 				79E07B801933A493008EA875 /* now_qin_map.png in Resources */,
 				79E07B7F1933A493008EA875 /* now_dongzhou_map.png in Resources */,
 				79E07BC319362E8A008EA875 /* StoryListViewController.xib in Resources */,
+				7995F09C19A5049C00D37E2B /* search.png in Resources */,
 				4ECDA9EC19907444005F72B6 /* ShareSDKLocalizable.strings in Resources */,
 				79E07B831933A493008EA875 /* now_xizhou_map.png in Resources */,
 				79F2FB3B194620CB00780F2A /* PersonDetailViewController.xib in Resources */,
@@ -949,6 +965,7 @@
 				79A66328192BA3FB00B7170E /* MainViewController.xib in Resources */,
 				4ECDA9C1199071CD005F72B6 /* PageView.xib in Resources */,
 				79E07BEA19377B3A008EA875 /* StoryTitleTableViewCell.xib in Resources */,
+				7995F0A419A5052900D37E2B /* SearchView.xib in Resources */,
 				4ECDA9F019907444005F72B6 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				4EAB4890199DB31900C8DD7D /* story1@2x.png in Resources */,
 				4EAB489B199E005100C8DD7D /* TimeLineView.xib in Resources */,
@@ -993,6 +1010,7 @@
 				79F2FB341944A18500780F2A /* DynastyPersonList.m in Sources */,
 				4EAB48A4199E069500C8DD7D /* TimeLineManager.m in Sources */,
 				4ECDAA2119907A62005F72B6 /* CollectManager.m in Sources */,
+				7995F0A019A504EA00D37E2B /* SearchView.m in Sources */,
 				790AE201192E4BAF00FC4668 /* UIController.m in Sources */,
 				79E07BD619376DD8008EA875 /* DynastyList.m in Sources */,
 				4EC9896419A43B8700878B84 /* BaseViewController.m in Sources */,
