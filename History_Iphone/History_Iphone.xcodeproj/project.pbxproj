@@ -77,6 +77,9 @@
 		790AE201192E4BAF00FC4668 /* UIController.m in Sources */ = {isa = PBXBuildFile; fileRef = 790AE200192E4BAF00FC4668 /* UIController.m */; };
 		79410895194F3CF200C0D438 /* DynastyPersonDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 79410894194F3CF200C0D438 /* DynastyPersonDetail.m */; };
 		795F0B79195C7E0F00D5874B /* TextKitManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 795F0B78195C7E0F00D5874B /* TextKitManager.m */; };
+		7995F09119A3A86100D37E2B /* btn_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 7995F08F19A3A86100D37E2B /* btn_back.png */; };
+		7995F09219A3A86100D37E2B /* btn_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7995F09019A3A86100D37E2B /* btn_back@2x.png */; };
+		7995F09519A3A8A700D37E2B /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7995F09419A3A8A700D37E2B /* BaseViewController.m */; };
 		79989A8E1993D0CF00A8D6E5 /* ChapterConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 79989A8D1993D0CF00A8D6E5 /* ChapterConfig.m */; };
 		79A662F4192BA32100B7170E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A662F3192BA32100B7170E /* Foundation.framework */; };
 		79A662F6192BA32100B7170E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A662F5192BA32100B7170E /* CoreGraphics.framework */; };
@@ -230,6 +233,10 @@
 		79410894194F3CF200C0D438 /* DynastyPersonDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynastyPersonDetail.m; sourceTree = "<group>"; };
 		795F0B77195C7E0F00D5874B /* TextKitManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextKitManager.h; sourceTree = "<group>"; };
 		795F0B78195C7E0F00D5874B /* TextKitManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextKitManager.m; sourceTree = "<group>"; };
+		7995F08F19A3A86100D37E2B /* btn_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_back.png; sourceTree = "<group>"; };
+		7995F09019A3A86100D37E2B /* btn_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_back@2x.png"; sourceTree = "<group>"; };
+		7995F09319A3A8A700D37E2B /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		7995F09419A3A8A700D37E2B /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		79989A8C1993D0CF00A8D6E5 /* ChapterConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChapterConfig.h; sourceTree = "<group>"; };
 		79989A8D1993D0CF00A8D6E5 /* ChapterConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChapterConfig.m; sourceTree = "<group>"; };
 		79A662F0192BA32100B7170E /* History_Iphone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = History_Iphone.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -703,6 +710,8 @@
 				79A66324192BA3FB00B7170E /* MainViewController.h */,
 				79A66325192BA3FB00B7170E /* MainViewController.m */,
 				79A66326192BA3FB00B7170E /* MainViewController.xib */,
+				7995F09319A3A8A700D37E2B /* BaseViewController.h */,
+				7995F09419A3A8A700D37E2B /* BaseViewController.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -710,6 +719,8 @@
 		79E07B791933A493008EA875 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				7995F08F19A3A86100D37E2B /* btn_back.png */,
+				7995F09019A3A86100D37E2B /* btn_back@2x.png */,
 				4EAB488D199DB31900C8DD7D /* story1@2x.png */,
 				4EAB488E199DB31900C8DD7D /* story2@2x.png */,
 				4EAB488F199DB31900C8DD7D /* story3@2x.png */,
@@ -892,6 +903,7 @@
 				79F2FB361945EF3A00780F2A /* yiyin@2x.png in Resources */,
 				79E07B821933A493008EA875 /* now_xia_map.png in Resources */,
 				4ECDA9BF199071CD005F72B6 /* ChapterView.xib in Resources */,
+				7995F09219A3A86100D37E2B /* btn_back@2x.png in Resources */,
 				4EAB4892199DB31900C8DD7D /* story3@2x.png in Resources */,
 				79A662FE192BA32100B7170E /* InfoPlist.strings in Resources */,
 				79F2FB281940A91800780F2A /* PersonListViewController.xib in Resources */,
@@ -908,6 +920,7 @@
 				4EAB4889199DAF6E00C8DD7D /* TimeLineViewController.xib in Resources */,
 				79F2FB22193F6EC300780F2A /* StoryViewController.xib in Resources */,
 				79F2FB2E1944997F00780F2A /* PersonListTableViewCell.xib in Resources */,
+				7995F09119A3A86100D37E2B /* btn_back.png in Resources */,
 				4ECDA9F619907444005F72B6 /* ShareSDKFlatShareViewUI.bundle in Resources */,
 				79A66328192BA3FB00B7170E /* MainViewController.xib in Resources */,
 				4ECDA9C1199071CD005F72B6 /* PageView.xib in Resources */,
