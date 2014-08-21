@@ -39,7 +39,14 @@
     
     self.navigationController.navigationBarHidden = NO;
     DynastyStory *story = [[UIController shareInstance] getStory];
-    self.navigationItem.title = story.storyTitle;
+//    self.navigationItem.title = story.storyTitle;
+    
+    UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(0, 64, 100, 44)];
+    lbl.font = [UIFont fontWithName:@"DIN Alternate" size:20.0];
+    lbl.textColor = [UIColor whiteColor];
+    lbl.text = story.storyTitle;
+    lbl.textAlignment = NSTextAlignmentCenter;
+    self.navigationItem.titleView = lbl;
     
     //工厂模式
     [ChapterManager shareInstance].content = story.storyContent;
@@ -48,9 +55,9 @@
     chapterView.frame = CGRectMake(0, 64, 320, 454);
     
     if ([[CollectManager shareInstance] collect:story.storyId]) {
-        [btnCollect setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        [btnCollect setImage:[UIImage imageNamed:@"btn_collection_down.png"] forState:UIControlStateNormal];
     }else{
-        [btnCollect setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [btnCollect setImage:[UIImage imageNamed:@"btn_collection_nor.png"] forState:UIControlStateNormal];
     }
 }
 
@@ -61,7 +68,6 @@
 }
 
 - (IBAction)didPressedBtnCollectList:(id)sender{
-    //    NSLog(@"collect list");
     CollectViewController *collectVC = [[CollectViewController alloc] initWithNibName:@"CollectViewController" bundle:nil];
     [self.navigationController pushViewController:collectVC animated:YES];
 }
@@ -70,7 +76,7 @@
     DynastyStory *story = [[UIController shareInstance] getStory];
     if ([[CollectManager shareInstance] collect:story.storyId]) {
         [[CollectManager shareInstance] cancelCollect:story.storyId];
-        [btnCollect setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [btnCollect setImage:[UIImage imageNamed:@"btn_collection_nor.png"] forState:UIControlStateNormal];
     }else{
         CollectionEntity *collectEntity = [[CollectionEntity alloc] init];
         collectEntity.contentId = story.storyId;
@@ -80,7 +86,15 @@
         collectEntity.collectTime = strTimer;
         
         [[CollectManager shareInstance] addCollect:collectEntity];
-        [btnCollect setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        
+        CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+        scaleAnimation.duration = 0.25f;
+        scaleAnimation.autoreverses = YES;
+        scaleAnimation.repeatCount = 1;
+        scaleAnimation.toValue = [NSNumber numberWithFloat:1.5];
+        scaleAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+        [btnCollect.layer addAnimation:scaleAnimation forKey:@"scaleAnimation"];
+        [btnCollect setImage:[UIImage imageNamed:@"btn_collection_down.png"] forState:UIControlStateNormal];
     }
 }
 

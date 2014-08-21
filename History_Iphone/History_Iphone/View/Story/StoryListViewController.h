@@ -16,7 +16,8 @@
 UISearchBarDelegate,
 UITableViewDataSource,
 UITableViewDelegate,
-DynastyCollectDelegate
+DynastyCollectDelegate,
+SearchViewDelegate
 >{
 //    IBOutlet UISearchBar *searchBar;
     IBOutlet UIScrollView *scrollDynasty;

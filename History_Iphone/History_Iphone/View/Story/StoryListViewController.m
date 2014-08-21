@@ -31,6 +31,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
     self.navigationController.navigationBarHidden = NO;
     UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(0, 64, 100, 44)];
     lbl.font = [UIFont fontWithName:@"DIN Alternate" size:22.0];
@@ -48,12 +50,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)loadSearchView{
-    SearchView *searchView = [[[NSBundle mainBundle] loadNibNamed:@"SearchView" owner:self options:nil] lastObject];//[[SearchView alloc] initWithFrame:CGRectMake(0, 0, 320, 34)];
-    searchView.frame = CGRectMake(0, 64, searchView.frame.size.width, searchView.frame.size.height);
-    [self.view addSubview:searchView];
 }
 
 - (void)loadDynastyCell{
@@ -74,6 +70,19 @@
     UILabel *lblSeparete = [[UILabel alloc] initWithFrame:CGRectMake(0, 44-thinLineHeight, 320, thinLineHeight)];
     lblSeparete.backgroundColor = [UIColor colorWithRed:136.0/255.0 green:136.0/255.0 blue:136.0/255.0 alpha:1.0];
     [cellDynasty addSubview:lblSeparete];
+    //    [tableStoryList reloadData];
+}
+
+- (void)loadSearchView{
+    SearchView *searchView = [[[NSBundle mainBundle] loadNibNamed:@"SearchView" owner:self options:nil] lastObject];//[[SearchView alloc] initWithFrame:CGRectMake(0, 0, 320, 34)];
+    searchView.frame = CGRectMake(0, 64, searchView.frame.size.width, searchView.frame.size.height);
+    [self.view addSubview:searchView];
+    searchView.delegate = self;
+}
+
+#pragma mark - SearchViewDelegate
+- (void)search:(NSString *)searchContent{
+    [[UIController shareInstance] setStorySearchWord:searchContent];
     [tableStoryList reloadData];
 }
 
