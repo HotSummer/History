@@ -95,6 +95,7 @@
 		7995F09219A3A86100D37E2B /* btn_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7995F09019A3A86100D37E2B /* btn_back@2x.png */; };
 		7995F09C19A5049C00D37E2B /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 7995F09A19A5049C00D37E2B /* search.png */; };
 		7995F09D19A5049C00D37E2B /* search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7995F09B19A5049C00D37E2B /* search@2x.png */; };
+		7995F0AA19A6676500D37E2B /* TriangleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7995F0A919A6676500D37E2B /* TriangleView.m */; };
 		79989A8E1993D0CF00A8D6E5 /* ChapterConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 79989A8D1993D0CF00A8D6E5 /* ChapterConfig.m */; };
 		79A662F4192BA32100B7170E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A662F3192BA32100B7170E /* Foundation.framework */; };
 		79A662F6192BA32100B7170E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A662F5192BA32100B7170E /* CoreGraphics.framework */; };
@@ -271,6 +272,8 @@
 		7995F09019A3A86100D37E2B /* btn_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_back@2x.png"; sourceTree = "<group>"; };
 		7995F09A19A5049C00D37E2B /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
 		7995F09B19A5049C00D37E2B /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@2x.png"; sourceTree = "<group>"; };
+		7995F0A819A6676500D37E2B /* TriangleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TriangleView.h; sourceTree = "<group>"; };
+		7995F0A919A6676500D37E2B /* TriangleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TriangleView.m; sourceTree = "<group>"; };
 		79989A8C1993D0CF00A8D6E5 /* ChapterConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChapterConfig.h; sourceTree = "<group>"; };
 		79989A8D1993D0CF00A8D6E5 /* ChapterConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChapterConfig.m; sourceTree = "<group>"; };
 		79A662F0192BA32100B7170E /* History_Iphone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = History_Iphone.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -396,6 +399,8 @@
 		4EAB47B1199228EB00C8DD7D /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				7995F0A819A6676500D37E2B /* TriangleView.h */,
+				7995F0A919A6676500D37E2B /* TriangleView.m */,
 				4EAB47B21992290A00C8DD7D /* ChapterConfigView.h */,
 				4EAB47B31992290A00C8DD7D /* ChapterConfigView.m */,
 				4EAB47B51992291A00C8DD7D /* ChapterConfigView.xib */,
@@ -1030,6 +1035,7 @@
 				4ECDA9BE199071CD005F72B6 /* ChapterView.m in Sources */,
 				79E07BE919377B3A008EA875 /* StoryTitleTableViewCell.m in Sources */,
 				79A66327192BA3FB00B7170E /* MainViewController.m in Sources */,
+				7995F0AA19A6676500D37E2B /* TriangleView.m in Sources */,
 				4EAB4896199DF8A900C8DD7D /* WhiteCircle.m in Sources */,
 				79F2FB271940A91800780F2A /* PersonListViewController.m in Sources */,
 				4EAB47B41992290A00C8DD7D /* ChapterConfigView.m in Sources */,

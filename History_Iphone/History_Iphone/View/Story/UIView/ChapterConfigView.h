@@ -18,6 +18,13 @@
 
 @interface ChapterConfigView : UIView{
     IBOutlet UISlider *slider;
+    IBOutlet UIView *viewConfig;
+    IBOutlet UILabel *lblSeperate1;
+    IBOutlet UILabel *lblSeperate2;
+    IBOutlet UILabel *lblColSeperate;
+    IBOutlet UIButton *btnWhite;
+    IBOutlet UIButton *btnColor;
+    IBOutlet UIButton *btnBlack;
 }
 @property(nonatomic, weak) id<ChapterConfigDelegate> delegate;
 
