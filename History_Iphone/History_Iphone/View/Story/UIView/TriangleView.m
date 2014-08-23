@@ -24,16 +24,15 @@
 - (void)drawRect:(CGRect)rect
 {
     // Drawing code
-    [[UIColor redColor] set];
+    [[UIColor colorWithRed:251.0/255.0 green:163.0/255.0 blue:65.0/255.0 alpha:1.0] set];
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     CGContextBeginPath(ctx);
-    CGContextMoveToPoint (ctx, CGRectGetMinX(rect), CGRectGetMinY(rect)); // top left
-//    CGContextAddLineToPoint(ctx, CGRectGetMidX(rect)-10, CGRectGetMaxY(rect)-10); // mid right
-    CGContextAddArcToPoint(ctx, CGRectGetMidX(rect)-10, CGRectGetMaxY(rect)-10, CGRectGetMidX(rect)+10, CGRectGetMaxY(rect)-10, 2);
-//    CGContextAddLineToPoint(ctx, CGRectGetMidX(rect)+2, CGRectGetMaxY(rect)-2); // mid right
-    CGContextAddLineToPoint(ctx, CGRectGetMaxX(rect), CGRectGetMinY(rect)); // bottom left
+    
+    CGContextMoveToPoint(ctx, CGRectGetMinX(rect), CGRectGetMinY(rect));//左上
+    CGContextAddArcToPoint(ctx, CGRectGetMidX(rect), CGRectGetMaxY(rect), CGRectGetMaxX(rect), CGRectGetMinY(rect), 5);
+    CGContextAddLineToPoint(ctx, CGRectGetMaxX(rect), CGRectGetMinY(rect)); // mid right
+
     CGContextClosePath(ctx);
-//    CGContextSetRGBFillColor(ctx, 1, 1, 0, 1);
     CGContextFillPath(ctx);
 }
 

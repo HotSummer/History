@@ -50,9 +50,11 @@
     btnBlack.layer.borderWidth = 1;
     btnBlack.layer.borderColor = [UIColor blackColor].CGColor;
     viewConfig.layer.cornerRadius = 5.0;
-    
-    TriangleView *triangle = [[TriangleView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
-    [self addSubview:triangle];
+//    
+//    TriangleView *triangle = [[TriangleView alloc] initWithFrame:CGRectMake(0, 50, 200, 200)];
+//    [self addSubview:triangle];
+//    triangle.backgroundColor = [UIColor blackColor];
+//    triangle.frame = CGRectMake(0, 50, 200, 200);
 }
 
 - (IBAction)didPressedBtnBg:(id)sender{
