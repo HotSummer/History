@@ -11,9 +11,11 @@
 @interface CollectListTableViewCell : UITableViewCell{
     IBOutlet UILabel *lblTitle;
     IBOutlet UILabel *lblDate;
+    UILabel *lbl;
 }
 
 @property(nonatomic, strong) NSString *strTitle;
 @property(nonatomic, strong) NSString *strDate;
+@property(nonatomic) BOOL bLast;
 
 @end

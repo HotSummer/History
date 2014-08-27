@@ -41,7 +41,7 @@
     
     for (int i=0; i<_arrDynasties.count; i++) {
         DynastyCellView *view = [[DynastyCellView alloc] initWithFrame:CGRectMake(fTotalLength, 0, 93, 42)];
-        view.strDynasty = ((DynastyList *)_arrDynasties[i]).dynastyName;
+        view.strDynasty = _arrDynasties[i];
         [self addSubview:view];
         view.tag = i+1;
         view.delegate = self;
@@ -61,15 +61,9 @@
             }
         }
     }
-    if (dynastyIndex == 0) {
-        if ([self.delegate respondsToSelector:@selector(didSelectedDynasty:)]) {
-            [self.delegate didSelectedDynasty:nil];
-        }
-    }else{
-        DynastyList *dynasty = _arrDynasties[dynastyIndex-1];
-        if ([self.delegate respondsToSelector:@selector(didSelectedDynasty:)]) {
-            [self.delegate didSelectedDynasty:dynasty];
-        }
+    
+    if ([self.delegate respondsToSelector:@selector(didSelected:)]) {
+        [self.delegate didSelected:dynastyIndex];
     }
 }
 

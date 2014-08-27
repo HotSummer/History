@@ -31,11 +31,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.navigationController.navigationBarHidden = NO;
-    self.navigationItem.title = @"人物故事";
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.navTitle = @"人物故事";
+    searchText = @"";
     
-    UIBarButtonItem *leftBar = [[UIBarButtonItem alloc] initWithCustomView:btnBack];
-    self.navigationItem.leftBarButtonItem = leftBar;
+    [self loadSearchView];
+    [self loadCategoriesView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,35 +45,50 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)loadSearchView{
+    SearchView *searchView = [[[NSBundle mainBundle] loadNibNamed:@"SearchView" owner:self options:nil] lastObject];
+    searchView.frame = CGRectMake(0, 64, searchView.frame.size.width, searchView.frame.size.height);
+    [self.view addSubview:searchView];
+    searchView.delegate = self;
+}
+
+- (void)loadCategoriesView{
+    HorizontalCollectView *horizontalCollectView = [[[NSBundle mainBundle] loadNibNamed:@"HorizontalCollectView" owner:self options:nil] lastObject];
+    horizontalCollectView.frame = CGRectMake(0, 98, 320, 44);
+    [self.view addSubview:horizontalCollectView];
+    horizontalCollectView.arrData = @[@"历史首位", @"后人评论", @"开国之君"];
+    horizontalCollectView.delegate = self;
+}
+
 - (IBAction)didPressedBtnBack:(id)sender{
     [[UIController shareInstance] clearSearchAndSift];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (IBAction)didBeginPressedBtn:(id)sender{
-    UIButton *btn = (UIButton *)sender;
-    [btn setTitleColor:[UIColor colorWithRed:42.0/255.0 green:121.0/255.0 blue:252.0/255.0 alpha:1.0] forState:UIControlStateNormal];
-}
-
-- (IBAction)didPressedBtn:(id)sender{
-    UIButton *btnPressed = (UIButton *)sender;
-    NSInteger iSelect = ((UIController *)[UIController shareInstance]).personListSiftCondition;
-    if (iSelect != btnPressed.tag) {
+#pragma mark - HorizontalCollectViewDelegate
+- (void)didSelected:(NSInteger)iSelected{
+    NSInteger iPreSelect = ((UIController *)[UIController shareInstance]).personListSiftCondition;
+    if (iPreSelect != iSelected) {
         for (UIView *view in self.view.subviews) {
-            if ([view isKindOfClass:[UIButton class]] && view.tag == iSelect) {
+            if ([view isKindOfClass:[UIButton class]] && view.tag == iPreSelect) {
                 UIButton *btn = (UIButton *)view;
                 [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
             }
         }
-        lblLine.frame = CGRectMake(btnPressed.tag*80, 150, 80, 2);
-        ((UIController *)[UIController shareInstance]).personListSiftCondition = (PersonListSiftCondition)btnPressed.tag;
+        ((UIController *)[UIController shareInstance]).personListSiftCondition = (PersonListSiftCondition)iSelected;
         [tableview reloadData];
     }
 }
 
+#pragma mark - SearchViewDelegate
+- (void)search:(NSString *)searchContent{
+    searchText = searchContent;
+    [tableview reloadData];
+}
+
 #pragma mark - tableview delegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    NSArray *arr = [[UIController shareInstance] getPersonDynastyList:personListSearchBar.text siftCondition:((UIController *)[UIController shareInstance]).personListSiftCondition];
+    NSArray *arr = [[UIController shareInstance] getPersonDynastyList:searchText siftCondition:((UIController *)[UIController shareInstance]).personListSiftCondition];
     return arr.count;
 }
 
@@ -81,9 +97,7 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-#warning fuck
-    lblLine.frame = CGRectMake(((UIController *)[UIController shareInstance]).personListSiftCondition*80, 150, 80, 2);
-    NSArray *arr = [[UIController shareInstance] getPersonDynastyList:personListSearchBar.text siftCondition:((UIController *)[UIController shareInstance]).personListSiftCondition];
+    NSArray *arr = [[UIController shareInstance] getPersonDynastyList:searchText siftCondition:((UIController *)[UIController shareInstance]).personListSiftCondition];
     DynastyList *dynastyList = arr[section];
     if (dynastyList.dynastyId.length == 0) {//不显示section view
         return nil;
@@ -100,7 +114,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    NSArray *arr = [[UIController shareInstance] getPersonDynastyList:personListSearchBar.text siftCondition:((UIController *)[UIController shareInstance]).personListSiftCondition];
+    NSArray *arr = [[UIController shareInstance] getPersonDynastyList:searchText siftCondition:((UIController *)[UIController shareInstance]).personListSiftCondition];
     DynastyList *dynastyList = arr[section];
     
     NSArray *arrPersonList = [[UIController shareInstance] getPersonList:dynastyList.dynastyId];
@@ -119,7 +133,7 @@
         }
     }
     
-    NSArray *arr = [[UIController shareInstance] getPersonDynastyList:personListSearchBar.text siftCondition:((UIController *)[UIController shareInstance]).personListSiftCondition];
+    NSArray *arr = [[UIController shareInstance] getPersonDynastyList:searchText siftCondition:((UIController *)[UIController shareInstance]).personListSiftCondition];
     DynastyList *dynastyList = arr[indexPath.section];
     
     NSArray *arrPersonList = [[UIController shareInstance] getPersonList:dynastyList.dynastyId];
@@ -130,7 +144,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSArray *arr = [[UIController shareInstance] getPersonDynastyList:personListSearchBar.text siftCondition:((UIController *)[UIController shareInstance]).personListSiftCondition];
+    NSArray *arr = [[UIController shareInstance] getPersonDynastyList:searchText siftCondition:((UIController *)[UIController shareInstance]).personListSiftCondition];
     DynastyList *dynastyList = arr[indexPath.section];
     
     NSArray *arrPersonList = [[UIController shareInstance] getPersonList:dynastyList.dynastyId];
@@ -138,29 +152,6 @@
     [[UIController shareInstance] setCurrentPersonId:personListItem.personId];
     PersonDetailViewController *personDetailVC = [[PersonDetailViewController alloc] init];
     [self.navigationController pushViewController:personDetailVC animated:YES];
-}
-
-#pragma mark - search delegate
-- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
-    personListSearchBar.showsCancelButton = YES;
-    return YES;
-}
-
-- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
-    personListSearchBar.showsCancelButton = YES;
-    [tableview reloadData];
-}
-
-- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
-    personListSearchBar.showsCancelButton = NO;
-    [personListSearchBar resignFirstResponder];
-    [tableview reloadData];
-}
-
-- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
-    personListSearchBar.showsCancelButton = NO;
-    [personListSearchBar resignFirstResponder];
-    [tableview reloadData];
 }
 
 @end

@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StoryListViewController">
             <connections>
+                <outlet property="btnCollectList" destination="0cH-n6-kxb" id="xXI-02-WeS"/>
                 <outlet property="cellDynasty" destination="52o-RA-jfa" id="dbB-9j-CRR"/>
                 <outlet property="scrollDynasty" destination="CyV-zc-Tks" id="cnI-Ot-IYe"/>
                 <outlet property="tableStoryList" destination="r5w-gV-ve6" id="UQ0-zR-jkX"/>
@@ -50,5 +51,20 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
         </tableViewCell>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0cH-n6-kxb">
+            <rect key="frame" x="0.0" y="0.0" width="33" height="33"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <state key="normal" image="btn_favorites.png">
+                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+            </state>
+            <connections>
+                <action selector="didPressedBtnCollectList:" destination="-1" eventType="touchUpInside" id="Jbf-xK-c7f"/>
+            </connections>
+        </button>
     </objects>
+    <resources>
+        <image name="btn_favorites.png" width="44" height="44"/>
+    </resources>
 </document>

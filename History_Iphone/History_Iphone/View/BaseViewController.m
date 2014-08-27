@@ -39,6 +39,17 @@
     self.navigationItem.leftBarButtonItem = leftBar;
     
     [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:67.0/255.0 green:6.0/255.0 blue:9.0/255.0 alpha:1.0]];
+    self.navigationController.navigationBarHidden = NO;
+}
+
+- (void)setNavTitle:(NSString *)navTitle{
+    _navTitle = navTitle;
+    UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(0, 64, 100, 44)];
+    lbl.font = [UIFont fontWithName:@"DIN Alternate" size:22.0];
+    lbl.textColor = [UIColor whiteColor];
+    lbl.text = _navTitle;
+    lbl.textAlignment = NSTextAlignmentCenter;
+    self.navigationItem.titleView = lbl;
 }
 
 - (void)back:(id)sender{

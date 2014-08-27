@@ -11,6 +11,7 @@
 #import "DynastyList.h"
 #import "StoryTitleTableViewCell.h"
 #import "StoryViewController.h"
+#import "CollectViewController.h"
 
 @interface StoryListViewController ()
 
@@ -33,13 +34,10 @@
     // Do any additional setup after loading the view from its nib.
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-    self.navigationController.navigationBarHidden = NO;
-    UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(0, 64, 100, 44)];
-    lbl.font = [UIFont fontWithName:@"DIN Alternate" size:22.0];
-    lbl.textColor = [UIColor whiteColor];
-    lbl.text = @"历史故事";
-    lbl.textAlignment = NSTextAlignmentCenter;
-    self.navigationItem.titleView = lbl;
+    UIBarButtonItem *rightbar = [[UIBarButtonItem alloc] initWithCustomView:btnCollectList];
+    self.navigationItem.rightBarButtonItem = rightbar;
+    
+    self.navTitle = @"历史故事";
     
     [self loadDynastyCell];
     [self loadSearchView];
@@ -61,8 +59,13 @@
     }
     fTotalLength += 15;
     
+    NSMutableArray *arrTitles = [NSMutableArray array];
+    for (DynastyList *dynastyList in arrDynasties) {
+        [arrTitles addObject:dynastyList.dynastyName];
+    }
+    
     DynastyCollectView *dynastyCollectView = [[DynastyCollectView alloc] initWithFrame:CGRectMake(0, 0, fTotalLength, 44)];
-    dynastyCollectView.arrDynasties = arrDynasties;
+    dynastyCollectView.arrDynasties = arrTitles;
     [scrollDynasty addSubview:dynastyCollectView];
     dynastyCollectView.delegate = self;
     [scrollDynasty setContentSize:CGSizeMake(fTotalLength, 42)];
@@ -80,6 +83,11 @@
     searchView.delegate = self;
 }
 
+- (IBAction)didPressedBtnCollectList:(id)sender{
+    CollectViewController *collectVC = [[CollectViewController alloc] initWithNibName:@"CollectViewController" bundle:nil];
+    [self.navigationController pushViewController:collectVC animated:YES];
+}
+
 #pragma mark - SearchViewDelegate
 - (void)search:(NSString *)searchContent{
     [[UIController shareInstance] setStorySearchWord:searchContent];
@@ -87,38 +95,15 @@
 }
 
 #pragma mark - DynastyCollectDelegate
-- (void)didSelectedDynasty:(DynastyList *)dynasty{
-    if (!dynasty) {
+- (void)didSelected:(NSInteger)iSelected{
+    if (iSelected == 0) {
         [UIController shareInstance].selectedDynastyId = nil;
     }else{
+        NSArray *arrDynasties = [[UIController shareInstance] getStoriesDynastyList];
+        DynastyList *dynasty = arrDynasties[iSelected-1];
         [UIController shareInstance].selectedDynastyId = dynasty.dynastyId;
     }
-    [tableStoryList reloadData];
-}
-
-#pragma mark - search delegate
-- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
-    searchBar.showsCancelButton = YES;
-    return YES;
-}
-
-- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
-    searchBar.showsCancelButton = YES;
-    [[UIController shareInstance] setStorySearchWord:searchText];
-    [tableStoryList reloadData];
-}
-
-- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
-    searchBar.showsCancelButton = NO;
-    [searchBar resignFirstResponder];
-    [[UIController shareInstance] setStorySearchWord:searchBar.text];
-    [tableStoryList reloadData];
-}
-
-- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
-    searchBar.showsCancelButton = NO;
-    [searchBar resignFirstResponder];
-    [[UIController shareInstance] setStorySearchWord:nil];
+    
     [tableStoryList reloadData];
 }
 

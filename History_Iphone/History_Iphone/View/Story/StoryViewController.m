@@ -34,19 +34,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    UIBarButtonItem *rightbar = [[UIBarButtonItem alloc] initWithCustomView:btnCollectList];
-    self.navigationItem.rightBarButtonItem = rightbar;
+
     
     self.navigationController.navigationBarHidden = NO;
     DynastyStory *story = [[UIController shareInstance] getStory];
-//    self.navigationItem.title = story.storyTitle;
     
-    UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(0, 64, 100, 44)];
-    lbl.font = [UIFont fontWithName:@"DIN Alternate" size:20.0];
-    lbl.textColor = [UIColor whiteColor];
-    lbl.text = story.storyTitle;
-    lbl.textAlignment = NSTextAlignmentCenter;
-    self.navigationItem.titleView = lbl;
+    self.navTitle = story.storyTitle;
     
     //工厂模式
     [ChapterManager shareInstance].content = story.storyContent;

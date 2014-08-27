@@ -9,6 +9,8 @@
 #import "CollectViewController.h"
 #import "CollectListTableViewCell.h"
 #import "CollectManager.h"
+#import "UIController.h"
+#import "StoryViewController.h"
 
 @interface CollectViewController ()
 
@@ -29,16 +31,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.navigationController.navigationBarHidden = NO;
-    
-    self.navigationController.navigationBarHidden = NO;
-    UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(0, 64, 100, 44)];
-    lbl.font = [UIFont fontWithName:@"DIN Alternate" size:22.0];
-    lbl.textColor = [UIColor whiteColor];
-    lbl.text = @"收藏列表";
-    lbl.textAlignment = NSTextAlignmentCenter;
-    self.navigationItem.titleView = lbl;
-    
+    self.navTitle = @"收藏列表";
 }
 
 - (void)didReceiveMemoryWarning
@@ -62,7 +55,20 @@
     DynastyStory *story = [[CollectManager shareInstance] getCollectedDynastyStory:entity.contentId];
     cell.strTitle = story.storyTitle;
     cell.strDate = entity.collectTime;
+    if (indexPath.row == [[CollectManager shareInstance] getCollects].count-1) {
+        cell.bLast = YES;
+    }else{
+        cell.bLast = NO;
+    }
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    CollectionEntity *entity = [[CollectManager shareInstance] getCollects][indexPath.row];
+    [[UIController shareInstance] setCurrentStoryId:entity.contentId];
+    
+    StoryViewController *storyVC = [[StoryViewController alloc] initWithNibName:@"StoryViewController" bundle:nil];
+    [self.navigationController pushViewController:storyVC animated:YES];
 }
 
 @end

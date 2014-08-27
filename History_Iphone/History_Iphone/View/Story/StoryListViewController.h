@@ -19,10 +19,11 @@ UITableViewDelegate,
 DynastyCollectDelegate,
 SearchViewDelegate
 >{
-//    IBOutlet UISearchBar *searchBar;
+    IBOutlet UIButton *btnCollectList;
     IBOutlet UIScrollView *scrollDynasty;
     IBOutlet UITableViewCell *cellDynasty;
     IBOutlet UITableView *tableStoryList;
 }
+- (IBAction)didPressedBtnCollectList:(id)sender;
 
 @end

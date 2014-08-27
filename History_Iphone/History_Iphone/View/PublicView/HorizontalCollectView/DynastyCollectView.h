@@ -13,7 +13,7 @@
 @protocol DynastyCollectDelegate <NSObject>
 
 @optional
-- (void)didSelectedDynasty:(DynastyList *)dynasty;
+- (void)didSelected:(NSInteger)iSelected;
 
 @end
 

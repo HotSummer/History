@@ -7,21 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
+#import "HorizontalCollectView.h"
+#import "SearchView.h"
 
-@interface PersonListViewController : UIViewController
+@interface PersonListViewController : BaseViewController
 <
 UITableViewDataSource,
 UITableViewDelegate,
-UISearchBarDelegate
+UISearchBarDelegate,
+SearchViewDelegate,
+HorizontalCollectViewDelegate
 >{
     IBOutlet UIButton *btnBack;
-    IBOutlet UILabel *lblLine;
-    IBOutlet UISearchBar *personListSearchBar;
+    NSString *searchText;
     IBOutlet UITableView *tableview;
 }
 
 - (IBAction)didPressedBtnBack:(id)sender;
-- (IBAction)didBeginPressedBtn:(id)sender;
-- (IBAction)didPressedBtn:(id)sender;
 
 @end
