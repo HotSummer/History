@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "CollectionEntity.h"
+#import "DynastyStory.h"
 
 @interface CollectManager : NSObject
 
@@ -17,5 +18,6 @@
 - (void)addCollect:(CollectionEntity *)contentEntity;
 - (void)cancelCollect:(NSString *)contentId;
 - (BOOL)collect:(NSString *)contentId;
+- (DynastyStory *)getCollectedDynastyStory:(NSString *)storyId;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "CollectManager.h"
+#import "UIController.h"
 
 @implementation CollectManager
 
@@ -56,6 +57,10 @@
         }
     }
     return NO;
+}
+
+- (DynastyStory *)getCollectedDynastyStory:(NSString *)storyId{
+    return [[UIController shareInstance] getStory:storyId];
 }
 
 @end

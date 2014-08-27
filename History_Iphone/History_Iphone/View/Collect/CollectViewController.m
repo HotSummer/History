@@ -7,6 +7,7 @@
 //
 
 #import "CollectViewController.h"
+#import "CollectListTableViewCell.h"
 #import "CollectManager.h"
 
 @interface CollectViewController ()
@@ -29,7 +30,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.navigationController.navigationBarHidden = NO;
-    self.navigationItem.title = @"收藏列表";
+    
+    self.navigationController.navigationBarHidden = NO;
+    UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(0, 64, 100, 44)];
+    lbl.font = [UIFont fontWithName:@"DIN Alternate" size:22.0];
+    lbl.textColor = [UIColor whiteColor];
+    lbl.text = @"收藏列表";
+    lbl.textAlignment = NSTextAlignmentCenter;
+    self.navigationItem.titleView = lbl;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,13 +53,15 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *cellIndentifier = @"CellIndentifier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifier];
+    static NSString *cellIndentifier = @"CollectListTableViewCellIndentifier";
+    CollectListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifier];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier];
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"CollectListTableViewCell" owner:self options:nil] lastObject];
     }
     CollectionEntity *entity = [[CollectManager shareInstance] getCollects][indexPath.row];
-    cell.textLabel.text = entity.contentId;
+    DynastyStory *story = [[CollectManager shareInstance] getCollectedDynastyStory:entity.contentId];
+    cell.strTitle = story.storyTitle;
+    cell.strDate = entity.collectTime;
     return cell;
 }
 

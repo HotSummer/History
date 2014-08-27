@@ -128,6 +128,8 @@
 		79E07BE319377B03008EA875 /* DynastyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E07BE019377B03008EA875 /* DynastyView.m */; };
 		79E07BE919377B3A008EA875 /* StoryTitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E07BE719377B3A008EA875 /* StoryTitleTableViewCell.m */; };
 		79E07BEA19377B3A008EA875 /* StoryTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79E07BE819377B3A008EA875 /* StoryTitleTableViewCell.xib */; };
+		79E641CF19ACF7070070A287 /* CollectListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E641CD19ACF7070070A287 /* CollectListTableViewCell.m */; };
+		79E641D019ACF7070070A287 /* CollectListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79E641CE19ACF7070070A287 /* CollectListTableViewCell.xib */; };
 		79F2FB1D193F68FF00780F2A /* DynastyStory.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F2FB1C193F68FF00780F2A /* DynastyStory.m */; };
 		79F2FB21193F6EC300780F2A /* StoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F2FB1F193F6EC300780F2A /* StoryViewController.m */; };
 		79F2FB22193F6EC300780F2A /* StoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79F2FB20193F6EC300780F2A /* StoryViewController.xib */; };
@@ -320,6 +322,9 @@
 		79E07BE619377B3A008EA875 /* StoryTitleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryTitleTableViewCell.h; sourceTree = "<group>"; };
 		79E07BE719377B3A008EA875 /* StoryTitleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryTitleTableViewCell.m; sourceTree = "<group>"; };
 		79E07BE819377B3A008EA875 /* StoryTitleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoryTitleTableViewCell.xib; sourceTree = "<group>"; };
+		79E641CC19ACF7070070A287 /* CollectListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectListTableViewCell.h; sourceTree = "<group>"; };
+		79E641CD19ACF7070070A287 /* CollectListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectListTableViewCell.m; sourceTree = "<group>"; };
+		79E641CE19ACF7070070A287 /* CollectListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectListTableViewCell.xib; sourceTree = "<group>"; };
 		79F2FB1B193F68FF00780F2A /* DynastyStory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynastyStory.h; sourceTree = "<group>"; };
 		79F2FB1C193F68FF00780F2A /* DynastyStory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynastyStory.m; sourceTree = "<group>"; };
 		79F2FB1E193F6EC300780F2A /* StoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryViewController.h; sourceTree = "<group>"; };
@@ -579,6 +584,7 @@
 		4ECDAA2219907A7E005F72B6 /* Collect */ = {
 			isa = PBXGroup;
 			children = (
+				79E641CB19ACF6A50070A287 /* Cell */,
 				4ECDAA2319907A7E005F72B6 /* CollectViewController.h */,
 				4ECDAA2419907A7E005F72B6 /* CollectViewController.m */,
 				4ECDAA2519907A7E005F72B6 /* CollectViewController.xib */,
@@ -866,6 +872,16 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		79E641CB19ACF6A50070A287 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				79E641CC19ACF7070070A287 /* CollectListTableViewCell.h */,
+				79E641CD19ACF7070070A287 /* CollectListTableViewCell.m */,
+				79E641CE19ACF7070070A287 /* CollectListTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		79F2FB231940A90300780F2A /* Person */ = {
 			isa = PBXGroup;
 			children = (
@@ -937,6 +953,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = zbq;
 				TargetAttributes = {
+					79A662EF192BA32100B7170E = {
+						DevelopmentTeam = W9LJWVEKU4;
+					};
 					79A6630A192BA32200B7170E = {
 						TestTargetID = 79A662EF192BA32100B7170E;
 					};
@@ -970,6 +989,7 @@
 				79F2FB361945EF3A00780F2A /* yiyin@2x.png in Resources */,
 				79E07B821933A493008EA875 /* now_xia_map.png in Resources */,
 				4ECDA9BF199071CD005F72B6 /* ChapterView.xib in Resources */,
+				79E641D019ACF7070070A287 /* CollectListTableViewCell.xib in Resources */,
 				7995F09219A3A86100D37E2B /* btn_back@2x.png in Resources */,
 				4EAB4892199DB31900C8DD7D /* story3@2x.png in Resources */,
 				79A662FE192BA32100B7170E /* InfoPlist.strings in Resources */,
@@ -1071,6 +1091,7 @@
 				790AE1FE192E459500FC4668 /* MakeData.m in Sources */,
 				79A66300192BA32100B7170E /* main.m in Sources */,
 				79E07BDA19376DD8008EA875 /* DynastyStoryList.m in Sources */,
+				79E641CF19ACF7070070A287 /* CollectListTableViewCell.m in Sources */,
 				79E07BD519376DD8008EA875 /* Contribute.m in Sources */,
 				790AE1F0192D0A5300FC4668 /* DBHelper.m in Sources */,
 				79F2FB2D1944997F00780F2A /* PersonListTableViewCell.m in Sources */,
@@ -1220,6 +1241,7 @@
 					"$(PROJECT_DIR)/History_Iphone/Tools/ShareSDK/Extend/WeChatSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "21BB759C-8420-4B90-B427-4385E0CBD331";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1230,6 +1252,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/History_Iphone/Tools/ShareSDK/Connection",
@@ -1249,6 +1272,7 @@
 					"$(PROJECT_DIR)/History_Iphone/Tools/ShareSDK/Extend/WeChatSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "21BB759C-8420-4B90-B427-4385E0CBD331";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface CollectViewController : UIViewController
+@interface CollectViewController : BaseViewController
 <
 UITableViewDataSource,
 UITableViewDelegate

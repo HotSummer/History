@@ -56,6 +56,8 @@ typedef enum {
 - (NSArray *)getStoriesByDynastyId:(NSString *)dynastyId;
 //获取某个故事
 - (DynastyStory *)getStory;
+//根据storyId获取Story
+- (DynastyStory *)getStory:(NSString *)stroyId;
 
 #pragma mark - 人物故事
 - (void)clearSearchAndSift;

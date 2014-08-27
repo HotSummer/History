@@ -119,6 +119,14 @@
     return nil;
 }
 
+- (DynastyStory *)getStory:(NSString *)stroyId{
+    NSArray *arr = [[MakeData shareInstance] searchStoryByStoryId:stroyId];
+    if (arr.count > 0) {
+        return (DynastyStory *)arr[0];
+    }
+    return nil;
+}
+
 #pragma mark - PersonList
 - (void)clearSearchAndSift{
     personListSiftCondition = PersonListSiftNone;
