@@ -10,6 +10,7 @@
 #import "BaseViewController.h"
 #import "HorizontalCollectView.h"
 #import "SearchView.h"
+#import "DynastyIndicatorView.h"
 
 @interface PersonListViewController : BaseViewController
 <

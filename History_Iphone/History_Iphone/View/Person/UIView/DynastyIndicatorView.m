@@ -31,7 +31,7 @@
 - (void)layoutSubviews{
     [super layoutSubviews];
     self.layer.borderWidth = 1/[UIScreen mainScreen].scale;
-    self.layer.borderColor = [UIColor grayColor].CGColor;
+    self.layer.borderColor = [UIColor colorWithRed:189.0/255.0 green:189.0/255.0 blue:189.0/255.0 alpha:1.0].CGColor;
 }
 
 - (void)setArrDynasties:(NSArray *)arrDynasties{

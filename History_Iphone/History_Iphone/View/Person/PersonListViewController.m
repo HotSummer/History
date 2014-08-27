@@ -37,6 +37,7 @@
     
     [self loadSearchView];
     [self loadCategoriesView];
+    [self loadDynastyIndicatorView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,6 +59,13 @@
     [self.view addSubview:horizontalCollectView];
     horizontalCollectView.arrData = @[@"历史首位", @"后人评论", @"开国之君"];
     horizontalCollectView.delegate = self;
+}
+
+- (void)loadDynastyIndicatorView{
+    DynastyIndicatorView *indicatorView = [[[NSBundle mainBundle] loadNibNamed:@"DynastyIndicatorView" owner:self options:nil] lastObject];
+    [self.view addSubview:indicatorView];
+    indicatorView.alpha = 0.9;
+    indicatorView.frame = CGRectMake(271, 162, indicatorView.frame.size.width, indicatorView.frame.size.height);
 }
 
 - (IBAction)didPressedBtnBack:(id)sender{
