@@ -12,7 +12,11 @@
 #import "PersonListTableViewCell.h"
 #import "PersonDetailViewController.h"
 
-@interface PersonListViewController ()
+@interface PersonListViewController (){
+    NSMutableArray *arrDynastyLength;
+}
+
+- (void)loadDynastyLength;
 
 @end
 
@@ -38,6 +42,7 @@
     [self loadSearchView];
     [self loadCategoriesView];
     [self loadDynastyIndicatorView];
+    [self loadDynastyLength];
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,8 +51,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    [timerAnimation invalidate];
+}
+
 - (void)loadSearchView{
-    SearchView *searchView = [[[NSBundle mainBundle] loadNibNamed:@"SearchView" owner:self options:nil] lastObject];
+    searchView = [[[NSBundle mainBundle] loadNibNamed:@"SearchView" owner:self options:nil] lastObject];
     searchView.frame = CGRectMake(0, 64, searchView.frame.size.width, searchView.frame.size.height);
     [self.view addSubview:searchView];
     searchView.delegate = self;
@@ -62,15 +72,45 @@
 }
 
 - (void)loadDynastyIndicatorView{
-    DynastyIndicatorView *indicatorView = [[[NSBundle mainBundle] loadNibNamed:@"DynastyIndicatorView" owner:self options:nil] lastObject];
+    indicatorView = [[[NSBundle mainBundle] loadNibNamed:@"DynastyIndicatorView" owner:self options:nil] lastObject];
     [self.view addSubview:indicatorView];
-    indicatorView.alpha = 0.9;
+    indicatorView.alpha = 0.0;
+    indicatorView.delegate = self;
     indicatorView.frame = CGRectMake(271, 162, indicatorView.frame.size.width, indicatorView.frame.size.height);
 }
 
-- (IBAction)didPressedBtnBack:(id)sender{
-    [[UIController shareInstance] clearSearchAndSift];
-    [self.navigationController popViewControllerAnimated:YES];
+- (void)hideIndicatorView{
+    [UIView animateWithDuration:0.3 animations:^{
+        indicatorView.alpha = 0;
+    } completion:^(BOOL finished) {
+        
+    }];
+}
+
+- (void)loadDynastyLength{
+    arrDynastyLength = [NSMutableArray array];
+    CGFloat fHight = 0;
+    NSArray *arr = [[UIController shareInstance] getPersonDynastyList:searchText siftCondition:((UIController *)[UIController shareInstance]).personListSiftCondition];
+    for (int i=0; i<arr.count; i++) {
+        [arrDynastyLength addObject:[NSNumber numberWithFloat:fHight]];
+        DynastyList *dynastyList = arr[i];
+        NSArray *arrPersonList = [[UIController shareInstance] getPersonList:dynastyList.dynastyId];
+        fHight += arrPersonList.count*44;
+    }
+}
+
+- (NSInteger)scrollToDynasty:(CGFloat)scrollContentOffset{
+//    CGFloat offset = -scrollContentOffset;
+    int iDynasty=0;
+    for (int i=0; i<arrDynastyLength.count-1; i++) {
+        NSNumber *current = arrDynastyLength[i];
+        NSNumber *next = arrDynastyLength[i+1];
+        if (scrollContentOffset > [current floatValue] && scrollContentOffset <= [next floatValue]) {
+            iDynasty = i;
+            break;
+        }
+    }
+    return iDynasty;
 }
 
 #pragma mark - HorizontalCollectViewDelegate
@@ -94,6 +134,34 @@
     [tableview reloadData];
 }
 
+#pragma mark - UIScrollView Delegate
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    if (timerAnimation) {
+        [timerAnimation invalidate];
+        timerAnimation = nil;
+    }
+    [UIView animateWithDuration:0.3 animations:^{
+        indicatorView.alpha = 0.9;
+    } completion:^(BOOL finished) {
+        if (finished) {
+            
+        }
+    }];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    NSInteger iDynasty = [self scrollToDynasty:scrollView.contentOffset.y];
+    [indicatorView setCurrentIndex:iDynasty];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    if (timerAnimation) {
+        [timerAnimation invalidate];
+        timerAnimation = nil;
+    }
+    timerAnimation = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(hideIndicatorView) userInfo:nil repeats:NO];
+}
+
 #pragma mark - tableview delegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     NSArray *arr = [[UIController shareInstance] getPersonDynastyList:searchText siftCondition:((UIController *)[UIController shareInstance]).personListSiftCondition];
@@ -101,24 +169,11 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 20.0;
+    return 0;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    NSArray *arr = [[UIController shareInstance] getPersonDynastyList:searchText siftCondition:((UIController *)[UIController shareInstance]).personListSiftCondition];
-    DynastyList *dynastyList = arr[section];
-    if (dynastyList.dynastyId.length == 0) {//不显示section view
-        return nil;
-    }else{
-        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 20)];
-        view.backgroundColor = [UIColor clearColor];
-        UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 310, 20)];
-        lbl.backgroundColor = [UIColor grayColor];
-        lbl.textColor = [UIColor blackColor];
-        lbl.text = dynastyList.dynastyName;
-        [view addSubview:lbl];
-        return view;
-    }
+    return nil;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -160,6 +215,10 @@
     [[UIController shareInstance] setCurrentPersonId:personListItem.personId];
     PersonDetailViewController *personDetailVC = [[PersonDetailViewController alloc] init];
     [self.navigationController pushViewController:personDetailVC animated:YES];
+}
+
+- (void)dealloc{
+    timerAnimation = nil;
 }
 
 @end

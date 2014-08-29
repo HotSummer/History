@@ -373,6 +373,51 @@
     person3.startKing = @"";
     [DBHelper save];
     
+    DynastyPersonList *person13 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
+    person13.dynastyId = @"1";
+    person13.personId = @"100";
+    person13.personName = @"后羿";
+    person13.firstRole = @"";
+    person13.commentCount = [NSNumber numberWithInt:20];
+    person13.startKing = @"";
+    [DBHelper save];
+    
+    DynastyPersonList *person14 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
+    person14.dynastyId = @"1";
+    person14.personId = @"101";
+    person14.personName = @"后羿";
+    person14.firstRole = @"";
+    person14.commentCount = [NSNumber numberWithInt:20];
+    person14.startKing = @"";
+    [DBHelper save];
+    
+    DynastyPersonList *person15 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
+    person15.dynastyId = @"1";
+    person15.personId = @"102";
+    person15.personName = @"后羿";
+    person15.firstRole = @"";
+    person15.commentCount = [NSNumber numberWithInt:20];
+    person15.startKing = @"";
+    [DBHelper save];
+    
+    DynastyPersonList *person16 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
+    person16.dynastyId = @"1";
+    person16.personId = @"103";
+    person16.personName = @"后羿";
+    person16.firstRole = @"";
+    person16.commentCount = [NSNumber numberWithInt:20];
+    person16.startKing = @"";
+    [DBHelper save];
+    
+    DynastyPersonList *person17 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
+    person17.dynastyId = @"1";
+    person17.personId = @"103";
+    person17.personName = @"后羿";
+    person17.firstRole = @"";
+    person17.commentCount = [NSNumber numberWithInt:20];
+    person17.startKing = @"";
+    [DBHelper save];
+    
     DynastyPersonList *person4 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
     person4.dynastyId = @"2";
     person4.personId = @"5";
@@ -391,6 +436,42 @@
     person5.startKing = @"";
     [DBHelper save];
     
+    DynastyPersonList *person25 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
+    person25.dynastyId = @"2";
+    person25.personId = @"206";
+    person25.personName = @"伊尹";
+    person25.firstRole = @"第一位名臣";
+    person25.commentCount = [NSNumber numberWithInt:50];
+    person25.startKing = @"";
+    [DBHelper save];
+    
+    DynastyPersonList *person26 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
+    person26.dynastyId = @"2";
+    person26.personId = @"207";
+    person26.personName = @"伊尹";
+    person26.firstRole = @"第一位名臣";
+    person26.commentCount = [NSNumber numberWithInt:50];
+    person26.startKing = @"";
+    [DBHelper save];
+    
+    DynastyPersonList *person27 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
+    person27.dynastyId = @"2";
+    person27.personId = @"208";
+    person27.personName = @"伊尹";
+    person27.firstRole = @"第一位名臣";
+    person27.commentCount = [NSNumber numberWithInt:50];
+    person27.startKing = @"";
+    [DBHelper save];
+    
+    DynastyPersonList *person28 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
+    person28.dynastyId = @"2";
+    person28.personId = @"209";
+    person28.personName = @"伊尹";
+    person28.firstRole = @"第一位名臣";
+    person28.commentCount = [NSNumber numberWithInt:50];
+    person28.startKing = @"";
+    [DBHelper save];
+    
     DynastyPersonList *person6 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
     person6.dynastyId = @"2";
     person6.personId = @"7";
@@ -407,6 +488,51 @@
     person7.firstRole = @"";
     person7.commentCount = [NSNumber numberWithInt:30];
     person7.startKing = @"";
+    [DBHelper save];
+    
+    DynastyPersonList *person8 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
+    person8.dynastyId = @"3";
+    person8.personId = @"9";
+    person8.personName = @"太甲";
+    person8.firstRole = @"";
+    person8.commentCount = [NSNumber numberWithInt:30];
+    person8.startKing = @"";
+    [DBHelper save];
+    
+    DynastyPersonList *person9 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
+    person9.dynastyId = @"3";
+    person9.personId = @"10";
+    person9.personName = @"太甲";
+    person9.firstRole = @"";
+    person9.commentCount = [NSNumber numberWithInt:30];
+    person9.startKing = @"";
+    [DBHelper save];
+    
+    DynastyPersonList *person10 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
+    person10.dynastyId = @"3";
+    person10.personId = @"11";
+    person10.personName = @"太甲";
+    person10.firstRole = @"";
+    person10.commentCount = [NSNumber numberWithInt:30];
+    person10.startKing = @"";
+    [DBHelper save];
+    
+    DynastyPersonList *person11 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
+    person11.dynastyId = @"3";
+    person11.personId = @"12";
+    person11.personName = @"太甲";
+    person11.firstRole = @"";
+    person11.commentCount = [NSNumber numberWithInt:30];
+    person11.startKing = @"";
+    [DBHelper save];
+    
+    DynastyPersonList *person12 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
+    person12.dynastyId = @"3";
+    person12.personId = @"13";
+    person12.personName = @"太甲";
+    person12.firstRole = @"";
+    person12.commentCount = [NSNumber numberWithInt:30];
+    person12.startKing = @"";
     [DBHelper save];
 }
 

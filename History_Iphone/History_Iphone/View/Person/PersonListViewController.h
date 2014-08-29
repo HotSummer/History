@@ -18,13 +18,15 @@ UITableViewDataSource,
 UITableViewDelegate,
 UISearchBarDelegate,
 SearchViewDelegate,
-HorizontalCollectViewDelegate
+HorizontalCollectViewDelegate,
+DynastyIndicatorDelegate
 >{
-    IBOutlet UIButton *btnBack;
+    SearchView *searchView;
     NSString *searchText;
     IBOutlet UITableView *tableview;
+    
+    DynastyIndicatorView *indicatorView;
+    NSTimer *timerAnimation;
 }
-
-- (IBAction)didPressedBtnBack:(id)sender;
 
 @end

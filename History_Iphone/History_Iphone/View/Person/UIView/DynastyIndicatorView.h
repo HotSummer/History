@@ -8,8 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol DynastyIndicatorDelegate <NSObject>
+
+@optional
+- (void)didSelectedDynasty:(NSInteger)iSelected;
+
+@end
+
 @interface DynastyIndicatorView : UIView
 
-@property(nonatomic, strong) NSArray *arrDynasties;
+@property(nonatomic, weak) id<DynastyIndicatorDelegate> delegate;
+
+- (IBAction)didPressedBtnDynasty:(id)sender;
+- (void)setCurrentIndex:(NSInteger)current;
 
 @end
