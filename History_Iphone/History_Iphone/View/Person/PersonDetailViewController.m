@@ -40,9 +40,10 @@
     // Do any additional setup after loading the view from its nib.
     self.navigationController.navigationBarHidden = NO;
     
+    
     personDetail = [[UIController shareInstance] getPersonDetail];
     if (personDetail != nil) {
-        self.navigationItem.title = personDetail.personName;
+        self.navTitle = personDetail.personName;
         [self loadIdCell];
         [self loadHistoryContributeCell];
         [self loadEvalution];
@@ -114,8 +115,8 @@
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 20)];
     view.backgroundColor = [UIColor clearColor];
     UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 310, 20)];
-    lbl.backgroundColor = [UIColor grayColor];
-    lbl.textColor = [UIColor blackColor];
+    lbl.backgroundColor = [UIColor clearColor];
+    lbl.textColor = [UIColor colorWithRed:172.0/255.0 green:131.0/255.0 blue:92.0/255.0 alpha:1.0];//[UIColor blackColor];
     lbl.text = [[[UIController shareInstance] getSection] objectAtIndex:section];
     [view addSubview:lbl];
     return view;

@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface PersonDetailViewController : UIViewController
+@interface PersonDetailViewController : BaseViewController
 <
 UITableViewDataSource,
 UITableViewDelegate

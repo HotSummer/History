@@ -39,6 +39,7 @@
 
 - (IBAction)didPressedBtnDynasty:(id)sender{
     UIButton *btn = (UIButton *)sender;
+    [self setCurrentIndex:btn.tag-1];
     if ([self.delegate respondsToSelector:@selector(didSelectedDynasty:)]) {
         [self.delegate didSelectedDynasty:btn.tag-1];
     }
@@ -56,5 +57,6 @@
     UIButton *btn = (UIButton *)view;
     [btn setTitleColor:[UIColor colorWithRed:219.0/255.0 green:39.0/255.0 blue:130.0/255.0 alpha:1] forState:UIControlStateNormal];
 }
+
 
 @end

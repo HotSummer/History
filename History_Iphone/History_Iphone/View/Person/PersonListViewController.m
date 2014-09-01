@@ -69,6 +69,10 @@
     [self.view addSubview:horizontalCollectView];
     horizontalCollectView.arrData = @[@"历史首位", @"后人评论", @"开国之君"];
     horizontalCollectView.delegate = self;
+    
+    UILabel *lblSeparete = [[UILabel alloc] initWithFrame:CGRectMake(0, 44-thinLineHeight, 320, thinLineHeight)];
+    lblSeparete.backgroundColor = [UIColor colorWithRed:136.0/255.0 green:136.0/255.0 blue:136.0/255.0 alpha:1.0];
+    [horizontalCollectView addSubview:lblSeparete];
 }
 
 - (void)loadDynastyIndicatorView{
@@ -100,7 +104,6 @@
 }
 
 - (NSInteger)scrollToDynasty:(CGFloat)scrollContentOffset{
-//    CGFloat offset = -scrollContentOffset;
     int iDynasty=0;
     for (int i=0; i<arrDynastyLength.count-1; i++) {
         NSNumber *current = arrDynastyLength[i];
@@ -136,30 +139,37 @@
 
 #pragma mark - UIScrollView Delegate
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
-    if (timerAnimation) {
-        [timerAnimation invalidate];
-        timerAnimation = nil;
-    }
-    [UIView animateWithDuration:0.3 animations:^{
-        indicatorView.alpha = 0.9;
-    } completion:^(BOOL finished) {
-        if (finished) {
-            
+    //没有搜索 没有筛选条件
+    if (searchText.length == 0 && (((UIController *)[UIController shareInstance]).personListSiftCondition == PersonListSiftNone)) {
+        if (timerAnimation) {
+            [timerAnimation invalidate];
+            timerAnimation = nil;
         }
-    }];
+        [UIView animateWithDuration:0.3 animations:^{
+            indicatorView.alpha = 0.9;
+        } completion:^(BOOL finished) {
+            if (finished) {
+                
+            }
+        }];
+    }
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    NSInteger iDynasty = [self scrollToDynasty:scrollView.contentOffset.y];
-    [indicatorView setCurrentIndex:iDynasty];
+    if (searchText.length == 0 && (((UIController *)[UIController shareInstance]).personListSiftCondition == PersonListSiftNone)) {
+        NSInteger iDynasty = [self scrollToDynasty:scrollView.contentOffset.y];
+        [indicatorView setCurrentIndex:iDynasty];
+    }
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-    if (timerAnimation) {
-        [timerAnimation invalidate];
-        timerAnimation = nil;
+    if (searchText.length == 0 && (((UIController *)[UIController shareInstance]).personListSiftCondition == PersonListSiftNone)) {
+        if (timerAnimation) {
+            [timerAnimation invalidate];
+            timerAnimation = nil;
+        }
+        timerAnimation = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(hideIndicatorView) userInfo:nil repeats:NO];
     }
-    timerAnimation = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(hideIndicatorView) userInfo:nil repeats:NO];
 }
 
 #pragma mark - tableview delegate
@@ -202,6 +212,12 @@
     NSArray *arrPersonList = [[UIController shareInstance] getPersonList:dynastyList.dynastyId];
     DynastyPersonList *personListItem = arrPersonList[indexPath.row];
     cell.personList = personListItem;
+    
+    if (indexPath.section == arr.count-1 && indexPath.row == arrPersonList.count-1) {
+        cell.bLast = YES;
+    }else{
+        cell.bLast = NO;
+    }
     
     return cell;
 }

@@ -13,8 +13,10 @@
 @interface PersonListTableViewCell : UITableViewCell{
     IBOutlet UILabel *lblName;
     IBOutlet UILabel *lblAddition;
+    UILabel *lbl;
 }
 
 @property(nonatomic, strong) DynastyPersonList *personList;
+@property(nonatomic) BOOL bLast;
 
 @end
