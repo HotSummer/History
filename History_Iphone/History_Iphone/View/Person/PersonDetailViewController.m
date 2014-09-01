@@ -40,7 +40,6 @@
     // Do any additional setup after loading the view from its nib.
     self.navigationController.navigationBarHidden = NO;
     
-    
     personDetail = [[UIController shareInstance] getPersonDetail];
     if (personDetail != nil) {
         self.navTitle = personDetail.personName;
@@ -70,7 +69,7 @@
     float fYPosition = 11;
     NSSet *set = personDetail.contributes;
     for (Contribute *contribute in set) {
-        CGSize size = [contribute.contributeContent sizeWithFont:[UIFont systemFontOfSize:17.0]
+        CGSize size = [contribute.contributeContent sizeWithFont:[UIFont systemFontOfSize:15.0]
                                constrainedToSize:CGSizeMake(300, MAXFLOAT)
                                    lineBreakMode:NSLineBreakByTruncatingMiddle];
         UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(10, fYPosition, 300, size.height)];
@@ -78,6 +77,7 @@
         lbl.text = contribute.contributeContent;
         lbl.backgroundColor = [UIColor clearColor];
         lbl.textColor = [UIColor blackColor];
+        lbl.font = [UIFont systemFontOfSize:15.0];
         [cellHistoryContribute addSubview:lbl];
         fYPosition += size.height+11;
     }
@@ -88,7 +88,7 @@
     float fHeight = 12;
     NSSet *set = personDetail.comments;
     for (Comment *comment in set) {
-        CGSize size = [comment.commentContent sizeWithFont:[UIFont systemFontOfSize:17.0]
+        CGSize size = [comment.commentContent sizeWithFont:[UIFont systemFontOfSize:15.0]
                                                 constrainedToSize:CGSizeMake(300, MAXFLOAT)
                                                     lineBreakMode:NSLineBreakByTruncatingMiddle];
         UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(10, fHeight, 300, 47)];
@@ -96,6 +96,7 @@
         lbl.text = comment.commentContent;
         lbl.backgroundColor = [UIColor clearColor];
         lbl.textColor = [UIColor blackColor];
+        lbl.font = [UIFont systemFontOfSize:15.0];
         [cellEvalution addSubview:lbl];
         fHeight += size.height+12;
     }
@@ -114,6 +115,13 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 20)];
     view.backgroundColor = [UIColor clearColor];
+    //添加渐变色
+    CAGradientLayer *gradientLayer = [CAGradientLayer layer];
+    gradientLayer.frame = CGRectMake(0, 0, 320, 20);
+    gradientLayer.colors = @[(id)[UIColor colorWithRed:229.0/255.0 green:206.0/255.0 blue:165.0/255.0 alpha:1.0].CGColor, (id)[UIColor whiteColor].CGColor];
+    gradientLayer.startPoint = CGPointMake(0, .5);
+    gradientLayer.endPoint = CGPointMake(1, .5);
+    [view.layer addSublayer:gradientLayer];
     UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 310, 20)];
     lbl.backgroundColor = [UIColor clearColor];
     lbl.textColor = [UIColor colorWithRed:172.0/255.0 green:131.0/255.0 blue:92.0/255.0 alpha:1.0];//[UIColor blackColor];
