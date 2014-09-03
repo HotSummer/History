@@ -13,7 +13,7 @@
 
 @optional
 - (void)selectTime:(NSInteger)iTimeNumber;
-
+- (void)showNextLevelTimeLine:(NSString *)iTimeLineId;
 @end
 
 @interface TimeLineView : UIView

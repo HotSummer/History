@@ -11,6 +11,8 @@
 
 @interface TimeLineViewController ()
 
+@property(nonatomic, strong) NSArray *arrData;
+
 @end
 
 @implementation TimeLineViewController
@@ -20,6 +22,9 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        [TimeLineManager shareInstance].currentLevel ++;
+        NSArray *arrEntity = [[TimeLineManager shareInstance] getTimeLineByLevel:[TimeLineManager shareInstance].currentLevel hasSuper:NO];
+        _arrData = [[NSArray alloc] initWithArray:arrEntity];
     }
     return self;
 }
@@ -28,7 +33,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.navigationItem.title = @"时间轴";
+    self.navTitle = @"时间轴";
     pageView.dataSource = self;
     pageView.delegate = self;
     pageView.minimumPageScale = 0.7;
@@ -47,9 +52,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)back:(id)sender{
+    [super back:sender];
+    [TimeLineManager shareInstance].currentLevel --;
+}
+
 #pragma mark - pageview delegate
 - (NSInteger)numberOfPagesInFlowView:(PagedFlowView *)flowView{
-    return [TimeLineManager shareInstance].timeLines.count;
+    return _arrData.count;
 }
 
 - (CGSize)sizeForPageInFlowView:(PagedFlowView *)flowView{
@@ -57,7 +67,7 @@
 }
 
 - (UIView *)flowView:(PagedFlowView *)flowView cellForPageAtIndex:(NSInteger)index{
-    TimeLineEntity *entity = [TimeLineManager shareInstance].timeLines[index];
+    TimeLineEntity *entity = _arrData[index];
     UIImage *image = [UIImage imageNamed:entity.image];
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 215, 168)];
     imageView.image = image;
@@ -78,6 +88,11 @@
 #pragma mark - TimeLineDelegate
 - (void)selectTime:(NSInteger)iTimeNumber{
     [pageView scrollToPage:iTimeNumber];
+}
+
+- (void)showNextLevelTimeLine:(NSString *)iTimeLineId{
+    TimeLineViewController *timeLineVC = [[TimeLineViewController alloc] initWithNibName:@"TimeLineViewController" bundle:nil];
+    [self.navigationController pushViewController:timeLineVC animated:YES];
 }
 
 @end

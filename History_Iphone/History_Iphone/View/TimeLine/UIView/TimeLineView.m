@@ -12,10 +12,11 @@
 
 #define LineUpSpace 6
 #define LineDownSpace 6
-#define TimeLineItemMinLength 30
+#define TimeLineItemMinLength 8
 
 @interface TimeLineView ()
 
+@property(nonatomic, strong) NSArray *arrData;
 @property(nonatomic) CGFloat fTotalTimeLineLength;
 @property(nonatomic, strong) NSMutableArray *arrRate;
 @property(nonatomic, strong) UIView *viewTimeLine;
@@ -46,6 +47,8 @@
     if (self = [super initWithCoder:aDecoder]) {
         //
         _arrRate = [[NSMutableArray alloc] init];
+        NSArray *arrEntity = [[TimeLineManager shareInstance] getTimeLineByLevel:[TimeLineManager shareInstance].currentLevel hasSuper:NO];
+        _arrData = [[NSArray alloc] initWithArray:arrEntity];
     }
     return self;
 }
@@ -70,12 +73,11 @@
     CGFloat fTotalLength = 0;
     CGFloat fMin = 1;
     
-    NSArray *arrEntity = [TimeLineManager shareInstance].timeLines;
-    for (TimeLineEntity *entity in arrEntity) {
+    for (TimeLineEntity *entity in _arrData) {
         fTotalLength += entity.length;
     }
     
-    for (TimeLineEntity *entity in arrEntity) {
+    for (TimeLineEntity *entity in _arrData) {
         CGFloat rate = entity.length/fTotalLength;
         NSNumber *number = [NSNumber numberWithFloat:rate];
         [_arrRate addObject:number];
@@ -103,10 +105,9 @@
 
 //创建时间线上的button
 - (void)createTimeLineButton{
-    NSArray *arrEntity = [TimeLineManager shareInstance].timeLines;
     CGFloat fYPosition = 0;
-    for (int i=0; i<arrEntity.count; i++) {
-        TimeLineEntity *entity = arrEntity[i];
+    for (int i=0; i<_arrData.count; i++) {
+        TimeLineEntity *entity = _arrData[i];
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         if (i==0) {
             btn.frame = CGRectMake(4, 0, 68, 12);
@@ -118,10 +119,20 @@
         
         [btn setTitle:entity.name forState:UIControlStateNormal];
         btn.titleLabel.font = [UIFont systemFontOfSize:14.0];
+        btn.tag = i;
+        [btn addTarget:self action:@selector(showNextLevelTimeLine:) forControlEvents:UIControlEventTouchUpInside];
         [_viewTimeLine addSubview:btn];
         
         GrayCircle *grapCircle = [[GrayCircle alloc] initWithFrame:CGRectMake(71, btn.frame.origin.y+3, 6, 6)];
         [_viewTimeLine addSubview:grapCircle];
+    }
+}
+
+- (void)showNextLevelTimeLine:(id)sender{
+    UIButton *btn = (UIButton *)sender;
+    TimeLineEntity *entity = _arrData[btn.tag];
+    if ([self.delegate respondsToSelector:@selector(showNextLevelTimeLine:)]) {
+        [self.delegate showNextLevelTimeLine:entity.story_id];
     }
 }
 
@@ -140,7 +151,7 @@
     }else{
         if (timeNumber == 0) {
             fY = 0;
-        }else if (timeNumber == [TimeLineManager shareInstance].timeLines.count -1){
+        }else if (timeNumber == _arrData.count -1){
             fY = scrollViewTimeLine.contentSize.height-504;
             fY = (fY>0)?fY:0;
         }else{

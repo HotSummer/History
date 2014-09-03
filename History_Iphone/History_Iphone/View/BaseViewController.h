@@ -12,4 +12,6 @@
 
 @property(nonatomic, strong) NSString *navTitle;
 
+- (void)back:(id)sender;
+
 @end

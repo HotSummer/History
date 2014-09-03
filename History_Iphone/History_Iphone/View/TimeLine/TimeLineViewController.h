@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "PagedFlowView.h"
 #import "TimeLineView.h"
+#import "BaseViewController.h"
 
-@interface TimeLineViewController : UIViewController
+@interface TimeLineViewController : BaseViewController
 <
 PagedFlowViewDataSource,
 PagedFlowViewDelegate,

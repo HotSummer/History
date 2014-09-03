@@ -12,6 +12,7 @@
 @interface TimeLineManager : NSObject{
 }
 @property(nonatomic, readonly) NSArray *timeLines;
+@property(nonatomic) int currentLevel;//当前时间轴的层级
 
 + (TimeLineManager *)shareInstance;
 

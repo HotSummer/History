@@ -168,7 +168,7 @@
             [timerAnimation invalidate];
             timerAnimation = nil;
         }
-        timerAnimation = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(hideIndicatorView) userInfo:nil repeats:NO];
+        timerAnimation = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(hideIndicatorView) userInfo:nil repeats:NO];
     }
 }
 
