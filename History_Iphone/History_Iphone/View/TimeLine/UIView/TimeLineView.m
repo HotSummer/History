@@ -47,7 +47,8 @@
     if (self = [super initWithCoder:aDecoder]) {
         //
         _arrRate = [[NSMutableArray alloc] init];
-        NSArray *arrEntity = [[TimeLineManager shareInstance] getTimeLineByLevel:[TimeLineManager shareInstance].currentLevel hasSuper:NO];
+        NSString *currentTimeLine = [[TimeLineManager shareInstance] getCurrentTimeLineId];
+        NSArray *arrEntity = [[TimeLineManager shareInstance] getTimeLine:currentTimeLine level:[TimeLineManager shareInstance].currentLevel hasSuper:NO];
         _arrData = [[NSArray alloc] initWithArray:arrEntity];
     }
     return self;
@@ -56,16 +57,18 @@
 - (void)layoutSubviews{
     [super layoutSubviews];
     
-    _viewTimeLine = [[UIView alloc] init];
-    [scrollViewTimeLine addSubview:_viewTimeLine];
-    
-    [self showTimeLine];
-    
-    timeLineSlideView = [[TimeLineSlideView alloc] initWithFrame:CGRectMake(69, 0, 12, _fTotalTimeLineLength)];
-    timeLineSlideView.tag = 1000;
-    [scrollViewTimeLine addSubview:timeLineSlideView];
-    timeLineSlideView.arrRate = _arrRate;
-    timeLineSlideView.delegate = self;
+    if (!_viewTimeLine) {
+        _viewTimeLine = [[UIView alloc] init];
+        [scrollViewTimeLine addSubview:_viewTimeLine];
+        
+        [self showTimeLine];
+        
+        timeLineSlideView = [[TimeLineSlideView alloc] initWithFrame:CGRectMake(69, 0, 12, _fTotalTimeLineLength)];
+        timeLineSlideView.tag = 1000;
+        [scrollViewTimeLine addSubview:timeLineSlideView];
+        timeLineSlideView.arrRate = _arrRate;
+        timeLineSlideView.delegate = self;
+    }
 }
 
 //计算时间线总长度
@@ -87,6 +90,9 @@
     }
     
     _fTotalTimeLineLength = TimeLineItemMinLength/fMin;
+    if (_fTotalTimeLineLength < self.bounds.size.height - (LineUpSpace+LineDownSpace)) {
+        _fTotalTimeLineLength = self.bounds.size.height - (LineUpSpace+LineDownSpace);
+    }
     
     return 0;
 }
@@ -118,7 +124,7 @@
         }
         
         [btn setTitle:entity.name forState:UIControlStateNormal];
-        btn.titleLabel.font = [UIFont systemFontOfSize:14.0];
+        btn.titleLabel.font = [UIFont systemFontOfSize:13.0];
         btn.tag = i;
         [btn addTarget:self action:@selector(showNextLevelTimeLine:) forControlEvents:UIControlEventTouchUpInside];
         [_viewTimeLine addSubview:btn];

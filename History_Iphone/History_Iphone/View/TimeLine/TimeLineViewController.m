@@ -22,9 +22,9 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        [TimeLineManager shareInstance].currentLevel ++;
-        NSArray *arrEntity = [[TimeLineManager shareInstance] getTimeLineByLevel:[TimeLineManager shareInstance].currentLevel hasSuper:NO];
-        _arrData = [[NSArray alloc] initWithArray:arrEntity];
+        NSString *currentTimeLine = [[TimeLineManager shareInstance] getCurrentTimeLineId];
+        NSArray *arrEntities = [[TimeLineManager shareInstance] getTimeLine:currentTimeLine level:[TimeLineManager shareInstance].currentLevel  hasSuper:NO];
+        _arrData = [[NSArray alloc] initWithArray:arrEntities];
     }
     return self;
 }
@@ -54,7 +54,7 @@
 
 - (void)back:(id)sender{
     [super back:sender];
-    [TimeLineManager shareInstance].currentLevel --;
+    [[TimeLineManager shareInstance] removeCurrentTimeLineId];
 }
 
 #pragma mark - pageview delegate
@@ -71,7 +71,6 @@
     UIImage *image = [UIImage imageNamed:entity.image];
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 215, 168)];
     imageView.image = image;
-    
     
     return imageView;
 }
@@ -91,6 +90,7 @@
 }
 
 - (void)showNextLevelTimeLine:(NSString *)iTimeLineId{
+    [[TimeLineManager shareInstance] addTimeLineId:iTimeLineId];
     TimeLineViewController *timeLineVC = [[TimeLineViewController alloc] initWithNibName:@"TimeLineViewController" bundle:nil];
     [self.navigationController pushViewController:timeLineVC animated:YES];
 }

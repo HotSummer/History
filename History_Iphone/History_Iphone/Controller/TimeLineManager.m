@@ -28,7 +28,8 @@
 
 - (id)init{
     if (self = [super init]) {
-        _currentLevel = -1;
+        _currentLevel = 0;
+        _timeLineIds = [[NSMutableArray alloc] init];
 #warning data
         //@[@"story1.png", @"story2.png", @"story3.png", @"story1.png", @"story2.png", @"story3.png"];
         TimeLineEntity *entity = [[TimeLineEntity alloc] init];
@@ -244,20 +245,44 @@
     return self;
 }
 
-- (NSArray *)getTimeLineByLevel:(NSInteger)level hasSuper:(BOOL)bHasSuper{
+- (NSArray *)getTimeLine:(NSString *)superTimeLine level:(NSInteger)level hasSuper:(BOOL)bHasSuper{
     NSMutableArray *arrLevel = [[NSMutableArray alloc] init];
     for (TimeLineEntity *entity in _timeLines) {
         if (bHasSuper) {
             if ([entity.level integerValue] <= level) {
-                [arrLevel addObject:entity];
+                if (level == 0) {
+                    [arrLevel addObject:entity];
+                }else if([entity.super_id isEqualToString:superTimeLine]){
+                    [arrLevel addObject:entity];
+                }
             }
         }else{
             if ([entity.level integerValue] == level) {
-                [arrLevel addObject:entity];
+                if (level == 0) {
+                    [arrLevel addObject:entity];
+                }else if([entity.super_id isEqualToString:superTimeLine]){
+                    [arrLevel addObject:entity];
+                }
             }
         }
     }
     return arrLevel;
+    
+}
+
+- (NSString *)getCurrentTimeLineId{
+    if (_currentLevel < 1 || _timeLineIds.count == 0) {
+        return nil;
+    }
+    return _timeLineIds[_currentLevel-1];
+}
+- (void)addTimeLineId:(NSString *)timeLineId{
+    [TimeLineManager shareInstance].currentLevel ++;
+    [_timeLineIds addObject:timeLineId];
+}
+- (void)removeCurrentTimeLineId{
+    [TimeLineManager shareInstance].currentLevel --;
+    [_timeLineIds removeLastObject];
 }
 
 @end

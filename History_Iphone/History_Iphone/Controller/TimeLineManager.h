@@ -13,12 +13,19 @@
 }
 @property(nonatomic, readonly) NSArray *timeLines;
 @property(nonatomic) int currentLevel;//当前时间轴的层级
+@property(nonatomic, strong) NSMutableArray *timeLineIds;
 
 + (TimeLineManager *)shareInstance;
 
 //bHasSuper：是否返回level的上一级数据
-- (NSArray *)getTimeLineByLevel:(NSInteger)level hasSuper:(BOOL)bHasSuper;
+- (NSArray *)getTimeLine:(NSString *)superTimeLine level:(NSInteger)level hasSuper:(BOOL)bHasSuper;
 
-//- (NSArray *)get
+//获取当前CurrentTimeLineId
+- (NSString *)getCurrentTimeLineId;
+//添加新的TimeLineId
+- (void)addTimeLineId:(NSString *)timeLineId;
+//删除TimeLineId
+- (void)removeCurrentTimeLineId;
+
 
 @end
