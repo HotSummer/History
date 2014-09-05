@@ -22,9 +22,12 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        
         NSString *currentTimeLine = [[TimeLineManager shareInstance] getCurrentTimeLineId];
         NSArray *arrEntities = [[TimeLineManager shareInstance] getTimeLine:currentTimeLine level:[TimeLineManager shareInstance].currentLevel  hasSuper:NO];
         _arrData = [[NSArray alloc] initWithArray:arrEntities];
+        
+
     }
     return self;
 }
@@ -91,8 +94,15 @@
 
 - (void)showNextLevelTimeLine:(NSString *)iTimeLineId{
     [[TimeLineManager shareInstance] addTimeLineId:iTimeLineId];
-    TimeLineViewController *timeLineVC = [[TimeLineViewController alloc] initWithNibName:@"TimeLineViewController" bundle:nil];
-    [self.navigationController pushViewController:timeLineVC animated:YES];
+    
+    NSString *currentTimeLine = [[TimeLineManager shareInstance] getCurrentTimeLineId];
+    NSArray *arrEntities = [[TimeLineManager shareInstance] getTimeLine:currentTimeLine level:[TimeLineManager shareInstance].currentLevel  hasSuper:NO];
+    if (arrEntities.count > 0) {
+        TimeLineViewController *timeLineVC = [[TimeLineViewController alloc] initWithNibName:@"TimeLineViewController" bundle:nil];
+        [self.navigationController pushViewController:timeLineVC animated:YES];
+    }else{
+        [[TimeLineManager shareInstance] removeCurrentTimeLineId];
+    }
 }
 
 @end

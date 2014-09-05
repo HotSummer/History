@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import "BaseViewController.h"
+#import "BaseViewController.h"
 
-@interface MainViewController : UIViewController{
+@interface MainViewController : BaseViewController{
     IBOutlet UIButton *btnDynastyMap;
     IBOutlet UIButton *btnDynastyStory;
     IBOutlet UIButton *btnPersonStory;

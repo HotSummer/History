@@ -30,11 +30,13 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.navigationController.navigationBarHidden = YES;
+    self.navTitle = @"历史地图";
     pageView.dataSource = self;
     pageView.delegate = self;
     pageView.minimumPageScale = 0.7;
     pageView.minimumPageAlpha = 0.3;
+    
+    
 }
 
 - (void)didReceiveMemoryWarning

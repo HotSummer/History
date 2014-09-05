@@ -1010,7 +1010,7 @@
 				ORGANIZATIONNAME = zbq;
 				TargetAttributes = {
 					79A662EF192BA32100B7170E = {
-						DevelopmentTeam = W9LJWVEKU4;
+						DevelopmentTeam = 323D66V24V;
 					};
 					79A6630A192BA32200B7170E = {
 						TestTargetID = 79A662EF192BA32100B7170E;
@@ -1281,7 +1281,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: summer zhu (CUNW93NJ58)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/History_Iphone/Tools/ShareSDK/Connection",
@@ -1301,7 +1301,7 @@
 					"$(PROJECT_DIR)/History_Iphone/Tools/ShareSDK/Extend/WeChatSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "21BB759C-8420-4B90-B427-4385E0CBD331";
+				PROVISIONING_PROFILE = "D21A200E-654B-4248-B8DE-893839463161";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1311,8 +1311,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: summer zhu (CUNW93NJ58)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: summer zhu (CUNW93NJ58)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/History_Iphone/Tools/ShareSDK/Connection",
@@ -1332,7 +1332,7 @@
 					"$(PROJECT_DIR)/History_Iphone/Tools/ShareSDK/Extend/WeChatSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "21BB759C-8420-4B90-B427-4385E0CBD331";
+				PROVISIONING_PROFILE = "D21A200E-654B-4248-B8DE-893839463161";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
