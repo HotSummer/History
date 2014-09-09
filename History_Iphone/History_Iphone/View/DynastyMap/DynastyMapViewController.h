@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "PagedFlowView.h"
+#import "BaseViewController.h"
 
-@interface DynastyMapViewController : UIViewController
+@interface DynastyMapViewController : BaseViewController
 <
 PagedFlowViewDataSource,
 PagedFlowViewDelegate

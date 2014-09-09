@@ -282,6 +282,9 @@
 }
 - (void)removeCurrentTimeLineId{
     [TimeLineManager shareInstance].currentLevel --;
+    if ([TimeLineManager shareInstance].currentLevel < 0) {
+        [TimeLineManager shareInstance].currentLevel = 0;
+    }
     [_timeLineIds removeLastObject];
 }
 
