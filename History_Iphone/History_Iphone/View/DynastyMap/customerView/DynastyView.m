@@ -10,16 +10,23 @@
 
 @implementation DynastyView
 @synthesize dynastyName;
+@synthesize dynastyImageName;
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        lblDynastyName = [[UILabel alloc] initWithFrame:self.frame];
-        lblDynastyName.textColor = [UIColor blackColor];
+        
+        imageviewDynasty = [[UIImageView alloc] initWithFrame:self.bounds];
+        [self addSubview:imageviewDynasty];
+        
+        lblDynastyName = [[UILabel alloc] initWithFrame:self.bounds];
+        lblDynastyName.textColor = [UIColor whiteColor];
         lblDynastyName.textAlignment = NSTextAlignmentCenter;
+        lblDynastyName.font = [UIFont fontWithName:@"DIN Alternate" size:20.0];
         [self addSubview:lblDynastyName];
+        
     }
     return self;
 }
@@ -43,6 +50,16 @@
     }
     if (dynastyName.length > 0) {
         lblDynastyName.text = dynastyName;
+    }
+}
+
+- (void)setDynastyImageName:(NSString *)_dynastyImageName{
+    if (![dynastyImageName isEqualToString:_dynastyImageName]) {
+        dynastyImageName = _dynastyImageName;
+    }
+    
+    if (dynastyImageName.length > 0) {
+        imageviewDynasty.image = [UIImage imageNamed:dynastyImageName];
     }
 }
 

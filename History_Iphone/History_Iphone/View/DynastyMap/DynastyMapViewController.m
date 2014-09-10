@@ -91,6 +91,7 @@
     DynastyView *view = [[DynastyView alloc] initWithFrame:CGRectMake(0, 0, 140, 125)];
     DynastyList *dynastyList = [[UIController shareInstance] arrDynasties][index];
     view.dynastyName = dynastyList.dynastyName;
+    view.dynastyImageName = @"xia_thumbnail.png";
     return view;
 }
 

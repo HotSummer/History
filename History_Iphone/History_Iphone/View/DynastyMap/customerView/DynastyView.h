@@ -10,7 +10,9 @@
 
 @interface DynastyView : UIView{
     UILabel *lblDynastyName;
+    UIImageView *imageviewDynasty;
 }
 @property(nonatomic, strong) NSString *dynastyName;
+@property(nonatomic, strong) NSString *dynastyImageName;
 
 @end
