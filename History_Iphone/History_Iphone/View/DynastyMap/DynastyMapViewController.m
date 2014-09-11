@@ -13,6 +13,8 @@
 
 @interface DynastyMapViewController ()
 
+@property(nonatomic, strong) NSArray *dynastyThumbnailImages;
+
 @end
 
 @implementation DynastyMapViewController
@@ -35,7 +37,7 @@
     pageView.delegate = self;
     pageView.minimumPageScale = 0.7;
     pageView.minimumPageAlpha = 0.3;
-    
+    _dynastyThumbnailImages = @[@"xia_thumbnail.png", @"shang_early_thumbnail.png", @"shang_later_thumbnail.png", @"xizhou_thumbnail.png", @"dongzhou_thumbnail.png", @"qin_thumbnail.png"];
     
 }
 
@@ -91,7 +93,7 @@
     DynastyView *view = [[DynastyView alloc] initWithFrame:CGRectMake(0, 0, 140, 125)];
     DynastyList *dynastyList = [[UIController shareInstance] arrDynasties][index];
     view.dynastyName = dynastyList.dynastyName;
-    view.dynastyImageName = @"xia_thumbnail.png";
+    view.dynastyImageName = _dynastyThumbnailImages[index];
     return view;
 }
 
