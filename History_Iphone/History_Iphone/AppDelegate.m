@@ -22,6 +22,8 @@
     
     //ShareSDK
     [self initShareConfig];
+    //友盟统计
+    [self initUmeng];
     
     MainViewController *mainVC = [[MainViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:mainVC];
@@ -48,6 +50,29 @@
         }
         NSLog(@"%d", indFamily);
     }
+}
+
+- (void)initUmeng{
+    [MobClick startWithAppkey:@"540f14befd98c54ed001c0ce" reportPolicy:BATCH   channelId:@""];
+//    [MobClick checkUpdate];+ (void)checkUpdateWithDelegate:(id)delegate selector:(SEL)callBackSelectorWithDictionary
+    [MobClick checkUpdateWithDelegate:self selector:@selector(appUpdate:)];
+}
+
+#pragma mark - MobClick Delegate
+- (void)appUpdate:(NSDictionary *)appInfo{
+    self.updateAppInfo = appInfo;
+//    ((AppDelegate *)[UIApplication sharedApplication].delegate).updateAppInfo = appInfo;
+    
+    NSString *updateLog = [appInfo objectForKey:@"update_log"];
+    NSString *logs = [updateLog stringByReplacingOccurrencesOfString:@";" withString:@"\n"];
+    UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:logs message:nil delegate:self cancelButtonTitle:@"立即更新" otherButtonTitles:nil, nil];
+    [alertview show];
+}
+
+#pragma mark - alertview
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    NSString *appUrl = [self.updateAppInfo objectForKey:@"path"];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:appUrl]];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

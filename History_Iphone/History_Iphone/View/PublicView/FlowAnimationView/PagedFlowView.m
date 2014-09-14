@@ -414,7 +414,6 @@
                 [_scrollView setContentOffset:CGPointMake(0, _pageSize.height * pageNumber) animated:YES];
                 break;
         }
-        NSLog(@"offset.y : %f", _scrollView.contentOffset.y);
         [self setPagesAtContentOffset:_scrollView.contentOffset];
         [self refreshVisibleCellAppearance];
     }

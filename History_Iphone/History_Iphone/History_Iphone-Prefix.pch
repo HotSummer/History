@@ -16,4 +16,5 @@
     #import <CoreData/CoreData.h>
     #import <ShareSDK/ShareSDK.h>
     #import "HistoryDefine.h"
+    #import "MobClick.h"
 #endif
