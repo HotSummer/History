@@ -47,6 +47,7 @@
     timeLineView = [[[NSBundle mainBundle] loadNibNamed:@"TimeLineView" owner:self options:nil] lastObject];
     timeLineView.frame = CGRectMake(0, 64, timeLineView.frame.size.width, timeLineView.frame.size.height);
     timeLineView.delegate = self;
+    timeLineView.arrData = _arrData;
     [self.view addSubview:timeLineView];
 }
 

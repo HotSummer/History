@@ -17,7 +17,6 @@
 
 @interface TimeLineView ()
 
-@property(nonatomic, strong) NSArray *arrData;
 @property(nonatomic) CGFloat fTotalTimeLineLength;
 @property(nonatomic, strong) NSMutableArray *arrRate;
 @property(nonatomic, strong) UIView *viewTimeLine;
@@ -48,9 +47,9 @@
     if (self = [super initWithCoder:aDecoder]) {
         //
         _arrRate = [[NSMutableArray alloc] init];
-        NSString *currentTimeLine = [[TimeLineManager shareInstance] getCurrentTimeLineId];
-        NSArray *arrEntity = [[TimeLineManager shareInstance] getTimeLine:currentTimeLine level:[TimeLineManager shareInstance].currentLevel hasSuper:NO];
-        _arrData = [[NSArray alloc] initWithArray:arrEntity];
+//        NSString *currentTimeLine = [[TimeLineManager shareInstance] getCurrentTimeLineId];
+//        NSArray *arrEntity = [[TimeLineManager shareInstance] getTimeLine:currentTimeLine level:[TimeLineManager shareInstance].currentLevel hasSuper:NO];
+//        _arrData = [[NSArray alloc] initWithArray:arrEntity];
     }
     return self;
 }

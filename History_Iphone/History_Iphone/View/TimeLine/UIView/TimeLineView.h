@@ -23,6 +23,7 @@ TimeLineSlideDelegate
     IBOutlet UIScrollView *scrollViewTimeLine;
     TimeLineSlideView *timeLineSlideView;
 }
+@property(nonatomic, strong) NSArray *arrData;
 @property(nonatomic, weak) id<TimeLineDelegate> delegate;
 
 - (void)scrollToTime:(NSInteger)timeNumber;

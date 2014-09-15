@@ -60,7 +60,20 @@
             }
         }
     }
-    return arrLevel;
+    
+    NSArray *arrResult = [arrLevel sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        TimeLine *timeLine1 = (TimeLine *)obj1;
+        TimeLine *timeLine2 = (TimeLine *)obj2;
+        if ([timeLine1.startYear floatValue] < [timeLine2.startYear floatValue]) {
+            return NSOrderedAscending;
+        }
+        if ([timeLine1.startYear floatValue] > [timeLine2.startYear floatValue]) {
+            return NSOrderedDescending;
+        }
+        return NSOrderedSame;
+    }];
+    
+    return arrResult;
     
 }
 

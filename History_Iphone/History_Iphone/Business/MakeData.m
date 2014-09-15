@@ -609,6 +609,7 @@
     entity2.story_id = @"14";
     entity2.name = @"殷商";
     entity2.image = @"story3.png";
+    entity2.startYear = [NSNumber numberWithFloat:-1300];
     entity2.length = [NSNumber numberWithFloat:256];
     
     TimeLine *entity3 = [DBHelper insertObjectToEntity:@"TimeLine"];
@@ -617,6 +618,7 @@
     entity3.story_id = @"15";
     entity3.name = @"西周建立";
     entity3.image = @"story1.png";
+    entity3.startYear = [NSNumber numberWithFloat:-1059];
     entity3.length = [NSNumber numberWithFloat:275];
     
     TimeLine *entity4 = [DBHelper insertObjectToEntity:@"TimeLine"];
@@ -625,6 +627,7 @@
     entity4.story_id = @"16";
     entity4.name = @"东周";
     entity4.image = @"story2.png";
+    entity4.startYear = [NSNumber numberWithFloat:-770];
     entity4.length = [NSNumber numberWithFloat:548];
     
     TimeLine *entity4_1 = [DBHelper insertObjectToEntity:@"TimeLine"];
@@ -793,6 +796,7 @@
     entity5.story_id = @"17";
     entity5.name = @"秦";
     entity5.image = @"story3.png";
+    entity5.startYear = [NSNumber numberWithFloat:-221];
     entity5.length = [NSNumber numberWithFloat:15];
     
     [DBHelper save];
