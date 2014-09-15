@@ -8,6 +8,7 @@
 
 #import "TimeLineViewController.h"
 #import "TimeLineManager.h"
+#import "TimeLine.h"
 
 @interface TimeLineViewController ()
 
@@ -70,7 +71,7 @@
 }
 
 - (UIView *)flowView:(PagedFlowView *)flowView cellForPageAtIndex:(NSInteger)index{
-    TimeLineEntity *entity = _arrData[index];
+    TimeLine *entity = _arrData[index];
     UIImage *image = [UIImage imageNamed:entity.image];
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 215, 168)];
     imageView.image = image;

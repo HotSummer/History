@@ -9,6 +9,7 @@
 #import "TimeLineView.h"
 #import "TimeLineManager.h"
 #import "GrayCircle.h"
+#import "TimeLine.h"
 
 #define LineUpSpace 6
 #define LineDownSpace 6
@@ -76,12 +77,12 @@
     CGFloat fTotalLength = 0;
     CGFloat fMin = 1;
     
-    for (TimeLineEntity *entity in _arrData) {
-        fTotalLength += entity.length;
+    for (TimeLine *entity in _arrData) {
+        fTotalLength += [entity.length floatValue];
     }
     
-    for (TimeLineEntity *entity in _arrData) {
-        CGFloat rate = entity.length/fTotalLength;
+    for (TimeLine *entity in _arrData) {
+        CGFloat rate = [entity.length floatValue]/fTotalLength;
         NSNumber *number = [NSNumber numberWithFloat:rate];
         [_arrRate addObject:number];
         if (fMin > rate) {
@@ -113,7 +114,7 @@
 - (void)createTimeLineButton{
     CGFloat fYPosition = 0;
     for (int i=0; i<_arrData.count; i++) {
-        TimeLineEntity *entity = _arrData[i];
+        TimeLine *entity = _arrData[i];
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         if (i==0) {
             btn.frame = CGRectMake(4, 0, 68, 12);
@@ -136,7 +137,7 @@
 
 - (void)showNextLevelTimeLine:(id)sender{
     UIButton *btn = (UIButton *)sender;
-    TimeLineEntity *entity = _arrData[btn.tag];
+    TimeLine *entity = _arrData[btn.tag];
     if ([self.delegate respondsToSelector:@selector(showNextLevelTimeLine:)]) {
         [self.delegate showNextLevelTimeLine:entity.story_id];
     }

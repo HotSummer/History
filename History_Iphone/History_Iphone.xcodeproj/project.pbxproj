@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E54017A19C6CB9C00CB8FC7 /* TimeLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54017919C6CB9C00CB8FC7 /* TimeLine.m */; };
+		4E54017D19C6CD2600CB8FC7 /* TimeLineManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54017C19C6CD2600CB8FC7 /* TimeLineManager.m */; };
+		4E54018019C6CE7A00CB8FC7 /* TimeLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54017F19C6CE7A00CB8FC7 /* TimeLineView.m */; };
+		4E54018319C6CE9F00CB8FC7 /* TimeLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54018219C6CE9F00CB8FC7 /* TimeLineViewController.m */; };
 		4EAB47B41992290A00C8DD7D /* ChapterConfigView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB47B31992290A00C8DD7D /* ChapterConfigView.m */; };
 		4EAB47B61992291A00C8DD7D /* ChapterConfigView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EAB47B51992291A00C8DD7D /* ChapterConfigView.xib */; };
-		4EAB4888199DAF6E00C8DD7D /* TimeLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB4886199DAF6E00C8DD7D /* TimeLineViewController.m */; };
 		4EAB4889199DAF6E00C8DD7D /* TimeLineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EAB4887199DAF6E00C8DD7D /* TimeLineViewController.xib */; };
 		4EAB4890199DB31900C8DD7D /* story1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EAB488D199DB31900C8DD7D /* story1@2x.png */; };
 		4EAB4891199DB31900C8DD7D /* story2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EAB488E199DB31900C8DD7D /* story2@2x.png */; };
 		4EAB4892199DB31900C8DD7D /* story3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EAB488F199DB31900C8DD7D /* story3@2x.png */; };
 		4EAB4896199DF8A900C8DD7D /* WhiteCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB4895199DF8A900C8DD7D /* WhiteCircle.m */; };
-		4EAB4899199E004500C8DD7D /* TimeLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB4898199E004500C8DD7D /* TimeLineView.m */; };
 		4EAB489B199E005100C8DD7D /* TimeLineView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EAB489A199E005100C8DD7D /* TimeLineView.xib */; };
-		4EAB48A1199E05DD00C8DD7D /* TimeLineEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB48A0199E05DD00C8DD7D /* TimeLineEntity.m */; };
-		4EAB48A4199E069500C8DD7D /* TimeLineManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB48A3199E069500C8DD7D /* TimeLineManager.m */; };
 		4EBE0ADF19AD7A610022012A /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC9896319A43B8700878B84 /* BaseViewController.m */; };
 		4EBE0B0119AD8D4A0022012A /* DynastyCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBE0AED19AD8D4A0022012A /* DynastyCellView.m */; };
 		4EBE0B0219AD8D4A0022012A /* DynastyCollectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBE0AEF19AD8D4A0022012A /* DynastyCollectView.m */; };
@@ -192,24 +192,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E54017819C6CB9C00CB8FC7 /* TimeLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLine.h; sourceTree = "<group>"; };
+		4E54017919C6CB9C00CB8FC7 /* TimeLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLine.m; sourceTree = "<group>"; };
+		4E54017B19C6CD2600CB8FC7 /* TimeLineManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineManager.h; sourceTree = "<group>"; };
+		4E54017C19C6CD2600CB8FC7 /* TimeLineManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineManager.m; sourceTree = "<group>"; };
+		4E54017E19C6CE7A00CB8FC7 /* TimeLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineView.h; sourceTree = "<group>"; };
+		4E54017F19C6CE7A00CB8FC7 /* TimeLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineView.m; sourceTree = "<group>"; };
+		4E54018119C6CE9F00CB8FC7 /* TimeLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineViewController.h; sourceTree = "<group>"; };
+		4E54018219C6CE9F00CB8FC7 /* TimeLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineViewController.m; sourceTree = "<group>"; };
 		4EAB47B21992290A00C8DD7D /* ChapterConfigView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChapterConfigView.h; sourceTree = "<group>"; };
 		4EAB47B31992290A00C8DD7D /* ChapterConfigView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChapterConfigView.m; sourceTree = "<group>"; };
 		4EAB47B51992291A00C8DD7D /* ChapterConfigView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChapterConfigView.xib; sourceTree = "<group>"; };
-		4EAB4885199DAF6E00C8DD7D /* TimeLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineViewController.h; sourceTree = "<group>"; };
-		4EAB4886199DAF6E00C8DD7D /* TimeLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineViewController.m; sourceTree = "<group>"; };
 		4EAB4887199DAF6E00C8DD7D /* TimeLineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimeLineViewController.xib; sourceTree = "<group>"; };
 		4EAB488D199DB31900C8DD7D /* story1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "story1@2x.png"; sourceTree = "<group>"; };
 		4EAB488E199DB31900C8DD7D /* story2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "story2@2x.png"; sourceTree = "<group>"; };
 		4EAB488F199DB31900C8DD7D /* story3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "story3@2x.png"; sourceTree = "<group>"; };
 		4EAB4894199DF8A800C8DD7D /* WhiteCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhiteCircle.h; sourceTree = "<group>"; };
 		4EAB4895199DF8A900C8DD7D /* WhiteCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhiteCircle.m; sourceTree = "<group>"; };
-		4EAB4897199E004500C8DD7D /* TimeLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineView.h; sourceTree = "<group>"; };
-		4EAB4898199E004500C8DD7D /* TimeLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineView.m; sourceTree = "<group>"; };
 		4EAB489A199E005100C8DD7D /* TimeLineView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimeLineView.xib; sourceTree = "<group>"; };
-		4EAB489F199E05DD00C8DD7D /* TimeLineEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineEntity.h; sourceTree = "<group>"; };
-		4EAB48A0199E05DD00C8DD7D /* TimeLineEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineEntity.m; sourceTree = "<group>"; };
-		4EAB48A2199E069500C8DD7D /* TimeLineManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineManager.h; sourceTree = "<group>"; };
-		4EAB48A3199E069500C8DD7D /* TimeLineManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineManager.m; sourceTree = "<group>"; };
 		4EBE0AEC19AD8D4A0022012A /* DynastyCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynastyCellView.h; sourceTree = "<group>"; };
 		4EBE0AED19AD8D4A0022012A /* DynastyCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynastyCellView.m; sourceTree = "<group>"; };
 		4EBE0AEE19AD8D4A0022012A /* DynastyCollectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynastyCollectView.h; sourceTree = "<group>"; };
@@ -499,8 +499,8 @@
 			isa = PBXGroup;
 			children = (
 				4EAB4893199DF87200C8DD7D /* UIView */,
-				4EAB4885199DAF6E00C8DD7D /* TimeLineViewController.h */,
-				4EAB4886199DAF6E00C8DD7D /* TimeLineViewController.m */,
+				4E54018119C6CE9F00CB8FC7 /* TimeLineViewController.h */,
+				4E54018219C6CE9F00CB8FC7 /* TimeLineViewController.m */,
 				4EAB4887199DAF6E00C8DD7D /* TimeLineViewController.xib */,
 			);
 			path = TimeLine;
@@ -509,11 +509,11 @@
 		4EAB4893199DF87200C8DD7D /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				4E54017E19C6CE7A00CB8FC7 /* TimeLineView.h */,
+				4E54017F19C6CE7A00CB8FC7 /* TimeLineView.m */,
+				4EAB489A199E005100C8DD7D /* TimeLineView.xib */,
 				4EAB4894199DF8A800C8DD7D /* WhiteCircle.h */,
 				4EAB4895199DF8A900C8DD7D /* WhiteCircle.m */,
-				4EAB4897199E004500C8DD7D /* TimeLineView.h */,
-				4EAB4898199E004500C8DD7D /* TimeLineView.m */,
-				4EAB489A199E005100C8DD7D /* TimeLineView.xib */,
 				4EC9895919A334EA00878B84 /* GrayCircle.h */,
 				4EC9895A19A334EA00878B84 /* GrayCircle.m */,
 				4EC9895C19A3388B00878B84 /* TimeLineSlideView.h */,
@@ -702,8 +702,6 @@
 				4ECDAA1D19907A37005F72B6 /* CollectionEntity.m */,
 				79989A8C1993D0CF00A8D6E5 /* ChapterConfig.h */,
 				79989A8D1993D0CF00A8D6E5 /* ChapterConfig.m */,
-				4EAB489F199E05DD00C8DD7D /* TimeLineEntity.h */,
-				4EAB48A0199E05DD00C8DD7D /* TimeLineEntity.m */,
 			);
 			path = Bll;
 			sourceTree = "<group>";
@@ -906,14 +904,14 @@
 		79A66322192BA39B00B7170E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4E54017B19C6CD2600CB8FC7 /* TimeLineManager.h */,
+				4E54017C19C6CD2600CB8FC7 /* TimeLineManager.m */,
 				4ECDAA1F19907A62005F72B6 /* CollectManager.h */,
 				4ECDAA2019907A62005F72B6 /* CollectManager.m */,
 				790AE1FF192E4BAF00FC4668 /* UIController.h */,
 				790AE200192E4BAF00FC4668 /* UIController.m */,
 				4ECDAA281990B97F005F72B6 /* ChapterManager.h */,
 				4ECDAA291990B97F005F72B6 /* ChapterManager.m */,
-				4EAB48A2199E069500C8DD7D /* TimeLineManager.h */,
-				4EAB48A3199E069500C8DD7D /* TimeLineManager.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1023,6 +1021,8 @@
 		79E07BC519376DD8008EA875 /* DB */ = {
 			isa = PBXGroup;
 			children = (
+				4E54017819C6CB9C00CB8FC7 /* TimeLine.h */,
+				4E54017919C6CB9C00CB8FC7 /* TimeLine.m */,
 				79410893194F3CF200C0D438 /* DynastyPersonDetail.h */,
 				79410894194F3CF200C0D438 /* DynastyPersonDetail.m */,
 				79F2FB321944A18500780F2A /* DynastyPersonList.h */,
@@ -1276,7 +1276,6 @@
 				4EBE0ADF19AD7A610022012A /* BaseViewController.m in Sources */,
 				79F2FB3A194620CB00780F2A /* PersonDetailViewController.m in Sources */,
 				79A66304192BA32100B7170E /* AppDelegate.m in Sources */,
-				4EAB48A1199E05DD00C8DD7D /* TimeLineEntity.m in Sources */,
 				79816AB819C41672002AE346 /* TwoGradientImageView.m in Sources */,
 				79E07BE919377B3A008EA875 /* StoryTitleTableViewCell.m in Sources */,
 				4EBE0B0319AD8D4A0022012A /* HorizontalCollectView.m in Sources */,
@@ -1292,7 +1291,6 @@
 				4EBE0B0119AD8D4A0022012A /* DynastyCellView.m in Sources */,
 				79E07BE319377B03008EA875 /* DynastyView.m in Sources */,
 				79F2FB341944A18500780F2A /* DynastyPersonList.m in Sources */,
-				4EAB48A4199E069500C8DD7D /* TimeLineManager.m in Sources */,
 				4ECDAA2119907A62005F72B6 /* CollectManager.m in Sources */,
 				790AE201192E4BAF00FC4668 /* UIController.m in Sources */,
 				79E07BD619376DD8008EA875 /* DynastyList.m in Sources */,
@@ -1310,18 +1308,20 @@
 				790AE1E6192CED3200FC4668 /* History.xcdatamodeld in Sources */,
 				79410895194F3CF200C0D438 /* DynastyPersonDetail.m in Sources */,
 				79E07BBC19362047008EA875 /* DynastyMapViewController.m in Sources */,
-				4EAB4888199DAF6E00C8DD7D /* TimeLineViewController.m in Sources */,
 				79E07BD419376DD8008EA875 /* Comment.m in Sources */,
 				79F2FB1D193F68FF00780F2A /* DynastyStory.m in Sources */,
-				4EAB4899199E004500C8DD7D /* TimeLineView.m in Sources */,
 				790AE1FE192E459500FC4668 /* MakeData.m in Sources */,
 				79A66300192BA32100B7170E /* main.m in Sources */,
 				79E07BDA19376DD8008EA875 /* DynastyStoryList.m in Sources */,
+				4E54017D19C6CD2600CB8FC7 /* TimeLineManager.m in Sources */,
 				79E641CF19ACF7070070A287 /* CollectListTableViewCell.m in Sources */,
+				4E54017A19C6CB9C00CB8FC7 /* TimeLine.m in Sources */,
+				4E54018019C6CE7A00CB8FC7 /* TimeLineView.m in Sources */,
 				79E07BD519376DD8008EA875 /* Contribute.m in Sources */,
 				790AE1F0192D0A5300FC4668 /* DBHelper.m in Sources */,
 				79F2FB2D1944997F00780F2A /* PersonListTableViewCell.m in Sources */,
 				795F0B79195C7E0F00D5874B /* TextKitManager.m in Sources */,
+				4E54018319C6CE9F00CB8FC7 /* TimeLineViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -34,5 +34,7 @@
 - (NSArray *)searchPersonList;
 //根据personId获取personDetail
 - (NSArray *)searchPersonDetail:(NSString *)personId;
+//查询TimeLine数据
+- (NSArray *)searchTimeLine;
 
 @end

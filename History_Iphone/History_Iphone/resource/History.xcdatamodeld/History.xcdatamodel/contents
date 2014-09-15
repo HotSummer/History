@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13C64" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13D65" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Comment" representedClassName="Comment" syncable="YES">
         <attribute name="commentContent" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="commentId" optional="YES" attributeType="String" syncable="YES"/>
@@ -45,6 +45,15 @@
         <attribute name="storyId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="storyTitle" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="TimeLine" representedClassName="TimeLine" syncable="YES">
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="length" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="level" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startYear" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="story_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="super_id" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
         <element name="Comment" positionX="0" positionY="252" width="128" height="88"/>
         <element name="Contribute" positionX="45" positionY="288" width="128" height="88"/>
@@ -53,5 +62,6 @@
         <element name="DynastyPersonList" positionX="9" positionY="225" width="128" height="135"/>
         <element name="DynastyStory" positionX="-9" positionY="198" width="128" height="105"/>
         <element name="DynastyStoryList" positionX="-27" positionY="162" width="128" height="88"/>
+        <element name="TimeLine" positionX="0" positionY="270" width="128" height="150"/>
     </elements>
 </model>

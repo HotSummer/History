@@ -63,10 +63,10 @@
     self.updateAppInfo = appInfo;
 //    ((AppDelegate *)[UIApplication sharedApplication].delegate).updateAppInfo = appInfo;
     
-    NSString *updateLog = [appInfo objectForKey:@"update_log"];
-    NSString *logs = [updateLog stringByReplacingOccurrencesOfString:@";" withString:@"\n"];
-    UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:logs message:nil delegate:self cancelButtonTitle:@"立即更新" otherButtonTitles:nil, nil];
-    [alertview show];
+//    NSString *updateLog = [appInfo objectForKey:@"update_log"];
+//    NSString *logs = [updateLog stringByReplacingOccurrencesOfString:@";" withString:@"\n"];
+//    UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:logs message:nil delegate:self cancelButtonTitle:@"立即更新" otherButtonTitles:nil, nil];
+//    [alertview show];
 }
 
 #pragma mark - alertview
