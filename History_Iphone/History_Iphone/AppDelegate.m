@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import "PushManager.h"
 
 @implementation AppDelegate
 
@@ -24,6 +25,8 @@
     [self initShareConfig];
     //友盟统计
     [self initUmeng];
+    //注册通知
+    [self registerNotification];
     
     MainViewController *mainVC = [[MainViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:mainVC];
@@ -48,7 +51,7 @@
         {
             NSLog(@"    Font name: %@", [fontNames objectAtIndex:indFont]);
         }
-        NSLog(@"%d", indFamily);
+        NSLog(@"%ld", (long)indFamily);
     }
 }
 
@@ -58,15 +61,22 @@
     [MobClick checkUpdateWithDelegate:self selector:@selector(appUpdate:)];
 }
 
+- (void)registerNotification{
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
+}
+
 #pragma mark - MobClick Delegate
 - (void)appUpdate:(NSDictionary *)appInfo{
     self.updateAppInfo = appInfo;
 //    ((AppDelegate *)[UIApplication sharedApplication].delegate).updateAppInfo = appInfo;
-    
-//    NSString *updateLog = [appInfo objectForKey:@"update_log"];
-//    NSString *logs = [updateLog stringByReplacingOccurrencesOfString:@";" withString:@"\n"];
-//    UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:logs message:nil delegate:self cancelButtonTitle:@"立即更新" otherButtonTitles:nil, nil];
-//    [alertview show];
+    NSString *lastVersion = [appInfo objectForKey:@"current_version"];
+    NSString *currentVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+    if (![lastVersion isEqualToString:currentVersion]) {
+        NSString *updateLog = [appInfo objectForKey:@"update_log"];
+        NSString *logs = [updateLog stringByReplacingOccurrencesOfString:@";" withString:@"\n"];
+        UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:logs message:nil delegate:self cancelButtonTitle:@"立即更新" otherButtonTitles:nil, nil];
+        [alertview show];
+    }
 }
 
 #pragma mark - alertview
@@ -100,6 +110,21 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+-(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+
+{
+    NSString *pushToken = [[[[deviceToken description]
+                             stringByReplacingOccurrencesOfString:@"<" withString:@""]
+                            stringByReplacingOccurrencesOfString:@">" withString:@""]
+                           stringByReplacingOccurrencesOfString:@" " withString:@""];
+    //这里进行的操作，是将Device Token发送到个推服务端
+    [[PushManager shareInstance] postDeviceTokenToHistoryServer:pushToken];
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    [[PushManager shareInstance] postDeviceTokenToHistoryServer:@""];
 }
 
 #pragma mark - ShareSDK

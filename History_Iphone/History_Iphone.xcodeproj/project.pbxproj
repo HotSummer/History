@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4E54017A19C6CB9C00CB8FC7 /* TimeLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54017919C6CB9C00CB8FC7 /* TimeLine.m */; };
-		4E54017D19C6CD2600CB8FC7 /* TimeLineManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54017C19C6CD2600CB8FC7 /* TimeLineManager.m */; };
 		4E54018019C6CE7A00CB8FC7 /* TimeLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54017F19C6CE7A00CB8FC7 /* TimeLineView.m */; };
 		4E54018319C6CE9F00CB8FC7 /* TimeLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54018219C6CE9F00CB8FC7 /* TimeLineViewController.m */; };
 		4EAB47B41992290A00C8DD7D /* ChapterConfigView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB47B31992290A00C8DD7D /* ChapterConfigView.m */; };
@@ -83,18 +82,22 @@
 		4ECDAA18199075DF005F72B6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ECDAA17199075DF005F72B6 /* QuartzCore.framework */; };
 		4ECDAA1A19907922005F72B6 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ECDAA1919907922005F72B6 /* CoreTelephony.framework */; };
 		4ECDAA1E19907A37005F72B6 /* CollectionEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECDAA1D19907A37005F72B6 /* CollectionEntity.m */; };
-		4ECDAA2119907A62005F72B6 /* CollectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECDAA2019907A62005F72B6 /* CollectManager.m */; };
 		4ECDAA2619907A7E005F72B6 /* CollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECDAA2419907A7E005F72B6 /* CollectViewController.m */; };
 		4ECDAA2719907A7E005F72B6 /* CollectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ECDAA2519907A7E005F72B6 /* CollectViewController.xib */; };
-		4ECDAA2A1990B97F005F72B6 /* ChapterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECDAA291990B97F005F72B6 /* ChapterManager.m */; };
 		790AE1E6192CED3200FC4668 /* History.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 790AE1E4192CED3200FC4668 /* History.xcdatamodeld */; };
 		790AE1EB192CFB5800FC4668 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 790AE1EA192CFB5800FC4668 /* CoreDataManager.m */; };
 		790AE1ED192D025800FC4668 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 790AE1EC192D025800FC4668 /* CoreData.framework */; };
 		790AE1F0192D0A5300FC4668 /* DBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 790AE1EF192D0A5300FC4668 /* DBHelper.m */; };
 		790AE1FE192E459500FC4668 /* MakeData.m in Sources */ = {isa = PBXBuildFile; fileRef = 790AE1FD192E459500FC4668 /* MakeData.m */; };
-		790AE201192E4BAF00FC4668 /* UIController.m in Sources */ = {isa = PBXBuildFile; fileRef = 790AE200192E4BAF00FC4668 /* UIController.m */; };
 		79410895194F3CF200C0D438 /* DynastyPersonDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 79410894194F3CF200C0D438 /* DynastyPersonDetail.m */; };
 		795F0B79195C7E0F00D5874B /* TextKitManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 795F0B78195C7E0F00D5874B /* TextKitManager.m */; };
+		796F17EF19C9D93800D55ACD /* libGexinSdk-1.0.6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 796F17EE19C9D93800D55ACD /* libGexinSdk-1.0.6.a */; };
+		796F17F119C9D9CC00D55ACD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 796F17F019C9D9CC00D55ACD /* CFNetwork.framework */; };
+		796F17FC19C9DE6E00D55ACD /* ChapterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 796F17F419C9DE6E00D55ACD /* ChapterManager.m */; };
+		796F17FD19C9DE6E00D55ACD /* CollectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 796F17F619C9DE6E00D55ACD /* CollectManager.m */; };
+		796F17FE19C9DE6E00D55ACD /* TimeLineManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 796F17F819C9DE6E00D55ACD /* TimeLineManager.m */; };
+		796F17FF19C9DE6E00D55ACD /* UIController.m in Sources */ = {isa = PBXBuildFile; fileRef = 796F17FA19C9DE6E00D55ACD /* UIController.m */; };
+		796F180219C9DEAC00D55ACD /* PushManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 796F180119C9DEAC00D55ACD /* PushManager.m */; };
 		79816A9219BF4D51002AE346 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79816A8F19BF4D51002AE346 /* libMobClickLibrary.a */; };
 		79816A9519C0B2A8002AE346 /* xia_thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = 79816A9319C0B2A8002AE346 /* xia_thumbnail.png */; };
 		79816A9619C0B2A8002AE346 /* xia_thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79816A9419C0B2A8002AE346 /* xia_thumbnail@2x.png */; };
@@ -194,8 +197,6 @@
 /* Begin PBXFileReference section */
 		4E54017819C6CB9C00CB8FC7 /* TimeLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLine.h; sourceTree = "<group>"; };
 		4E54017919C6CB9C00CB8FC7 /* TimeLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLine.m; sourceTree = "<group>"; };
-		4E54017B19C6CD2600CB8FC7 /* TimeLineManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineManager.h; sourceTree = "<group>"; };
-		4E54017C19C6CD2600CB8FC7 /* TimeLineManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineManager.m; sourceTree = "<group>"; };
 		4E54017E19C6CE7A00CB8FC7 /* TimeLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineView.h; sourceTree = "<group>"; };
 		4E54017F19C6CE7A00CB8FC7 /* TimeLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineView.m; sourceTree = "<group>"; };
 		4E54018119C6CE9F00CB8FC7 /* TimeLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineViewController.h; sourceTree = "<group>"; };
@@ -293,13 +294,9 @@
 		4ECDAA1919907922005F72B6 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		4ECDAA1C19907A37005F72B6 /* CollectionEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionEntity.h; sourceTree = "<group>"; };
 		4ECDAA1D19907A37005F72B6 /* CollectionEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionEntity.m; sourceTree = "<group>"; };
-		4ECDAA1F19907A62005F72B6 /* CollectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectManager.h; sourceTree = "<group>"; };
-		4ECDAA2019907A62005F72B6 /* CollectManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectManager.m; sourceTree = "<group>"; };
 		4ECDAA2319907A7E005F72B6 /* CollectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectViewController.h; sourceTree = "<group>"; };
 		4ECDAA2419907A7E005F72B6 /* CollectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectViewController.m; sourceTree = "<group>"; };
 		4ECDAA2519907A7E005F72B6 /* CollectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectViewController.xib; sourceTree = "<group>"; };
-		4ECDAA281990B97F005F72B6 /* ChapterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChapterManager.h; sourceTree = "<group>"; };
-		4ECDAA291990B97F005F72B6 /* ChapterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChapterManager.m; sourceTree = "<group>"; };
 		790AE1E5192CED3200FC4668 /* History.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = History.xcdatamodel; sourceTree = "<group>"; };
 		790AE1E9192CFB5800FC4668 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
 		790AE1EA192CFB5800FC4668 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
@@ -308,12 +305,24 @@
 		790AE1EF192D0A5300FC4668 /* DBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBHelper.m; sourceTree = "<group>"; };
 		790AE1FC192E459500FC4668 /* MakeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakeData.h; sourceTree = "<group>"; };
 		790AE1FD192E459500FC4668 /* MakeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MakeData.m; sourceTree = "<group>"; };
-		790AE1FF192E4BAF00FC4668 /* UIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIController.h; sourceTree = "<group>"; };
-		790AE200192E4BAF00FC4668 /* UIController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIController.m; sourceTree = "<group>"; };
 		79410893194F3CF200C0D438 /* DynastyPersonDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynastyPersonDetail.h; sourceTree = "<group>"; };
 		79410894194F3CF200C0D438 /* DynastyPersonDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynastyPersonDetail.m; sourceTree = "<group>"; };
 		795F0B77195C7E0F00D5874B /* TextKitManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextKitManager.h; sourceTree = "<group>"; };
 		795F0B78195C7E0F00D5874B /* TextKitManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextKitManager.m; sourceTree = "<group>"; };
+		796F17EC19C9D93800D55ACD /* GexinSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GexinSdk.h; sourceTree = "<group>"; };
+		796F17ED19C9D93800D55ACD /* GXSdkError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXSdkError.h; sourceTree = "<group>"; };
+		796F17EE19C9D93800D55ACD /* libGexinSdk-1.0.6.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libGexinSdk-1.0.6.a"; sourceTree = "<group>"; };
+		796F17F019C9D9CC00D55ACD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		796F17F319C9DE6E00D55ACD /* ChapterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChapterManager.h; sourceTree = "<group>"; };
+		796F17F419C9DE6E00D55ACD /* ChapterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChapterManager.m; sourceTree = "<group>"; };
+		796F17F519C9DE6E00D55ACD /* CollectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectManager.h; sourceTree = "<group>"; };
+		796F17F619C9DE6E00D55ACD /* CollectManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectManager.m; sourceTree = "<group>"; };
+		796F17F719C9DE6E00D55ACD /* TimeLineManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineManager.h; sourceTree = "<group>"; };
+		796F17F819C9DE6E00D55ACD /* TimeLineManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineManager.m; sourceTree = "<group>"; };
+		796F17F919C9DE6E00D55ACD /* UIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIController.h; sourceTree = "<group>"; };
+		796F17FA19C9DE6E00D55ACD /* UIController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIController.m; sourceTree = "<group>"; };
+		796F180019C9DEAC00D55ACD /* PushManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushManager.h; sourceTree = "<group>"; };
+		796F180119C9DEAC00D55ACD /* PushManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushManager.m; sourceTree = "<group>"; };
 		79816A8F19BF4D51002AE346 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
 		79816A9019BF4D51002AE346 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
 		79816A9119BF4D51002AE346 /* MobClickSocialAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickSocialAnalytics.h; sourceTree = "<group>"; };
@@ -430,12 +439,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				796F17F119C9D9CC00D55ACD /* CFNetwork.framework in Frameworks */,
+				4ECDAA1219907553005F72B6 /* Security.framework in Frameworks */,
 				4ECDAA1A19907922005F72B6 /* CoreTelephony.framework in Frameworks */,
 				4ECDAA18199075DF005F72B6 /* QuartzCore.framework in Frameworks */,
 				79A662F6192BA32100B7170E /* CoreGraphics.framework in Frameworks */,
 				4ECDAA16199075AC005F72B6 /* SystemConfiguration.framework in Frameworks */,
 				4ECDAA1419907576005F72B6 /* libicucore.dylib in Frameworks */,
-				4ECDAA1219907553005F72B6 /* Security.framework in Frameworks */,
+				796F17EF19C9D93800D55ACD /* libGexinSdk-1.0.6.a in Frameworks */,
 				4ECDAA1019907547005F72B6 /* libstdc++.dylib in Frameworks */,
 				4ECDAA0E19907524005F72B6 /* libsqlite3.dylib in Frameworks */,
 				4ECDAA0C1990750F005F72B6 /* CoreMotion.framework in Frameworks */,
@@ -720,6 +731,7 @@
 		790AE1E7192CF74400FC4668 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				796F17E919C9D93800D55ACD /* GeTui */,
 				79816A8E19BF4D51002AE346 /* UMAnalytics_Sdk_3.1.2 */,
 				4ECDA9C219907444005F72B6 /* ShareSDK */,
 				795F0B76195C7DF400D5874B /* TextKitManager */,
@@ -776,6 +788,56 @@
 			path = TextKitManager;
 			sourceTree = "<group>";
 		};
+		796F17E919C9D93800D55ACD /* GeTui */ = {
+			isa = PBXGroup;
+			children = (
+				796F17EA19C9D93800D55ACD /* dist */,
+			);
+			path = GeTui;
+			sourceTree = "<group>";
+		};
+		796F17EA19C9D93800D55ACD /* dist */ = {
+			isa = PBXGroup;
+			children = (
+				796F17EB19C9D93800D55ACD /* include */,
+				796F17EE19C9D93800D55ACD /* libGexinSdk-1.0.6.a */,
+			);
+			path = dist;
+			sourceTree = "<group>";
+		};
+		796F17EB19C9D93800D55ACD /* include */ = {
+			isa = PBXGroup;
+			children = (
+				796F17EC19C9D93800D55ACD /* GexinSdk.h */,
+				796F17ED19C9D93800D55ACD /* GXSdkError.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		796F17F219C9DE6E00D55ACD /* BussinessController */ = {
+			isa = PBXGroup;
+			children = (
+				796F17F319C9DE6E00D55ACD /* ChapterManager.h */,
+				796F17F419C9DE6E00D55ACD /* ChapterManager.m */,
+				796F17F519C9DE6E00D55ACD /* CollectManager.h */,
+				796F17F619C9DE6E00D55ACD /* CollectManager.m */,
+				796F17F719C9DE6E00D55ACD /* TimeLineManager.h */,
+				796F17F819C9DE6E00D55ACD /* TimeLineManager.m */,
+				796F17F919C9DE6E00D55ACD /* UIController.h */,
+				796F17FA19C9DE6E00D55ACD /* UIController.m */,
+			);
+			path = BussinessController;
+			sourceTree = "<group>";
+		};
+		796F17FB19C9DE6E00D55ACD /* PushManager */ = {
+			isa = PBXGroup;
+			children = (
+				796F180019C9DEAC00D55ACD /* PushManager.h */,
+				796F180119C9DEAC00D55ACD /* PushManager.m */,
+			);
+			path = PushManager;
+			sourceTree = "<group>";
+		};
 		79816A8E19BF4D51002AE346 /* UMAnalytics_Sdk_3.1.2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -828,6 +890,7 @@
 		79A662F2192BA32100B7170E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				796F17F019C9D9CC00D55ACD /* CFNetwork.framework */,
 				4ECDAA1919907922005F72B6 /* CoreTelephony.framework */,
 				4ECDAA17199075DF005F72B6 /* QuartzCore.framework */,
 				4ECDAA15199075AC005F72B6 /* SystemConfiguration.framework */,
@@ -904,14 +967,8 @@
 		79A66322192BA39B00B7170E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4E54017B19C6CD2600CB8FC7 /* TimeLineManager.h */,
-				4E54017C19C6CD2600CB8FC7 /* TimeLineManager.m */,
-				4ECDAA1F19907A62005F72B6 /* CollectManager.h */,
-				4ECDAA2019907A62005F72B6 /* CollectManager.m */,
-				790AE1FF192E4BAF00FC4668 /* UIController.h */,
-				790AE200192E4BAF00FC4668 /* UIController.m */,
-				4ECDAA281990B97F005F72B6 /* ChapterManager.h */,
-				4ECDAA291990B97F005F72B6 /* ChapterManager.m */,
+				796F17F219C9DE6E00D55ACD /* BussinessController */,
+				796F17FB19C9DE6E00D55ACD /* PushManager */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1274,6 +1331,8 @@
 			files = (
 				4EBE0B1319ADE1160022012A /* DynastyIndicatorView.m in Sources */,
 				4EBE0ADF19AD7A610022012A /* BaseViewController.m in Sources */,
+				796F180219C9DEAC00D55ACD /* PushManager.m in Sources */,
+				796F17FC19C9DE6E00D55ACD /* ChapterManager.m in Sources */,
 				79F2FB3A194620CB00780F2A /* PersonDetailViewController.m in Sources */,
 				79A66304192BA32100B7170E /* AppDelegate.m in Sources */,
 				79816AB819C41672002AE346 /* TwoGradientImageView.m in Sources */,
@@ -1283,20 +1342,20 @@
 				4EAB4896199DF8A900C8DD7D /* WhiteCircle.m in Sources */,
 				79F2FB271940A91800780F2A /* PersonListViewController.m in Sources */,
 				4EAB47B41992290A00C8DD7D /* ChapterConfigView.m in Sources */,
+				796F17FD19C9DE6E00D55ACD /* CollectManager.m in Sources */,
 				4EC9895E19A3388B00878B84 /* TimeLineSlideView.m in Sources */,
 				4EBE0B0519AD8D4A0022012A /* PagedFlowView.m in Sources */,
-				4ECDAA2A1990B97F005F72B6 /* ChapterManager.m in Sources */,
 				4EBE0B0819AD8D4A0022012A /* PageView.m in Sources */,
 				4ECDAA2619907A7E005F72B6 /* CollectViewController.m in Sources */,
 				4EBE0B0119AD8D4A0022012A /* DynastyCellView.m in Sources */,
 				79E07BE319377B03008EA875 /* DynastyView.m in Sources */,
 				79F2FB341944A18500780F2A /* DynastyPersonList.m in Sources */,
-				4ECDAA2119907A62005F72B6 /* CollectManager.m in Sources */,
-				790AE201192E4BAF00FC4668 /* UIController.m in Sources */,
+				796F17FE19C9DE6E00D55ACD /* TimeLineManager.m in Sources */,
 				79E07BD619376DD8008EA875 /* DynastyList.m in Sources */,
 				4EBE0B0219AD8D4A0022012A /* DynastyCollectView.m in Sources */,
 				4EBE0B0A19AD8D4A0022012A /* SearchView.m in Sources */,
 				79816AB319C415F1002AE346 /* MainViewController.m in Sources */,
+				796F17FF19C9DE6E00D55ACD /* UIController.m in Sources */,
 				79E07BC219362E8A008EA875 /* StoryListViewController.m in Sources */,
 				4EBE0B0619AD8D4A0022012A /* ChapterView.m in Sources */,
 				79F2FB21193F6EC300780F2A /* StoryViewController.m in Sources */,
@@ -1313,7 +1372,6 @@
 				790AE1FE192E459500FC4668 /* MakeData.m in Sources */,
 				79A66300192BA32100B7170E /* main.m in Sources */,
 				79E07BDA19376DD8008EA875 /* DynastyStoryList.m in Sources */,
-				4E54017D19C6CD2600CB8FC7 /* TimeLineManager.m in Sources */,
 				79E641CF19ACF7070070A287 /* CollectListTableViewCell.m in Sources */,
 				4E54017A19C6CB9C00CB8FC7 /* TimeLine.m in Sources */,
 				4E54018019C6CE7A00CB8FC7 /* TimeLineView.m in Sources */,
@@ -1467,9 +1525,10 @@
 					"$(PROJECT_DIR)/History_Iphone/Tools/ShareSDK/Extend/TencentWeiboSDK",
 					"$(PROJECT_DIR)/History_Iphone/Tools/ShareSDK/Extend/WeChatSDK",
 					"$(PROJECT_DIR)/History_Iphone/Tools/UMAnalytics_Sdk_3.1.2",
+					"$(PROJECT_DIR)/History_Iphone/Tools/GeTui/dist",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e2d720e0-89f2-4b80-90b9-0fef73a95fc6";
+				PROVISIONING_PROFILE = "c09b51f3-ca4c-48cd-94e0-7fff2228bd22";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1499,9 +1558,10 @@
 					"$(PROJECT_DIR)/History_Iphone/Tools/ShareSDK/Extend/TencentWeiboSDK",
 					"$(PROJECT_DIR)/History_Iphone/Tools/ShareSDK/Extend/WeChatSDK",
 					"$(PROJECT_DIR)/History_Iphone/Tools/UMAnalytics_Sdk_3.1.2",
+					"$(PROJECT_DIR)/History_Iphone/Tools/GeTui/dist",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e2d720e0-89f2-4b80-90b9-0fef73a95fc6";
+				PROVISIONING_PROFILE = "c09b51f3-ca4c-48cd-94e0-7fff2228bd22";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
