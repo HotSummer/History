@@ -17,7 +17,9 @@ GexinSdkDelegate
 }
 
 + (PushManager *)shareInstance;
-
+//发送推送消息通知
+- (void)postPushNotification:(NSString *)message;
+//将deviceToken传给服务器
 - (void)postDeviceTokenToHistoryServer:(NSString *)deviceToken;
 
 @end

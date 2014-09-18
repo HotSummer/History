@@ -11,6 +11,7 @@
 #import "StoryListViewController.h"
 #import "PersonListViewController.h"
 #import "TimeLineViewController.h"
+#import "PushViewController.h"
 #import "UIController.h"
 
 @interface MainViewController ()
@@ -32,6 +33,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receivePushNotification:) name:PushNotification object:nil];
 //    [[UIController shareInstance] addDataToDB];
 }
 
@@ -44,6 +46,15 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = YES;
+}
+
+- (void)receivePushNotification:(NSNotification *)notification{
+    NSDictionary *pushDic = notification.userInfo;
+    NSString *pushTitle = pushDic[@"pushTitle"];
+    NSString *pushContent = pushDic[@"pushContent"];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:pushTitle message:pushContent delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"查看", nil];
+    [alertView show];
+    
 }
 
 - (IBAction)didPressedBtnDynastyMap:(id)sender{
@@ -61,6 +72,21 @@
 - (IBAction)didPressedBtnTimeLine:(id)sender{
     TimeLineViewController *timeLineVC = [[TimeLineViewController alloc] initWithNibName:@"TimeLineViewController" bundle:nil];
     [self.navigationController pushViewController:timeLineVC animated:YES];
+}
+
+#pragma mark - alertView delegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 1) {
+        PushViewController *pushVC = [[PushViewController alloc] init];
+        pushVC.pushTitle = alertView.title;
+        pushVC.pushContent = alertView.message;
+        UIViewController *topViewController = self.navigationController.topViewController;
+        [topViewController.navigationController pushViewController:pushVC animated:YES];
+    }
+}
+
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

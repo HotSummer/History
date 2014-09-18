@@ -12,5 +12,6 @@
 
 #define thinLineHeight 1/[UIScreen mainScreen].scale
 
+#define PushNotification @"PushNotification"
 
 #endif

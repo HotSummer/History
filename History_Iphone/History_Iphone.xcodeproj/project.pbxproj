@@ -84,20 +84,23 @@
 		4ECDAA1E19907A37005F72B6 /* CollectionEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECDAA1D19907A37005F72B6 /* CollectionEntity.m */; };
 		4ECDAA2619907A7E005F72B6 /* CollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECDAA2419907A7E005F72B6 /* CollectViewController.m */; };
 		4ECDAA2719907A7E005F72B6 /* CollectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ECDAA2519907A7E005F72B6 /* CollectViewController.xib */; };
-		790AE1E6192CED3200FC4668 /* History.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 790AE1E4192CED3200FC4668 /* History.xcdatamodeld */; };
 		790AE1EB192CFB5800FC4668 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 790AE1EA192CFB5800FC4668 /* CoreDataManager.m */; };
 		790AE1ED192D025800FC4668 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 790AE1EC192D025800FC4668 /* CoreData.framework */; };
 		790AE1F0192D0A5300FC4668 /* DBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 790AE1EF192D0A5300FC4668 /* DBHelper.m */; };
 		790AE1FE192E459500FC4668 /* MakeData.m in Sources */ = {isa = PBXBuildFile; fileRef = 790AE1FD192E459500FC4668 /* MakeData.m */; };
 		79410895194F3CF200C0D438 /* DynastyPersonDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 79410894194F3CF200C0D438 /* DynastyPersonDetail.m */; };
 		795F0B79195C7E0F00D5874B /* TextKitManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 795F0B78195C7E0F00D5874B /* TextKitManager.m */; };
+		796161A919CB2082001A69BB /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 796161A719CB2082001A69BB /* PushViewController.m */; };
+		796161AA19CB2082001A69BB /* PushViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 796161A819CB2082001A69BB /* PushViewController.xib */; };
+		796161AE19CB2E25001A69BB /* PushManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 796161AD19CB2E25001A69BB /* PushManager.m */; };
+		796161B219CB2E9D001A69BB /* History.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 796161B019CB2E9D001A69BB /* History.xcdatamodeld */; };
+		796161B419CB30FA001A69BB /* History.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 796161B319CB30FA001A69BB /* History.sqlite */; };
 		796F17EF19C9D93800D55ACD /* libGexinSdk-1.0.6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 796F17EE19C9D93800D55ACD /* libGexinSdk-1.0.6.a */; };
 		796F17F119C9D9CC00D55ACD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 796F17F019C9D9CC00D55ACD /* CFNetwork.framework */; };
 		796F17FC19C9DE6E00D55ACD /* ChapterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 796F17F419C9DE6E00D55ACD /* ChapterManager.m */; };
 		796F17FD19C9DE6E00D55ACD /* CollectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 796F17F619C9DE6E00D55ACD /* CollectManager.m */; };
 		796F17FE19C9DE6E00D55ACD /* TimeLineManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 796F17F819C9DE6E00D55ACD /* TimeLineManager.m */; };
 		796F17FF19C9DE6E00D55ACD /* UIController.m in Sources */ = {isa = PBXBuildFile; fileRef = 796F17FA19C9DE6E00D55ACD /* UIController.m */; };
-		796F180219C9DEAC00D55ACD /* PushManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 796F180119C9DEAC00D55ACD /* PushManager.m */; };
 		79816A9219BF4D51002AE346 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79816A8F19BF4D51002AE346 /* libMobClickLibrary.a */; };
 		79816A9519C0B2A8002AE346 /* xia_thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = 79816A9319C0B2A8002AE346 /* xia_thumbnail.png */; };
 		79816A9619C0B2A8002AE346 /* xia_thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79816A9419C0B2A8002AE346 /* xia_thumbnail@2x.png */; };
@@ -297,7 +300,6 @@
 		4ECDAA2319907A7E005F72B6 /* CollectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectViewController.h; sourceTree = "<group>"; };
 		4ECDAA2419907A7E005F72B6 /* CollectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectViewController.m; sourceTree = "<group>"; };
 		4ECDAA2519907A7E005F72B6 /* CollectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectViewController.xib; sourceTree = "<group>"; };
-		790AE1E5192CED3200FC4668 /* History.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = History.xcdatamodel; sourceTree = "<group>"; };
 		790AE1E9192CFB5800FC4668 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
 		790AE1EA192CFB5800FC4668 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 		790AE1EC192D025800FC4668 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -309,6 +311,13 @@
 		79410894194F3CF200C0D438 /* DynastyPersonDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynastyPersonDetail.m; sourceTree = "<group>"; };
 		795F0B77195C7E0F00D5874B /* TextKitManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextKitManager.h; sourceTree = "<group>"; };
 		795F0B78195C7E0F00D5874B /* TextKitManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextKitManager.m; sourceTree = "<group>"; };
+		796161A619CB2082001A69BB /* PushViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushViewController.h; sourceTree = "<group>"; };
+		796161A719CB2082001A69BB /* PushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
+		796161A819CB2082001A69BB /* PushViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PushViewController.xib; sourceTree = "<group>"; };
+		796161AC19CB2E25001A69BB /* PushManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushManager.h; sourceTree = "<group>"; };
+		796161AD19CB2E25001A69BB /* PushManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushManager.m; sourceTree = "<group>"; };
+		796161B119CB2E9D001A69BB /* History.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = History.xcdatamodel; sourceTree = "<group>"; };
+		796161B319CB30FA001A69BB /* History.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = History.sqlite; sourceTree = "<group>"; };
 		796F17EC19C9D93800D55ACD /* GexinSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GexinSdk.h; sourceTree = "<group>"; };
 		796F17ED19C9D93800D55ACD /* GXSdkError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXSdkError.h; sourceTree = "<group>"; };
 		796F17EE19C9D93800D55ACD /* libGexinSdk-1.0.6.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libGexinSdk-1.0.6.a"; sourceTree = "<group>"; };
@@ -321,8 +330,6 @@
 		796F17F819C9DE6E00D55ACD /* TimeLineManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineManager.m; sourceTree = "<group>"; };
 		796F17F919C9DE6E00D55ACD /* UIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIController.h; sourceTree = "<group>"; };
 		796F17FA19C9DE6E00D55ACD /* UIController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIController.m; sourceTree = "<group>"; };
-		796F180019C9DEAC00D55ACD /* PushManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushManager.h; sourceTree = "<group>"; };
-		796F180119C9DEAC00D55ACD /* PushManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushManager.m; sourceTree = "<group>"; };
 		79816A8F19BF4D51002AE346 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
 		79816A9019BF4D51002AE346 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
 		79816A9119BF4D51002AE346 /* MobClickSocialAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickSocialAnalytics.h; sourceTree = "<group>"; };
@@ -731,6 +738,7 @@
 		790AE1E7192CF74400FC4668 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				796161AB19CB2E25001A69BB /* PushManager */,
 				796F17E919C9D93800D55ACD /* GeTui */,
 				79816A8E19BF4D51002AE346 /* UMAnalytics_Sdk_3.1.2 */,
 				4ECDA9C219907444005F72B6 /* ShareSDK */,
@@ -772,9 +780,9 @@
 		7931654F192BB60700F7D365 /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				796161AF19CB2E9D001A69BB /* DB */,
 				4EC9896F19A47AD300878B84 /* STHeiti-Medium.ttc */,
 				79E07B791933A493008EA875 /* images */,
-				790AE1E4192CED3200FC4668 /* History.xcdatamodeld */,
 			);
 			path = resource;
 			sourceTree = "<group>";
@@ -786,6 +794,34 @@
 				795F0B78195C7E0F00D5874B /* TextKitManager.m */,
 			);
 			path = TextKitManager;
+			sourceTree = "<group>";
+		};
+		796161A519CB205D001A69BB /* Push */ = {
+			isa = PBXGroup;
+			children = (
+				796161A619CB2082001A69BB /* PushViewController.h */,
+				796161A719CB2082001A69BB /* PushViewController.m */,
+				796161A819CB2082001A69BB /* PushViewController.xib */,
+			);
+			path = Push;
+			sourceTree = "<group>";
+		};
+		796161AB19CB2E25001A69BB /* PushManager */ = {
+			isa = PBXGroup;
+			children = (
+				796161AC19CB2E25001A69BB /* PushManager.h */,
+				796161AD19CB2E25001A69BB /* PushManager.m */,
+			);
+			path = PushManager;
+			sourceTree = "<group>";
+		};
+		796161AF19CB2E9D001A69BB /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				796161B319CB30FA001A69BB /* History.sqlite */,
+				796161B019CB2E9D001A69BB /* History.xcdatamodeld */,
+			);
+			path = DB;
 			sourceTree = "<group>";
 		};
 		796F17E919C9D93800D55ACD /* GeTui */ = {
@@ -827,15 +863,6 @@
 				796F17FA19C9DE6E00D55ACD /* UIController.m */,
 			);
 			path = BussinessController;
-			sourceTree = "<group>";
-		};
-		796F17FB19C9DE6E00D55ACD /* PushManager */ = {
-			isa = PBXGroup;
-			children = (
-				796F180019C9DEAC00D55ACD /* PushManager.h */,
-				796F180119C9DEAC00D55ACD /* PushManager.m */,
-			);
-			path = PushManager;
 			sourceTree = "<group>";
 		};
 		79816A8E19BF4D51002AE346 /* UMAnalytics_Sdk_3.1.2 */ = {
@@ -968,7 +995,6 @@
 			isa = PBXGroup;
 			children = (
 				796F17F219C9DE6E00D55ACD /* BussinessController */,
-				796F17FB19C9DE6E00D55ACD /* PushManager */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -976,6 +1002,7 @@
 		79A66323192BA39B00B7170E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				796161A519CB205D001A69BB /* Push */,
 				79816AAF19C415F1002AE346 /* Main */,
 				4EC9896219A43B8700878B84 /* BaseViewController.h */,
 				4EC9896319A43B8700878B84 /* BaseViewController.m */,
@@ -1265,6 +1292,7 @@
 				79816AAA19C1FD7C002AE346 /* qin_thumbnail@2x.png in Resources */,
 				79816AA219C1FA31002AE346 /* xizhou_thumbnail@2x.png in Resources */,
 				79816ADC19C4A7B5002AE346 /* timeLine_Icon_selected@2x.png in Resources */,
+				796161AA19CB2082001A69BB /* PushViewController.xib in Resources */,
 				79F2FB3B194620CB00780F2A /* PersonDetailViewController.xib in Resources */,
 				79E07BBD19362047008EA875 /* DynastyMapViewController.xib in Resources */,
 				4EAB47B61992291A00C8DD7D /* ChapterConfigView.xib in Resources */,
@@ -1302,6 +1330,7 @@
 				79816A9519C0B2A8002AE346 /* xia_thumbnail.png in Resources */,
 				4EC9898A19A5E96B00878B84 /* btn_collection_nor@2x.png in Resources */,
 				4ECDA9F219907444005F72B6 /* WeiboSDK.bundle in Resources */,
+				796161B419CB30FA001A69BB /* History.sqlite in Resources */,
 				4ECDAA2719907A7E005F72B6 /* CollectViewController.xib in Resources */,
 				4EC9898519A5E5E200878B84 /* btn_favorites.png in Resources */,
 				79816ACA19C448BF002AE346 /* map_Icon_selected@2x.png in Resources */,
@@ -1331,8 +1360,8 @@
 			files = (
 				4EBE0B1319ADE1160022012A /* DynastyIndicatorView.m in Sources */,
 				4EBE0ADF19AD7A610022012A /* BaseViewController.m in Sources */,
-				796F180219C9DEAC00D55ACD /* PushManager.m in Sources */,
 				796F17FC19C9DE6E00D55ACD /* ChapterManager.m in Sources */,
+				796161AE19CB2E25001A69BB /* PushManager.m in Sources */,
 				79F2FB3A194620CB00780F2A /* PersonDetailViewController.m in Sources */,
 				79A66304192BA32100B7170E /* AppDelegate.m in Sources */,
 				79816AB819C41672002AE346 /* TwoGradientImageView.m in Sources */,
@@ -1364,7 +1393,6 @@
 				4EC9895B19A334EA00878B84 /* GrayCircle.m in Sources */,
 				4ECDAA1E19907A37005F72B6 /* CollectionEntity.m in Sources */,
 				4EC9896119A33B4E00878B84 /* TimeLineScrollView.m in Sources */,
-				790AE1E6192CED3200FC4668 /* History.xcdatamodeld in Sources */,
 				79410895194F3CF200C0D438 /* DynastyPersonDetail.m in Sources */,
 				79E07BBC19362047008EA875 /* DynastyMapViewController.m in Sources */,
 				79E07BD419376DD8008EA875 /* Comment.m in Sources */,
@@ -1375,6 +1403,8 @@
 				79E641CF19ACF7070070A287 /* CollectListTableViewCell.m in Sources */,
 				4E54017A19C6CB9C00CB8FC7 /* TimeLine.m in Sources */,
 				4E54018019C6CE7A00CB8FC7 /* TimeLineView.m in Sources */,
+				796161A919CB2082001A69BB /* PushViewController.m in Sources */,
+				796161B219CB2E9D001A69BB /* History.xcdatamodeld in Sources */,
 				79E07BD519376DD8008EA875 /* Contribute.m in Sources */,
 				790AE1F0192D0A5300FC4668 /* DBHelper.m in Sources */,
 				79F2FB2D1944997F00780F2A /* PersonListTableViewCell.m in Sources */,
@@ -1639,12 +1669,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		790AE1E4192CED3200FC4668 /* History.xcdatamodeld */ = {
+		796161B019CB2E9D001A69BB /* History.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				790AE1E5192CED3200FC4668 /* History.xcdatamodel */,
+				796161B119CB2E9D001A69BB /* History.xcdatamodel */,
 			);
-			currentVersion = 790AE1E5192CED3200FC4668 /* History.xcdatamodel */;
+			currentVersion = 796161B119CB2E9D001A69BB /* History.xcdatamodel */;
 			path = History.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

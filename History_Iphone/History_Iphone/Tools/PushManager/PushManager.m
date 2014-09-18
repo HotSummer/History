@@ -41,6 +41,11 @@
     [gexin registerDeviceToken:deviceToken];
 }
 
+- (void)postPushNotification:(NSString *)message{
+    NSDictionary *dic = @{@"pushTitle": @"Push", @"pushContent":message};
+    [[NSNotificationCenter defaultCenter] postNotificationName:PushNotification object:nil userInfo:dic];
+}
+
 #pragma mark - GexinSdkDelegate
 - (void)GexinSdkDidRegisterClient:(NSString *)clientId
 {
@@ -51,7 +56,14 @@
 - (void)GexinSdkDidReceivePayload:(NSString *)payloadId fromApplication:(NSString *)appId
 {
     // [4]: 收到个推消息
-    NSLog(@"%@_%@", payloadId, appId);
+    NSData *payload = [gexin retrivePayloadById:payloadId];
+    NSString *payloadMsg = nil;
+    if (payload) {
+        payloadMsg = [[NSString alloc] initWithBytes:payload.bytes
+                                              length:payload.length
+                                            encoding:NSUTF8StringEncoding];
+    }
+    [[PushManager shareInstance] postPushNotification:payloadMsg];
 }
 
 - (void)GexinSdkDidOccurError:(NSError *)error
