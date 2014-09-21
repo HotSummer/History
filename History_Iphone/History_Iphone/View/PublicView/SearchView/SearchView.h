@@ -31,4 +31,7 @@ UITextFieldDelegate
 }
 @property(nonatomic, weak) id<SearchViewDelegate> delegate;
 
+//当SearchView退到后面时，要取消搜索功能
+- (void)stopSearch;
+
 @end

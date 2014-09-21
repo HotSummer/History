@@ -223,6 +223,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [searchView stopSearch];
+    
     NSArray *arr = [[UIController shareInstance] getPersonDynastyList:searchText siftCondition:((UIController *)[UIController shareInstance]).personListSiftCondition];
     DynastyList *dynastyList = arr[indexPath.section];
     

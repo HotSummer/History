@@ -43,6 +43,11 @@
     personDetail = [[UIController shareInstance] getPersonDetail];
     if (personDetail != nil) {
         self.navTitle = personDetail.personName;
+        lblAddress = [[UILabel alloc] initWithFrame:CGRectMake(65, 99, 144, 21)];
+        lblAddress.numberOfLines = 0;
+        lblAddress.font = [UIFont systemFontOfSize:15.0];
+        lblAddress.textColor = [UIColor blackColor];
+        [cellId addSubview:lblAddress];
         [self loadIdCell];
         [self loadHistoryContributeCell];
         [self loadEvalution];
@@ -63,6 +68,12 @@
     lblCareer.text = personDetail.career;
     lblId.text = personDetail.idNumber;
     imageviewIcon.image = [UIImage imageNamed:personDetail.image];
+    
+    CGSize size = [personDetail.address sizeWithFont:[UIFont systemFontOfSize:15.0]
+                                   constrainedToSize:CGSizeMake(144, MAXFLOAT)
+                                       lineBreakMode:NSLineBreakByTruncatingMiddle];
+    NSInteger row = (NSInteger)(size.height/21.0);
+    lblAddress.frame = CGRectMake(lblAddress.frame.origin.x, lblAddress.frame.origin.y, lblAddress.frame.size.width, (row+1)*21.0);
 }
 
 - (void)loadHistoryContributeCell{
@@ -91,7 +102,7 @@
         CGSize size = [comment.commentContent sizeWithFont:[UIFont systemFontOfSize:15.0]
                                                 constrainedToSize:CGSizeMake(300, MAXFLOAT)
                                                     lineBreakMode:NSLineBreakByTruncatingMiddle];
-        UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(10, fHeight, 300, 47)];
+        UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(10, fHeight, 300, MAX(47, size.height))];
         lbl.numberOfLines = 0;
         lbl.text = comment.commentContent;
         lbl.backgroundColor = [UIColor clearColor];

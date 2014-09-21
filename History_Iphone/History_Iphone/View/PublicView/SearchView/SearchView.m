@@ -51,6 +51,10 @@
 }
 */
 
+- (void)stopSearch{
+    [self didPressedBtnCancel:nil];
+}
+
 -(void)textFiledEditChanged:(NSNotification *)obj{
     UITextField *textField = (UITextField *)obj.object;
     

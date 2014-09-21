@@ -15,6 +15,8 @@
 
 @interface StoryListViewController ()
 
+@property(nonatomic, strong) SearchView *searchView;
+
 @end
 
 @implementation StoryListViewController
@@ -77,10 +79,10 @@
 }
 
 - (void)loadSearchView{
-    SearchView *searchView = [[[NSBundle mainBundle] loadNibNamed:@"SearchView" owner:self options:nil] lastObject];//[[SearchView alloc] initWithFrame:CGRectMake(0, 0, 320, 34)];
-    searchView.frame = CGRectMake(0, 64, searchView.frame.size.width, searchView.frame.size.height);
-    [self.view addSubview:searchView];
-    searchView.delegate = self;
+    _searchView = [[[NSBundle mainBundle] loadNibNamed:@"SearchView" owner:self options:nil] lastObject];//[[SearchView alloc] initWithFrame:CGRectMake(0, 0, 320, 34)];
+    _searchView.frame = CGRectMake(0, 64, _searchView.frame.size.width, _searchView.frame.size.height);
+    [self.view addSubview:_searchView];
+    _searchView.delegate = self;
 }
 
 - (IBAction)didPressedBtnCollectList:(id)sender{
@@ -150,6 +152,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [_searchView stopSearch];
     if (indexPath.section > 0) {
         DynastyList *dynastyList = (DynastyList *)[[UIController shareInstance] getStoriesDynastyListByDynastyId:[UIController shareInstance].selectedDynastyId][indexPath.section-1];
         NSArray *arrStoroes = [[UIController shareInstance] getStoriesByDynastyId:dynastyList.dynastyId];

@@ -18,7 +18,10 @@ UITableViewDelegate
     IBOutlet UILabel *lblName;
     IBOutlet UILabel *lblGender;
     IBOutlet UILabel *lblCareer;
-    IBOutlet UILabel *lblAddress;
+//    IBOutlet UILabel *lblAddress;
+    
+    UILabel *lblAddress;
+    
     IBOutlet UILabel *lblId;
     IBOutlet UIImageView *imageviewIcon;
     IBOutlet UITableViewCell *cellId;

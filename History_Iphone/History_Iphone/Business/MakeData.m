@@ -375,51 +375,6 @@
     person3.startKing = @"";
     [DBHelper save];
     
-    DynastyPersonList *person13 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
-    person13.dynastyId = @"1";
-    person13.personId = @"100";
-    person13.personName = @"后羿";
-    person13.firstRole = @"";
-    person13.commentCount = [NSNumber numberWithInt:20];
-    person13.startKing = @"";
-    [DBHelper save];
-    
-    DynastyPersonList *person14 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
-    person14.dynastyId = @"1";
-    person14.personId = @"101";
-    person14.personName = @"后羿";
-    person14.firstRole = @"";
-    person14.commentCount = [NSNumber numberWithInt:20];
-    person14.startKing = @"";
-    [DBHelper save];
-    
-    DynastyPersonList *person15 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
-    person15.dynastyId = @"1";
-    person15.personId = @"102";
-    person15.personName = @"后羿";
-    person15.firstRole = @"";
-    person15.commentCount = [NSNumber numberWithInt:20];
-    person15.startKing = @"";
-    [DBHelper save];
-    
-    DynastyPersonList *person16 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
-    person16.dynastyId = @"1";
-    person16.personId = @"103";
-    person16.personName = @"后羿";
-    person16.firstRole = @"";
-    person16.commentCount = [NSNumber numberWithInt:20];
-    person16.startKing = @"";
-    [DBHelper save];
-    
-    DynastyPersonList *person17 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
-    person17.dynastyId = @"1";
-    person17.personId = @"103";
-    person17.personName = @"后羿";
-    person17.firstRole = @"";
-    person17.commentCount = [NSNumber numberWithInt:20];
-    person17.startKing = @"";
-    [DBHelper save];
-    
     DynastyPersonList *person4 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
     person4.dynastyId = @"2";
     person4.personId = @"5";
@@ -438,62 +393,26 @@
     person5.startKing = @"";
     [DBHelper save];
     
-    DynastyPersonList *person25 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
-    person25.dynastyId = @"2";
-    person25.personId = @"206";
-    person25.personName = @"伊尹";
-    person25.firstRole = @"第一位名臣";
-    person25.commentCount = [NSNumber numberWithInt:50];
-    person25.startKing = @"";
-    [DBHelper save];
-    
-    DynastyPersonList *person26 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
-    person26.dynastyId = @"2";
-    person26.personId = @"207";
-    person26.personName = @"伊尹";
-    person26.firstRole = @"第一位名臣";
-    person26.commentCount = [NSNumber numberWithInt:50];
-    person26.startKing = @"";
-    [DBHelper save];
-    
-    DynastyPersonList *person27 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
-    person27.dynastyId = @"2";
-    person27.personId = @"208";
-    person27.personName = @"伊尹";
-    person27.firstRole = @"第一位名臣";
-    person27.commentCount = [NSNumber numberWithInt:50];
-    person27.startKing = @"";
-    [DBHelper save];
-    
-    DynastyPersonList *person28 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
-    person28.dynastyId = @"2";
-    person28.personId = @"209";
-    person28.personName = @"伊尹";
-    person28.firstRole = @"第一位名臣";
-    person28.commentCount = [NSNumber numberWithInt:50];
-    person28.startKing = @"";
-    [DBHelper save];
-    
     DynastyPersonList *person6 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
-    person6.dynastyId = @"2";
+    person6.dynastyId = @"3";
     person6.personId = @"7";
-    person6.personName = @"妇好";
-    person6.firstRole = @"第一位女将军";
+    person6.personName = @"盘庚";
+    person6.firstRole = @"";
     person6.commentCount = [NSNumber numberWithInt:20];
-    person6.startKing = @"";
+    person6.startKing = @"殷商";
     [DBHelper save];
     
     DynastyPersonList *person7 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
-    person7.dynastyId = @"2";
+    person7.dynastyId = @"3";
     person7.personId = @"8";
-    person7.personName = @"太甲";
-    person7.firstRole = @"";
-    person7.commentCount = [NSNumber numberWithInt:30];
+    person7.personName = @"妇好";
+    person7.firstRole = @"第一位女将军";
+    person7.commentCount = [NSNumber numberWithInt:20];
     person7.startKing = @"";
     [DBHelper save];
     
     DynastyPersonList *person8 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
-    person8.dynastyId = @"3";
+    person8.dynastyId = @"2";
     person8.personId = @"9";
     person8.personName = @"太甲";
     person8.firstRole = @"";
@@ -502,84 +421,346 @@
     [DBHelper save];
     
     DynastyPersonList *person9 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
-    person9.dynastyId = @"3";
+    person9.dynastyId = @"4";
     person9.personId = @"10";
-    person9.personName = @"太甲";
+    person9.personName = @"周公";
     person9.firstRole = @"";
-    person9.commentCount = [NSNumber numberWithInt:30];
+    person9.commentCount = [NSNumber numberWithInt:1];//孔子说“甚矣吾衰也！久矣吾不复梦见周公（我很久没有梦到周公了）！”后来周公被称为“梦神”
     person9.startKing = @"";
-    [DBHelper save];
     
     DynastyPersonList *person10 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
-    person10.dynastyId = @"3";
+    person10.dynastyId = @"4";
     person10.personId = @"11";
-    person10.personName = @"太甲";
+    person10.personName = @"姜太公";
     person10.firstRole = @"";
-    person10.commentCount = [NSNumber numberWithInt:30];
+    person10.commentCount = [NSNumber numberWithInt:1];//《诗经·大雅·大明》中赞此事：“牧野洋洋，檀车煌煌，驷騵彭彭。维师尚父，时维鹰扬。凉彼武王，肆伐大商。会朝清明。”
     person10.startKing = @"";
-    [DBHelper save];
     
     DynastyPersonList *person11 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
-    person11.dynastyId = @"3";
+    person11.dynastyId = @"4";
     person11.personId = @"12";
-    person11.personName = @"太甲";
+    person11.personName = @"周武王";
     person11.firstRole = @"";
-    person11.commentCount = [NSNumber numberWithInt:30];
-    person11.startKing = @"";
-    [DBHelper save];
+    person11.commentCount = [NSNumber numberWithInt:0];
+    person11.startKing = @"西周";
     
     DynastyPersonList *person12 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
-    person12.dynastyId = @"3";
+    person12.dynastyId = @"4";
     person12.personId = @"13";
-    person12.personName = @"太甲";
+    person12.personName = @"周文王";
     person12.firstRole = @"";
-    person12.commentCount = [NSNumber numberWithInt:30];
+    person12.commentCount = [NSNumber numberWithInt:1];//周文王本人好饮酒，“饮酒千钟”[2]。武则天改国号周时，自称武家为周文王后代，追尊周文王为始祖文皇帝。
     person12.startKing = @"";
+    
+    DynastyPersonList *person13 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
+    person13.dynastyId = @"5";
+    person13.personId = @"14";
+    person13.personName = @"周平王";
+    person13.firstRole = @"";
+    person13.commentCount = [NSNumber numberWithInt:1];//周文王本人好饮酒，“饮酒千钟”[2]。武则天改国号周时，自称武家为周文王后代，追尊周文王为始祖文皇帝。
+    person13.startKing = @"东周";
+    
+    DynastyPersonList *person14 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
+    person14.dynastyId = @"5";
+    person14.personId = @"15";
+    person14.personName = @"齐桓公";
+    person14.firstRole = @"春秋五霸之春秋首霸";
+    person14.commentCount = [NSNumber numberWithInt:4];
+    /*
+     1.《春秋公羊传》说：“南夷北狄交，中国不绝如线，桓公攘夷狄而救中国。”齐桓公作为春秋时代的第一位霸主，他一向是被高度评价的。当时在夷狄的逼迫之下，中原各国的确遭到了极大的威胁，而通过改革而强盛起来的齐桓公，此时充当起了中原各国的保护神，打出了“尊王壤夷”的旗号。作为霸主，齐桓公又是会盟诸侯，又是插手别国事务，又是安定王室，又是征伐夷狄，可谓风光一时。
+     2.穀梁传谴责了齐桓公通过杀公子纠成为齐国国君的手段。对于桓公前681年在北杏的会盟，《穀梁传》认为齐桓公并不是周天子任命的方伯，如此是不应当的。但在记载前667年桓公与诸侯在幽的会盟时，称赞桓公仁义守信。对于桓公在前666年伐卫一事，《穀梁传》认为桓公虽然是奉王命，但攻伐别国又索取财物，需要轻视。《穀梁传》认为桓公为燕国讨伐山戎一事是莫大之善举，需要称赞。《穀梁传》以为桓公驻曹救邢一事是害怕狄人，不值得赞扬，所以《春秋》避讳不书齐桓公。前658年桓公为卫国筑楚丘城，对于此事《谷梁传》认为桓公虽然有仁爱之心，但此举超出礼制。桓公率大军伐蔡，《穀梁传》认为合乎正道。前655年桓公盟诸侯，拥戴周王的太子，《穀梁传》认为这是变通礼制拥戴周王的做法值得肯定。《穀梁传》对桓公在葵丘大会诸侯申明周王禁令表示称赞。《穀梁传》谴责桓公灭项一事，但又说桓公曾有存亡继绝之功，所以为之避讳。对于桓公的去世，《穀梁传》说此人不正道，但前文有所贬抑，记载他的去世时对他的尊敬。
+     3.关于齐桓公伐楚的“召陵之师”，也许首当其冲的楚国人最了解当时的情况。召陵之师过去一百多年后，楚国的大夫椒举向追求霸业的[[楚灵王]]提到历史上夏启王、商汤王、周武王、周成王、周康王、周穆王、齐桓公和晋文公这“六王二公”之功业。而楚灵王在这些历史人物的伟大业绩中，仅选择了齐桓“召陵之师”作为自己效仿的对象。可见楚国人心目中“召陵之师”是多么雄壮。《左传·昭公四年》童书业推测各国当时兵力，认为“召陵之师”联军有多达一千数百乘兵车的兵力，在当时是前所未有的巨大兵力。在联军深入楚境的强压下，楚国被迫放弃在战场上击败联军的努力，而是乞求加入齐国同盟，此事在楚人心中印象极深。而齐桓去世后的[[前641年]]想谋求霸权的楚国在齐国参加盟会，仍然以齐国为盟主。可见齐桓霸业之盛。童书业《春秋左传研究》中华书局2006年
+     
+     有人认为，当时齐桓公并未有多少实力，当时[[秦]][[晋]]都还不是很强大，而对于楚国，齐桓公不过是定了一个盟约，并没有试试楚国“方城以为城，汉水以为池”的雄厚实力。至于抗击夷狄，更多的是打败了实力不强的狄人，而对于楚国出兵灭了一些小国的行为，齐桓公并没有干涉。《左传选评》
+     4.孟子批评齐桓公，认为他不过是靠霸道，而不是王道。
+     
+     齐桓公生活糜烂，《史记》：“桓公好内，多内宠，如夫人（妾）者六人”、“桓公病，五公子各树党争立。”如此多的儿子也为以后的内乱埋下了隐患。不仅如此，齐桓公在近亲性关系上也很混乱，“寡人有污行，不幸而好色，姑姊有不嫁者” ，“齐桓公好妇人之色，妻姑姊妹，而国中多淫于骨肉。”另外齐桓公亲近小人，甚至吃人肉。
+     */
+    person14.startKing = @"";
+    
+    DynastyPersonList *person15 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
+    person15.dynastyId = @"5";
+    person15.personId = @"16";
+    person15.personName = @"楚庄王";
+    person15.firstRole = @"";
+    person15.commentCount = [NSNumber numberWithInt:0];
+    person15.startKing = @"";
+    
+    DynastyPersonList *person16 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
+    person16.dynastyId = @"5";
+    person16.personId = @"17";
+    person16.personName = @"周恒王";
+    person16.firstRole = @"";
+    person16.commentCount = [NSNumber numberWithInt:0];//周文王本人好饮酒，“饮酒千钟”[2]。武则天改国号周时，自称武家为周文王后代，追尊周文王为始祖文皇帝。
+    person16.startKing = @"";
+    
+    DynastyPersonList *person17 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
+    person17.dynastyId = @"5";
+    person17.personId = @"18";
+    person17.personName = @"白起";
+    person17.firstRole = @"战国四大名将之首";
+    person17.commentCount = [NSNumber numberWithInt:5];
+    /*
+     司马迁：“白起料敌合变，出奇无穷，声震天下，然不能救患於应侯。”“南拔鄢郢，北摧长平，遂围邯郸，武安为率。”
+     李世民：“白起为秦平赵，乃被昭王所杀…乃君之过也，非臣之罪焉。”
+     杜甫：“门阑苏生在，勇锐白起强。”
+     赵匡胤：“此人杀已降，不武之甚，何受享于此？”
+     毛泽东：“论打歼灭战，千载之下，无人出其右。”
+     */
+    person17.startKing = @"";
+    
+    DynastyPersonList *person18 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
+    person18.dynastyId = @"5";
+    person18.personId = @"19";
+    person18.personName = @"孙武";
+    person18.firstRole = @"";
+    person18.commentCount = [NSNumber numberWithInt:0];//周文王本人好饮酒，“饮酒千钟”[2]。武则天改国号周时，自称武家为周文王后代，追尊周文王为始祖文皇帝。
+    person18.startKing = @"";
+    
+    DynastyPersonList *person19 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
+    person19.dynastyId = @"8";
+    person19.personId = @"20";
+    person19.personName = @"蒙括";
+    person19.firstRole = @"中华第一勇士";
+    person19.commentCount = [NSNumber numberWithInt:0];
+    person19.startKing = @"";
+    
+    DynastyPersonList *person20 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
+    person20.dynastyId = @"8";
+    person20.personId = @"21";
+    person20.personName = @"李斯";
+    person20.firstRole = @"";
+    person20.commentCount = [NSNumber numberWithInt:0];
+    person20.startKing = @"";
+    
+    DynastyPersonList *person21 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
+    person21.dynastyId = @"8";
+    person21.personId = @"22";
+    person21.personName = @"吕不韦";
+    person21.firstRole = @"商圣鼻祖 官商勾结的开创者";
+    person21.commentCount = [NSNumber numberWithInt:0];
+    person21.startKing = @"";
+    
+    DynastyPersonList *person22 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
+    person22.dynastyId = @"8";
+    person22.personId = @"23";
+    person22.personName = @"秦始皇";
+    person22.firstRole = @"";
+    person22.commentCount = [NSNumber numberWithInt:2];
+    /*
+     正面
+     秦始皇结束了春秋战国五百多年诸侯割据混战的局面，建立了中国历史上第一个统一的、多民族的、专制主义中央集权制国家，为中国的发展奠定了坚实的基础。所谓“汉承秦制”，“自秦以来，其制未变”，秦始皇建立的秦帝国为中国其后近二千年的政治制度奠定了基础。
+     
+     秦始皇使中国第一次完成了政治和经济上的统一。根据史书记载，夏朝万国，商朝千国，周朝八百国，西周后期还有二百国左右，春秋时期一百几十国，战国后期形成“七雄”。这些国中之国书不同文、币不同形、度不同尺、权不同衡、十里尚不同风。而秦始皇则前无古人地在中国大地建立了第一个统一的、多民族的中央集权制国家，形成了“车同轨、书同文、钱同币、币同形、度同尺、权同衡、行同伦、一法度”的大一统局面，为其后各朝代谋求统一奠定了坚实的基础。从秦以后，中国人使用的文字源于秦人，中国广袤的国土是秦帝国的延续，中华民族的统一和融合在秦帝国时期开始形成，中国在政治体制和文化思想等各方面无不打有秦始皇的深刻烙印：秦始皇在2000多年前建立的文治武功，自此始终与中华民族血脉相连。
+     
+     秦始皇在政治制度的最大创建是在全国范围内废除分封制，代以郡县制，在皇帝的直接控制下，建立自中央直至郡县的一整套官僚机构，确立了中央的权威和集权。除了政治体制的改革，秦始皇还广泛统一了其他各种制度，包括全国的水陆交通建制（车同轨）、全国的文字（书同文）、全国的度量衡制度（度同尺、权同衡）和全国的币制（钱同币、币同形）。他还试图统一全国的思想（焚书坑儒），但由于手段过于暴力而没有完成（统一思想要到汉武帝的“罢黜百家、独尊儒术”时才而得以初步完成）。应该说，正是由于秦始皇对征服后的土地注重统治和制度的建设，不似其它同时代的征服者（如古马其顿的亚力山大，或古罗马的凯撒等人）只重征服而不重制度和文化上的建设和统一[96]，才使得统一的土地统治稳固，才使得中国在以后几千年中都没有像其他古代文明那样经历真正不可挽回的分裂或灭亡，为现代中国的版图奠定了历史基础。中国虽然经历过长期的内乱分裂，不同地区的语言也差别很大，却一直拥有同样的文化，并且在数次分裂后又一次次地统一，是因为秦始皇统一了文字。
+     
+     秦始皇首创驿站制度，并修驿道，为庞大帝国的政令通达以及由此而来的郡县制皇权国家奠定了技术基础。“修驿道，设郡县”，这是中国能够采用郡县制这种先进制度，而非类似西方的分封制的一个必要条件。同时期的古罗马不能有效控制占领区，只能设权利极大的总督（总督总揽一地的军政大权，都是贵族，基层组织都依靠当地的原有组织），仍旧类似于分封制，这是后来罗马帝国分裂的一个很重要的原因[96]。郡县制是一种平民制度，其军政首脑都由皇帝任命，依政绩军功可上可下，可平职调动，这就导致了职业官僚和职业军人的出现。职业官僚和职业军人都可以来自平民，郡县官僚制有效的保证了平民（布衣）参政议政的权利（如李斯，蒙敖等都是布衣，依军功政绩才出将入相），相比分封制这种贵族政治，无疑是一大历史进步。
+     
+     秦国自商鞅变法以来重视以法治国，秦始皇继承了这个传统，并十分推崇法家人物韩非，曾自叹“若与其同游，则无恨矣”。战争时期，秦始皇对将领赏功罚罪，皆依法。统一中国后，秦始皇以秦国原有的法律令为基础，吸收六国法律的某些条文，制定和颁行全国统一的法律。秦始皇虽专制，认为“朕即天下”，但有秦一代，仍是依法治国。
+     
+     总而言之，秦始皇一生并天下、称皇帝、废分封、置郡县、征百越、逐匈奴、修长城、通沟渠、销兵器、迁富豪、车同轨、书同文、钱同币、币同形、度同尺、权同衡、行同伦、一法度、以法治国、焚书坑儒，对于中国之大一统、对于中国政制之创建、对于中国版图之确立、对于中国民族之传承，都起到了不可磨灭的关键作用，堪称“千古一帝”。所谓“功莫大过秦皇汉武”，其意就是指在文治武功方面，历代君王无秦始皇之右。
+     
+     历代文人和政治家中对秦始皇大加褒扬的不乏其人。例如，西汉名臣桑弘羊的论著中肯定秦始皇统一中国的功绩是“功如丘山，名传后世”。唐太宗李世民说过：“近代平一天下，拓定边方者，惟秦皇、汉武。”唐朝大诗人李白在诗《古风》中写道：“秦王扫六合，虎视何雄哉！挥剑决浮云，诸侯尽西来。明断自天启，大略驾群才。收兵铸金人，函谷正东开。铭功会稽岭，骋望琅琊台。”唐朝思想家柳宗元在名著《封建论》指出秦始皇废除分封制、建立郡县制，符合了历史发展的客观必然趋势，所谓“非圣人意也，势也。”清末民初思想家章太炎在1913年撰写的秦政记也赞扬秦始皇，说：“虽四三皇、六五帝，曾不足比隆也。”
+     
+     中国近现代史学先驱柳翼谋在《中国文化史》评论道：“始皇时代之法制，实具伟大之精神，以一政府而统制方数千里之中国，是固国家形式之进化，抑亦其时思想之进化也。”“盖嬴政称皇帝之年，实前此二千数百年之结局，亦为后此二千数百年之起点，不可谓非历史一大关键。惟秦虽有经营统一之功，而未能尽行其规划一统之策。凡秦之政，皆待汉行之。秦人启其端，汉人竟其绪。”[97]。
+     
+     中共中央主席毛泽东对秦始皇的评价也是甚高，他说：“秦始皇是个厚今薄古的专家。”，“孔孟是唯心主义，荀子是唯物主义，是儒家的‘左派’。孔子代表奴隶主、贵族。荀子代表地主阶级。”又说，“在中国历史上，真正做了点事的是秦始皇，孔子只说空话。”，“我们应该讲句公道话。秦始皇比孔子伟大的多，可是被人骂了几千年。”，“秦始皇是第一个把中国统一起来的人物。不但政治上统一了中国，而且统一了中国的文字、中国各种制度，如度量衡，有些制度后来一直沿用下来。中国过去的封建君主还没有第二个超过他的，可是被一些人骂了几千年。……我赞成秦始皇，不赞成孔夫子。因为秦始皇是第一个统一中国、统一文字，修筑宽广的道路，不搞国中之国，而用集权制，由中央政府派人去各地方，几年一换，不用世袭制度。”史学家郭沫若呈给毛泽东《十批书》，毛泽东阅读后说：“劝君少骂秦始皇，焚书坑儒要商量。祖龙魂死秦犹在，孔学名高实秕糠。百代都行秦政法，《十批》不是好文章。熟读唐人《封建论》，莫从子厚返文王。历代政治家有成就的，在封建社会前期的，都是法家。这些人主张法治，犯了法就杀头，主张厚今薄古。儒家满口仁义道德，一肚子男盗女娼，都是主张厚古薄今的。”[注 74]在某些场合，毛泽东甚至说他自己就是“马克思加秦始皇”。但毛泽东对于秦始皇也不是完全肯定，他也说过：“秦始皇作为一个历史人物，要一分为二。秦始皇在历史发展过程中的进步作用要肯定，但他在统一六国后，丧失了进取方面，志得意满，耽于佚乐，求神仙，修宫室，残酷地压迫人民，到处游走，消磨岁月，无聊得很。……陈胜、吴广揭竿而起、反对暴秦，就包括反对秦始皇，这也是完全正义的。”[98][99][100]
+     
+     钟澈在评价历代帝王时说：世界历史上，开创庞大帝国的帝王之中，排名没有比得上秦始皇的，因为无论是波斯阿契美尼德帝国的居鲁士大帝、古马其顿帝国的亚历山大大帝、还是古罗马帝国的凯撒大帝，他们的帝国早已不存在了，对世界的影响远无法与秦始皇相比。其实，即使他们在位时，其对帝国统一性的重组也远远小于秦始皇[101]。
+     
+     面对秦始皇暴虐的批评，也有史学家指出，要区分秦始皇的个人性质的“暴”和时代的、社会的、制度的“暴”。因为秦始皇所推行的“暴政”，有很多是不得不借助暴力来完成激烈巨大的社会变革，这种“暴”，实质上是在大转型、大变革背景下产生的时代的、社会的、制度的“暴”，和秦始皇个人并没有太大关系[102]。
+     
+     秦政暴虐严苛，百姓为暴秦奴役生活凄苦在始皇帝之时尤甚，这在历史上并没什么异议；对秦朝或秦始皇的正面评价主要集中在“统一”和“集权”对后世的意义上。“统一”和“集权”对维护稳定十分重要，但却使阻止了社会的自我完善的过程使社会变革非常困难，往往要到最后靠暴力手段消灭旧的统治集团来建立新的统治集团。但由于“统一”、“集权”的观念根深蒂固，新的统治集团很快又会重蹈旧集团的覆辙。导致华夏文明出现明显的盛衰周期。在对秦始皇作正面评价之时不能忽略他设计的这种制度的缺陷。
+     
+     负面
+     秦始皇是一个专制独裁、横征暴敛、严刑峻法、生活奢侈的君主，成为中国文化中代表暴君的符号。秦朝在统一天下后只历十五年即速亡，而且也开启中国两千余年的专制统治，影响深远。先秦时期百家争鸣的文化、思想大爆发的情况自秦之后灭迹。秦朝以高度组织化的政府机构来透支民力和资源，而且使用严酷的刑罚来保证政令的实行（不能按时到达目的地要被全部处死是陈胜吴广率民夫揭竿起事的直接原因）。
+     
+     有观点认为，因为秦始皇推行“以法治国”的法家学说，而其后中国历代统治者都推行以仁爱中庸为核心的儒家学说。所以，秦始皇常作为负面典型出现在各种散文、史籍中。其实, 秦始皇虽然推行法家学说，但也宣扬儒家的忠孝仁义（见于云梦秦简），任用儒生为他制定礼仪，“大一统”的思想更是来自儒家。而儒家也不反对法治，儒家是主张先教化后法治，劝善惩恶，反对不教而诛。这里需要说明的是，秦朝的“以法治国”和现代的以法治国是很不一样的。秦法非常严苛。比如规定“偶语者弃市”（史记高祖本纪），禁止民众阅读诗书，禁止自由迁徙，牛瘦一寸就要处罚，不按期服役就处死等等。虽然历朝历代的法律都有许多严酷的刑罚，但是因为秦朝奉行的是法家“重罚主义”思想，所以罪名和刑罚格外繁杂严酷。
+     
+     此外，秦始皇焚书坑儒的极端措施，引起了天下士人（即知识阶层）的愤慨和警惕。再加上汉武帝以后独尊儒术，因此批判秦始皇也就不奇怪了。
+     
+     秦始皇的建筑工程，包括秦长城、秦驰道、灵渠、阿房宫及秦始皇陵等，规模均极为庞大，动辄劳动举国人口兴修，不少文献均斥责在工程进行时造成不少人命死伤。[注 75]从现在考古发现的阿房宫遗址以及秦皇陵来看，当年占用了大量的劳动力和物资来满足秦始皇的个人虚荣感。但另一方面，一些工程也使各地的交通进一步发展，有助日后交通、经贸、国家安全以及各民族之交融。故此，这些工程是功大还是过大，一直是史学家的争论点。对于长城，有人指出当时所修筑的长城，并非今所见之长城（今长城主为明朝时所修建），秦长城主要目的是标明与匈奴的防卫基准界线，[103]始皇仍遣蒙恬发兵三十万攻击匈奴，后人对此的评价是：“兴兵远攻，贪外虚内，务欲广地，不虑其害”。[注 76]蒙恬死后没多久，匈奴便轻松跨过秦长城，不但收复了原来的失地，并且占领了燕、代等郡。[注 77]可见，长城本身在后世抗击游牧民族的战争中是否有意义还属争议话题，但至少在秦始皇时代的作用除了虚耗国力以外，作用微乎其微。
+     
+     秦始皇灭六国过程中将所灭国家宫女充到自己宫中（《史记》秦始皇本纪第六：“秦每破诸侯，写放其宫室，作之咸阳北阪上，南临渭，自雍门以东至泾、渭，殿屋复道周阁相属。所得诸侯美人锺鼓，以充入之。”）秦始皇死后，秦二世下令将宫中没有子女的宫女全部殉葬，在秦始皇下葬后又关闭墓门生葬了工匠（《史记》秦始皇本纪第六：“二世曰：‘先帝后宫非有子者，出焉不宜。’皆令从死，死者甚众。葬既已下，或言工匠为机，臧皆知之，臧重即泄。大事毕，已臧，闭中羡，下外羡门，尽闭工匠臧者，无复出者。”）由以上两段可想知给秦始皇殉葬的宫女和工匠真正是“不计其数”。执行的是秦二世，焉知不是秦始皇的意思？另外，目前考古发现秦皇陵大量分布有陪葬坑、殉葬坑、从葬坑。从陪葬坑里发掘了珍禽异兽坑和铜车马坑，通体彩绘并装饰有大量的金银，制作相当华丽精美。殉葬墓里的殉葬者有男有女，是被杀戮后一齐掩埋的。从葬坑排列密集有序，坑里埋有跪坐的陶俑和马骨，大约是宫廷的马厩和养马的仆役。秦政暴虐可见一斑。
+     */
+    person22.startKing = @"秦";
+    
     [DBHelper save];
 }
 
 - (void)createPersonDetail{
-    DynastyPersonDetail *personDetail = [DBHelper insertObjectToEntity:@"DynastyPersonDetail"];
-    personDetail.personId = @"6";
-    personDetail.personName = @"伊尹";
-    personDetail.gender = @"男";
-    personDetail.career = @"家庭教师";
-    personDetail.idNumber = @"0202";
-    personDetail.image = @"yiyin.png";
-    personDetail.address = @"河南开封市杞县西空桑村";
+    {
+        DynastyPersonDetail *personDetail = [DBHelper insertObjectToEntity:@"DynastyPersonDetail"];
+        personDetail.personId = @"1";
+        personDetail.personName = @"禹";
+        personDetail.gender = @"男";
+        personDetail.career = @"水利工程师";
+        personDetail.idNumber = @"0101";
+        personDetail.image = @"dayu01.png";
+        personDetail.address = @"山西夏县";
+        
+        NSMutableSet *setContribute = [[NSMutableSet alloc] init];
+        Contribute *contribute = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute.contributeId = @"1_1";
+        contribute.contributeContent = @"治理洪水，发展国家生产，使人民安居乐业；";
+        contribute.person = personDetail;
+        [setContribute addObject:contribute];
+        
+        Contribute *contribute2 = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute2.contributeId = @"1_2";
+        contribute2.contributeContent = @"结束中国原始社会部落联盟的社会组织形态，创造了“国家”这一新型的社会政治形态；";
+        contribute2.person = personDetail;
+        [setContribute addObject:contribute2];
+        
+        Contribute *contribute3 = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute3.contributeId = @"1_2";
+        contribute3.contributeContent = @"结束中国原始社会部落联盟的社会组织形态，创造了“国家”这一新型的社会政治形态；";
+        contribute3.person = personDetail;
+        [setContribute addObject:contribute3];
+        
+        [personDetail addContributes:setContribute];
+        
+        Comment *commit = [DBHelper insertObjectToEntity:@"Comment"];
+        commit.commentId = @"1_1";
+        commit.commentContent = @"《史记》：禹践天子位，尧子丹朱、舜子商均皆有疆土，以奉先祀，服其服，礼乐如之。";
+        commit.person = personDetail;
+        [personDetail addCommentsObject:commit];
+    }
     
-    NSMutableSet *setContribute = [[NSMutableSet alloc] init];
-    Contribute *contribute = [DBHelper insertObjectToEntity:@"Contribute"];
-    contribute.contributeId = @"61";
-    contribute.contributeContent = @"辅佐商汤王建立商朝；";
-    contribute.person = personDetail;
-    [setContribute addObject:contribute];
+    {
+        DynastyPersonDetail *personDetail = [DBHelper insertObjectToEntity:@"DynastyPersonDetail"];
+        personDetail.personId = @"2";
+        personDetail.personName = @"启";
+        personDetail.gender = @"男";
+        personDetail.career = @"官二代";
+        personDetail.idNumber = @"0102";
+        personDetail.image = @"xiaqi.png";
+        personDetail.address = @"山西夏县";
+        
+        NSMutableSet *setContribute = [[NSMutableSet alloc] init];
+        Contribute *contribute = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute.contributeId = @"2_1";
+        contribute.contributeContent = @"建立了王位世袭制；";
+        contribute.person = personDetail;
+        [setContribute addObject:contribute];
+        
+        [personDetail addContributes:setContribute];
+        
+        Comment *commit = [DBHelper insertObjectToEntity:@"Comment"];
+        commit.commentId = @"2_1";
+        commit.commentContent = @"郭沫若《中国古代社会研究》导论二：“古时的人以为尧舜传贤而夏禹传子，是家天下的开始。";
+        commit.person = personDetail;
+        [personDetail addCommentsObject:commit];
+    }
     
-    Contribute *contribute1 = [DBHelper insertObjectToEntity:@"Contribute"];
-    contribute1.contributeId = @"62";
-    contribute1.contributeContent = @"创立“五味调和说”与“火候论”， 至今仍是中国烹饪的不变之规；";
-    contribute1.person = personDetail;
-    [setContribute addObject:contribute];
+    {
+        DynastyPersonDetail *personDetail = [DBHelper insertObjectToEntity:@"DynastyPersonDetail"];
+        personDetail.personId = @"3";
+        personDetail.personName = @"关龙逢";
+        personDetail.gender = @"男";
+        personDetail.career = @"当官的";
+        personDetail.idNumber = @"0103";
+        personDetail.image = @"guanlongfeng.png";
+        personDetail.address = @"河南";
+        
+        NSMutableSet *setContribute = [[NSMutableSet alloc] init];
+        Contribute *contribute = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute.contributeId = @"3_1";
+        contribute.contributeContent = @"有史以来第一位因进谏而遭杀戮的忠臣";
+        contribute.person = personDetail;
+        [setContribute addObject:contribute];
+
+        [personDetail addContributes:setContribute];
+        
+        Comment *commit = [DBHelper insertObjectToEntity:@"Comment"];
+        commit.commentId = @"3_1";
+        commit.commentContent = @"夏直谏臣关公之墓；";
+        commit.person = personDetail;
+        [personDetail addCommentsObject:commit];
+        
+        Comment *commit1 = [DBHelper insertObjectToEntity:@"Comment"];
+        commit1.commentId = @"3_2";
+        commit1.commentContent = @"李梦阳：《双忠祠碑》；";
+        commit1.person = personDetail;
+        [personDetail addCommentsObject:commit1];
+        
+        Comment *commit2 = [DBHelper insertObjectToEntity:@"Comment"];
+        commit2.commentId = @"3_3";
+        commit2.commentContent = @"《关龙逄墓》：死谏开先第一人，千秋从此解批鳞，空言盛世能旌善，坯土何曾表直臣；";
+        commit2.person = personDetail;
+        [personDetail addCommentsObject:commit2];
+    }
     
-    Contribute *contribute2 = [DBHelper insertObjectToEntity:@"Contribute"];
-    contribute2.contributeId = @"63";
-    contribute2.contributeContent = @"对中国古代的政治，军事，文化，教育等多方面都做过卓越贡献，是杰出的思想家；";
-    contribute2.person = personDetail;
-    [setContribute addObject:contribute];
+    {
+        DynastyPersonDetail *personDetail = [DBHelper insertObjectToEntity:@"DynastyPersonDetail"];
+        personDetail.personId = @"4";
+        personDetail.personName = @"后羿";
+        personDetail.gender = @"男";
+        personDetail.career = @"枭雄";
+        personDetail.idNumber = @"0104";
+        personDetail.image = @"houyi@2x.png";
+        personDetail.address = @"不祥";
+        
+        NSMutableSet *setContribute = [[NSMutableSet alloc] init];
+        Contribute *contribute = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute.contributeId = @"4_1";
+        contribute.contributeContent = @"除了提供神话故事基本没别的作用了";
+        contribute.person = personDetail;
+        [setContribute addObject:contribute];
+        
+        [personDetail addContributes:setContribute];
+        
+        Comment *commit = [DBHelper insertObjectToEntity:@"Comment"];
+        commit.commentId = @"4_1";
+        commit.commentContent = @"《庄子·桑庚楚》：一雀适羿，羿必得之";
+        commit.person = personDetail;
+        [personDetail addCommentsObject:commit];
+    }
     
-    Contribute *contribute3 = [DBHelper insertObjectToEntity:@"Contribute"];
-    contribute3.contributeId = @"64";
-    contribute3.contributeContent = @"政治家，军事家，中国历史上第一个贤能相国， 帝王之师，中华厨祖";
-    contribute3.person = personDetail;
-    [setContribute addObject:contribute];
-    
-    [personDetail addContributes:setContribute];
-    
-    Comment *commit = [DBHelper insertObjectToEntity:@"Comment"];
-    commit.commentId = @"61";
-    commit.commentContent = @"《孟子》：汤之于伊尹， 学焉而后臣之， 故不劳而王。";
-    commit.person = personDetail;
-    [personDetail addCommentsObject:commit];
+    {
+        DynastyPersonDetail *personDetail = [DBHelper insertObjectToEntity:@"DynastyPersonDetail"];
+        personDetail.personId = @"6";
+        personDetail.personName = @"伊尹";
+        personDetail.gender = @"男";
+        personDetail.career = @"家庭教师";
+        personDetail.idNumber = @"0202";
+        personDetail.image = @"yiyin.png";
+        personDetail.address = @"河南开封市杞县西空桑村";
+        
+        NSMutableSet *setContribute = [[NSMutableSet alloc] init];
+        Contribute *contribute = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute.contributeId = @"61";
+        contribute.contributeContent = @"辅佐商汤王建立商朝；";
+        contribute.person = personDetail;
+        [setContribute addObject:contribute];
+        
+        Contribute *contribute1 = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute1.contributeId = @"62";
+        contribute1.contributeContent = @"创立“五味调和说”与“火候论”， 至今仍是中国烹饪的不变之规；";
+        contribute1.person = personDetail;
+        [setContribute addObject:contribute1];
+        
+        Contribute *contribute2 = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute2.contributeId = @"63";
+        contribute2.contributeContent = @"对中国古代的政治，军事，文化，教育等多方面都做过卓越贡献，是杰出的思想家；";
+        contribute2.person = personDetail;
+        [setContribute addObject:contribute2];
+        
+        Contribute *contribute3 = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute3.contributeId = @"64";
+        contribute3.contributeContent = @"政治家，军事家，中国历史上第一个贤能相国， 帝王之师，中华厨祖";
+        contribute3.person = personDetail;
+        [setContribute addObject:contribute3];
+        
+        [personDetail addContributes:setContribute];
+        
+        Comment *commit = [DBHelper insertObjectToEntity:@"Comment"];
+        commit.commentId = @"61";
+        commit.commentContent = @"《孟子》：汤之于伊尹， 学焉而后臣之， 故不劳而王。";
+        commit.person = personDetail;
+        [personDetail addCommentsObject:commit];
+    }
     
     [DBHelper save];
 }

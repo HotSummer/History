@@ -156,6 +156,10 @@
 		79A66317192BA32200B7170E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 79A66315192BA32200B7170E /* InfoPlist.strings */; };
 		79A66319192BA32200B7170E /* History_IphoneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A66318192BA32200B7170E /* History_IphoneTests.m */; };
 		79A6632A192BAAA400B7170E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A66329192BAAA400B7170E /* MapKit.framework */; };
+		79D5F99419CEC6FA00B4CD45 /* dayu01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79D5F99319CEC6FA00B4CD45 /* dayu01@2x.png */; };
+		79D5F99619CF18B500B4CD45 /* xiaqi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79D5F99519CF18B500B4CD45 /* xiaqi@2x.png */; };
+		79D5F99819CF1BB700B4CD45 /* guanlongfeng@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79D5F99719CF1BB700B4CD45 /* guanlongfeng@2x.png */; };
+		79D5F99A19CF1F1900B4CD45 /* houyi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79D5F99919CF1F1900B4CD45 /* houyi@2x.png */; };
 		79E07B7F1933A493008EA875 /* now_dongzhou_map.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E07B7A1933A493008EA875 /* now_dongzhou_map.png */; };
 		79E07B801933A493008EA875 /* now_qin_map.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E07B7B1933A493008EA875 /* now_qin_map.png */; };
 		79E07B811933A493008EA875 /* now_shang_map.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E07B7C1933A493008EA875 /* now_shang_map.png */; };
@@ -395,6 +399,10 @@
 		79A66316192BA32200B7170E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		79A66318192BA32200B7170E /* History_IphoneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = History_IphoneTests.m; sourceTree = "<group>"; };
 		79A66329192BAAA400B7170E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		79D5F99319CEC6FA00B4CD45 /* dayu01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dayu01@2x.png"; sourceTree = "<group>"; };
+		79D5F99519CF18B500B4CD45 /* xiaqi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xiaqi@2x.png"; sourceTree = "<group>"; };
+		79D5F99719CF1BB700B4CD45 /* guanlongfeng@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guanlongfeng@2x.png"; sourceTree = "<group>"; };
+		79D5F99919CF1F1900B4CD45 /* houyi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "houyi@2x.png"; sourceTree = "<group>"; };
 		79E07B7A1933A493008EA875 /* now_dongzhou_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = now_dongzhou_map.png; sourceTree = "<group>"; };
 		79E07B7B1933A493008EA875 /* now_qin_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = now_qin_map.png; sourceTree = "<group>"; };
 		79E07B7C1933A493008EA875 /* now_shang_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = now_shang_map.png; sourceTree = "<group>"; };
@@ -1019,6 +1027,10 @@
 		79E07B791933A493008EA875 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				79D5F99919CF1F1900B4CD45 /* houyi@2x.png */,
+				79D5F99719CF1BB700B4CD45 /* guanlongfeng@2x.png */,
+				79D5F99519CF18B500B4CD45 /* xiaqi@2x.png */,
+				79D5F99319CEC6FA00B4CD45 /* dayu01@2x.png */,
 				79816AD519C4A7B5002AE346 /* timeLine_Icon_selected.png */,
 				79816AD619C4A7B5002AE346 /* timeLine_Icon@2x.png */,
 				79816AD719C4A7B5002AE346 /* timeLine_Icon.png */,
@@ -1267,6 +1279,7 @@
 				79816AA619C1FC6E002AE346 /* dongzhou_thumbnail@2x.png in Resources */,
 				79E07B821933A493008EA875 /* now_xia_map.png in Resources */,
 				79E641D019ACF7070070A287 /* CollectListTableViewCell.xib in Resources */,
+				79D5F99619CF18B500B4CD45 /* xiaqi@2x.png in Resources */,
 				79816ABF19C43C88002AE346 /* map_Icon.png in Resources */,
 				79816A9E19C1F756002AE346 /* shang_later_thumbnail@2x.png in Resources */,
 				79816AC919C448BF002AE346 /* map_Icon_selected.png in Resources */,
@@ -1294,6 +1307,7 @@
 				79816ADC19C4A7B5002AE346 /* timeLine_Icon_selected@2x.png in Resources */,
 				796161AA19CB2082001A69BB /* PushViewController.xib in Resources */,
 				79F2FB3B194620CB00780F2A /* PersonDetailViewController.xib in Resources */,
+				79D5F99419CEC6FA00B4CD45 /* dayu01@2x.png in Resources */,
 				79E07BBD19362047008EA875 /* DynastyMapViewController.xib in Resources */,
 				4EAB47B61992291A00C8DD7D /* ChapterConfigView.xib in Resources */,
 				4ECDA9F819907444005F72B6 /* ShareSDKiPhoneSimpleShareViewUI.bundle in Resources */,
@@ -1309,6 +1323,7 @@
 				79816AAD19C412CB002AE346 /* mainBg.png in Resources */,
 				4EC9897019A47AD300878B84 /* STHeiti-Medium.ttc in Resources */,
 				79816AD419C4A149002AE346 /* person_Icon@2x.png in Resources */,
+				79D5F99819CF1BB700B4CD45 /* guanlongfeng@2x.png in Resources */,
 				79F2FB2E1944997F00780F2A /* PersonListTableViewCell.xib in Resources */,
 				7995F09119A3A86100D37E2B /* btn_back.png in Resources */,
 				4EBE0B1519ADE1280022012A /* DynastyIndicatorView.xib in Resources */,
@@ -1318,6 +1333,7 @@
 				4EBE0B0919AD8D4A0022012A /* PageView.xib in Resources */,
 				4ECDA9F619907444005F72B6 /* ShareSDKFlatShareViewUI.bundle in Resources */,
 				79E07BEA19377B3A008EA875 /* StoryTitleTableViewCell.xib in Resources */,
+				79D5F99A19CF1F1900B4CD45 /* houyi@2x.png in Resources */,
 				79816A9919C1F6AB002AE346 /* shang_early_thumbnail.png in Resources */,
 				4ECDA9F019907444005F72B6 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				79816AAE19C412CC002AE346 /* mainBg@2x.png in Resources */,
