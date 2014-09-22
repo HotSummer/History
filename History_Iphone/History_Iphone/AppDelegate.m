@@ -76,7 +76,7 @@
 - (void)appUpdate:(NSDictionary *)appInfo{
     self.updateAppInfo = appInfo;
     NSString *lastVersion = [appInfo objectForKey:@"version"];
-    NSString *currentVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+    NSString *currentVersion = appCurrentVersion;
     if (![lastVersion isEqualToString:currentVersion] && lastVersion.length > 0) {
         NSString *updateLog = [appInfo objectForKey:@"update_log"];
         NSString *logs = [updateLog stringByReplacingOccurrencesOfString:@";" withString:@"\n"];

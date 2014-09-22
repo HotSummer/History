@@ -699,7 +699,7 @@
         personDetail.gender = @"男";
         personDetail.career = @"枭雄";
         personDetail.idNumber = @"0104";
-        personDetail.image = @"houyi@2x.png";
+        personDetail.image = @"houyi.png";
         personDetail.address = @"不祥";
         
         NSMutableSet *setContribute = [[NSMutableSet alloc] init];
@@ -720,6 +720,32 @@
     
     {
         DynastyPersonDetail *personDetail = [DBHelper insertObjectToEntity:@"DynastyPersonDetail"];
+        personDetail.personId = @"5";
+        personDetail.personName = @"商汤";
+        personDetail.gender = @"男";
+        personDetail.career = @"天子";
+        personDetail.idNumber = @"0201";
+        personDetail.image = @"shangtang.png";
+        personDetail.address = @"河南商丘";
+        
+        NSMutableSet *setContribute = [[NSMutableSet alloc] init];
+        Contribute *contribute = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute.contributeId = @"05_1";
+        contribute.contributeContent = @"灭夏，结束夏桀的残暴统治；";
+        contribute.person = personDetail;
+        [setContribute addObject:contribute];
+        
+        [personDetail addContributes:setContribute];
+        
+        Comment *commit = [DBHelper insertObjectToEntity:@"Comment"];
+        commit.commentId = @"05_1";
+        commit.commentContent = @"暂无。";
+        commit.person = personDetail;
+        [personDetail addCommentsObject:commit];
+    }
+    
+    {
+        DynastyPersonDetail *personDetail = [DBHelper insertObjectToEntity:@"DynastyPersonDetail"];
         personDetail.personId = @"6";
         personDetail.personName = @"伊尹";
         personDetail.gender = @"男";
@@ -730,25 +756,25 @@
         
         NSMutableSet *setContribute = [[NSMutableSet alloc] init];
         Contribute *contribute = [DBHelper insertObjectToEntity:@"Contribute"];
-        contribute.contributeId = @"61";
+        contribute.contributeId = @"06_1";
         contribute.contributeContent = @"辅佐商汤王建立商朝；";
         contribute.person = personDetail;
         [setContribute addObject:contribute];
         
         Contribute *contribute1 = [DBHelper insertObjectToEntity:@"Contribute"];
-        contribute1.contributeId = @"62";
+        contribute1.contributeId = @"06_2";
         contribute1.contributeContent = @"创立“五味调和说”与“火候论”， 至今仍是中国烹饪的不变之规；";
         contribute1.person = personDetail;
         [setContribute addObject:contribute1];
         
         Contribute *contribute2 = [DBHelper insertObjectToEntity:@"Contribute"];
-        contribute2.contributeId = @"63";
+        contribute2.contributeId = @"06_3";
         contribute2.contributeContent = @"对中国古代的政治，军事，文化，教育等多方面都做过卓越贡献，是杰出的思想家；";
         contribute2.person = personDetail;
         [setContribute addObject:contribute2];
         
         Contribute *contribute3 = [DBHelper insertObjectToEntity:@"Contribute"];
-        contribute3.contributeId = @"64";
+        contribute3.contributeId = @"06_4";
         contribute3.contributeContent = @"政治家，军事家，中国历史上第一个贤能相国， 帝王之师，中华厨祖";
         contribute3.person = personDetail;
         [setContribute addObject:contribute3];
@@ -756,8 +782,98 @@
         [personDetail addContributes:setContribute];
         
         Comment *commit = [DBHelper insertObjectToEntity:@"Comment"];
-        commit.commentId = @"61";
+        commit.commentId = @"06_1";
         commit.commentContent = @"《孟子》：汤之于伊尹， 学焉而后臣之， 故不劳而王。";
+        commit.person = personDetail;
+        [personDetail addCommentsObject:commit];
+    }
+    
+    {
+        DynastyPersonDetail *personDetail = [DBHelper insertObjectToEntity:@"DynastyPersonDetail"];
+        personDetail.personId = @"7";
+        personDetail.personName = @"盘庚";
+        personDetail.gender = @"男";
+        personDetail.career = @"国王";
+        personDetail.idNumber = @"0203";
+        personDetail.image = @"pangeng.png";
+        personDetail.address = @"河南商丘";
+        
+        NSMutableSet *setContribute = [[NSMutableSet alloc] init];
+        Contribute *contribute = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute.contributeId = @"07_1";
+        contribute.contributeContent = @"力排众议，迁都于殷；";
+        contribute.person = personDetail;
+        [setContribute addObject:contribute];
+        
+        Contribute *contribute1 = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute1.contributeId = @"07_2";
+        contribute1.contributeContent = @"行汤之政，然后百姓由宁，殷道复兴，使商朝又经历了一段繁盛时期；";
+        contribute1.person = personDetail;
+        [setContribute addObject:contribute1];
+        
+        [personDetail addContributes:setContribute];
+        
+        Comment *commit = [DBHelper insertObjectToEntity:@"Comment"];
+        commit.commentId = @"07_1";
+        commit.commentContent = @"《史记》：自中丁以来，废适而更立诸弟子，弟子或争相代立，比九世乱，于是诸侯莫朝。";
+        commit.person = personDetail;
+        [personDetail addCommentsObject:commit];
+    }
+    
+    {
+        DynastyPersonDetail *personDetail = [DBHelper insertObjectToEntity:@"DynastyPersonDetail"];
+        personDetail.personId = @"8";
+        personDetail.personName = @"妇好";
+        personDetail.gender = @"女";
+        personDetail.career = @"军事";
+        personDetail.idNumber = @"0204";
+        personDetail.image = @"fuhao.png";
+        personDetail.address = @"不祥";
+        
+        NSMutableSet *setContribute = [[NSMutableSet alloc] init];
+        Contribute *contribute = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute.contributeId = @"08_1";
+        contribute.contributeContent = @"率领军队东征西讨为武丁（国王）拓展疆土；";
+        contribute.person = personDetail;
+        [setContribute addObject:contribute];
+        
+        Contribute *contribute1 = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute1.contributeId = @"08_2";
+        contribute1.contributeContent = @"主持着武丁朝的各种祭祀活动；";
+        contribute1.person = personDetail;
+        [setContribute addObject:contribute1];
+        
+        [personDetail addContributes:setContribute];
+        
+        Comment *commit = [DBHelper insertObjectToEntity:@"Comment"];
+        commit.commentId = @"08_1";
+        commit.commentContent = @"暂无。";
+        commit.person = personDetail;
+        [personDetail addCommentsObject:commit];
+    }
+    
+    {
+        DynastyPersonDetail *personDetail = [DBHelper insertObjectToEntity:@"DynastyPersonDetail"];
+        personDetail.personId = @"9";
+        personDetail.personName = @"太甲";
+        personDetail.gender = @"男";
+        personDetail.career = @"国王";
+        personDetail.idNumber = @"0205";
+        personDetail.image = @"taijia.png";
+        personDetail.address = @"河南商丘";
+        
+        NSMutableSet *setContribute = [[NSMutableSet alloc] init];
+        Contribute *contribute = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute.contributeId = @"09_1";
+        contribute.contributeContent = @"听从身边大臣的良言良策，使商朝进入了一个稳定发展的时期；";
+        contribute.person = personDetail;
+        [setContribute addObject:contribute];
+        
+        [personDetail addContributes:setContribute];
+        
+        Comment *commit = [DBHelper insertObjectToEntity:@"Comment"];
+        commit.commentId = @"09_1";
+        commit.commentContent = @"《孟子·万章上》：太甲颠覆汤之典刑，伊尹放之于桐。";
         commit.person = personDetail;
         [personDetail addCommentsObject:commit];
     }

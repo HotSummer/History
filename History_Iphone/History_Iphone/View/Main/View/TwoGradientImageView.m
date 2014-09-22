@@ -35,14 +35,14 @@
     
     CAGradientLayer *gradientLayer = [CAGradientLayer layer];
     gradientLayer.frame = CGRectMake(0, 0, 320, self.frame.size.height*SeperatePosition);
-    gradientLayer.colors = @[(id)[UIColor colorWithWhite:1.0 alpha:1.0].CGColor, (id)[UIColor clearColor].CGColor];
+    gradientLayer.colors = @[(id)[UIColor colorWithRed:199.0/255.0 green:203.0/255.0 blue:194.0/255.0 alpha:0.8].CGColor, (id)[UIColor clearColor].CGColor];
     gradientLayer.startPoint = CGPointMake(0.5, 0);
     gradientLayer.endPoint = CGPointMake(0.5, 1);
     [self.layer addSublayer:gradientLayer];
     
     CAGradientLayer *gradientLayer1 = [CAGradientLayer layer];
     gradientLayer1.frame = CGRectMake(0, self.frame.size.height*SeperatePosition, 320, self.frame.size.height*(1-SeperatePosition));
-    gradientLayer1.colors = @[(id)[UIColor clearColor].CGColor, (id)[UIColor colorWithWhite:1.0 alpha:1.0].CGColor];
+    gradientLayer1.colors = @[(id)[UIColor clearColor].CGColor, (id)[UIColor colorWithRed:201.0/255.0 green:177.0/255.0 blue:151.0/255.0 alpha:0.8].CGColor];
     gradientLayer1.startPoint = CGPointMake(0.5, 0);
     gradientLayer1.endPoint = CGPointMake(0.5, 1);
     [self.layer addSublayer:gradientLayer1];

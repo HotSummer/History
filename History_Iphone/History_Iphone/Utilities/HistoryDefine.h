@@ -14,4 +14,6 @@
 
 #define PushNotification @"PushNotification"
 
+#define appCurrentVersion [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]
+
 #endif

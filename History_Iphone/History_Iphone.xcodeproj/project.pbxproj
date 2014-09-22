@@ -95,6 +95,19 @@
 		796161AE19CB2E25001A69BB /* PushManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 796161AD19CB2E25001A69BB /* PushManager.m */; };
 		796161B219CB2E9D001A69BB /* History.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 796161B019CB2E9D001A69BB /* History.xcdatamodeld */; };
 		796161B419CB30FA001A69BB /* History.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 796161B319CB30FA001A69BB /* History.sqlite */; };
+		79684E5419D05FF700F25977 /* shangtang@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79684E5319D05FF700F25977 /* shangtang@2x.png */; };
+		79684E5619D066E100F25977 /* pangeng@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79684E5519D066E100F25977 /* pangeng@2x.png */; };
+		79684E5819D068E300F25977 /* fuhao@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79684E5719D068E300F25977 /* fuhao@2x.png */; };
+		79684E5A19D06C1600F25977 /* taijia@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79684E5919D06C1600F25977 /* taijia@2x.png */; };
+		79684EDF19D07A2B00F25977 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79684EDE19D07A2B00F25977 /* icon@2x.png */; };
+		79684EE419D07D9300F25977 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79684EE219D07D9200F25977 /* AboutViewController.m */; };
+		79684EE519D07D9300F25977 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79684EE319D07D9300F25977 /* AboutViewController.xib */; };
+		79684EEC19D084BC00F25977 /* qq.png in Resources */ = {isa = PBXBuildFile; fileRef = 79684EE619D084BC00F25977 /* qq.png */; };
+		79684EED19D084BC00F25977 /* qq@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79684EE719D084BC00F25977 /* qq@2x.png */; };
+		79684EEE19D084BC00F25977 /* sina.png in Resources */ = {isa = PBXBuildFile; fileRef = 79684EE819D084BC00F25977 /* sina.png */; };
+		79684EEF19D084BC00F25977 /* sina@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79684EE919D084BC00F25977 /* sina@2x.png */; };
+		79684EF019D084BC00F25977 /* weixin.png in Resources */ = {isa = PBXBuildFile; fileRef = 79684EEA19D084BC00F25977 /* weixin.png */; };
+		79684EF119D084BC00F25977 /* weixin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79684EEB19D084BC00F25977 /* weixin@2x.png */; };
 		796F17EF19C9D93800D55ACD /* libGexinSdk-1.0.6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 796F17EE19C9D93800D55ACD /* libGexinSdk-1.0.6.a */; };
 		796F17F119C9D9CC00D55ACD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 796F17F019C9D9CC00D55ACD /* CFNetwork.framework */; };
 		796F17FC19C9DE6E00D55ACD /* ChapterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 796F17F419C9DE6E00D55ACD /* ChapterManager.m */; };
@@ -322,6 +335,20 @@
 		796161AD19CB2E25001A69BB /* PushManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushManager.m; sourceTree = "<group>"; };
 		796161B119CB2E9D001A69BB /* History.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = History.xcdatamodel; sourceTree = "<group>"; };
 		796161B319CB30FA001A69BB /* History.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = History.sqlite; sourceTree = "<group>"; };
+		79684E5319D05FF700F25977 /* shangtang@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shangtang@2x.png"; sourceTree = "<group>"; };
+		79684E5519D066E100F25977 /* pangeng@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pangeng@2x.png"; sourceTree = "<group>"; };
+		79684E5719D068E300F25977 /* fuhao@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fuhao@2x.png"; sourceTree = "<group>"; };
+		79684E5919D06C1600F25977 /* taijia@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "taijia@2x.png"; sourceTree = "<group>"; };
+		79684EDE19D07A2B00F25977 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		79684EE119D07D9200F25977 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		79684EE219D07D9200F25977 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		79684EE319D07D9300F25977 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
+		79684EE619D084BC00F25977 /* qq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qq.png; sourceTree = "<group>"; };
+		79684EE719D084BC00F25977 /* qq@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qq@2x.png"; sourceTree = "<group>"; };
+		79684EE819D084BC00F25977 /* sina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sina.png; sourceTree = "<group>"; };
+		79684EE919D084BC00F25977 /* sina@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sina@2x.png"; sourceTree = "<group>"; };
+		79684EEA19D084BC00F25977 /* weixin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weixin.png; sourceTree = "<group>"; };
+		79684EEB19D084BC00F25977 /* weixin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weixin@2x.png"; sourceTree = "<group>"; };
 		796F17EC19C9D93800D55ACD /* GexinSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GexinSdk.h; sourceTree = "<group>"; };
 		796F17ED19C9D93800D55ACD /* GXSdkError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXSdkError.h; sourceTree = "<group>"; };
 		796F17EE19C9D93800D55ACD /* libGexinSdk-1.0.6.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libGexinSdk-1.0.6.a"; sourceTree = "<group>"; };
@@ -832,6 +859,16 @@
 			path = DB;
 			sourceTree = "<group>";
 		};
+		79684EE019D07D8200F25977 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				79684EE119D07D9200F25977 /* AboutViewController.h */,
+				79684EE219D07D9200F25977 /* AboutViewController.m */,
+				79684EE319D07D9300F25977 /* AboutViewController.xib */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
 		796F17E919C9D93800D55ACD /* GeTui */ = {
 			isa = PBXGroup;
 			children = (
@@ -1010,6 +1047,7 @@
 		79A66323192BA39B00B7170E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				79684EE019D07D8200F25977 /* About */,
 				796161A519CB205D001A69BB /* Push */,
 				79816AAF19C415F1002AE346 /* Main */,
 				4EC9896219A43B8700878B84 /* BaseViewController.h */,
@@ -1027,6 +1065,17 @@
 		79E07B791933A493008EA875 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				79684EE619D084BC00F25977 /* qq.png */,
+				79684EE719D084BC00F25977 /* qq@2x.png */,
+				79684EE819D084BC00F25977 /* sina.png */,
+				79684EE919D084BC00F25977 /* sina@2x.png */,
+				79684EEA19D084BC00F25977 /* weixin.png */,
+				79684EEB19D084BC00F25977 /* weixin@2x.png */,
+				79684EDE19D07A2B00F25977 /* icon@2x.png */,
+				79684E5919D06C1600F25977 /* taijia@2x.png */,
+				79684E5719D068E300F25977 /* fuhao@2x.png */,
+				79684E5519D066E100F25977 /* pangeng@2x.png */,
+				79684E5319D05FF700F25977 /* shangtang@2x.png */,
 				79D5F99919CF1F1900B4CD45 /* houyi@2x.png */,
 				79D5F99719CF1BB700B4CD45 /* guanlongfeng@2x.png */,
 				79D5F99519CF18B500B4CD45 /* xiaqi@2x.png */,
@@ -1271,6 +1320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EBE0B0719AD8D4A0022012A /* ChapterView.xib in Resources */,
+				79684EE519D07D9300F25977 /* AboutViewController.xib in Resources */,
 				79816A9A19C1F6AB002AE346 /* shang_early_thumbnail@2x.png in Resources */,
 				7995F09D19A5049C00D37E2B /* search@2x.png in Resources */,
 				79F2FB361945EF3A00780F2A /* yiyin@2x.png in Resources */,
@@ -1279,6 +1329,7 @@
 				79816AA619C1FC6E002AE346 /* dongzhou_thumbnail@2x.png in Resources */,
 				79E07B821933A493008EA875 /* now_xia_map.png in Resources */,
 				79E641D019ACF7070070A287 /* CollectListTableViewCell.xib in Resources */,
+				79684EDF19D07A2B00F25977 /* icon@2x.png in Resources */,
 				79D5F99619CF18B500B4CD45 /* xiaqi@2x.png in Resources */,
 				79816ABF19C43C88002AE346 /* map_Icon.png in Resources */,
 				79816A9E19C1F756002AE346 /* shang_later_thumbnail@2x.png in Resources */,
@@ -1287,17 +1338,21 @@
 				7995F09219A3A86100D37E2B /* btn_back@2x.png in Resources */,
 				79816A9619C0B2A8002AE346 /* xia_thumbnail@2x.png in Resources */,
 				4EAB4892199DB31900C8DD7D /* story3@2x.png in Resources */,
+				79684EF019D084BC00F25977 /* weixin.png in Resources */,
+				79684E5819D068E300F25977 /* fuhao@2x.png in Resources */,
 				79816AD119C4A149002AE346 /* person_Icon_selected.png in Resources */,
 				79A662FE192BA32100B7170E /* InfoPlist.strings in Resources */,
 				79816AD319C4A149002AE346 /* person_Icon.png in Resources */,
 				79F2FB281940A91800780F2A /* PersonListViewController.xib in Resources */,
 				4EC9898E19A5EA0100878B84 /* btn_collection_nor.png in Resources */,
+				79684EF119D084BC00F25977 /* weixin@2x.png in Resources */,
 				79E07B801933A493008EA875 /* now_qin_map.png in Resources */,
 				79E07B7F1933A493008EA875 /* now_dongzhou_map.png in Resources */,
 				79E07BC319362E8A008EA875 /* StoryListViewController.xib in Resources */,
 				7995F09C19A5049C00D37E2B /* search.png in Resources */,
 				4EC9898619A5E5E200878B84 /* btn_favorites@2x.png in Resources */,
 				4EC9898919A5E96B00878B84 /* btn_collection_down@2x.png in Resources */,
+				79684EEE19D084BC00F25977 /* sina.png in Resources */,
 				4ECDA9EC19907444005F72B6 /* ShareSDKLocalizable.strings in Resources */,
 				79816AC319C445F7002AE346 /* story_Icon.png in Resources */,
 				79E07B831933A493008EA875 /* now_xizhou_map.png in Resources */,
@@ -1315,6 +1370,7 @@
 				79816A9D19C1F755002AE346 /* shang_later_thumbnail.png in Resources */,
 				79816AC419C445F7002AE346 /* story_Icon@2x.png in Resources */,
 				79816ADB19C4A7B5002AE346 /* timeLine_Icon.png in Resources */,
+				79684E5A19D06C1600F25977 /* taijia@2x.png in Resources */,
 				4EC9899119A5EFBF00878B84 /* btn_share.png in Resources */,
 				4EAB4889199DAF6E00C8DD7D /* TimeLineViewController.xib in Resources */,
 				79816ACB19C448BF002AE346 /* story_Icon_selected.png in Resources */,
@@ -1329,10 +1385,12 @@
 				4EBE0B1519ADE1280022012A /* DynastyIndicatorView.xib in Resources */,
 				4EC9899219A5EFBF00878B84 /* btn_share@2x.png in Resources */,
 				4EBE0B0419AD8D4A0022012A /* HorizontalCollectView.xib in Resources */,
+				79684E5619D066E100F25977 /* pangeng@2x.png in Resources */,
 				79816ACC19C448BF002AE346 /* story_Icon_selected@2x.png in Resources */,
 				4EBE0B0919AD8D4A0022012A /* PageView.xib in Resources */,
 				4ECDA9F619907444005F72B6 /* ShareSDKFlatShareViewUI.bundle in Resources */,
 				79E07BEA19377B3A008EA875 /* StoryTitleTableViewCell.xib in Resources */,
+				79684EED19D084BC00F25977 /* qq@2x.png in Resources */,
 				79D5F99A19CF1F1900B4CD45 /* houyi@2x.png in Resources */,
 				79816A9919C1F6AB002AE346 /* shang_early_thumbnail.png in Resources */,
 				4ECDA9F019907444005F72B6 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
@@ -1344,11 +1402,14 @@
 				4EAB4890199DB31900C8DD7D /* story1@2x.png in Resources */,
 				4EAB489B199E005100C8DD7D /* TimeLineView.xib in Resources */,
 				79816A9519C0B2A8002AE346 /* xia_thumbnail.png in Resources */,
+				79684EEC19D084BC00F25977 /* qq.png in Resources */,
 				4EC9898A19A5E96B00878B84 /* btn_collection_nor@2x.png in Resources */,
+				79684EEF19D084BC00F25977 /* sina@2x.png in Resources */,
 				4ECDA9F219907444005F72B6 /* WeiboSDK.bundle in Resources */,
 				796161B419CB30FA001A69BB /* History.sqlite in Resources */,
 				4ECDAA2719907A7E005F72B6 /* CollectViewController.xib in Resources */,
 				4EC9898519A5E5E200878B84 /* btn_favorites.png in Resources */,
+				79684E5419D05FF700F25977 /* shangtang@2x.png in Resources */,
 				79816ACA19C448BF002AE346 /* map_Icon_selected@2x.png in Resources */,
 				79816AC019C43C88002AE346 /* map_Icon@2x.png in Resources */,
 				4EAB4891199DB31900C8DD7D /* story2@2x.png in Resources */,
@@ -1391,6 +1452,7 @@
 				4EC9895E19A3388B00878B84 /* TimeLineSlideView.m in Sources */,
 				4EBE0B0519AD8D4A0022012A /* PagedFlowView.m in Sources */,
 				4EBE0B0819AD8D4A0022012A /* PageView.m in Sources */,
+				79684EE419D07D9300F25977 /* AboutViewController.m in Sources */,
 				4ECDAA2619907A7E005F72B6 /* CollectViewController.m in Sources */,
 				4EBE0B0119AD8D4A0022012A /* DynastyCellView.m in Sources */,
 				79E07BE319377B03008EA875 /* DynastyView.m in Sources */,
