@@ -34,7 +34,7 @@
                     </connections>
                 </tableView>
             </subviews>
-            <color key="backgroundColor" red="0.96078431372549022" green="0.90196078431372551" blue="0.82745098039215681" alpha="1" colorSpace="deviceRGB"/>
+            <color key="backgroundColor" red="0.9882352941176471" green="0.96862745098039216" blue="0.94509803921568625" alpha="1" colorSpace="deviceRGB"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
