@@ -20,5 +20,6 @@
 - (IBAction)didPressedBtnPersonStory:(id)sender;
 - (IBAction)didPressedBtnTimeLine:(id)sender;
 - (IBAction)didPressedBtnAbout:(id)sender;
+- (IBAction)didPressedBtnAnimation:(id)sender;
 
 @end

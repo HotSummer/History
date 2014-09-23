@@ -113,6 +113,7 @@
 
 #pragma mark - ShareSDK
 - (void)initShareConfig{
+    
     [ShareSDK registerApp:@"28c1f554769a"];
     
     [ShareSDK connectSinaWeiboWithAppKey:@"543371755" appSecret:@"fbff33068d1418f3bd189cf76d5f4ff1" redirectUri:@"http://"];

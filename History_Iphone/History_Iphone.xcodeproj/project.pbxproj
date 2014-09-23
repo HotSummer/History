@@ -32,6 +32,8 @@
 		4EBE0B0B19AD8D4A0022012A /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EBE0B0019AD8D4A0022012A /* SearchView.xib */; };
 		4EBE0B1319ADE1160022012A /* DynastyIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBE0B1219ADE1160022012A /* DynastyIndicatorView.m */; };
 		4EBE0B1519ADE1280022012A /* DynastyIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EBE0B1419ADE1280022012A /* DynastyIndicatorView.xib */; };
+		4EC410E819D1629000239E3E /* IntroduceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC410E619D1629000239E3E /* IntroduceViewController.m */; };
+		4EC410E919D1629000239E3E /* IntroduceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EC410E719D1629000239E3E /* IntroduceViewController.xib */; };
 		4EC9895B19A334EA00878B84 /* GrayCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC9895A19A334EA00878B84 /* GrayCircle.m */; };
 		4EC9895E19A3388B00878B84 /* TimeLineSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC9895D19A3388B00878B84 /* TimeLineSlideView.m */; };
 		4EC9896119A33B4E00878B84 /* TimeLineScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC9896019A33B4E00878B84 /* TimeLineScrollView.m */; };
@@ -252,6 +254,9 @@
 		4EBE0B1119ADE1160022012A /* DynastyIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynastyIndicatorView.h; sourceTree = "<group>"; };
 		4EBE0B1219ADE1160022012A /* DynastyIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynastyIndicatorView.m; sourceTree = "<group>"; };
 		4EBE0B1419ADE1280022012A /* DynastyIndicatorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DynastyIndicatorView.xib; sourceTree = "<group>"; };
+		4EC410E519D1629000239E3E /* IntroduceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroduceViewController.h; sourceTree = "<group>"; };
+		4EC410E619D1629000239E3E /* IntroduceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroduceViewController.m; sourceTree = "<group>"; };
+		4EC410E719D1629000239E3E /* IntroduceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntroduceViewController.xib; sourceTree = "<group>"; };
 		4EC9895919A334EA00878B84 /* GrayCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrayCircle.h; sourceTree = "<group>"; };
 		4EC9895A19A334EA00878B84 /* GrayCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrayCircle.m; sourceTree = "<group>"; };
 		4EC9895C19A3388B00878B84 /* TimeLineSlideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineSlideView.h; sourceTree = "<group>"; };
@@ -631,6 +636,16 @@
 				4EBE0B1419ADE1280022012A /* DynastyIndicatorView.xib */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		4EC410E419D1627700239E3E /* Introduce */ = {
+			isa = PBXGroup;
+			children = (
+				4EC410E519D1629000239E3E /* IntroduceViewController.h */,
+				4EC410E619D1629000239E3E /* IntroduceViewController.m */,
+				4EC410E719D1629000239E3E /* IntroduceViewController.xib */,
+			);
+			path = Introduce;
 			sourceTree = "<group>";
 		};
 		4EC9897719A48D7600878B84 /* Utilities */ = {
@@ -1047,6 +1062,7 @@
 		79A66323192BA39B00B7170E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4EC410E419D1627700239E3E /* Introduce */,
 				79684EE019D07D8200F25977 /* About */,
 				796161A519CB205D001A69BB /* Push */,
 				79816AAF19C415F1002AE346 /* Main */,
@@ -1331,6 +1347,7 @@
 				79E641D019ACF7070070A287 /* CollectListTableViewCell.xib in Resources */,
 				79684EDF19D07A2B00F25977 /* icon@2x.png in Resources */,
 				79D5F99619CF18B500B4CD45 /* xiaqi@2x.png in Resources */,
+				4EC410E919D1629000239E3E /* IntroduceViewController.xib in Resources */,
 				79816ABF19C43C88002AE346 /* map_Icon.png in Resources */,
 				79816A9E19C1F756002AE346 /* shang_later_thumbnail@2x.png in Resources */,
 				79816AC919C448BF002AE346 /* map_Icon_selected.png in Resources */,
@@ -1461,6 +1478,7 @@
 				79E07BD619376DD8008EA875 /* DynastyList.m in Sources */,
 				4EBE0B0219AD8D4A0022012A /* DynastyCollectView.m in Sources */,
 				4EBE0B0A19AD8D4A0022012A /* SearchView.m in Sources */,
+				4EC410E819D1629000239E3E /* IntroduceViewController.m in Sources */,
 				79816AB319C415F1002AE346 /* MainViewController.m in Sources */,
 				796F17FF19C9DE6E00D55ACD /* UIController.m in Sources */,
 				79E07BC219362E8A008EA875 /* StoryListViewController.m in Sources */,
@@ -1636,7 +1654,7 @@
 					"$(PROJECT_DIR)/History_Iphone/Tools/GeTui/dist",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c09b51f3-ca4c-48cd-94e0-7fff2228bd22";
+				PROVISIONING_PROFILE = "3c86a008-ef43-4e8d-baf9-bfe3d592514e";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1669,7 +1687,7 @@
 					"$(PROJECT_DIR)/History_Iphone/Tools/GeTui/dist",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c09b51f3-ca4c-48cd-94e0-7fff2228bd22";
+				PROVISIONING_PROFILE = "3c86a008-ef43-4e8d-baf9-bfe3d592514e";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

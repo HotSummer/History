@@ -7,8 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WeiboSDK.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>{
+@interface AppDelegate : UIResponder
+<
+UIApplicationDelegate,
+WBHttpRequestDelegate,
+WeiboSDKDelegate
+>{
     
 }
 

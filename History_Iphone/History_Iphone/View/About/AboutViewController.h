@@ -7,11 +7,13 @@
 //
 
 #import "BaseViewController.h"
+#import "WeiboSDK.h"
 
 @interface AboutViewController : BaseViewController
 <
 UITableViewDataSource,
-UITableViewDelegate
+UITableViewDelegate,
+WBHttpRequestDelegate
 >
 
 @end

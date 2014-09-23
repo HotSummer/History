@@ -13,6 +13,7 @@
 #import "TimeLineViewController.h"
 #import "PushViewController.h"
 #import "AboutViewController.h"
+#import "IntroduceViewController.h"
 #import "UIController.h"
 
 @interface MainViewController ()
@@ -36,6 +37,9 @@
     // Do any additional setup after loading the view from its nib.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receivePushNotification:) name:PushNotification object:nil];
 //    [[UIController shareInstance] addDataToDB];
+    
+    IntroduceViewController *introduceVC = [[IntroduceViewController alloc] init];
+    [self presentViewController:introduceVC animated:NO completion:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,7 +59,6 @@
     NSString *pushContent = pushDic[@"pushContent"];
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:pushTitle message:pushContent delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"查看", nil];
     [alertView show];
-    
 }
 
 - (IBAction)didPressedBtnDynastyMap:(id)sender{
@@ -77,6 +80,11 @@
 - (IBAction)didPressedBtnAbout:(id)sender{
     AboutViewController *aboutVC = [[AboutViewController alloc] initWithNibName:@"AboutViewController" bundle:nil];
     [self.navigationController pushViewController:aboutVC animated:YES];
+}
+
+- (IBAction)didPressedBtnAnimation:(id)sender{
+    IntroduceViewController *introduceVC = [[IntroduceViewController alloc] init];
+    [self presentViewController:introduceVC animated:YES completion:nil];
 }
 
 #pragma mark - alertView delegate
