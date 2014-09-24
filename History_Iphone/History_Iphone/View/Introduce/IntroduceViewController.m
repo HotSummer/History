@@ -48,6 +48,8 @@
     [self setDynastyTitle];
     
     [self performSelector:@selector(showAnimation) withObject:nil afterDelay:1.0];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,8 +71,8 @@
         _imageviewXia.alpha = 0;
         _imageviewZaoShang.alpha = 1;
         _lblXia.alpha = 0;
-        _lblXia.frame = CGRectMake(-52, 20, 52, 44);
-        _lblZaoShang.frame = CGRectMake(134, 20, 52, 44);
+        _lblXia.font = [UIFont systemFontOfSize:13.0];
+        _lblZaoShang.font = [UIFont systemFontOfSize:13.0];
         _lblZaoShang.alpha = 1;
     } completion:^(BOOL finished) {
         if (finished) {
