@@ -12,7 +12,7 @@
 - (void)layoutSubviews{
     [super layoutSubviews];
     
-    self.backgroundColor = [UIColor whiteColor];
+    self.backgroundColor = [UIColor clearColor];
     
     self.layer.masksToBounds = YES;
     self.layer.borderWidth = thinLineHeight;

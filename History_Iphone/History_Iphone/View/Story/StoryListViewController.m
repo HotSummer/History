@@ -75,7 +75,6 @@
     UILabel *lblSeparete = [[UILabel alloc] initWithFrame:CGRectMake(0, 44-thinLineHeight, 320, thinLineHeight)];
     lblSeparete.backgroundColor = [UIColor colorWithRed:136.0/255.0 green:136.0/255.0 blue:136.0/255.0 alpha:1.0];
     [cellDynasty addSubview:lblSeparete];
-    //    [tableStoryList reloadData];
 }
 
 - (void)loadSearchView{

@@ -60,36 +60,59 @@
     [super viewWillAppear:animated];
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+}
+
 - (void)showAnimation{
     [UIView animateWithDuration:1.5 animations:^{
         _imageviewXia.alpha = 0;
         _imageviewZaoShang.alpha = 1;
+        _lblXia.alpha = 0;
+        _lblXia.frame = CGRectMake(-52, 20, 52, 44);
+        _lblZaoShang.frame = CGRectMake(134, 20, 52, 44);
+        _lblZaoShang.alpha = 1;
     } completion:^(BOOL finished) {
         if (finished) {
             [UIView animateWithDuration:1.5 animations:^{
                 _imageviewZaoShang.alpha = 0;
                 _imageviewYinShang.alpha = 1;
+                _lblZaoShang.alpha = 0;
+                _lblZaoShang.frame = CGRectMake(-52, 20, 52, 44);
+                _lblYinShang.frame = CGRectMake(134, 20, 52, 44);
+                _lblYinShang.alpha = 1;
             } completion:^(BOOL finished) {
                 if (finished) {
                     [UIView animateWithDuration:1.5 animations:^{
                         _imageviewYinShang.alpha = 0;
                         _imageviewXiZhou.alpha = 1;
+                        _lblYinShang.alpha = 0;
+                        _lblYinShang.frame = CGRectMake(-52, 20, 52, 44);
+                        _lblXiZhou.frame = CGRectMake(134, 20, 52, 44);
+                        _lblXiZhou.alpha = 1;
                     } completion:^(BOOL finished) {
                         if (finished) {
                             [UIView animateWithDuration:1.5 animations:^{
                                 _imageviewXiZhou.alpha = 0;
                                 _imageviewDongZhou.alpha = 1;
+                                _lblXiZhou.alpha = 0;
+                                _lblXiZhou.frame = CGRectMake(-52, 20, 52, 44);
+                                _lblDongZhou.frame = CGRectMake(134, 20, 52, 44);
+                                _lblDongZhou.alpha = 1;
                             } completion:^(BOOL finished) {
                                 if (finished) {
                                     [UIView animateWithDuration:1.5 animations:^{
                                         _imageviewDongZhou.alpha = 0;
                                         _imageviewQin.alpha = 1;
+                                        _lblDongZhou.alpha = 0;
+                                        _lblDongZhou.frame = CGRectMake(-52, 20, 52, 44);
+                                        _lblQin.frame = CGRectMake(134, 20, 52, 44);
+                                        _lblQin.alpha = 1;
                                     } completion:^(BOOL finished) {
                                         
                                     }];
                                 }
                             }];
-                            
                         }
                     }];
                 }
@@ -126,6 +149,7 @@
     _lblDongZhou.text = dynastyList4.dynastyName;
     DynastyList *dynastyList5 = dynasties[5];
     _lblQin.text = dynastyList5.dynastyName;
+    
 }
 
 - (IBAction)didPressedBtnEnter:(id)sender{

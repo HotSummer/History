@@ -38,7 +38,6 @@
     pageView.minimumPageScale = 0.7;
     pageView.minimumPageAlpha = 0.3;
     _dynastyThumbnailImages = @[@"xia_thumbnail.png", @"shang_early_thumbnail.png", @"shang_later_thumbnail.png", @"xizhou_thumbnail.png", @"dongzhou_thumbnail.png", @"qin_thumbnail.png"];
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -98,7 +97,11 @@
 }
 
 - (void)flowView:(PagedFlowView *)flowView didScrollToPageAtIndex:(NSInteger)index {
-    //    NSLog(@"Scrolled to page # %ld", (long)index);
+    NSLog(@"Scrolled to page # %ld", (long)index);
+    //防止快速滑动导致index小于0 
+    if (index < 0) {
+        index = 0;
+    }
     [self updateImage:index];
 }
 

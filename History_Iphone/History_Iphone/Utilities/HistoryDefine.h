@@ -16,4 +16,6 @@
 
 #define appCurrentVersion [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]
 
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+
 #endif
