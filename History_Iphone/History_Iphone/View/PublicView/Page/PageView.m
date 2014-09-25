@@ -28,10 +28,10 @@
         [textStorage addLayoutManager:layoutManager];
         layoutManager.delegate = self;
         
-        textContainer = [[NSTextContainer alloc] initWithSize:self.bounds.size];
+        textContainer = [[NSTextContainer alloc] initWithSize:CGSizeMake(320, (iPhone5?454:366))];
         [layoutManager addTextContainer:textContainer];
         
-        _txtContent = [[UITextView alloc] initWithFrame:self.bounds textContainer:textContainer];//设置textView样式
+        _txtContent = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, 320, (iPhone5?454:366)) textContainer:textContainer];//设置textView样式
         _txtContent.editable = NO;
         _txtContent.scrollEnabled = NO;
     }

@@ -14,7 +14,7 @@
 #import "ChapterManager.h"
 
 @interface StoryViewController (){
-    ChapterView *chapterView;
+    IBOutlet ChapterView *chapterView;
 }
 
 @end
@@ -41,15 +41,22 @@
     
     //工厂模式
     [ChapterManager shareInstance].content = story.storyContent;
-    chapterView = [[ChapterManager shareInstance] createChapterView];
-    [self.view addSubview:chapterView];
-    chapterView.frame = CGRectMake(0, 64, 320, 454);
+    chapterView.strContent = [ChapterManager shareInstance].content;
+    [chapterView setReadMode:[ChapterManager shareInstance].chapterConfig.readMode];
     
     if ([[CollectManager shareInstance] collect:story.storyId]) {
         [btnCollect setImage:[UIImage imageNamed:@"btn_collection_down.png"] forState:UIControlStateNormal];
     }else{
         [btnCollect setImage:[UIImage imageNamed:@"btn_collection_nor.png"] forState:UIControlStateNormal];
     }
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning
@@ -92,7 +99,9 @@
 - (IBAction)didPressedBtnChapterConfig:(id)sender{
     ChapterConfigView *chapterConfigView = [[[NSBundle mainBundle] loadNibNamed:@"ChapterConfigView" owner:self options:nil] firstObject];
     chapterConfigView.delegate = self;
+    chapterConfigView.frame = self.view.bounds;
     [self.view addSubview:chapterConfigView];
+    
 }
 
 - (IBAction)didPressedBtnShare:(id)sender{

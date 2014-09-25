@@ -31,6 +31,17 @@
 }
 */
 
+- (void)layoutSubviews{
+    [super layoutSubviews];
+}
+
+//- (id)initWithCoder:(NSCoder *)aDecoder{
+//    if (self = [super initWithCoder:aDecoder]) {
+//        scrollText.frame = CGRectMake(0, 0, 320, (iPhone5?454:366));
+//    }
+//    return self;
+//}
+
 - (void)setStrContent:(NSString *)strContent{
     if (![_strContent isEqualToString:strContent]) {
         _strContent = strContent;
@@ -70,7 +81,7 @@
     while (iTotalTextNumber < self.strContent.length) {
         iPageNumers ++;
         NSString *strLeft = [self.strContent substringFromIndex:iTotalTextNumber];
-        NSInteger iPageContentNumber = [[TextKitManager shareInstance] getShowNumbers:strLeft rect:scrollText.bounds attribute:dic];
+        NSInteger iPageContentNumber = [[TextKitManager shareInstance] getShowNumbers:strLeft rect:CGRectMake(0, 0, 320, (iPhone5?454:366)) attribute:dic];
         NSString *strContentPage = [strLeft substringToIndex:iPageContentNumber];
         [_pageContents addObject:strContentPage];
         iTotalTextNumber += iPageContentNumber;
@@ -100,12 +111,12 @@
 //加载pageView
 - (void)loadPagesView{
     [self createPagesView];
-    scrollText.contentSize = CGSizeMake(_pageContents.count*320, 454);
+    scrollText.contentSize = CGSizeMake(_pageContents.count*320, (iPhone5?454:366));
     for (int i=0; i<_pageViews.count; i++) {
         PageView *pageView = _pageViews[i];
         [scrollText addSubview:pageView];
         
-        pageView.frame = CGRectMake(i*320, 0, pageView.frame.size.width, pageView.frame.size.height);
+        pageView.frame = CGRectMake(i*320, 0, pageView.frame.size.width, (iPhone5?454:366));
         pageView.strContent = _pageContents[i];
     }
     
@@ -180,7 +191,7 @@
                 [_pageViews removeObject:visibleFirstPageView];
                 [_pageReuseView addObject:visibleFirstPageView];
                 [_pageViews addObject:reusePageView];
-                reusePageView.frame = CGRectMake((index+1)*320, 0, reusePageView.frame.size.width, reusePageView.frame.size.height);
+                reusePageView.frame = CGRectMake((index+1)*320, 0, reusePageView.frame.size.width, (iPhone5?454:366));
                 [scrollText addSubview:reusePageView];
                 reusePageView.strContent = _pageContents[index+1];
                 [visibleFirstPageView removeFromSuperview];
@@ -195,7 +206,7 @@
                 [_pageViews removeObject:visibleFirstPageView];
                 [_pageReuseView addObject:visibleFirstPageView];
                 [_pageViews addObject:reusePageView];
-                reusePageView.frame = CGRectMake((index-1)*320, 0, reusePageView.frame.size.width, reusePageView.frame.size.height);
+                reusePageView.frame = CGRectMake((index-1)*320, 0, reusePageView.frame.size.width, (iPhone5?454:366));
                 [scrollText addSubview:reusePageView];
                 reusePageView.strContent = _pageContents[index-1];
                 [visibleFirstPageView removeFromSuperview];

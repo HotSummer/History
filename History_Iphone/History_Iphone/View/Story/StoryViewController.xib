@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="btnCollect" destination="awJ-D3-GPk" id="oQ3-X6-ZDU"/>
                 <outlet property="btnCollectList" destination="6V8-5s-cR8" id="hf0-le-hK2"/>
+                <outlet property="chapterView" destination="KBx-YH-Ycq" id="wkf-aU-5f8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,7 +17,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="usB-2U-wpU">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="usB-2U-wpU">
                     <rect key="frame" x="0.0" y="518" width="320" height="50"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
@@ -57,9 +58,45 @@
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="8L6-mF-Lmp"/>
+                        <constraint firstAttribute="width" constant="320" id="WRn-aq-ulx"/>
+                    </constraints>
+                </view>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KBx-YH-Ycq" customClass="ChapterView">
+                    <rect key="frame" x="0.0" y="64" width="320" height="454"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fe-Ev-DmV">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="454"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="delegate" destination="KBx-YH-Ycq" id="j3s-mx-laA"/>
+                            </connections>
+                        </scrollView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="1fe-Ev-DmV" firstAttribute="leading" secondItem="KBx-YH-Ycq" secondAttribute="leading" id="Qv7-uf-372"/>
+                        <constraint firstAttribute="trailing" secondItem="1fe-Ev-DmV" secondAttribute="trailing" id="mfZ-rT-FHe"/>
+                        <constraint firstAttribute="bottom" secondItem="1fe-Ev-DmV" secondAttribute="bottom" id="tnb-vR-3lZ"/>
+                        <constraint firstItem="1fe-Ev-DmV" firstAttribute="top" secondItem="KBx-YH-Ycq" secondAttribute="top" id="xaR-0N-UL9"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="scrollText" destination="1fe-Ev-DmV" id="ORD-Ko-HUm"/>
+                    </connections>
                 </view>
             </subviews>
             <color key="backgroundColor" red="0.98823529409999999" green="0.96862745100000003" blue="0.94509803920000002" alpha="1" colorSpace="deviceRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="usB-2U-wpU" secondAttribute="bottom" id="I8p-Sd-3Yi"/>
+                <constraint firstAttribute="trailing" secondItem="KBx-YH-Ycq" secondAttribute="trailing" id="Khp-Ok-fxG"/>
+                <constraint firstItem="usB-2U-wpU" firstAttribute="top" secondItem="KBx-YH-Ycq" secondAttribute="bottom" id="Prz-Lg-QCf"/>
+                <constraint firstItem="usB-2U-wpU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hrS-un-jkN"/>
+                <constraint firstItem="KBx-YH-Ycq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="ih0-L0-8f5"/>
+                <constraint firstItem="KBx-YH-Ycq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ux6-0H-xh7"/>
+            </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>

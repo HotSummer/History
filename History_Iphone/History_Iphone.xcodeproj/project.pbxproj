@@ -25,7 +25,6 @@
 		4EBE0B0419AD8D4A0022012A /* HorizontalCollectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EBE0AF219AD8D4A0022012A /* HorizontalCollectView.xib */; };
 		4EBE0B0519AD8D4A0022012A /* PagedFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBE0AF519AD8D4A0022012A /* PagedFlowView.m */; };
 		4EBE0B0619AD8D4A0022012A /* ChapterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBE0AF819AD8D4A0022012A /* ChapterView.m */; };
-		4EBE0B0719AD8D4A0022012A /* ChapterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EBE0AF919AD8D4A0022012A /* ChapterView.xib */; };
 		4EBE0B0819AD8D4A0022012A /* PageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBE0AFB19AD8D4A0022012A /* PageView.m */; };
 		4EBE0B0919AD8D4A0022012A /* PageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EBE0AFC19AD8D4A0022012A /* PageView.xib */; };
 		4EBE0B0A19AD8D4A0022012A /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBE0AFF19AD8D4A0022012A /* SearchView.m */; };
@@ -244,7 +243,6 @@
 		4EBE0AF519AD8D4A0022012A /* PagedFlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagedFlowView.m; sourceTree = "<group>"; };
 		4EBE0AF719AD8D4A0022012A /* ChapterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChapterView.h; sourceTree = "<group>"; };
 		4EBE0AF819AD8D4A0022012A /* ChapterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChapterView.m; sourceTree = "<group>"; };
-		4EBE0AF919AD8D4A0022012A /* ChapterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChapterView.xib; sourceTree = "<group>"; };
 		4EBE0AFA19AD8D4A0022012A /* PageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageView.h; sourceTree = "<group>"; };
 		4EBE0AFB19AD8D4A0022012A /* PageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageView.m; sourceTree = "<group>"; };
 		4EBE0AFC19AD8D4A0022012A /* PageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PageView.xib; sourceTree = "<group>"; };
@@ -610,7 +608,6 @@
 			children = (
 				4EBE0AF719AD8D4A0022012A /* ChapterView.h */,
 				4EBE0AF819AD8D4A0022012A /* ChapterView.m */,
-				4EBE0AF919AD8D4A0022012A /* ChapterView.xib */,
 				4EBE0AFA19AD8D4A0022012A /* PageView.h */,
 				4EBE0AFB19AD8D4A0022012A /* PageView.m */,
 				4EBE0AFC19AD8D4A0022012A /* PageView.xib */,
@@ -1335,7 +1332,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EBE0B0719AD8D4A0022012A /* ChapterView.xib in Resources */,
 				79684EE519D07D9300F25977 /* AboutViewController.xib in Resources */,
 				79816A9A19C1F6AB002AE346 /* shang_early_thumbnail@2x.png in Resources */,
 				7995F09D19A5049C00D37E2B /* search@2x.png in Resources */,

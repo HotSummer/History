@@ -158,7 +158,7 @@
         if (timeNumber == 0) {
             fY = 0;
         }else if (timeNumber == _arrData.count -1){
-            fY = scrollViewTimeLine.contentSize.height-504;
+            fY = scrollViewTimeLine.contentSize.height-(iPhone5?504:416);
             fY = (fY>0)?fY:0;
         }else{
             CGFloat fRate = 0;
@@ -166,6 +166,7 @@
                 NSNumber *number = _arrRate[i];
                 fRate += [number floatValue];
             }
+            //落点的位置和高度的一半比较
             fY = fRate*scrollViewTimeLine.contentSize.height-scrollViewTimeLine.frame.size.height/2.0;
             fY = (fY>0)?fY:0;
             CGFloat fMore = fY+scrollViewTimeLine.frame.size.height - scrollViewTimeLine.contentSize.height;

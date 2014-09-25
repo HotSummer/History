@@ -75,6 +75,7 @@
 
 - (void)dealloc{
     [_chapterConfig removeObserver:self forKeyPath:@"readMode"];
+    [_chapterConfig removeObserver:self forKeyPath:@"readSize"];
 }
 
 @end

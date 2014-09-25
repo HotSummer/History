@@ -77,10 +77,12 @@
 
 - (void)loadDynastyIndicatorView{
     indicatorView = [[[NSBundle mainBundle] loadNibNamed:@"DynastyIndicatorView" owner:self options:nil] lastObject];
-    [self.view addSubview:indicatorView];
+    
     indicatorView.alpha = 0.0;
     indicatorView.delegate = self;
-    indicatorView.frame = CGRectMake(271, 162, indicatorView.frame.size.width, indicatorView.frame.size.height);
+    indicatorView.frame = CGRectMake(271, (iPhone5?224:182), indicatorView.frame.size.width, indicatorView.frame.size.height);
+    
+    [self.view addSubview:indicatorView];
 }
 
 - (void)hideIndicatorView{
