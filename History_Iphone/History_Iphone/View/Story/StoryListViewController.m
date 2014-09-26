@@ -35,7 +35,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.automaticallyAdjustsScrollViewInsets = NO;
-    
     UIBarButtonItem *rightbar = [[UIBarButtonItem alloc] initWithCustomView:btnCollectList];
     self.navigationItem.rightBarButtonItem = rightbar;
     
@@ -43,7 +42,16 @@
     
     [self loadDynastyCell];
     [self loadSearchView];
-    tableStoryList.frame = CGRectMake(0, 98, 320, 470);
+//    tableStoryList.contentInset =  UIEdgeInsetsZero;
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+//    tableStoryList.contentInset =  UIEdgeInsetsZero;
 }
 
 - (void)didReceiveMemoryWarning
@@ -82,6 +90,7 @@
     _searchView.frame = CGRectMake(0, 64, _searchView.frame.size.width, _searchView.frame.size.height);
     [self.view addSubview:_searchView];
     _searchView.delegate = self;
+//    tableStoryList.tableHeaderView = _searchView;
 }
 
 - (IBAction)didPressedBtnCollectList:(id)sender{
@@ -161,11 +170,6 @@
         StoryViewController *storyVC = [[StoryViewController alloc] initWithNibName:@"StoryViewController" bundle:nil];
         [self.navigationController pushViewController:storyVC animated:YES];
     }
-}
-
-#pragma mark - scrollview delegate
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    
 }
 
 @end

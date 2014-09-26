@@ -22,6 +22,10 @@
 
 @end
 
+@interface SearchView ()
+
+@end
+
 @implementation SearchView
 
 - (id)initWithFrame:(CGRect)frame
@@ -51,6 +55,10 @@
 }
 */
 
+- (void)layoutSubviews{
+    [super layoutSubviews];
+}
+
 - (void)stopSearch{
     [self didPressedBtnCancel:nil];
 }
@@ -78,7 +86,7 @@
             
         }
     }
-    // 中文输入法以外的直接对其统计限制即可，不考虑其他语种情况
+    // 中文输入法以外的直接对其限制即可，不考虑其他语种情况
     else{
         textField.text = @"";
         UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:@"请输入中文" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
