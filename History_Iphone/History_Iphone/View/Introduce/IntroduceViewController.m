@@ -9,21 +9,26 @@
 #import "IntroduceViewController.h"
 #import "DynastyList.h"
 #import "UIController.h"
+#import "UIView+Explode.h"
+
+typedef enum : NSUInteger {
+    Destroy,
+    Move
+} DynastyDisappearStyle;
 
 @interface IntroduceViewController ()
 
-@property(nonatomic, strong) IBOutlet UILabel *lblTitle;
-@property(nonatomic, strong) IBOutlet UILabel *lblXia;
+@property(nonatomic, strong) IBOutlet UIImageView *imageXia;
 @property(nonatomic, strong) IBOutlet UIImageView *imageviewXia;
-@property(nonatomic, strong) IBOutlet UILabel *lblZaoShang;
+@property(nonatomic, strong) IBOutlet UIImageView *imageZaoShang;
 @property(nonatomic, strong) IBOutlet UIImageView *imageviewZaoShang;
-@property(nonatomic, strong) IBOutlet UILabel *lblYinShang;
+@property(nonatomic, strong) IBOutlet UIImageView *imageYinShang;
 @property(nonatomic, strong) IBOutlet UIImageView *imageviewYinShang;
-@property(nonatomic, strong) IBOutlet UILabel *lblXiZhou;
+@property(nonatomic, strong) IBOutlet UIImageView *imageXiZhou;
 @property(nonatomic, strong) IBOutlet UIImageView *imageviewXiZhou;
-@property(nonatomic, strong) IBOutlet UILabel *lblDongZhou;
+@property(nonatomic, strong) IBOutlet UIImageView *imageDongZhou;
 @property(nonatomic, strong) IBOutlet UIImageView *imageviewDongZhou;
-@property(nonatomic, strong) IBOutlet UILabel *lblQin;
+@property(nonatomic, strong) IBOutlet UIImageView *imageQin;
 @property(nonatomic, strong) IBOutlet UIImageView *imageviewQin;
 
 - (IBAction)didPressedBtnEnter:(id)sender;
@@ -45,7 +50,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self setDynastyTitle];
     
     [self performSelector:@selector(showAnimation) withObject:nil afterDelay:1.0];
     
@@ -66,99 +70,72 @@
     [super viewDidAppear:animated];
 }
 
-- (void)showAnimation{
-    CGAffineTransform goTranslation = CGAffineTransformMakeTranslation(-52, 0);
-    CGAffineTransform goScale = CGAffineTransformMakeScale(0.1, 0.1);
-    CGAffineTransform goTransform = CGAffineTransformConcat(goTranslation, goScale);
+/**
+ @brief 根据朝代更替的方式执行动画
+ @param style 朝代更替的方式（Destroy, Move）
+ @param originalDynasty 原来朝代的title
+ @param currentDynasty 现在朝代的title
+ @param dynastyOriginalMap 原来朝代的地图
+ @param dynastyCurrentMap 现在朝代的地图
+ @param completion 动画执行完的回掉
+ */
+- (void)dynastyExchangeAnimation:(DynastyDisappearStyle)style
+                 originalDynasty:(UIView *)originalDynasty
+                  currentDynasty:(UIView *)currentDynasty
+                     originalMap:(UIView *)dynastyOriginalMap
+                      currentMap:(UIView *)dynastyCurrentMap
+                   completeBlock:(void (^)())completion{
+    CGAffineTransform goTranslation = CGAffineTransformConcat(originalDynasty.transform, CGAffineTransformMakeTranslation(-186, 0));
+    CGAffineTransform goScale = CGAffineTransformMakeScale(0.3, 0.3);
+    CGAffineTransform goTransform = CGAffineTransformConcat(goScale, goTranslation);
+    CGAffineTransform comeTranslation = CGAffineTransformMakeTranslation(-186, 0);
+    CGAffineTransform comeScale = CGAffineTransformMakeScale(1.0, 1.0);
+    CGAffineTransform comeTransform = CGAffineTransformConcat(comeTranslation, comeScale);
     
     [UIView animateWithDuration:1.5 animations:^{
-        _imageviewXia.alpha = 0;
-        _imageviewZaoShang.alpha = 1;
-//        _lblXia.alpha = 0;
+        dynastyOriginalMap.alpha = 0;
+        dynastyCurrentMap.alpha = 1;
+        if (style == Move) {
+            originalDynasty.transform = goTransform;
+        }
+        currentDynasty.transform = comeTransform;
         
-        _lblXia.transform = goTranslation;
-//        _lblXia.frame = CGRectMake(-52, 20, 1, 1);
-//        _lblZaoShang.font = [UIFont systemFontOfSize:17.0];
-//        _lblZaoShang.frame = CGRectMake(134, 20, 52, 44);
-//        _lblZaoShang.alpha = 1;
     } completion:^(BOOL finished) {
-//        if (finished) {
-//            [UIView animateWithDuration:1.5 animations:^{
-//                _imageviewZaoShang.alpha = 0;
-//                _imageviewYinShang.alpha = 1;
-//                _lblZaoShang.alpha = 0;
-//                _lblZaoShang.frame = CGRectMake(-52, 20, 52, 44);
-//                _lblYinShang.frame = CGRectMake(134, 20, 52, 44);
-//                _lblYinShang.alpha = 1;
-//            } completion:^(BOOL finished) {
-//                if (finished) {
-//                    [UIView animateWithDuration:1.5 animations:^{
-//                        _imageviewYinShang.alpha = 0;
-//                        _imageviewXiZhou.alpha = 1;
-//                        _lblYinShang.alpha = 0;
-//                        _lblYinShang.frame = CGRectMake(-52, 20, 52, 44);
-//                        _lblXiZhou.frame = CGRectMake(134, 20, 52, 44);
-//                        _lblXiZhou.alpha = 1;
-//                    } completion:^(BOOL finished) {
-//                        if (finished) {
-//                            [UIView animateWithDuration:1.5 animations:^{
-//                                _imageviewXiZhou.alpha = 0;
-//                                _imageviewDongZhou.alpha = 1;
-//                                _lblXiZhou.alpha = 0;
-//                                _lblXiZhou.frame = CGRectMake(-52, 20, 52, 44);
-//                                _lblDongZhou.frame = CGRectMake(134, 20, 52, 44);
-//                                _lblDongZhou.alpha = 1;
-//                            } completion:^(BOOL finished) {
-//                                if (finished) {
-//                                    [UIView animateWithDuration:1.5 animations:^{
-//                                        _imageviewDongZhou.alpha = 0;
-//                                        _imageviewQin.alpha = 1;
-//                                        _lblDongZhou.alpha = 0;
-//                                        _lblDongZhou.frame = CGRectMake(-52, 20, 52, 44);
-//                                        _lblQin.frame = CGRectMake(134, 20, 52, 44);
-//                                        _lblQin.alpha = 1;
-//                                    } completion:^(BOOL finished) {
-//                                        
-//                                    }];
-//                                }
-//                            }];
-//                        }
-//                    }];
-//                }
-//            }];
-//        }
+        if (finished) {
+            if (style == Destroy) {
+                [originalDynasty lp_explode:^(CAAnimation *animation) {
+                    completion();
+                }];
+            }else{
+                completion();
+            }
+        }
     }];
 }
 
-- (void)setDynastyTitle{
-    _lblXia.font = [UIFont fontWithName:@"DIN Alternate" size:22.0];
-    _lblXia.textColor = [UIColor whiteColor];
-    _lblZaoShang.font = [UIFont fontWithName:@"DIN Alternate" size:22.0];
-    _lblZaoShang.textColor = [UIColor whiteColor];
-    _lblYinShang.font = [UIFont fontWithName:@"DIN Alternate" size:22.0];
-    _lblYinShang.textColor = [UIColor whiteColor];
-    _lblXiZhou.font = [UIFont fontWithName:@"DIN Alternate" size:22.0];
-    _lblXiZhou.textColor = [UIColor whiteColor];
-    _lblDongZhou.font = [UIFont fontWithName:@"DIN Alternate" size:22.0];
-    _lblDongZhou.textColor = [UIColor whiteColor];
-    _lblQin.font = [UIFont fontWithName:@"DIN Alternate" size:22.0];
-    _lblQin.textColor = [UIColor whiteColor];
+- (void)showAnimation{
+    _imageZaoShang.transform = CGAffineTransformMakeScale(0.3, 0.3);
+    _imageYinShang.transform = CGAffineTransformMakeScale(0.3, 0.3);
+    _imageXiZhou.transform = CGAffineTransformMakeScale(0.3, 0.3);
+    _imageDongZhou.transform = CGAffineTransformMakeScale(0.3, 0.3);
+    _imageQin.transform = CGAffineTransformMakeScale(0.3, 0.3);
     
-    NSArray *dynasties = [[UIController shareInstance] arrDynasties];
-    
-    DynastyList *dynastyList = dynasties[0];
-    _lblXia.text = dynastyList.dynastyName;
-    DynastyList *dynastyList1 = dynasties[1];
-    _lblZaoShang.text = dynastyList1.dynastyName;
-    DynastyList *dynastyList2 = dynasties[2];
-    _lblYinShang.text = dynastyList2.dynastyName;
-    DynastyList *dynastyList3 = dynasties[3];
-    _lblXiZhou.text = dynastyList3.dynastyName;
-    DynastyList *dynastyList4 = dynasties[4];
-    _lblDongZhou.text = dynastyList4.dynastyName;
-    DynastyList *dynastyList5 = dynasties[5];
-    _lblQin.text = dynastyList5.dynastyName;
-    
+    //夏到早商
+    [self dynastyExchangeAnimation:Destroy originalDynasty:_imageXia currentDynasty:_imageZaoShang originalMap:_imageviewXia currentMap:_imageviewZaoShang completeBlock:^{
+        //早商到殷商
+        [self dynastyExchangeAnimation:Move originalDynasty:_imageZaoShang currentDynasty:_imageYinShang originalMap:_imageviewZaoShang currentMap:_imageviewYinShang completeBlock:^{
+            //殷商到西周
+            [self dynastyExchangeAnimation:Destroy originalDynasty:_imageYinShang currentDynasty:_imageXiZhou originalMap:_imageviewYinShang currentMap:_imageviewXiZhou completeBlock:^{
+                //西周到东周
+                [self dynastyExchangeAnimation:Move originalDynasty:_imageXiZhou currentDynasty:_imageDongZhou originalMap:_imageviewXiZhou currentMap:_imageviewDongZhou completeBlock:^{
+                    //东周到秦
+                    [self dynastyExchangeAnimation:Destroy originalDynasty:_imageDongZhou currentDynasty:_imageQin originalMap:_imageviewDongZhou currentMap:_imageviewQin completeBlock:^{
+                        
+                    }];
+                }];
+            }];
+        }];
+    }];
 }
 
 - (IBAction)didPressedBtnEnter:(id)sender{
