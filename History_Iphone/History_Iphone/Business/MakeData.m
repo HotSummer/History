@@ -425,7 +425,7 @@
     person9.personId = @"10";
     person9.personName = @"周公";
     person9.firstRole = @"";
-    person9.commentCount = [NSNumber numberWithInt:1];//孔子说“甚矣吾衰也！久矣吾不复梦见周公（我很久没有梦到周公了）！”后来周公被称为“梦神”
+    person9.commentCount = [NSNumber numberWithInt:3];//孔子说“甚矣吾衰也！久矣吾不复梦见周公（我很久没有梦到周公了）！”后来周公被称为“梦神”
     person9.startKing = @"";
     
     DynastyPersonList *person10 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
@@ -794,7 +794,7 @@
         personDetail.personName = @"盘庚";
         personDetail.gender = @"男";
         personDetail.career = @"国王";
-        personDetail.idNumber = @"0203";
+        personDetail.idNumber = @"0301";
         personDetail.image = @"pangeng.png";
         personDetail.address = @"河南商丘";
         
@@ -826,7 +826,7 @@
         personDetail.personName = @"妇好";
         personDetail.gender = @"女";
         personDetail.career = @"军事";
-        personDetail.idNumber = @"0204";
+        personDetail.idNumber = @"0302";
         personDetail.image = @"fuhao.png";
         personDetail.address = @"不祥";
         
@@ -858,9 +858,9 @@
         personDetail.personName = @"太甲";
         personDetail.gender = @"男";
         personDetail.career = @"国王";
-        personDetail.idNumber = @"0205";
-        personDetail.image = @"taijia.png";
-        personDetail.address = @"河南商丘";
+        personDetail.idNumber = @"0203";
+        personDetail.image = @"zhougong.png";
+        personDetail.address = @"岐山";
         
         NSMutableSet *setContribute = [[NSMutableSet alloc] init];
         Contribute *contribute = [DBHelper insertObjectToEntity:@"Contribute"];
@@ -874,6 +874,202 @@
         Comment *commit = [DBHelper insertObjectToEntity:@"Comment"];
         commit.commentId = @"09_1";
         commit.commentContent = @"《孟子·万章上》：太甲颠覆汤之典刑，伊尹放之于桐。";
+        commit.person = personDetail;
+        [personDetail addCommentsObject:commit];
+    }
+    
+    {
+        DynastyPersonDetail *personDetail = [DBHelper insertObjectToEntity:@"DynastyPersonDetail"];
+        personDetail.personId = @"10";
+        personDetail.personName = @"周公";
+        personDetail.gender = @"男";
+        personDetail.career = @"儒学先驱";
+        personDetail.idNumber = @"0401";
+        personDetail.image = @"zhougong.png";
+        personDetail.address = @"河南商丘";
+        
+        NSMutableSet *setContribute = [[NSMutableSet alloc] init];
+        Contribute *contribute = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute.contributeId = @"10_1";
+        contribute.contributeContent = @"一年救乱，二年克殷，三年践奄，四年建侯卫,五年营成周。六年制礼乐，七年致政成王。";
+        contribute.person = personDetail;
+        [setContribute addObject:contribute];
+        
+        Contribute *contribute1 = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute1.contributeId = @"10_2";
+        contribute1.contributeContent = @"周公以商朝灭亡和“三监”等武装反叛活动为鉴，特别重视奴隶主贵族及其子弟的政治道德教育、治术教育和勤政教育，要求“敬德保民”“明德配天”“明德慎刑”“有孝有德”“力农无逸”等，主张充分发挥“颂”“诰”对奴隶主及平民的教育作用，并提出以治绩考察、选任官吏的原则。他一生礼贤下士。其言论散见于《尚书》中的《大诰》《多士》《无逸》《立政》等篇。";
+        contribute1.person = personDetail;
+        [setContribute addObject:contribute1];
+        
+        [personDetail addContributes:setContribute];
+        
+        Comment *commit = [DBHelper insertObjectToEntity:@"Comment"];
+        commit.commentId = @"10_1";
+        commit.commentContent = @"他被尊为儒学奠基人，是孔子最崇敬的古圣之一，《论语》中记载孔子言论云：“甚矣吾衰也！久矣吾不复梦见周公。”";
+        commit.person = personDetail;
+        [personDetail addCommentsObject:commit];
+        
+        Comment *commit1 = [DBHelper insertObjectToEntity:@"Comment"];
+        commit1.commentId = @"10_2";
+        commit1.commentContent = @"孟子首称周公为“古圣人”，将周公与孔子并论，足见尊崇之甚。";
+        commit1.person = personDetail;
+        [personDetail addCommentsObject:commit1];
+        
+        Comment *commit2 = [DBHelper insertObjectToEntity:@"Comment"];
+        commit2.commentId = @"10_3";
+        commit2.commentContent = @"《史记》：周公吐哺，天下归心";
+        commit2.person = personDetail;
+        [personDetail addCommentsObject:commit2];
+    }
+    
+    {
+        DynastyPersonDetail *personDetail = [DBHelper insertObjectToEntity:@"DynastyPersonDetail"];
+        personDetail.personId = @"11";
+        personDetail.personName = @"姜太公";
+        personDetail.gender = @"男";
+        personDetail.career = @"丞相";
+        personDetail.idNumber = @"0402";
+        personDetail.image = @"jiangtaigong.png";
+        personDetail.address = @"东海之滨";
+        
+        NSMutableSet *setContribute = [[NSMutableSet alloc] init];
+        Contribute *contribute = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute.contributeId = @"11_1";
+        contribute.contributeContent = @"治理齐国，是齐国的缔造者。";
+        contribute.person = personDetail;
+        [setContribute addObject:contribute];
+        
+        Contribute *contribute1 = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute1.contributeId = @"11_2";
+        contribute1.contributeContent = @"武王克纣的首席谋主、最高军事统帅与西周的开国元勋，齐文化的创始人";
+        contribute1.person = personDetail;
+        [setContribute addObject:contribute1];
+        
+        Contribute *contribute2 = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute2.contributeId = @"11_3";
+        contribute2.contributeContent = @"中国古代的一位影响久远的杰出的韬略家、军事家与政治家";
+        contribute2.person = personDetail;
+        [setContribute addObject:contribute2];
+        
+        [personDetail addContributes:setContribute];
+        
+        Comment *commit = [DBHelper insertObjectToEntity:@"Comment"];
+        commit.commentId = @"11_1";
+        commit.commentContent = @"孔子：“许由，独善其身者也；太公，兼利天下者也。”";
+        commit.person = personDetail;
+        [personDetail addCommentsObject:commit];
+        
+        Comment *commit1 = [DBHelper insertObjectToEntity:@"Comment"];
+        commit1.commentId = @"11_2";
+        commit1.commentContent = @"司马迁：“太公至国，脩政，因其俗，简其礼，通商工之业，便鱼盐之利，而人民多归齐，齐为大国。”";
+        commit1.person = personDetail;
+        [personDetail addCommentsObject:commit1];
+        
+        Comment *commit2 = [DBHelper insertObjectToEntity:@"Comment"];
+        commit2.commentId = @"11_3";
+        commit2.commentContent = @"司马贞：“太公佐周，实秉阴谋。既表东海，乃居营丘。”";
+        commit2.person = personDetail;
+        [personDetail addCommentsObject:commit2];
+        
+        Comment *commit3 = [DBHelper insertObjectToEntity:@"Comment"];
+        commit3.commentId = @"11_4";
+        commit3.commentContent = @"杜牧：“周有齐太公，秦有王翦，两汉有韩信、赵充国、耿恭、虞诩、段颎，魏有司马懿，吴有周瑜，蜀有诸葛武侯，晋有羊祜、杜公元凯，梁有韦睿，元魏有崔浩，周有韦孝宽，隋有杨素，国朝有李靖、李勣、裴行俭、郭元振。如此人者，当此一时，其所出计画，皆考古校今，奇秘长远，策先定於内，功后成於外。”";
+        commit3.person = personDetail;
+        [personDetail addCommentsObject:commit3];
+    }
+    
+    {
+        DynastyPersonDetail *personDetail = [DBHelper insertObjectToEntity:@"DynastyPersonDetail"];
+        personDetail.personId = @"12";
+        personDetail.personName = @"周武王";
+        personDetail.gender = @"男";
+        personDetail.career = @"国王";
+        personDetail.idNumber = @"0403";
+        personDetail.image = @"zhouwuwang.png";
+        personDetail.address = @"陕西长安西南沣水西岸";
+        
+        NSMutableSet *setContribute = [[NSMutableSet alloc] init];
+        Contribute *contribute = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute.contributeId = @"12_1";
+        contribute.contributeContent = @"公元前11世纪消灭商朝，夺取全国政权，建立了西周王朝。";
+        contribute.person = personDetail;
+        [setContribute addObject:contribute];
+        
+        Contribute *contribute1 = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute1.contributeId = @"12_2";
+        contribute1.contributeContent = @"治理国家，分封诸侯";
+        contribute1.person = personDetail;
+        [setContribute addObject:contribute1];
+        
+        [personDetail addContributes:setContribute];
+        
+        Comment *commit = [DBHelper insertObjectToEntity:@"Comment"];
+        commit.commentId = @"12_1";
+        commit.commentContent = @"周武王有着广阔的心胸和长远的眼光，同时有着果断地处事能力，在看到商朝的无道，他打出了为民请命，替天行道的旗号来获得广大人民群众的拥护，从而大大的扩大了自己的实力和影响力，在伐纣的过程中，他以大无畏的精神亲自带领兵马直捣朝歌，打了纣王一个措手不及。同时周武王有着很杰出的个人魅力，他也因此受到人们的爱戴，这也是他获得人们支持的一个重要原因。";
+        commit.person = personDetail;
+        [personDetail addCommentsObject:commit];
+    }
+    
+    {
+        DynastyPersonDetail *personDetail = [DBHelper insertObjectToEntity:@"DynastyPersonDetail"];
+        personDetail.personId = @"13";
+        personDetail.personName = @"周文王";
+        personDetail.gender = @"男";
+        personDetail.career = @"太上皇";
+        personDetail.idNumber = @"0404";
+        personDetail.image = @"zhouwenwang.png";
+        personDetail.address = @"岐山";
+        
+        NSMutableSet *setContribute = [[NSMutableSet alloc] init];
+        Contribute *contribute = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute.contributeId = @"13_1";
+        contribute.contributeContent = @"在位时期，决讼虞、芮，使这两国归附，攻灭黎（今山西长治）、邗（今河南沁阳）、崇（今河南嵩县）等国，建都丰邑（今陕西西安），为武王灭商奠基。";
+        contribute.person = personDetail;
+        [setContribute addObject:contribute];
+        
+        Contribute *contribute1 = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute1.contributeId = @"13_2";
+        contribute1.contributeContent = @"勤治政， 施仁德， 增官职， 拓疆域";
+        contribute1.person = personDetail;
+        [setContribute addObject:contribute1];
+        
+        [personDetail addContributes:setContribute];
+        
+        Comment *commit = [DBHelper insertObjectToEntity:@"Comment"];
+        commit.commentId = @"13_1";
+        commit.commentContent = @"《诗经·大雅·文王》：文王在上，於昭于天";
+        commit.person = personDetail;
+        [personDetail addCommentsObject:commit];
+        
+        Comment *commit1 = [DBHelper insertObjectToEntity:@"Comment"];
+        commit1.commentId = @"13_2";
+        commit1.commentContent = @"《史记》：公季卒，子昌立，是为西伯。西伯曰文王，遵后稷、公刘之业，则古公、公季之法，笃仁，敬老，慈少。礼下贤者，日中不暇食以待士，士以此多归之。伯夷、叔齐[1] 在孤竹，闻西伯善养老，盍往归之。太颠、闳夭、散宜生、鬻子、辛甲大夫之徒皆往归之。\n崇侯虎谮西伯于殷纣曰：“西伯积善累德，诸侯皆乡之 ，将不利于帝。”帝纣乃囚西伯于羑里。闳夭之徒患之。乃求有莘氏美女，骊戎之文马，有熊九驷，他奇怪物，因殷嬖臣费仲而献之纣。纣大说，曰：“此一物足以释西伯，况其多乎！”乃赦西伯，赐之弓矢斧钺，使西伯得征伐。曰：“谮西伯者，崇侯虎也。”西伯乃献洛西之地，以请纣去炮格之刑。纣许之。\n西伯阴行善，诸侯皆来决平。于是虞、芮之人有狱不能决，乃如周。入界，耕者皆让畔，民俗皆让长。虞、芮之人未见西伯，皆惭，相谓曰：“吾所争，周人所耻，何往为，只取辱耳。”遂还，俱让而去。诸侯闻之，曰：“西伯盖受命之君”。\n明年，伐犬戎。明年，伐密须。明年，败耆国。殷之祖伊闻之，惧，以告帝纣。纣曰：“不有天命乎？是何能为！”明年，伐邘。明年，伐崇侯虎。而作丰邑，自岐下而徙都丰。明年连，西伯崩商朝都城，太子发立，是为武王。";
+        commit1.person = personDetail;
+        [personDetail addCommentsObject:commit1];
+    }
+    
+    {
+        DynastyPersonDetail *personDetail = [DBHelper insertObjectToEntity:@"DynastyPersonDetail"];
+        personDetail.personId = @"14";
+        personDetail.personName = @"周平王";
+        personDetail.gender = @"男";
+        personDetail.career = @"周朝君王";
+        personDetail.idNumber = @"0501";
+        personDetail.image = @"zhoupingwang.png";
+        personDetail.address = @"镐京（西安市长安区西北）";
+        
+        NSMutableSet *setContribute = [[NSMutableSet alloc] init];
+        Contribute *contribute = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute.contributeId = @"14_1";
+        contribute.contributeContent = @"建立东周";
+        contribute.person = personDetail;
+        [setContribute addObject:contribute];
+        
+        [personDetail addContributes:setContribute];
+        
+        Comment *commit = [DBHelper insertObjectToEntity:@"Comment"];
+        commit.commentId = @"14_1";
+        commit.commentContent = @"暂无";
         commit.person = personDetail;
         [personDetail addCommentsObject:commit];
     }

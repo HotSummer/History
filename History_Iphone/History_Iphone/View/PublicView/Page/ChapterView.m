@@ -35,13 +35,6 @@
     [super layoutSubviews];
 }
 
-//- (id)initWithCoder:(NSCoder *)aDecoder{
-//    if (self = [super initWithCoder:aDecoder]) {
-//        scrollText.frame = CGRectMake(0, 0, 320, (iPhone5?454:366));
-//    }
-//    return self;
-//}
-
 - (void)setStrContent:(NSString *)strContent{
     if (![_strContent isEqualToString:strContent]) {
         _strContent = strContent;
