@@ -12,8 +12,7 @@
 @interface AppDelegate : UIResponder
 <
 UIApplicationDelegate,
-WBHttpRequestDelegate,
-WeiboSDKDelegate
+WBHttpRequestDelegate
 >{
     
 }

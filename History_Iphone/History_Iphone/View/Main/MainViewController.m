@@ -15,8 +15,11 @@
 #import "AboutViewController.h"
 #import "IntroduceViewController.h"
 #import "UIController.h"
+#import "ArrowView.h"
 
 @interface MainViewController ()
+
+@property(nonatomic, strong) IBOutlet UIButton *btnAnimation;
 
 @end
 
@@ -37,7 +40,7 @@
     // Do any additional setup after loading the view from its nib.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receivePushNotification:) name:PushNotification object:nil];
 //    [[UIController shareInstance] addDataToDB];
-    
+    [self addArrowView];
     IntroduceViewController *introduceVC = [[IntroduceViewController alloc] init];
     [self presentViewController:introduceVC animated:NO completion:nil];
 }
@@ -51,6 +54,14 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = YES;
+}
+
+//添加向上剪头的view
+- (void)addArrowView{
+    ArrowView *arrowView = [[[NSBundle mainBundle] loadNibNamed:@"ArrowView" owner:self options:nil] lastObject];
+    arrowView.frame = _btnAnimation.frame;
+    [self.view addSubview:arrowView];
+    [self.view bringSubviewToFront:_btnAnimation];
 }
 
 - (void)receivePushNotification:(NSNotification *)notification{

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
             <connections>
+                <outlet property="btnAnimation" destination="gG9-sa-9Yx" id="fh5-g8-fFJ"/>
                 <outlet property="btnDynastyMap" destination="np1-qD-6Bb" id="s7H-OC-Lf3"/>
                 <outlet property="btnDynastyStory" destination="XKG-IL-lfN" id="729-tU-EEf"/>
                 <outlet property="btnPersonStory" destination="gMS-tU-okG" id="Nbd-jn-1zD"/>
@@ -85,29 +86,30 @@
                         <action selector="didPressedBtnTimeLine:" destination="-1" eventType="touchUpInside" id="yzF-a4-zBU"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3w-f5-SK1">
-                    <rect key="frame" x="254" y="518" width="46" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3w-f5-SK1">
+                    <rect key="frame" x="249" y="498" width="44" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="46" id="bkc-zl-TQS"/>
-                        <constraint firstAttribute="height" constant="30" id="qT7-Zb-aqf"/>
+                        <constraint firstAttribute="width" constant="44" id="bkc-zl-TQS"/>
+                        <constraint firstAttribute="height" constant="44" id="qT7-Zb-aqf"/>
                     </constraints>
-                    <state key="normal" title="设置">
+                    <state key="normal" image="btn_about_nor.png">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <state key="highlighted" image="btn_about_down.png"/>
                     <connections>
                         <action selector="didPressedBtnAbout:" destination="-1" eventType="touchUpInside" id="Ilh-Js-WNg"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gG9-sa-9Yx">
-                    <rect key="frame" x="254" y="480" width="46" height="30"/>
+                    <rect key="frame" x="249" y="438" width="44" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="46" id="C8B-tI-pTh"/>
-                        <constraint firstAttribute="height" constant="30" id="abf-wJ-i1A"/>
+                        <constraint firstAttribute="width" constant="44" id="C8B-tI-pTh"/>
+                        <constraint firstAttribute="height" constant="44" id="abf-wJ-i1A"/>
                     </constraints>
-                    <state key="normal" title="动画">
+                    <state key="normal">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -118,12 +120,12 @@
             </subviews>
             <color key="backgroundColor" red="0.90980398654937744" green="0.76470595598220825" blue="0.51372551918029785" alpha="1" colorSpace="deviceRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="i3w-f5-SK1" secondAttribute="bottom" constant="20" id="7j7-4E-nBf"/>
-                <constraint firstAttribute="trailing" secondItem="gG9-sa-9Yx" secondAttribute="trailing" constant="20" id="9a2-yP-s3a"/>
+                <constraint firstAttribute="bottom" secondItem="i3w-f5-SK1" secondAttribute="bottom" constant="26" id="7j7-4E-nBf"/>
+                <constraint firstAttribute="trailing" secondItem="gG9-sa-9Yx" secondAttribute="trailing" constant="27" id="9a2-yP-s3a"/>
                 <constraint firstItem="np1-qD-6Bb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="GaR-jf-i8w"/>
-                <constraint firstItem="i3w-f5-SK1" firstAttribute="top" secondItem="gG9-sa-9Yx" secondAttribute="bottom" constant="8" id="HWG-Iw-QH8"/>
+                <constraint firstItem="i3w-f5-SK1" firstAttribute="top" secondItem="gG9-sa-9Yx" secondAttribute="bottom" constant="16" id="HWG-Iw-QH8"/>
                 <constraint firstItem="np1-qD-6Bb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="RHB-GG-xvj"/>
-                <constraint firstAttribute="trailing" secondItem="i3w-f5-SK1" secondAttribute="trailing" constant="20" id="ROW-ya-kDc"/>
+                <constraint firstAttribute="trailing" secondItem="i3w-f5-SK1" secondAttribute="trailing" constant="27" id="ROW-ya-kDc"/>
                 <constraint firstItem="XKG-IL-lfN" firstAttribute="top" secondItem="np1-qD-6Bb" secondAttribute="bottom" constant="2" id="SmQ-u9-pcf"/>
                 <constraint firstItem="XKG-IL-lfN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="XhO-lK-AvO"/>
                 <constraint firstItem="N06-WS-rB5" firstAttribute="top" secondItem="gMS-tU-okG" secondAttribute="bottom" constant="2" id="cQq-Nm-eOB"/>
@@ -136,6 +138,8 @@
         </view>
     </objects>
     <resources>
+        <image name="btn_about_down.png" width="44" height="44"/>
+        <image name="btn_about_nor.png" width="44" height="44"/>
         <image name="mainBg.png" width="320" height="568"/>
         <image name="map_Icon.png" width="155" height="110"/>
         <image name="map_Icon_selected.png" width="155" height="110"/>
