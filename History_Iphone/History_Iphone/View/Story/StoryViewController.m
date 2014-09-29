@@ -136,19 +136,17 @@
 }
 
 - (id<ISSCAttachment>)getShareImage{
-//    CGSize imageSize = [[UIScreen mainScreen] bounds].size;
-//    if (NULL != UIGraphicsBeginImageContextWithOptions) {
-//        UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0);
-//    }
-//    else
-//    {
-//        UIGraphicsBeginImageContext(imageSize);
-//    }
-//    [[self.view layer] renderInContext:UIGraphicsGetCurrentContext()];
-//    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-//    UIGraphicsEndImageContext();
-    
-    UIImage *newImage = [UIImage imageNamed:@"share.png"];
+    CGSize imageSize = [[UIScreen mainScreen] bounds].size;
+    if (NULL != UIGraphicsBeginImageContextWithOptions) {
+        UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0);
+    }
+    else
+    {
+        UIGraphicsBeginImageContext(imageSize);
+    }
+    [[self.view layer] renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
     
     id<ISSCAttachment> shareImage = nil;
     shareImage = [ShareSDK pngImageWithImage:newImage];
