@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "MainViewController.h"
 #import "PushManager.h"
+#import "WXApi.h"
 
 @implementation AppDelegate
 
@@ -72,6 +73,14 @@
     [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
 }
 
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
+    return [ShareSDK handleOpenURL:url wxDelegate:self];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+    return [ShareSDK handleOpenURL:url sourceApplication:sourceApplication annotation:annotation wxDelegate:self];
+}
+
 #pragma mark - MobClick Delegate
 - (void)appUpdate:(NSDictionary *)appInfo{
     self.updateAppInfo = appInfo;
@@ -117,6 +126,13 @@
     [ShareSDK registerApp:@"28c1f554769a"];
     
     [ShareSDK connectSinaWeiboWithAppKey:@"543371755" appSecret:@"fbff33068d1418f3bd189cf76d5f4ff1" redirectUri:@"http://"];
+    
+    //添加微信应用
+    [ShareSDK connectWeChatSessionWithAppId:@"wx1820f7df3e88698e" wechatCls:[WXApi class]];
+    [ShareSDK connectWeChatTimelineWithAppId:@"wx1820f7df3e88698e" wechatCls:[WXApi class]];
+    [ShareSDK importWeChatClass:[WXApi class]];
 }
+
+
 
 @end

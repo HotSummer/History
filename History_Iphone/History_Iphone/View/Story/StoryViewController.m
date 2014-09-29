@@ -110,9 +110,9 @@
                                        defaultContent:@"我在看微看历史"
                                                 image:[self getShareImage]
                                                 title:@"微看历史"
-                                                  url:@"http://www.sharesdk.cn"
+                                                  url:@""
                                           description:@"家天下开始"
-                                            mediaType:SSPublishContentMediaTypeNews];
+                                            mediaType:SSPublishContentMediaTypeImage];
     
     [ShareSDK showShareActionSheet:nil
                          shareList:nil
@@ -130,23 +130,25 @@
                                 {
                                     UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:@"分享失败" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
                                     [alertview show];
-                                    //                                    NSLog(@"分享失败,错误码:%d,错误描述:%@", [error errorCode], [error errorDescription]);
+//                                    NSLog(@"分享失败,错误码:%d,错误描述:%@", [error errorCode], [error errorDescription]);
                                 }
                             }];
 }
 
 - (id<ISSCAttachment>)getShareImage{
-    CGSize imageSize = [[UIScreen mainScreen] bounds].size;
-    if (NULL != UIGraphicsBeginImageContextWithOptions) {
-        UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0);
-    }
-    else
-    {
-        UIGraphicsBeginImageContext(imageSize);
-    }
-    [[self.view layer] renderInContext:UIGraphicsGetCurrentContext()];
-    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
+//    CGSize imageSize = [[UIScreen mainScreen] bounds].size;
+//    if (NULL != UIGraphicsBeginImageContextWithOptions) {
+//        UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0);
+//    }
+//    else
+//    {
+//        UIGraphicsBeginImageContext(imageSize);
+//    }
+//    [[self.view layer] renderInContext:UIGraphicsGetCurrentContext()];
+//    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+//    UIGraphicsEndImageContext();
+    
+    UIImage *newImage = [UIImage imageNamed:@"share.png"];
     
     id<ISSCAttachment> shareImage = nil;
     shareImage = [ShareSDK pngImageWithImage:newImage];
