@@ -1074,6 +1074,408 @@
         [personDetail addCommentsObject:commit];
     }
     
+    {
+        DynastyPersonDetail *personDetail = [DBHelper insertObjectToEntity:@"DynastyPersonDetail"];
+        personDetail.personId = @"15";
+        personDetail.personName = @"齐桓公";
+        personDetail.gender = @"男";
+        personDetail.career = @"诸侯王";
+        personDetail.idNumber = @"0502";
+        personDetail.image = @"qihuangong.png";
+        personDetail.address = @"不祥";
+        
+        NSMutableSet *setContribute = [[NSMutableSet alloc] init];
+        Contribute *contribute = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute.contributeId = @"15_1";
+        contribute.contributeContent = @"尊王攘夷，成为中原霸主；选贤任能，改革齐政，使齐国国富民强";
+        contribute.person = personDetail;
+        [setContribute addObject:contribute];
+        
+        [personDetail addContributes:setContribute];
+        
+        Comment *commit = [DBHelper insertObjectToEntity:@"Comment"];
+        commit.commentId = @"15_1";
+        commit.commentContent = @"孔子：“齐桓公正而不诡，晋文公诡而不正。”";
+        commit.person = personDetail;
+        [personDetail addCommentsObject:commit];
+        
+        Comment *commit1 = [DBHelper insertObjectToEntity:@"Comment"];
+        commit1.commentId = @"15_2";
+        commit1.commentContent = @"孟子：“仲尼之徒无道桓、文之事者，是以後世无传焉。臣未之闻也。无以，则王乎？”";
+        commit1.person = personDetail;
+        [personDetail addCommentsObject:commit1];
+        
+        Comment *commit2 = [DBHelper insertObjectToEntity:@"Comment"];
+        commit2.commentId = @"15_3";
+        commit2.commentContent = @"曹操《短歌行》：“齐桓之功，为霸之首。九合诸侯，一匡天下。一匡天下，不以兵车。正而不谲，其德传称。孔子所叹，并称夷吾，民受其恩。赐与庙胙，命无下拜。小白不敢尔，天威在颜咫尺。”";
+        commit2.person = personDetail;
+        [personDetail addCommentsObject:commit2];
+    }
+    
+    {
+        DynastyPersonDetail *personDetail = [DBHelper insertObjectToEntity:@"DynastyPersonDetail"];
+        personDetail.personId = @"16";
+        personDetail.personName = @"楚庄王";
+        personDetail.gender = @"男";
+        personDetail.career = @"诸侯王";
+        personDetail.idNumber = @"0503";
+        personDetail.image = @"chuzhuangwang.png";
+        personDetail.address = @"不祥";
+        
+        NSMutableSet *setContribute = [[NSMutableSet alloc] init];
+        Contribute *contribute = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute.contributeId = @"16_1";
+        contribute.contributeContent = @"饮马黄河、问鼎中原、“并国二十六，开地三千里”、春秋五霸之一";
+        contribute.person = personDetail;
+        [setContribute addObject:contribute];
+        
+        [personDetail addContributes:setContribute];
+        
+        Comment *commit = [DBHelper insertObjectToEntity:@"Comment"];
+        commit.commentId = @"16_1";
+        commit.commentContent = @"庄王葬马";
+        commit.person = personDetail;
+        [personDetail addCommentsObject:commit];
+        
+        Comment *commit1 = [DBHelper insertObjectToEntity:@"Comment"];
+        commit1.commentId = @"16_2";
+        commit1.commentContent = @"绝缨之宴";
+        commit1.person = personDetail;
+        [personDetail addCommentsObject:commit1];
+        
+        Comment *commit2 = [DBHelper insertObjectToEntity:@"Comment"];
+        commit2.commentId = @"16_3";
+        commit2.commentContent = @"问鼎中原";
+        commit2.person = personDetail;
+        [personDetail addCommentsObject:commit2];
+    }
+    
+    {
+        DynastyPersonDetail *personDetail = [DBHelper insertObjectToEntity:@"DynastyPersonDetail"];
+        personDetail.personId = @"17";
+        personDetail.personName = @"周恒王";
+        personDetail.gender = @"男";
+        personDetail.career = @"国王";
+        personDetail.idNumber = @"0504";
+        personDetail.image = @"zhouhengwang.png";
+        personDetail.address = @"不祥";
+        
+        NSMutableSet *setContribute = [[NSMutableSet alloc] init];
+        Contribute *contribute = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute.contributeId = @"17_1";
+        contribute.contributeContent = @"暂无";
+        contribute.person = personDetail;
+        [setContribute addObject:contribute];
+        
+        [personDetail addContributes:setContribute];
+        
+        Comment *commit = [DBHelper insertObjectToEntity:@"Comment"];
+        commit.commentId = @"17_1";
+        commit.commentContent = @"暂无";
+        commit.person = personDetail;
+        [personDetail addCommentsObject:commit];
+    }
+    
+    {
+        DynastyPersonDetail *personDetail = [DBHelper insertObjectToEntity:@"DynastyPersonDetail"];
+        personDetail.personId = @"18";
+        personDetail.personName = @"白起";
+        personDetail.gender = @"男";
+        personDetail.career = @"将军";
+        personDetail.idNumber = @"0505";
+        personDetail.image = @"baiqi.png";
+        personDetail.address = @"不祥";
+        
+        NSMutableSet *setContribute = [[NSMutableSet alloc] init];
+        Contribute *contribute = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute.contributeId = @"18_1";
+        contribute.contributeContent = @"赵楚慑服，不敢攻秦，为秦国统一中国做出了巨大的贡献";
+        contribute.person = personDetail;
+        [setContribute addObject:contribute];
+        
+        [personDetail addContributes:setContribute];
+        
+        Comment *commit = [DBHelper insertObjectToEntity:@"Comment"];
+        commit.commentId = @"18_1";
+        commit.commentContent = @"司马迁：“白起料敌合变，出奇无穷，声震天下，然不能救患於应侯。”“南拔鄢郢，北摧长平，遂围邯郸，武安为率。”";
+        commit.person = personDetail;
+        [personDetail addCommentsObject:commit];
+        
+        Comment *commit1 = [DBHelper insertObjectToEntity:@"Comment"];
+        commit1.commentId = @"18_2";
+        commit1.commentContent = @"李世民：“白起为秦平赵，乃被昭王所杀…乃君之过也，非臣之罪焉。”";
+        commit1.person = personDetail;
+        [personDetail addCommentsObject:commit1];
+        
+        Comment *commit2 = [DBHelper insertObjectToEntity:@"Comment"];
+        commit2.commentId = @"18_3";
+        commit2.commentContent = @"杜甫：“门阑苏生在，勇锐白起强。”";
+        commit2.person = personDetail;
+        [personDetail addCommentsObject:commit2];
+        
+        Comment *commit3 = [DBHelper insertObjectToEntity:@"Comment"];
+        commit3.commentId = @"18_4";
+        commit3.commentContent = @"赵匡胤：“此人杀已降，不武之甚，何受享于此？”";
+        commit3.person = personDetail;
+        [personDetail addCommentsObject:commit3];
+        
+        Comment *commit4 = [DBHelper insertObjectToEntity:@"Comment"];
+        commit4.commentId = @"18_5";
+        commit4.commentContent = @"毛泽东：“论打歼灭战，千载之下，无人出其右。”";
+        commit4.person = personDetail;
+        [personDetail addCommentsObject:commit4];
+    }
+    
+    {
+        DynastyPersonDetail *personDetail = [DBHelper insertObjectToEntity:@"DynastyPersonDetail"];
+        personDetail.personId = @"19";
+        personDetail.personName = @"孙武";
+        personDetail.gender = @"男";
+        personDetail.career = @"军事家";
+        personDetail.idNumber = @"0506";
+        personDetail.image = @"sunwu.png";
+        personDetail.address = @"山东博兴县";
+        
+        NSMutableSet *setContribute = [[NSMutableSet alloc] init];
+        Contribute *contribute = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute.contributeId = @"19_1";
+        contribute.contributeContent = @"著《孙子兵法》，成为兵家之祖";
+        contribute.person = personDetail;
+        [setContribute addObject:contribute];
+        
+        Contribute *contribute1 = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute1.contributeId = @"19_2";
+        contribute1.contributeContent = @"西破强楚，北威齐晋，显名诸侯";
+        contribute1.person = personDetail;
+        [setContribute addObject:contribute1];
+        
+        [personDetail addContributes:setContribute];
+        
+        Comment *commit = [DBHelper insertObjectToEntity:@"Comment"];
+        commit.commentId = @"19_1";
+        commit.commentContent = @"韩非：“境内皆言兵，藏孙吴之书者家有之，而兵愈弱，言战者多，披甲者少也。”";
+        commit.person = personDetail;
+        [personDetail addCommentsObject:commit];
+        
+        Comment *commit1 = [DBHelper insertObjectToEntity:@"Comment"];
+        commit1.commentId = @"19_2";
+        commit1.commentContent = @"司马迁：“世俗所称师旅，皆道孙子十三篇，吴起兵法，世多有，故弗论，论其行事所施设者。”“　非兵不强，非德不昌，黄帝、汤、武以兴，桀、纣、二世以崩，可不慎欤！《司马法》所从来尚矣，太公、孙、吴、王子能绍而明之，切近世，极人变。”";
+        commit1.person = personDetail;
+        [personDetail addCommentsObject:commit1];
+        
+        Comment *commit2 = [DBHelper insertObjectToEntity:@"Comment"];
+        commit2.commentId = @"19_3";
+        commit2.commentContent = @"诸葛亮：“孙武所以能制胜于天下者，用法明也。”";
+        commit2.person = personDetail;
+        [personDetail addCommentsObject:commit2];
+        
+        Comment *commit3 = [DBHelper insertObjectToEntity:@"Comment"];
+        commit3.commentId = @"19_4";
+        commit3.commentContent = @"朱元璋：“以朕观之，武之书杂出于古之权书，特未纯耳。其曰‘不仁之至’、‘非胜之主’，此说极是。若虚实变诈之说，则浅矣。苟君如汤武，用兵行师，不待虚实变诈而自无不胜。然虚实变诈之所以取胜者，特一时诡遇之术，非王者之师也，而其术终亦穷耳。盖用仁者无敌，恃术者必亡，观武之言与其术亦有相悖。盖武之书必有所授，而武之术则不能尽如其书也。”";
+        commit3.person = personDetail;
+        [personDetail addCommentsObject:commit3];
+        
+        Comment *commit4 = [DBHelper insertObjectToEntity:@"Comment"];
+        commit4.commentId = @"19_5";
+        commit4.commentContent = @"戚继光：“愚尝读孙武书，叹曰：兵法其武库乎！用兵其取诸库之器乎！兵法其药肆乎！用兵其取诸肆之材乎！及读诸将传又悟曰：此固善握器而妙用材者乎?学者欲求下手著实工夫之门，莫逾于此。数年间余承乏浙东，乃知孙武之法，纲领精微莫加矣。第于下手详细节目，无一及焉，犹禅者上乘之教也。”";
+        commit4.person = personDetail;
+        [personDetail addCommentsObject:commit4];
+    }
+    
+    {
+        DynastyPersonDetail *personDetail = [DBHelper insertObjectToEntity:@"DynastyPersonDetail"];
+        personDetail.personId = @"20";
+        personDetail.personName = @"蒙括";
+        personDetail.gender = @"男";
+        personDetail.career = @"将军";
+        personDetail.idNumber = @"0507";
+        personDetail.image = @"mengkuo.png";
+        personDetail.address = @"山东省蒙阴县";
+        
+        NSMutableSet *setContribute = [[NSMutableSet alloc] init];
+        Contribute *contribute = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute.contributeId = @"20_1";
+        contribute.contributeContent = @"收复河套地区，开发宁夏";
+        contribute.person = personDetail;
+        [setContribute addObject:contribute];
+        
+        Contribute *contribute1 = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute1.contributeId = @"20_2";
+        contribute1.contributeContent = @"修筑长城，防御匈奴";
+        contribute1.person = personDetail;
+        [setContribute addObject:contribute1];
+        
+        Contribute *contribute2 = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute2.contributeId = @"20_3";
+        contribute2.contributeContent = @"改良毛笔、改良古筝";
+        contribute2.person = personDetail;
+        [setContribute addObject:contribute2];
+        
+        [personDetail addContributes:setContribute];
+        
+        Comment *commit = [DBHelper insertObjectToEntity:@"Comment"];
+        commit.commentId = @"20_1";
+        commit.commentContent = @"陈馀：“蒙恬为秦将，北逐戎人，开榆中地数千里，竟斩阳周。”";
+        commit.person = personDetail;
+        [personDetail addCommentsObject:commit];
+        
+        Comment *commit1 = [DBHelper insertObjectToEntity:@"Comment"];
+        commit1.commentId = @"20_2";
+        commit1.commentContent = @"司马迁：“吾适北边，自直道归，行观蒙恬所为秦筑长城亭障，堑山堙谷，通直道，固轻百姓力矣。夫秦之初灭诸侯，天下之心未定，痍伤者未瘳，而恬为名将，不以此时彊谏，振百姓之急，养老存孤，务修众庶之和，而阿意兴功，此其兄弟遇诛，不亦宜乎！何乃罪地脉哉？”";
+        commit1.person = personDetail;
+        [personDetail addCommentsObject:commit1];
+        
+        Comment *commit2 = [DBHelper insertObjectToEntity:@"Comment"];
+        commit2.commentId = @"20_3";
+        commit2.commentContent = @"曹操：“昔乐毅走赵，赵王欲与之图燕。乐毅伏而垂泣，对曰：‘臣事昭王，犹事大王；臣若获戾，放在他国，没世然后已，不忍谋赵之徒隶，况燕后嗣乎！’胡亥之杀蒙恬也，恬曰：‘自吾先人及至子孙，积信于秦三世矣；今臣将兵三十余万，其势足以背叛，然自知必死而守义者，不敢辱先人之教以忘先王也。’孤每读此二人书，未尝不怆然流涕也。”";
+        commit2.person = personDetail;
+        [personDetail addCommentsObject:commit2];
+        
+        Comment *commit3 = [DBHelper insertObjectToEntity:@"Comment"];
+        commit3.commentId = @"20_4";
+        commit3.commentContent = @"苏轼：“蒙恬将三十万人，威振北方，扶苏监其军，而蒙毅侍帷幄为谋臣，虽有大奸贼，敢睥睨其间哉？不幸道病，祷祠山川尚有人也，而遣蒙毅，故高、斯得成其谋。”";
+        commit3.person = personDetail;
+        [personDetail addCommentsObject:commit3];
+        
+        Comment *commit4 = [DBHelper insertObjectToEntity:@"Comment"];
+        commit4.commentId = @"20_5";
+        commit4.commentContent = @"司马光：“秦始皇方毒天下而蒙恬为之使，恬不仁不知矣。然恬明于为人臣之义，虽无罪见诛，能守死不贰，斯亦足称也。”";
+        commit4.person = personDetail;
+        [personDetail addCommentsObject:commit4];
+    }
+    
+    {
+        DynastyPersonDetail *personDetail = [DBHelper insertObjectToEntity:@"DynastyPersonDetail"];
+        personDetail.personId = @"21";
+        personDetail.personName = @"李斯";
+        personDetail.gender = @"男";
+        personDetail.career = @"当官";
+        personDetail.idNumber = @"0508";
+        personDetail.image = @"lisi.png";
+        personDetail.address = @"河南上蔡";
+        
+        NSMutableSet *setContribute = [[NSMutableSet alloc] init];
+        Contribute *contribute = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute.contributeId = @"21_1";
+        contribute.contributeContent = @"协助秦始皇统一天下";
+        contribute.person = personDetail;
+        [setContribute addObject:contribute];
+        
+        Contribute *contribute1 = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute1.contributeId = @"21_2";
+        contribute1.contributeContent = @"极力主张实行郡县制、废除分封制";
+        contribute1.person = personDetail;
+        [setContribute addObject:contribute1];
+        
+        [personDetail addContributes:setContribute];
+        
+        Comment *commit = [DBHelper insertObjectToEntity:@"Comment"];
+        commit.commentId = @"21_1";
+        commit.commentContent = @"苏轼：“李斯、赵高矫诏立胡亥，杀扶苏、蒙恬、蒙毅，卒以亡秦。”";
+        commit.person = personDetail;
+        [personDetail addCommentsObject:commit];
+        
+        Comment *commit1 = [DBHelper insertObjectToEntity:@"Comment"];
+        commit1.commentId = @"21_2";
+        commit1.commentContent = @"曾国藩：“古来如李斯、曹操、董卓、杨素，其智力皆横绝一世，而其祸败亦迥异寻常。近世如陆、何、肃、陈亦皆予知自雄，而俱不保其终。故吾辈在自修处求强则可，在胜人处求强则不可。”";
+        commit1.person = personDetail;
+        [personDetail addCommentsObject:commit1];
+        
+        Comment *commit2 = [DBHelper insertObjectToEntity:@"Comment"];
+        commit2.commentId = @"21_3";
+        commit2.commentContent = @"鲁迅曾称赞李斯：“秦之文章，李斯一人而已”，“然子文字，则有殊勋。”他的书法“小篆入神，大篆入妙”，被称为书法鼻祖。";
+        commit2.person = personDetail;
+        [personDetail addCommentsObject:commit2];
+    }
+    
+    {
+        DynastyPersonDetail *personDetail = [DBHelper insertObjectToEntity:@"DynastyPersonDetail"];
+        personDetail.personId = @"22";
+        personDetail.personName = @"吕不韦";
+        personDetail.gender = @"男";
+        personDetail.career = @"商人";
+        personDetail.idNumber = @"0509";
+        personDetail.image = @"libuwei.png";
+        personDetail.address = @"河南省安阳市滑县";
+        
+        NSMutableSet *setContribute = [[NSMutableSet alloc] init];
+        Contribute *contribute = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute.contributeId = @"22_1";
+        contribute.contributeContent = @"扶立秦庄襄王，任秦国相邦";
+        contribute.person = personDetail;
+        [setContribute addObject:contribute];
+        
+        Contribute *contribute1 = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute1.contributeId = @"22_2";
+        contribute1.contributeContent = @"灭东周国，主持编纂《吕氏春秋》";
+        contribute1.person = personDetail;
+        [setContribute addObject:contribute1];
+        
+        [personDetail addContributes:setContribute];
+        
+        Comment *commit = [DBHelper insertObjectToEntity:@"Comment"];
+        commit.commentId = @"22_1";
+        commit.commentContent = @"司马迁：“不韦及嫪毐贵，封号文信侯。人之告嫪毐，毐闻之。秦王验左右，未发。上之雍郊，毐恐祸起，乃与党谋，矫太后玺发卒以反蕲年宫。发吏攻毐，毐败亡走，追斩之好畤，遂灭其宗。而吕不韦由此绌矣。孔子之所谓‘闻’者，其吕子乎？”";
+        commit.person = personDetail;
+        [personDetail addCommentsObject:commit];
+        
+        Comment *commit1 = [DBHelper insertObjectToEntity:@"Comment"];
+        commit1.commentId = @"22_2";
+        commit1.commentContent = @"司马贞：“不韦钓奇，委质子楚。华阳立嗣，邯郸献女。及封河南，乃号仲父。徙蜀惩谤，悬金作语。筹策既成，富贵斯取。”";
+        commit1.person = personDetail;
+        [personDetail addCommentsObject:commit1];
+    }
+    
+    {
+        DynastyPersonDetail *personDetail = [DBHelper insertObjectToEntity:@"DynastyPersonDetail"];
+        personDetail.personId = @"23";
+        personDetail.personName = @"秦始皇";
+        personDetail.gender = @"男";
+        personDetail.career = @"皇帝";
+        personDetail.idNumber = @"0601";
+        personDetail.image = @"qinshihuang.png";
+        personDetail.address = @"河北省邯郸市";
+        
+        NSMutableSet *setContribute = [[NSMutableSet alloc] init];
+        Contribute *contribute = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute.contributeId = @"23_1";
+        contribute.contributeContent = @"首次统一华夏";
+        contribute.person = personDetail;
+        [setContribute addObject:contribute];
+        
+        Contribute *contribute1 = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute1.contributeId = @"23_2";
+        contribute1.contributeContent = @"南平百越，北击匈奴";
+        contribute1.person = personDetail;
+        [setContribute addObject:contribute1];
+        
+        Contribute *contribute2 = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute2.contributeId = @"23_3";
+        contribute2.contributeContent = @"书同文，车同轨，统一度量衡";
+        contribute2.person = personDetail;
+        [setContribute addObject:contribute2];
+        
+        Contribute *contribute3 = [DBHelper insertObjectToEntity:@"Contribute"];
+        contribute3.contributeId = @"23_4";
+        contribute3.contributeContent = @"修建万里长城，打通西南";
+        contribute3.person = personDetail;
+        [setContribute addObject:contribute3];
+        
+        [personDetail addContributes:setContribute];
+        
+        Comment *commit = [DBHelper insertObjectToEntity:@"Comment"];
+        commit.commentId = @"23_1";
+        commit.commentContent = @"正面\n秦始皇结束了春秋战国五百多年诸侯割据混战的局面，建立了中国历史上第一个统一的、多民族的、专制主义中央集权制国家，为中国的发展奠定了坚实的基础。所谓“汉承秦制”，“自秦以来，其制未变”，秦始皇建立的秦帝国为中国其后近二千年的政治制度奠定了基础。\n";
+        commit.person = personDetail;
+        [personDetail addCommentsObject:commit];
+        
+        Comment *commit1 = [DBHelper insertObjectToEntity:@"Comment"];
+        commit1.commentId = @"23_2";
+        commit1.commentContent = @"负面\n秦始皇是一个专制独裁、横征暴敛、严刑峻法、生活奢侈的君主，成为中国文化中代表暴君的符号。秦朝在统一天下后只历十五年即速亡，而且也开启中国两千余年的专制统治，影响深远。先秦时期百家争鸣的文化、思想大爆发的情况自秦之后灭迹。秦朝以高度组织化的政府机构来透支民力和资源，而且使用严酷的刑罚来保证政令的实行（不能按时到达目的地要被全部处死是陈胜吴广率民夫揭竿起事的直接原因）。\n";
+        commit1.person = personDetail;
+        [personDetail addCommentsObject:commit1];
+    }
+    
     [DBHelper save];
 }
 

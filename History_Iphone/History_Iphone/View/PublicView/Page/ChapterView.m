@@ -79,10 +79,11 @@
         [_pageContents addObject:strContentPage];
         iTotalTextNumber += iPageContentNumber;
     }
-    iPageNumers ++;
+//    //考虑重用，先++
+//    iPageNumers ++;
     
     //创建重用的PageView
-    if (iPageNumers > 2) {
+    if (iPageNumers > 3) {
         PageView *pageView = [[[NSBundle mainBundle] loadNibNamed:@"PageView" owner:self options:nil] lastObject];
         [_pageReuseView addObject:pageView];
         pageView.font = [[ChapterManager shareInstance] getTextFont];
