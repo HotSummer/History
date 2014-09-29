@@ -62,6 +62,7 @@
     arrowView.frame = _btnAnimation.frame;
     [self.view addSubview:arrowView];
     [self.view bringSubviewToFront:_btnAnimation];
+    arrowView.translatesAutoresizingMaskIntoConstraints = NO;
 }
 
 - (void)receivePushNotification:(NSNotification *)notification{
