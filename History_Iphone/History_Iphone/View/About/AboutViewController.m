@@ -7,6 +7,7 @@
 //
 
 #import "AboutViewController.h"
+#import "WXApi.h"
 
 @interface AboutViewController ()
 
@@ -22,6 +23,8 @@
 @property(nonatomic, strong) IBOutlet UIView *viewFooter;
 
 - (IBAction)didPressedBtnSina:(id)sender;
+- (IBAction)didPressedBtnWeiXin:(id)sender;
+- (IBAction)didPressedBtnQQ:(id)sender;
 
 @end
 
@@ -80,13 +83,69 @@
 //    message.text = @"测试通过WeiboSDK发送文字到微博!";
 //    WBSendMessageToWeiboRequest *request = [WBSendMessageToWeiboRequest requestWithMessage:message];
 //    [WeiboSDK sendRequest:request];
-    NSDictionary *dic = @{@"uid": @"2704709665", @"screen_name":@"HotSummer1989"};
-    [WBHttpRequest requestWithURL:@"https://api.weibo.com/2/friendships/create.json"
-                       httpMethod:@"POST"
-                           params:dic
-                         delegate:self
-                          withTag:@"1"];
+//    NSDictionary *dic = @{@"uid": @"2704709665", @"screen_name":@"HotSummer1989"};
+//    [WBHttpRequest requestWithURL:@"https://api.weibo.com/2/friendships/create.json"
+//                       httpMethod:@"POST"
+//                           params:dic
+//                         delegate:self
+//                          withTag:@"1"];
     
+    [ShareSDK followUserWithType:ShareTypeSinaWeibo                    //平台类型
+                           field:@"2704709665"                                   //关注用户的名称或ID
+                       fieldType:SSUserFieldTypeName      //字段类型，用于指定第二个参数是名称还是ID
+                     authOptions:nil                     //授权选项
+                    viewDelegate:nil                    //授权视图委托
+                          result:^(SSResponseState state, id<ISSPlatformUser> userInfo, id<ICMErrorInfo> error) {               //返回回调
+//                              NSString *msg = nil;
+                              if (state == SSResponseStateSuccess)
+                              {
+                                  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"关注成功" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+                                  [alert show];
+                                  NSLog(@"关注成功");
+                              }
+                              else if (state == SSResponseStateFail)
+                              {
+                                  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"关注失败" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+                                  [alert show];
+                                  NSLog(@"%@", [NSString stringWithFormat:@"关注失败:%@", error.errorDescription]);
+                              }
+                          }];
+    
+}
+
+- (IBAction)didPressedBtnWeiXin:(id)sender{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"您可以在微信中通过搜索“hotsummer1989”，找到我们的微信号。" message:nil delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"去微信", nil];
+    [alert show];
+}
+
+- (IBAction)didPressedBtnQQ:(id)sender{
+    [ShareSDK followUserWithType:ShareTypeQQ                    //平台类型
+                           field:@"2759199007"                                   //关注用户的名称或ID
+                       fieldType:SSUserFieldTypeName      //字段类型，用于指定第二个参数是名称还是ID
+                     authOptions:nil                     //授权选项
+                    viewDelegate:nil                    //授权视图委托
+                          result:^(SSResponseState state, id<ISSPlatformUser> userInfo, id<ICMErrorInfo> error) {               //返回回调
+                              //                              NSString *msg = nil;
+                              if (state == SSResponseStateSuccess)
+                              {
+                                  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"关注成功" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+                                  [alert show];
+                                  NSLog(@"关注成功");
+                              }
+                              else if (state == SSResponseStateFail)
+                              {
+                                  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"关注失败" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+                                  [alert show];
+                                  NSLog(@"%@", [NSString stringWithFormat:@"关注失败:%@", error.errorDescription]);
+                              }
+                          }];
+}
+
+#pragma mark - alertviewdelegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 1) {
+        [WXApi openWXApp];
+    }
 }
 
 #pragma mark - WBHttpRequestDelegate
