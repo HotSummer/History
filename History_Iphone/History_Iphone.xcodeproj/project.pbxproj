@@ -197,6 +197,7 @@
 		79A66317192BA32200B7170E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 79A66315192BA32200B7170E /* InfoPlist.strings */; };
 		79A66319192BA32200B7170E /* History_IphoneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A66318192BA32200B7170E /* History_IphoneTests.m */; };
 		79A6632A192BAAA400B7170E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A66329192BAAA400B7170E /* MapKit.framework */; };
+		79CA776619E59F1C002644BF /* DXAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CA776119E59F1C002644BF /* DXAlertView.m */; };
 		79D5F99419CEC6FA00B4CD45 /* dayu01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79D5F99319CEC6FA00B4CD45 /* dayu01@2x.png */; };
 		79D5F99619CF18B500B4CD45 /* xiaqi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79D5F99519CF18B500B4CD45 /* xiaqi@2x.png */; };
 		79D5F99819CF1BB700B4CD45 /* guanlongfeng@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79D5F99719CF1BB700B4CD45 /* guanlongfeng@2x.png */; };
@@ -485,6 +486,8 @@
 		79A66316192BA32200B7170E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		79A66318192BA32200B7170E /* History_IphoneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = History_IphoneTests.m; sourceTree = "<group>"; };
 		79A66329192BAAA400B7170E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		79CA776019E59F1C002644BF /* DXAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXAlertView.h; sourceTree = "<group>"; };
+		79CA776119E59F1C002644BF /* DXAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXAlertView.m; sourceTree = "<group>"; };
 		79D5F99319CEC6FA00B4CD45 /* dayu01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dayu01@2x.png"; sourceTree = "<group>"; };
 		79D5F99519CF18B500B4CD45 /* xiaqi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xiaqi@2x.png"; sourceTree = "<group>"; };
 		79D5F99719CF1BB700B4CD45 /* guanlongfeng@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guanlongfeng@2x.png"; sourceTree = "<group>"; };
@@ -713,6 +716,7 @@
 		4ECDA9B7199071CD005F72B6 /* PublicView */ = {
 			isa = PBXGroup;
 			children = (
+				79CA775B19E59F1C002644BF /* Vendor */,
 				4EBE0AEB19AD8D4A0022012A /* HorizontalCollectView */,
 				4EBE0AF319AD8D4A0022012A /* FlowAnimationView */,
 				4EBE0AF619AD8D4A0022012A /* Page */,
@@ -1142,6 +1146,15 @@
 				79E07BB81936201C008EA875 /* DynastyMap */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		79CA775B19E59F1C002644BF /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				79CA776019E59F1C002644BF /* DXAlertView.h */,
+				79CA776119E59F1C002644BF /* DXAlertView.m */,
+			);
+			path = Vendor;
 			sourceTree = "<group>";
 		};
 		79E07B791933A493008EA875 /* images */ = {
@@ -1584,6 +1597,7 @@
 				4EBE0B0519AD8D4A0022012A /* PagedFlowView.m in Sources */,
 				4EBE0B0819AD8D4A0022012A /* PageView.m in Sources */,
 				79684EE419D07D9300F25977 /* AboutViewController.m in Sources */,
+				79CA776619E59F1C002644BF /* DXAlertView.m in Sources */,
 				4ECDAA2619907A7E005F72B6 /* CollectViewController.m in Sources */,
 				4EBE0B0119AD8D4A0022012A /* DynastyCellView.m in Sources */,
 				4E8EF9D119D7E6DE00AAA402 /* ArrowView.m in Sources */,

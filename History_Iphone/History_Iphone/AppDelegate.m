@@ -89,15 +89,22 @@
     if (![lastVersion isEqualToString:currentVersion] && lastVersion.length > 0) {
         NSString *updateLog = [appInfo objectForKey:@"update_log"];
         NSString *logs = [updateLog stringByReplacingOccurrencesOfString:@";" withString:@"\n"];
-        UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:logs message:nil delegate:self cancelButtonTitle:@"立即更新" otherButtonTitles:nil, nil];
+        UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:logs message:nil delegate:self cancelButtonTitle:@"暂不更新" otherButtonTitles:@"立即更新", nil];
         [alertview show];
+        
+        NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+        [userDefault setObject:lastVersion forKey:appLastVersion];
+        [userDefault setObject:logs forKey:appUpdateInfo];
+        [userDefault synchronize];
     }
 }
 
 #pragma mark - alertview
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    NSString *appUrl = [self.updateAppInfo objectForKey:@"path"];
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:appUrl]];
+    if (buttonIndex == 1) {
+        NSString *appUrl = [self.updateAppInfo objectForKey:@"path"];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:appUrl]];
+    }
 }
 
 #pragma mark - push

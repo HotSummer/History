@@ -7,7 +7,9 @@
 //
 
 #import "AboutViewController.h"
+#import "DXAlertView.h"
 #import "WXApi.h"
+#import "AppDelegate.h"
 
 @interface AboutViewController ()
 
@@ -73,7 +75,7 @@
 
 - (void)loadTableHeaderAndFooter{
     _tableAbout.tableHeaderView = _viewHeader;
-    _tableAbout.tableFooterView = _viewFooter;
+//    _tableAbout.tableFooterView = _viewFooter;
     
     _lblVersion.text = [NSString stringWithFormat:@"版本号%@", appCurrentVersion];
 }
@@ -143,8 +145,11 @@
 
 #pragma mark - alertviewdelegate
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    if (buttonIndex == 1) {
-        [WXApi openWXApp];
+    if (alertView.tag == 1) {
+        if (buttonIndex == 1) {
+            NSString *appUrl = [[HistoryAppDelegate updateAppInfo] objectForKey:@"path"];
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:appUrl]];
+        }
     }
 }
 
@@ -187,6 +192,36 @@
             break;
     }
     return nil;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == 1) {
+        NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+        NSString *lastVersion = [userDefault objectForKey:appLastVersion];
+        NSString *currentVersion = appCurrentVersion;
+        if (![lastVersion isEqualToString:currentVersion] && lastVersion.length > 0) {
+            NSString *logs = [userDefault objectForKey:appUpdateInfo];
+            UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:logs message:nil delegate:self cancelButtonTitle:@"暂不更新" otherButtonTitles:@"立即更新", nil];
+            alertview.tag = 1;
+            [alertview show];
+        }else{
+            UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:@"没有检测到新版本" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+            [alertview show];
+        }
+    }
+    else if (indexPath.row == 2) {
+        DXAlertView *alert = [[DXAlertView alloc] initWithTitle:@"您可以在微信中通过搜索“hotsummer1989”，找到我们的微信号。通过微信告诉我们您对这款App的想法，帮助我们完善它。" contentText:nil leftButtonTitle:@"没想法" rightButtonTitle:@"去微信"];
+        [alert show];
+        alert.leftBlock = ^() {
+            
+        };
+        alert.rightBlock = ^() {
+            [WXApi openWXApp];
+        };
+        alert.dismissBlock = ^() {
+            
+        };
+    }
 }
 
 @end
