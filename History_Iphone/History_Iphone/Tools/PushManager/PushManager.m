@@ -42,8 +42,24 @@
 }
 
 - (void)postPushNotification:(NSString *)message{
-    NSDictionary *dic = @{@"pushTitle": @"Push", @"pushContent":message};
+    [self savePushMessage:message];
+    NSDictionary *dic = @{@"pushTitle": @"收到一条新消息", @"pushContent":message};
     [[NSNotificationCenter defaultCenter] postNotificationName:PushNotification object:nil userInfo:dic];
+}
+
+- (void)savePushMessage:(NSString *)pushMessage{
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    NSArray *existMessages = [self readPushMessage];
+    NSMutableArray *messages = [NSMutableArray arrayWithArray:existMessages];
+    [messages addObject:pushMessage];
+    [userDefault setObject:messages forKey:@"PushMessage"];
+    [userDefault synchronize];
+}
+
+- (NSArray *)readPushMessage{
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    NSArray *existMessages = [userDefault objectForKey:@"PushMessage"];
+    return existMessages;
 }
 
 #pragma mark - GexinSdkDelegate

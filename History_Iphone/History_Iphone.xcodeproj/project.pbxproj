@@ -198,6 +198,8 @@
 		79A66319192BA32200B7170E /* History_IphoneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A66318192BA32200B7170E /* History_IphoneTests.m */; };
 		79A6632A192BAAA400B7170E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A66329192BAAA400B7170E /* MapKit.framework */; };
 		79CA776619E59F1C002644BF /* DXAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CA776119E59F1C002644BF /* DXAlertView.m */; };
+		79D358AF19E6DE8C007C1D71 /* NoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D358AD19E6DE8C007C1D71 /* NoticeViewController.m */; };
+		79D358B019E6DE8C007C1D71 /* NoticeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79D358AE19E6DE8C007C1D71 /* NoticeViewController.xib */; };
 		79D5F99419CEC6FA00B4CD45 /* dayu01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79D5F99319CEC6FA00B4CD45 /* dayu01@2x.png */; };
 		79D5F99619CF18B500B4CD45 /* xiaqi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79D5F99519CF18B500B4CD45 /* xiaqi@2x.png */; };
 		79D5F99819CF1BB700B4CD45 /* guanlongfeng@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79D5F99719CF1BB700B4CD45 /* guanlongfeng@2x.png */; };
@@ -488,6 +490,9 @@
 		79A66329192BAAA400B7170E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		79CA776019E59F1C002644BF /* DXAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXAlertView.h; sourceTree = "<group>"; };
 		79CA776119E59F1C002644BF /* DXAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXAlertView.m; sourceTree = "<group>"; };
+		79D358AC19E6DE8C007C1D71 /* NoticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticeViewController.h; sourceTree = "<group>"; };
+		79D358AD19E6DE8C007C1D71 /* NoticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticeViewController.m; sourceTree = "<group>"; };
+		79D358AE19E6DE8C007C1D71 /* NoticeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoticeViewController.xib; sourceTree = "<group>"; };
 		79D5F99319CEC6FA00B4CD45 /* dayu01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dayu01@2x.png"; sourceTree = "<group>"; };
 		79D5F99519CF18B500B4CD45 /* xiaqi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xiaqi@2x.png"; sourceTree = "<group>"; };
 		79D5F99719CF1BB700B4CD45 /* guanlongfeng@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guanlongfeng@2x.png"; sourceTree = "<group>"; };
@@ -947,6 +952,9 @@
 				79684EE119D07D9200F25977 /* AboutViewController.h */,
 				79684EE219D07D9200F25977 /* AboutViewController.m */,
 				79684EE319D07D9300F25977 /* AboutViewController.xib */,
+				79D358AC19E6DE8C007C1D71 /* NoticeViewController.h */,
+				79D358AD19E6DE8C007C1D71 /* NoticeViewController.m */,
+				79D358AE19E6DE8C007C1D71 /* NoticeViewController.xib */,
 			);
 			path = About;
 			sourceTree = "<group>";
@@ -1500,6 +1508,7 @@
 				4ECDA9F819907444005F72B6 /* ShareSDKiPhoneSimpleShareViewUI.bundle in Resources */,
 				79E07B811933A493008EA875 /* now_shang_map.png in Resources */,
 				4E8EF9D319D7E6EA00AAA402 /* ArrowView.xib in Resources */,
+				79D358B019E6DE8C007C1D71 /* NoticeViewController.xib in Resources */,
 				79816A9D19C1F755002AE346 /* shang_later_thumbnail.png in Resources */,
 				79816AC419C445F7002AE346 /* story_Icon@2x.png in Resources */,
 				79816ADB19C4A7B5002AE346 /* timeLine_Icon.png in Resources */,
@@ -1629,6 +1638,7 @@
 				4E54017A19C6CB9C00CB8FC7 /* TimeLine.m in Sources */,
 				4E54018019C6CE7A00CB8FC7 /* TimeLineView.m in Sources */,
 				796161A919CB2082001A69BB /* PushViewController.m in Sources */,
+				79D358AF19E6DE8C007C1D71 /* NoticeViewController.m in Sources */,
 				796161B219CB2E9D001A69BB /* History.xcdatamodeld in Sources */,
 				79E07BD519376DD8008EA875 /* Contribute.m in Sources */,
 				790AE1F0192D0A5300FC4668 /* DBHelper.m in Sources */,

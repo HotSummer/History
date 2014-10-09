@@ -22,4 +22,9 @@ GexinSdkDelegate
 //将deviceToken传给服务器
 - (void)postDeviceTokenToHistoryServer:(NSString *)deviceToken;
 
+/**
+ @brief 读取本地存储的推送通知
+ */
+- (NSArray *)readPushMessage;
+
 @end

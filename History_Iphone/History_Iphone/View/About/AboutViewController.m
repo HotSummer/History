@@ -10,6 +10,7 @@
 #import "DXAlertView.h"
 #import "WXApi.h"
 #import "AppDelegate.h"
+#import "NoticeViewController.h"
 
 @interface AboutViewController ()
 
@@ -81,17 +82,6 @@
 }
 
 - (IBAction)didPressedBtnSina:(id)sender{
-//    WBMessageObject *message = [WBMessageObject message];
-//    message.text = @"测试通过WeiboSDK发送文字到微博!";
-//    WBSendMessageToWeiboRequest *request = [WBSendMessageToWeiboRequest requestWithMessage:message];
-//    [WeiboSDK sendRequest:request];
-//    NSDictionary *dic = @{@"uid": @"2704709665", @"screen_name":@"HotSummer1989"};
-//    [WBHttpRequest requestWithURL:@"https://api.weibo.com/2/friendships/create.json"
-//                       httpMethod:@"POST"
-//                           params:dic
-//                         delegate:self
-//                          withTag:@"1"];
-    
     [ShareSDK followUserWithType:ShareTypeSinaWeibo                    //平台类型
                            field:@"2704709665"                                   //关注用户的名称或ID
                        fieldType:SSUserFieldTypeName      //字段类型，用于指定第二个参数是名称还是ID
@@ -195,7 +185,10 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row == 1) {
+    if (indexPath.row == 0) {
+        NoticeViewController *noticeVC = [[NoticeViewController alloc] init];
+        [self.navigationController pushViewController:noticeVC animated:YES];
+    }else if (indexPath.row == 1) {
         NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
         NSString *lastVersion = [userDefault objectForKey:appLastVersion];
         NSString *currentVersion = appCurrentVersion;
