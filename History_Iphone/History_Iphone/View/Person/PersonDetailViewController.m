@@ -68,10 +68,10 @@
     lblCareer.text = personDetail.career;
     lblId.text = personDetail.idNumber;
     imageviewIcon.image = [UIImage imageNamed:personDetail.image];
-    
-    CGSize size = [personDetail.address sizeWithFont:[UIFont systemFontOfSize:15.0]
-                                   constrainedToSize:CGSizeMake(144, MAXFLOAT)
-                                       lineBreakMode:NSLineBreakByTruncatingMiddle];
+    CGSize size = MULTILINE_TEXTSIZE(personDetail.address, [UIFont systemFontOfSize:15.0], CGSizeMake(144, MAXFLOAT), NSLineBreakByTruncatingMiddle);
+//    CGSize size = [personDetail.address sizeWithFont:[UIFont systemFontOfSize:15.0]
+//                                   constrainedToSize:CGSizeMake(144, MAXFLOAT)
+//                                       lineBreakMode:NSLineBreakByTruncatingMiddle];
     NSInteger row = (NSInteger)(size.height/21.0);
     lblAddress.frame = CGRectMake(lblAddress.frame.origin.x, lblAddress.frame.origin.y, lblAddress.frame.size.width, (row+1)*21.0);
 }
@@ -80,9 +80,10 @@
     float fYPosition = 11;
     NSSet *set = personDetail.contributes;
     for (Contribute *contribute in set) {
-        CGSize size = [contribute.contributeContent sizeWithFont:[UIFont systemFontOfSize:15.0]
-                               constrainedToSize:CGSizeMake(300, MAXFLOAT)
-                                   lineBreakMode:NSLineBreakByTruncatingMiddle];
+        CGSize size = MULTILINE_TEXTSIZE(contribute.contributeContent, [UIFont systemFontOfSize:15.0], CGSizeMake(300, MAXFLOAT), NSLineBreakByTruncatingMiddle);
+//        CGSize size = [contribute.contributeContent sizeWithFont:[UIFont systemFontOfSize:15.0]
+//                               constrainedToSize:CGSizeMake(300, MAXFLOAT)
+//                                   lineBreakMode:NSLineBreakByTruncatingMiddle];
         UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(10, fYPosition, 300, size.height)];
         lbl.numberOfLines = 0;
         lbl.text = contribute.contributeContent;
@@ -99,9 +100,10 @@
     float fHeight = 12;
     NSSet *set = personDetail.comments;
     for (Comment *comment in set) {
-        CGSize size = [comment.commentContent sizeWithFont:[UIFont systemFontOfSize:15.0]
-                                                constrainedToSize:CGSizeMake(300, MAXFLOAT)
-                                                    lineBreakMode:NSLineBreakByTruncatingMiddle];
+        CGSize size = MULTILINE_TEXTSIZE(comment.commentContent, [UIFont systemFontOfSize:15.0], CGSizeMake(300, MAXFLOAT), NSLineBreakByTruncatingMiddle);
+//        CGSize size = [comment.commentContent sizeWithFont:[UIFont systemFontOfSize:15.0]
+//                                                constrainedToSize:CGSizeMake(300, MAXFLOAT)
+//                                                    lineBreakMode:NSLineBreakByTruncatingMiddle];
         UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(10, fHeight, 300, MAX(47, size.height))];
         lbl.numberOfLines = 0;
         lbl.text = comment.commentContent;
