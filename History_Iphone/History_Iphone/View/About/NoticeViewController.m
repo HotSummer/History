@@ -13,6 +13,7 @@
 @interface NoticeViewController (){
     IBOutlet UITableView *tablePush;
     IBOutlet UIView *viewSectionHeader;
+    IBOutlet UITableViewCell *cellHide;
 }
 @property(nonatomic, strong) NSArray *pushMessages;
 
@@ -52,7 +53,7 @@
 
 #pragma mark - tableview delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return _pushMessages.count;
+    return _pushMessages.count+1;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
@@ -69,22 +70,46 @@
     return nil;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *cellIndentifier = @"CellIndentifier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifier];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier];
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == 0) {
+        return 700.0;
+    }else{
+        return 44.0;
     }
-    cell.textLabel.text = _pushMessages[indexPath.row];
-    return cell;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == 0) {
+        return cellHide;
+    }else{
+        static NSString *cellIndentifier = @"CellIndentifier";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifier];
+        if (!cell) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier];
+            UILabel *lbl = nil;
+            if (indexPath.row < _pushMessages.count) {
+                lbl = [[UILabel alloc] initWithFrame:CGRectMake(10, 43, 300, thinLineHeight)];
+                lbl.backgroundColor = [UIColor colorWithRed:80.0/255.0 green:80.0/255.0 blue:80.0/255.0 alpha:1.0];
+            }else{
+                lbl = [[UILabel alloc] initWithFrame:CGRectMake(0, 43, 320, thinLineHeight)];
+                lbl.backgroundColor = [UIColor blackColor];
+            }
+            [cell addSubview:lbl];
+        }
+        cell.textLabel.text = _pushMessages[indexPath.row-1];
+        
+        return cell;
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    PushViewController *pushVC = [[PushViewController alloc] init];
-    pushVC.pushTitle = @"消息";
-    pushVC.pushContent = _pushMessages[indexPath.row];
-    UIViewController *topViewController = self.navigationController.topViewController;
-    [topViewController.navigationController pushViewController:pushVC animated:YES];
+    if (indexPath.row > 0) {
+        PushViewController *pushVC = [[PushViewController alloc] init];
+        pushVC.pushTitle = @"消息";
+        pushVC.pushContent = _pushMessages[indexPath.row-1];
+        UIViewController *topViewController = self.navigationController.topViewController;
+        [topViewController.navigationController pushViewController:pushVC animated:YES];
+    }
 }
 
 @end

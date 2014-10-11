@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NoticeViewController">
             <connections>
+                <outlet property="cellHide" destination="rav-Sy-lzs" id="INb-Kc-lkr"/>
                 <outlet property="tablePush" destination="Vqs-cn-Dv5" id="dsF-Km-fZN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewSectionHeader" destination="U5P-On-nUJ" id="hh4-ap-HqT"/>
@@ -17,7 +18,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Vqs-cn-Dv5">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <rect key="frame" x="0.0" y="-700" width="320" height="1268"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -29,7 +30,7 @@
             </subviews>
             <color key="backgroundColor" red="0.98823529409999999" green="0.96862745100000003" blue="0.94509803920000002" alpha="1" colorSpace="deviceRGB"/>
             <constraints>
-                <constraint firstItem="Vqs-cn-Dv5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Ed3-rj-frY"/>
+                <constraint firstItem="Vqs-cn-Dv5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="-700" id="Ed3-rj-frY"/>
                 <constraint firstAttribute="bottom" secondItem="Vqs-cn-Dv5" secondAttribute="bottom" id="Mgx-xn-rYG"/>
                 <constraint firstItem="Vqs-cn-Dv5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="SCA-3U-7Me"/>
                 <constraint firstAttribute="trailing" secondItem="Vqs-cn-Dv5" secondAttribute="trailing" id="jcp-ED-wIM"/>
@@ -52,5 +53,25 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="rav-Sy-lzs">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="700"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rav-Sy-lzs" id="uOM-I8-jCk">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="699"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="以历史为镜，让我们做一个有历史的人" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pKh-tG-S4U">
+                        <rect key="frame" x="0.0" y="584" width="320" height="93"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.63921570777893066" green="0.38431376218795776" blue="0.364705890417099" alpha="1" colorSpace="deviceRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.98823529409999999" green="0.96862745100000003" blue="0.94509803920000002" alpha="1" colorSpace="deviceRGB"/>
+        </tableViewCell>
     </objects>
 </document>
