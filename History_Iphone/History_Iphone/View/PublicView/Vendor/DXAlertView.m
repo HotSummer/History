@@ -59,9 +59,7 @@
    rightButtonTitle:(NSString *)rigthTitle
 {
     if (self = [super init]) {
-        CGSize size = [title sizeWithFont:[UIFont boldSystemFontOfSize:16.0]
-                                         constrainedToSize:CGSizeMake(kAlertWidth, MAXFLOAT)
-                                             lineBreakMode:NSLineBreakByTruncatingMiddle];
+        CGSize size = MULTILINE_TEXTSIZE(title, [UIFont systemFontOfSize:16.0], CGSizeMake(kAlertWidth, MAXFLOAT), NSLineBreakByTruncatingMiddle);
         
         self.layer.cornerRadius = 5.0;
         self.backgroundColor = [UIColor whiteColor];
@@ -72,9 +70,7 @@
         [self addSubview:self.alertTitleLabel];
         
         CGFloat contentLabelWidth = kAlertWidth - 16;
-        CGSize sizeContent = [content sizeWithFont:[UIFont systemFontOfSize:13.0]
-                        constrainedToSize:CGSizeMake(kAlertWidth, MAXFLOAT)
-                            lineBreakMode:NSLineBreakByTruncatingMiddle];
+        CGSize sizeContent = MULTILINE_TEXTSIZE(content, [UIFont systemFontOfSize:13.0], CGSizeMake(kAlertWidth, MAXFLOAT), NSLineBreakByTruncatingMiddle);
         self.alertContentLabel = [[UILabel alloc] initWithFrame:CGRectMake((kAlertWidth - contentLabelWidth) * 0.5, CGRectGetMaxY(self.alertTitleLabel.frame), contentLabelWidth, sizeContent.height)];
         self.alertContentLabel.numberOfLines = 0;
         self.alertContentLabel.textAlignment = self.alertTitleLabel.textAlignment = NSTextAlignmentCenter;
