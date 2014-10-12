@@ -466,16 +466,6 @@
     person14.personName = @"齐桓公";
     person14.firstRole = @"春秋五霸之春秋首霸";
     person14.commentCount = [NSNumber numberWithInt:4];
-    /*
-     1.《春秋公羊传》说：“南夷北狄交，中国不绝如线，桓公攘夷狄而救中国。”齐桓公作为春秋时代的第一位霸主，他一向是被高度评价的。当时在夷狄的逼迫之下，中原各国的确遭到了极大的威胁，而通过改革而强盛起来的齐桓公，此时充当起了中原各国的保护神，打出了“尊王壤夷”的旗号。作为霸主，齐桓公又是会盟诸侯，又是插手别国事务，又是安定王室，又是征伐夷狄，可谓风光一时。
-     2.穀梁传谴责了齐桓公通过杀公子纠成为齐国国君的手段。对于桓公前681年在北杏的会盟，《穀梁传》认为齐桓公并不是周天子任命的方伯，如此是不应当的。但在记载前667年桓公与诸侯在幽的会盟时，称赞桓公仁义守信。对于桓公在前666年伐卫一事，《穀梁传》认为桓公虽然是奉王命，但攻伐别国又索取财物，需要轻视。《穀梁传》认为桓公为燕国讨伐山戎一事是莫大之善举，需要称赞。《穀梁传》以为桓公驻曹救邢一事是害怕狄人，不值得赞扬，所以《春秋》避讳不书齐桓公。前658年桓公为卫国筑楚丘城，对于此事《谷梁传》认为桓公虽然有仁爱之心，但此举超出礼制。桓公率大军伐蔡，《穀梁传》认为合乎正道。前655年桓公盟诸侯，拥戴周王的太子，《穀梁传》认为这是变通礼制拥戴周王的做法值得肯定。《穀梁传》对桓公在葵丘大会诸侯申明周王禁令表示称赞。《穀梁传》谴责桓公灭项一事，但又说桓公曾有存亡继绝之功，所以为之避讳。对于桓公的去世，《穀梁传》说此人不正道，但前文有所贬抑，记载他的去世时对他的尊敬。
-     3.关于齐桓公伐楚的“召陵之师”，也许首当其冲的楚国人最了解当时的情况。召陵之师过去一百多年后，楚国的大夫椒举向追求霸业的[[楚灵王]]提到历史上夏启王、商汤王、周武王、周成王、周康王、周穆王、齐桓公和晋文公这“六王二公”之功业。而楚灵王在这些历史人物的伟大业绩中，仅选择了齐桓“召陵之师”作为自己效仿的对象。可见楚国人心目中“召陵之师”是多么雄壮。《左传·昭公四年》童书业推测各国当时兵力，认为“召陵之师”联军有多达一千数百乘兵车的兵力，在当时是前所未有的巨大兵力。在联军深入楚境的强压下，楚国被迫放弃在战场上击败联军的努力，而是乞求加入齐国同盟，此事在楚人心中印象极深。而齐桓去世后的[[前641年]]想谋求霸权的楚国在齐国参加盟会，仍然以齐国为盟主。可见齐桓霸业之盛。童书业《春秋左传研究》中华书局2006年
-     
-     有人认为，当时齐桓公并未有多少实力，当时[[秦]][[晋]]都还不是很强大，而对于楚国，齐桓公不过是定了一个盟约，并没有试试楚国“方城以为城，汉水以为池”的雄厚实力。至于抗击夷狄，更多的是打败了实力不强的狄人，而对于楚国出兵灭了一些小国的行为，齐桓公并没有干涉。《左传选评》
-     4.孟子批评齐桓公，认为他不过是靠霸道，而不是王道。
-     
-     齐桓公生活糜烂，《史记》：“桓公好内，多内宠，如夫人（妾）者六人”、“桓公病，五公子各树党争立。”如此多的儿子也为以后的内乱埋下了隐患。不仅如此，齐桓公在近亲性关系上也很混乱，“寡人有污行，不幸而好色，姑姊有不嫁者” ，“齐桓公好妇人之色，妻姑姊妹，而国中多淫于骨肉。”另外齐桓公亲近小人，甚至吃人肉。
-     */
     person14.startKing = @"";
     
     DynastyPersonList *person15 = [DBHelper insertObjectToEntity:@"DynastyPersonList"];
@@ -547,43 +537,6 @@
     person22.personName = @"秦始皇";
     person22.firstRole = @"";
     person22.commentCount = [NSNumber numberWithInt:2];
-    /*
-     正面
-     秦始皇结束了春秋战国五百多年诸侯割据混战的局面，建立了中国历史上第一个统一的、多民族的、专制主义中央集权制国家，为中国的发展奠定了坚实的基础。所谓“汉承秦制”，“自秦以来，其制未变”，秦始皇建立的秦帝国为中国其后近二千年的政治制度奠定了基础。
-     
-     秦始皇使中国第一次完成了政治和经济上的统一。根据史书记载，夏朝万国，商朝千国，周朝八百国，西周后期还有二百国左右，春秋时期一百几十国，战国后期形成“七雄”。这些国中之国书不同文、币不同形、度不同尺、权不同衡、十里尚不同风。而秦始皇则前无古人地在中国大地建立了第一个统一的、多民族的中央集权制国家，形成了“车同轨、书同文、钱同币、币同形、度同尺、权同衡、行同伦、一法度”的大一统局面，为其后各朝代谋求统一奠定了坚实的基础。从秦以后，中国人使用的文字源于秦人，中国广袤的国土是秦帝国的延续，中华民族的统一和融合在秦帝国时期开始形成，中国在政治体制和文化思想等各方面无不打有秦始皇的深刻烙印：秦始皇在2000多年前建立的文治武功，自此始终与中华民族血脉相连。
-     
-     秦始皇在政治制度的最大创建是在全国范围内废除分封制，代以郡县制，在皇帝的直接控制下，建立自中央直至郡县的一整套官僚机构，确立了中央的权威和集权。除了政治体制的改革，秦始皇还广泛统一了其他各种制度，包括全国的水陆交通建制（车同轨）、全国的文字（书同文）、全国的度量衡制度（度同尺、权同衡）和全国的币制（钱同币、币同形）。他还试图统一全国的思想（焚书坑儒），但由于手段过于暴力而没有完成（统一思想要到汉武帝的“罢黜百家、独尊儒术”时才而得以初步完成）。应该说，正是由于秦始皇对征服后的土地注重统治和制度的建设，不似其它同时代的征服者（如古马其顿的亚力山大，或古罗马的凯撒等人）只重征服而不重制度和文化上的建设和统一[96]，才使得统一的土地统治稳固，才使得中国在以后几千年中都没有像其他古代文明那样经历真正不可挽回的分裂或灭亡，为现代中国的版图奠定了历史基础。中国虽然经历过长期的内乱分裂，不同地区的语言也差别很大，却一直拥有同样的文化，并且在数次分裂后又一次次地统一，是因为秦始皇统一了文字。
-     
-     秦始皇首创驿站制度，并修驿道，为庞大帝国的政令通达以及由此而来的郡县制皇权国家奠定了技术基础。“修驿道，设郡县”，这是中国能够采用郡县制这种先进制度，而非类似西方的分封制的一个必要条件。同时期的古罗马不能有效控制占领区，只能设权利极大的总督（总督总揽一地的军政大权，都是贵族，基层组织都依靠当地的原有组织），仍旧类似于分封制，这是后来罗马帝国分裂的一个很重要的原因[96]。郡县制是一种平民制度，其军政首脑都由皇帝任命，依政绩军功可上可下，可平职调动，这就导致了职业官僚和职业军人的出现。职业官僚和职业军人都可以来自平民，郡县官僚制有效的保证了平民（布衣）参政议政的权利（如李斯，蒙敖等都是布衣，依军功政绩才出将入相），相比分封制这种贵族政治，无疑是一大历史进步。
-     
-     秦国自商鞅变法以来重视以法治国，秦始皇继承了这个传统，并十分推崇法家人物韩非，曾自叹“若与其同游，则无恨矣”。战争时期，秦始皇对将领赏功罚罪，皆依法。统一中国后，秦始皇以秦国原有的法律令为基础，吸收六国法律的某些条文，制定和颁行全国统一的法律。秦始皇虽专制，认为“朕即天下”，但有秦一代，仍是依法治国。
-     
-     总而言之，秦始皇一生并天下、称皇帝、废分封、置郡县、征百越、逐匈奴、修长城、通沟渠、销兵器、迁富豪、车同轨、书同文、钱同币、币同形、度同尺、权同衡、行同伦、一法度、以法治国、焚书坑儒，对于中国之大一统、对于中国政制之创建、对于中国版图之确立、对于中国民族之传承，都起到了不可磨灭的关键作用，堪称“千古一帝”。所谓“功莫大过秦皇汉武”，其意就是指在文治武功方面，历代君王无秦始皇之右。
-     
-     历代文人和政治家中对秦始皇大加褒扬的不乏其人。例如，西汉名臣桑弘羊的论著中肯定秦始皇统一中国的功绩是“功如丘山，名传后世”。唐太宗李世民说过：“近代平一天下，拓定边方者，惟秦皇、汉武。”唐朝大诗人李白在诗《古风》中写道：“秦王扫六合，虎视何雄哉！挥剑决浮云，诸侯尽西来。明断自天启，大略驾群才。收兵铸金人，函谷正东开。铭功会稽岭，骋望琅琊台。”唐朝思想家柳宗元在名著《封建论》指出秦始皇废除分封制、建立郡县制，符合了历史发展的客观必然趋势，所谓“非圣人意也，势也。”清末民初思想家章太炎在1913年撰写的秦政记也赞扬秦始皇，说：“虽四三皇、六五帝，曾不足比隆也。”
-     
-     中国近现代史学先驱柳翼谋在《中国文化史》评论道：“始皇时代之法制，实具伟大之精神，以一政府而统制方数千里之中国，是固国家形式之进化，抑亦其时思想之进化也。”“盖嬴政称皇帝之年，实前此二千数百年之结局，亦为后此二千数百年之起点，不可谓非历史一大关键。惟秦虽有经营统一之功，而未能尽行其规划一统之策。凡秦之政，皆待汉行之。秦人启其端，汉人竟其绪。”[97]。
-     
-     中共中央主席毛泽东对秦始皇的评价也是甚高，他说：“秦始皇是个厚今薄古的专家。”，“孔孟是唯心主义，荀子是唯物主义，是儒家的‘左派’。孔子代表奴隶主、贵族。荀子代表地主阶级。”又说，“在中国历史上，真正做了点事的是秦始皇，孔子只说空话。”，“我们应该讲句公道话。秦始皇比孔子伟大的多，可是被人骂了几千年。”，“秦始皇是第一个把中国统一起来的人物。不但政治上统一了中国，而且统一了中国的文字、中国各种制度，如度量衡，有些制度后来一直沿用下来。中国过去的封建君主还没有第二个超过他的，可是被一些人骂了几千年。……我赞成秦始皇，不赞成孔夫子。因为秦始皇是第一个统一中国、统一文字，修筑宽广的道路，不搞国中之国，而用集权制，由中央政府派人去各地方，几年一换，不用世袭制度。”史学家郭沫若呈给毛泽东《十批书》，毛泽东阅读后说：“劝君少骂秦始皇，焚书坑儒要商量。祖龙魂死秦犹在，孔学名高实秕糠。百代都行秦政法，《十批》不是好文章。熟读唐人《封建论》，莫从子厚返文王。历代政治家有成就的，在封建社会前期的，都是法家。这些人主张法治，犯了法就杀头，主张厚今薄古。儒家满口仁义道德，一肚子男盗女娼，都是主张厚古薄今的。”[注 74]在某些场合，毛泽东甚至说他自己就是“马克思加秦始皇”。但毛泽东对于秦始皇也不是完全肯定，他也说过：“秦始皇作为一个历史人物，要一分为二。秦始皇在历史发展过程中的进步作用要肯定，但他在统一六国后，丧失了进取方面，志得意满，耽于佚乐，求神仙，修宫室，残酷地压迫人民，到处游走，消磨岁月，无聊得很。……陈胜、吴广揭竿而起、反对暴秦，就包括反对秦始皇，这也是完全正义的。”[98][99][100]
-     
-     钟澈在评价历代帝王时说：世界历史上，开创庞大帝国的帝王之中，排名没有比得上秦始皇的，因为无论是波斯阿契美尼德帝国的居鲁士大帝、古马其顿帝国的亚历山大大帝、还是古罗马帝国的凯撒大帝，他们的帝国早已不存在了，对世界的影响远无法与秦始皇相比。其实，即使他们在位时，其对帝国统一性的重组也远远小于秦始皇[101]。
-     
-     面对秦始皇暴虐的批评，也有史学家指出，要区分秦始皇的个人性质的“暴”和时代的、社会的、制度的“暴”。因为秦始皇所推行的“暴政”，有很多是不得不借助暴力来完成激烈巨大的社会变革，这种“暴”，实质上是在大转型、大变革背景下产生的时代的、社会的、制度的“暴”，和秦始皇个人并没有太大关系[102]。
-     
-     秦政暴虐严苛，百姓为暴秦奴役生活凄苦在始皇帝之时尤甚，这在历史上并没什么异议；对秦朝或秦始皇的正面评价主要集中在“统一”和“集权”对后世的意义上。“统一”和“集权”对维护稳定十分重要，但却使阻止了社会的自我完善的过程使社会变革非常困难，往往要到最后靠暴力手段消灭旧的统治集团来建立新的统治集团。但由于“统一”、“集权”的观念根深蒂固，新的统治集团很快又会重蹈旧集团的覆辙。导致华夏文明出现明显的盛衰周期。在对秦始皇作正面评价之时不能忽略他设计的这种制度的缺陷。
-     
-     负面
-     秦始皇是一个专制独裁、横征暴敛、严刑峻法、生活奢侈的君主，成为中国文化中代表暴君的符号。秦朝在统一天下后只历十五年即速亡，而且也开启中国两千余年的专制统治，影响深远。先秦时期百家争鸣的文化、思想大爆发的情况自秦之后灭迹。秦朝以高度组织化的政府机构来透支民力和资源，而且使用严酷的刑罚来保证政令的实行（不能按时到达目的地要被全部处死是陈胜吴广率民夫揭竿起事的直接原因）。
-     
-     有观点认为，因为秦始皇推行“以法治国”的法家学说，而其后中国历代统治者都推行以仁爱中庸为核心的儒家学说。所以，秦始皇常作为负面典型出现在各种散文、史籍中。其实, 秦始皇虽然推行法家学说，但也宣扬儒家的忠孝仁义（见于云梦秦简），任用儒生为他制定礼仪，“大一统”的思想更是来自儒家。而儒家也不反对法治，儒家是主张先教化后法治，劝善惩恶，反对不教而诛。这里需要说明的是，秦朝的“以法治国”和现代的以法治国是很不一样的。秦法非常严苛。比如规定“偶语者弃市”（史记高祖本纪），禁止民众阅读诗书，禁止自由迁徙，牛瘦一寸就要处罚，不按期服役就处死等等。虽然历朝历代的法律都有许多严酷的刑罚，但是因为秦朝奉行的是法家“重罚主义”思想，所以罪名和刑罚格外繁杂严酷。
-     
-     此外，秦始皇焚书坑儒的极端措施，引起了天下士人（即知识阶层）的愤慨和警惕。再加上汉武帝以后独尊儒术，因此批判秦始皇也就不奇怪了。
-     
-     秦始皇的建筑工程，包括秦长城、秦驰道、灵渠、阿房宫及秦始皇陵等，规模均极为庞大，动辄劳动举国人口兴修，不少文献均斥责在工程进行时造成不少人命死伤。[注 75]从现在考古发现的阿房宫遗址以及秦皇陵来看，当年占用了大量的劳动力和物资来满足秦始皇的个人虚荣感。但另一方面，一些工程也使各地的交通进一步发展，有助日后交通、经贸、国家安全以及各民族之交融。故此，这些工程是功大还是过大，一直是史学家的争论点。对于长城，有人指出当时所修筑的长城，并非今所见之长城（今长城主为明朝时所修建），秦长城主要目的是标明与匈奴的防卫基准界线，[103]始皇仍遣蒙恬发兵三十万攻击匈奴，后人对此的评价是：“兴兵远攻，贪外虚内，务欲广地，不虑其害”。[注 76]蒙恬死后没多久，匈奴便轻松跨过秦长城，不但收复了原来的失地，并且占领了燕、代等郡。[注 77]可见，长城本身在后世抗击游牧民族的战争中是否有意义还属争议话题，但至少在秦始皇时代的作用除了虚耗国力以外，作用微乎其微。
-     
-     秦始皇灭六国过程中将所灭国家宫女充到自己宫中（《史记》秦始皇本纪第六：“秦每破诸侯，写放其宫室，作之咸阳北阪上，南临渭，自雍门以东至泾、渭，殿屋复道周阁相属。所得诸侯美人锺鼓，以充入之。”）秦始皇死后，秦二世下令将宫中没有子女的宫女全部殉葬，在秦始皇下葬后又关闭墓门生葬了工匠（《史记》秦始皇本纪第六：“二世曰：‘先帝后宫非有子者，出焉不宜。’皆令从死，死者甚众。葬既已下，或言工匠为机，臧皆知之，臧重即泄。大事毕，已臧，闭中羡，下外羡门，尽闭工匠臧者，无复出者。”）由以上两段可想知给秦始皇殉葬的宫女和工匠真正是“不计其数”。执行的是秦二世，焉知不是秦始皇的意思？另外，目前考古发现秦皇陵大量分布有陪葬坑、殉葬坑、从葬坑。从陪葬坑里发掘了珍禽异兽坑和铜车马坑，通体彩绘并装饰有大量的金银，制作相当华丽精美。殉葬墓里的殉葬者有男有女，是被杀戮后一齐掩埋的。从葬坑排列密集有序，坑里埋有跪坐的陶俑和马骨，大约是宫廷的马厩和养马的仆役。秦政暴虐可见一斑。
-     */
     person22.startKing = @"秦";
     
     [DBHelper save];
@@ -1485,9 +1438,36 @@
     entity.super_id = @"";
     entity.story_id = @"12";
     entity.name = @"夏朝建立";
-    entity.image = @"story1.png";
-    entity.startYear = [NSNumber numberWithFloat:-2070];
+    entity.image = @"xiaTL.png";
+    entity.startYear = [NSNumber numberWithFloat:-2100];
     entity.length = [NSNumber numberWithFloat:470.0];
+    
+    TimeLine *entity0_1 = [DBHelper insertObjectToEntity:@"TimeLine"];
+    entity0_1.level = @"1";
+    entity0_1.super_id = @"12";
+    entity0_1.story_id = @"12_1";
+    entity0_1.name = @"家天下开始";
+    entity0_1.image = @"jiatianxiaTL.png";
+    entity0_1.startYear = [NSNumber numberWithFloat:-2110];
+    entity0_1.length = [NSNumber numberWithFloat:33];
+    
+    TimeLine *entity0_2 = [DBHelper insertObjectToEntity:@"TimeLine"];
+    entity0_2.level = @"1";
+    entity0_2.super_id = @"12";
+    entity0_2.story_id = @"12_2";
+    entity0_2.name = @"大禹治水";
+    entity0_2.image = @"dayuzhishui.png";
+    entity0_2.startYear = [NSNumber numberWithFloat:-2119];
+    entity0_2.length = [NSNumber numberWithFloat:9];
+    
+    TimeLine *entity0_3 = [DBHelper insertObjectToEntity:@"TimeLine"];
+    entity0_3.level = @"1";
+    entity0_3.super_id = @"12";
+    entity0_3.story_id = @"12_3";
+    entity0_3.name = @"后羿";
+    entity0_3.image = @"story2.png";
+    entity0_3.length = [NSNumber numberWithFloat:-2077];
+    entity0_3.length = [NSNumber numberWithFloat:15];
     
     TimeLine *entity1 = [DBHelper insertObjectToEntity:@"TimeLine"];
     entity1.level = @"0";
@@ -1495,8 +1475,26 @@
     entity1.story_id = @"13";
     entity1.name = @"早商建立";
     entity1.image = @"story2.png";
-    entity1.startYear = [NSNumber numberWithFloat:-1600];
+    entity1.startYear = [NSNumber numberWithFloat:-1700];
     entity1.length = [NSNumber numberWithFloat:300];
+    
+    TimeLine *entity1_1 = [DBHelper insertObjectToEntity:@"TimeLine"];
+    entity1_1.level = @"1";
+    entity1_1.super_id = @"13";
+    entity1_1.story_id = @"13_1";
+    entity1_1.name = @"早商建立";
+    entity1_1.image = @"story2.png";
+    entity1_1.startYear = [NSNumber numberWithFloat:-1700];
+    entity1_1.length = [NSNumber numberWithFloat:100];
+    
+    TimeLine *entity1_2 = [DBHelper insertObjectToEntity:@"TimeLine"];
+    entity1_2.level = @"1";
+    entity1_2.super_id = @"13";
+    entity1_2.story_id = @"13_2";
+    entity1_2.name = @"伊尹还政";
+    entity1_2.image = @"story2.png";
+    entity1_2.startYear = [NSNumber numberWithFloat:-1600];
+    entity1_2.length = [NSNumber numberWithFloat:15];
     
     TimeLine *entity2 = [DBHelper insertObjectToEntity:@"TimeLine"];
     entity2.level = @"0";
@@ -1504,8 +1502,17 @@
     entity2.story_id = @"14";
     entity2.name = @"殷商";
     entity2.image = @"story3.png";
-    entity2.startYear = [NSNumber numberWithFloat:-1300];
+    entity2.startYear = [NSNumber numberWithFloat:-1361];
     entity2.length = [NSNumber numberWithFloat:256];
+    
+    TimeLine *entity2_2 = [DBHelper insertObjectToEntity:@"TimeLine"];
+    entity2_2.level = @"1";
+    entity2_2.super_id = @"14";
+    entity2_2.story_id = @"14_2";
+    entity2_2.name = @"盘庚迁殷";
+    entity2_2.image = @"story2.png";
+    entity2_2.startYear = [NSNumber numberWithFloat:-1361];
+    entity2_2.length = [NSNumber numberWithFloat:15];
     
     TimeLine *entity3 = [DBHelper insertObjectToEntity:@"TimeLine"];
     entity3.level = @"0";
@@ -1515,6 +1522,24 @@
     entity3.image = @"story1.png";
     entity3.startYear = [NSNumber numberWithFloat:-1059];
     entity3.length = [NSNumber numberWithFloat:275];
+    
+    TimeLine *entity3_1 = [DBHelper insertObjectToEntity:@"TimeLine"];
+    entity3_1.level = @"1";
+    entity3_1.super_id = @"15";
+    entity3_1.story_id = @"15_1";
+    entity3_1.name = @"牧野之战";
+    entity3_1.image = @"story2.png";
+    entity3_1.startYear = [NSNumber numberWithFloat:-1059];
+    entity3_1.length = [NSNumber numberWithFloat:1];
+    
+    TimeLine *entity3_2 = [DBHelper insertObjectToEntity:@"TimeLine"];
+    entity3_2.level = @"1";
+    entity3_2.super_id = @"15";
+    entity3_2.story_id = @"15_2";
+    entity3_2.name = @"孟津之誓";
+    entity3_2.image = @"story2.png";
+    entity3_2.startYear = [NSNumber numberWithFloat:-1058];
+    entity3_2.length = [NSNumber numberWithFloat:15];
     
     TimeLine *entity4 = [DBHelper insertObjectToEntity:@"TimeLine"];
     entity4.level = @"0";
@@ -1531,7 +1556,8 @@
     entity4_1.story_id = @"16_1";
     entity4_1.name = @"春秋开始";
     entity4_1.image = @"story2.png";
-    entity4_1.length = [NSNumber numberWithFloat:548];
+    entity4_1.startYear = [NSNumber numberWithFloat:-770];
+    entity4_1.length = [NSNumber numberWithFloat:85];
     
     TimeLine *entity4_2 = [DBHelper insertObjectToEntity:@"TimeLine"];
     entity4_2.level = @"1";
@@ -1539,7 +1565,8 @@
     entity4_2.story_id = @"16_2";
     entity4_2.name = @"齐桓公继位";
     entity4_2.image = @"story2.png";
-    entity4_2.length = [NSNumber numberWithFloat:548];
+    entity4_2.startYear = [NSNumber numberWithFloat:-685];
+    entity4_2.length = [NSNumber numberWithFloat:4];
     
     TimeLine *entity4_3 = [DBHelper insertObjectToEntity:@"TimeLine"];
     entity4_3.level = @"1";
@@ -1547,7 +1574,8 @@
     entity4_3.story_id = @"16_3";
     entity4_3.name = @"北杏之盟";
     entity4_3.image = @"story2.png";
-    entity4_3.length = [NSNumber numberWithFloat:548];
+    entity4_3.startYear = [NSNumber numberWithFloat:-681];
+    entity4_3.length = [NSNumber numberWithFloat:3];
     
     TimeLine *entity4_4 = [DBHelper insertObjectToEntity:@"TimeLine"];
     entity4_4.level = @"1";
@@ -1555,7 +1583,8 @@
     entity4_4.story_id = @"16_4";
     entity4_4.name = @"幽地之盟";
     entity4_4.image = @"story2.png";
-    entity4_4.length = [NSNumber numberWithFloat:548];
+    entity4_4.startYear = [NSNumber numberWithFloat:-678];
+    entity4_4.length = [NSNumber numberWithFloat:22];
     
     TimeLine *entity4_5 = [DBHelper insertObjectToEntity:@"TimeLine"];
     entity4_5.level = @"1";
@@ -1563,7 +1592,8 @@
     entity4_5.story_id = @"16_5";
     entity4_5.name = @"召地之盟";
     entity4_5.image = @"story2.png";
-    entity4_5.length = [NSNumber numberWithFloat:548];
+    entity4_5.startYear = [NSNumber numberWithFloat:-656];
+    entity4_5.length = [NSNumber numberWithFloat:5];
     
     TimeLine *entity4_6 = [DBHelper insertObjectToEntity:@"TimeLine"];
     entity4_6.level = @"1";
@@ -1571,7 +1601,8 @@
     entity4_6.story_id = @"16_6";
     entity4_6.name = @"葵丘之会";
     entity4_6.image = @"story2.png";
-    entity4_6.length = [NSNumber numberWithFloat:548];
+    entity4_6.startYear = [NSNumber numberWithFloat:-651];
+    entity4_6.length = [NSNumber numberWithFloat:19];
     
     TimeLine *entity4_7 = [DBHelper insertObjectToEntity:@"TimeLine"];
     entity4_7.level = @"1";
@@ -1579,7 +1610,8 @@
     entity4_7.story_id = @"16_7";
     entity4_7.name = @"城濮之战";
     entity4_7.image = @"story2.png";
-    entity4_7.length = [NSNumber numberWithFloat:548];
+    entity4_7.startYear = [NSNumber numberWithFloat:-632];
+    entity4_7.length = [NSNumber numberWithFloat:4];
     
     TimeLine *entity4_8 = [DBHelper insertObjectToEntity:@"TimeLine"];
     entity4_8.level = @"1";
@@ -1587,7 +1619,8 @@
     entity4_8.story_id = @"16_8";
     entity4_8.name = @"楚穆王立";
     entity4_8.image = @"story2.png";
-    entity4_8.length = [NSNumber numberWithFloat:548];
+    entity4_8.startYear = [NSNumber numberWithFloat:-628];
+    entity4_8.length = [NSNumber numberWithFloat:1];
     
     TimeLine *entity4_9 = [DBHelper insertObjectToEntity:@"TimeLine"];
     entity4_9.level = @"1";
@@ -1595,7 +1628,8 @@
     entity4_9.story_id = @"16_9";
     entity4_9.name = @"崤之战";
     entity4_9.image = @"story2.png";
-    entity4_9.length = [NSNumber numberWithFloat:548];
+    entity4_9.startYear = [NSNumber numberWithFloat:-627];
+    entity4_9.length = [NSNumber numberWithFloat:6];
     
     TimeLine *entity4_10 = [DBHelper insertObjectToEntity:@"TimeLine"];
     entity4_10.level = @"1";
@@ -1603,7 +1637,8 @@
     entity4_10.story_id = @"16_10";
     entity4_10.name = @"彭衙之战";
     entity4_10.image = @"story2.png";
-    entity4_10.length = [NSNumber numberWithFloat:548];
+    entity4_10.startYear = [NSNumber numberWithFloat:-621];
+    entity4_10.length = [NSNumber numberWithFloat:1];
     
     TimeLine *entity4_11 = [DBHelper insertObjectToEntity:@"TimeLine"];
     entity4_11.level = @"1";
@@ -1611,7 +1646,8 @@
     entity4_11.story_id = @"16_11";
     entity4_11.name = @"秦穆公去世";
     entity4_11.image = @"story2.png";
-    entity4_11.length = [NSNumber numberWithFloat:548];
+    entity4_11.startYear = [NSNumber numberWithFloat:-621];
+    entity4_11.length = [NSNumber numberWithFloat:9];
     
     TimeLine *entity4_12 = [DBHelper insertObjectToEntity:@"TimeLine"];
     entity4_12.level = @"1";
@@ -1619,7 +1655,8 @@
     entity4_12.story_id = @"16_12";
     entity4_12.name = @"楚庄王立";
     entity4_12.image = @"story2.png";
-    entity4_12.length = [NSNumber numberWithFloat:548];
+    entity4_12.startYear = [NSNumber numberWithFloat:-613];
+    entity4_12.length = [NSNumber numberWithFloat:16];
     
     TimeLine *entity4_13 = [DBHelper insertObjectToEntity:@"TimeLine"];
     entity4_13.level = @"1";
@@ -1627,7 +1664,8 @@
     entity4_13.story_id = @"16_13";
     entity4_13.name = @"邲之战";
     entity4_13.image = @"story2.png";
-    entity4_13.length = [NSNumber numberWithFloat:548];
+    entity4_13.startYear = [NSNumber numberWithFloat:-597];
+    entity4_13.length = [NSNumber numberWithFloat:6];
     
     TimeLine *entity4_14 = [DBHelper insertObjectToEntity:@"TimeLine"];
     entity4_14.level = @"1";
@@ -1635,7 +1673,8 @@
     entity4_14.story_id = @"16_14";
     entity4_14.name = @"楚庄王去世";
     entity4_14.image = @"story2.png";
-    entity4_14.length = [NSNumber numberWithFloat:548];
+    entity4_14.startYear = [NSNumber numberWithFloat:-591];
+    entity4_14.length = [NSNumber numberWithFloat:85];
     
     TimeLine *entity4_15 = [DBHelper insertObjectToEntity:@"TimeLine"];
     entity4_15.level = @"1";
@@ -1643,7 +1682,8 @@
     entity4_15.story_id = @"16_15";
     entity4_15.name = @"吴国伐楚";
     entity4_15.image = @"story2.png";
-    entity4_15.length = [NSNumber numberWithFloat:548];
+    entity4_15.startYear = [NSNumber numberWithFloat:-506];
+    entity4_15.length = [NSNumber numberWithFloat:31];
     
     TimeLine *entity4_16 = [DBHelper insertObjectToEntity:@"TimeLine"];
     entity4_16.level = @"1";
@@ -1651,7 +1691,8 @@
     entity4_16.story_id = @"16_16";
     entity4_16.name = @"战国开始";
     entity4_16.image = @"story2.png";
-    entity4_16.length = [NSNumber numberWithFloat:548];
+    entity4_16.startYear = [NSNumber numberWithFloat:-475];
+    entity4_16.length = [NSNumber numberWithFloat:119];
     
     TimeLine *entity4_17 = [DBHelper insertObjectToEntity:@"TimeLine"];
     entity4_17.level = @"1";
@@ -1659,7 +1700,8 @@
     entity4_17.story_id = @"16_17";
     entity4_17.name = @"商鞅变法";
     entity4_17.image = @"story2.png";
-    entity4_17.length = [NSNumber numberWithFloat:548];
+    entity4_17.startYear = [NSNumber numberWithFloat:-356];
+    entity4_17.length = [NSNumber numberWithFloat:32];
     
     TimeLine *entity4_18 = [DBHelper insertObjectToEntity:@"TimeLine"];
     entity4_18.level = @"1";
@@ -1667,7 +1709,8 @@
     entity4_18.story_id = @"16_18";
     entity4_18.name = @"张仪说楚";
     entity4_18.image = @"story2.png";
-    entity4_18.length = [NSNumber numberWithFloat:548];
+    entity4_18.startYear = [NSNumber numberWithFloat:-314];
+    entity4_18.length = [NSNumber numberWithFloat:56];
     
     TimeLine *entity4_19 = [DBHelper insertObjectToEntity:@"TimeLine"];
     entity4_19.level = @"1";
@@ -1675,7 +1718,8 @@
     entity4_19.story_id = @"16_19";
     entity4_19.name = @"长平之战";
     entity4_19.image = @"story2.png";
-    entity4_19.length = [NSNumber numberWithFloat:548];
+    entity4_19.startYear = [NSNumber numberWithFloat:-260];
+    entity4_19.length = [NSNumber numberWithFloat:39];
     
     TimeLine *entity4_20 = [DBHelper insertObjectToEntity:@"TimeLine"];
     entity4_20.level = @"1";
@@ -1683,7 +1727,8 @@
     entity4_20.story_id = @"16_20";
     entity4_20.name = @"秦统一天下";
     entity4_20.image = @"story2.png";
-    entity4_20.length = [NSNumber numberWithFloat:548];
+    entity4_20.startYear = [NSNumber numberWithFloat:-221];
+    entity4_20.length = [NSNumber numberWithFloat:15];
     
     TimeLine *entity5 = [DBHelper insertObjectToEntity:@"TimeLine"];
     entity5.level = @"0";
@@ -1693,6 +1738,33 @@
     entity5.image = @"story3.png";
     entity5.startYear = [NSNumber numberWithFloat:-221];
     entity5.length = [NSNumber numberWithFloat:15];
+    
+    TimeLine *entity5_1 = [DBHelper insertObjectToEntity:@"TimeLine"];
+    entity5_1.level = @"1";
+    entity5_1.super_id = @"17";
+    entity5_1.story_id = @"17_1";
+    entity5_1.name = @"秦统一全国";
+    entity5_1.image = @"story2.png";
+    entity5_1.startYear = [NSNumber numberWithFloat:-221];
+    entity5_1.length = [NSNumber numberWithFloat:8];
+    
+    TimeLine *entity5_2 = [DBHelper insertObjectToEntity:@"TimeLine"];
+    entity5_2.level = @"1";
+    entity5_2.super_id = @"17";
+    entity5_2.story_id = @"17_2";
+    entity5_2.name = @"焚书坑儒";
+    entity5_2.image = @"story2.png";
+    entity5_2.startYear = [NSNumber numberWithFloat:-213];
+    entity5_2.length = [NSNumber numberWithFloat:1];
+    
+    TimeLine *entity5_3 = [DBHelper insertObjectToEntity:@"TimeLine"];
+    entity5_3.level = @"1";
+    entity5_3.super_id = @"17";
+    entity5_3.story_id = @"17_3";
+    entity5_3.name = @"修万里长城";
+    entity5_3.image = @"story2.png";
+    entity5_3.startYear = [NSNumber numberWithFloat:-214];
+    entity5_3.length = [NSNumber numberWithFloat:15];
     
     [DBHelper save];
 }
@@ -1726,7 +1798,7 @@
 }
 
 - (NSArray *)searchTimeLine{
-    NSArray *arr = [DBHelper searchObjectsForEntity:@"TimeLine" withPredicate:nil andSortKey:nil andSortAscending:YES];
+    NSArray *arr = [DBHelper searchObjectsForEntity:@"TimeLine" withPredicate:nil andSortKey:@"startYear" andSortAscending:YES];
     return arr;
 }
 

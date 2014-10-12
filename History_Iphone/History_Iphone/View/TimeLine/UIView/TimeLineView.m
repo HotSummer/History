@@ -13,7 +13,7 @@
 
 #define LineUpSpace 6
 #define LineDownSpace 6
-#define TimeLineItemMinLength 8
+#define TimeLineItemMinLength 16
 
 @interface TimeLineView ()
 

@@ -59,7 +59,7 @@
    rightButtonTitle:(NSString *)rigthTitle
 {
     if (self = [super init]) {
-        CGSize size = MULTILINE_TEXTSIZE(title, [UIFont systemFontOfSize:16.0], CGSizeMake(kAlertWidth, MAXFLOAT), NSLineBreakByTruncatingMiddle);
+        CGSize size = MULTILINE_TEXTSIZE(title, [UIFont boldSystemFontOfSize:16.0], CGSizeMake(kAlertWidth, MAXFLOAT), NSLineBreakByTruncatingMiddle);
         
         self.layer.cornerRadius = 5.0;
         self.backgroundColor = [UIColor whiteColor];
