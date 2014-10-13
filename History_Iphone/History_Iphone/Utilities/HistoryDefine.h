@@ -21,6 +21,10 @@
 
 #define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
 
+#define IOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0 && [[[UIDevice currentDevice] systemVersion] floatValue] < 8.0)
+#define IOS8 [[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0
+
+
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000
 #define MULTILINE_TEXTSIZE(text, font, maxSize, mode) [text length] > 0 ? [text \
 boundingRectWithSize:maxSize options:(NSStringDrawingUsesLineFragmentOrigin) \

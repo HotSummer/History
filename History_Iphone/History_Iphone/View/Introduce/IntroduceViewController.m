@@ -85,7 +85,7 @@ typedef enum : NSUInteger {
                      originalMap:(UIView *)dynastyOriginalMap
                       currentMap:(UIView *)dynastyCurrentMap
                    completeBlock:(void (^)())completion{
-    CGAffineTransform goTranslation = CGAffineTransformConcat(originalDynasty.transform, CGAffineTransformMakeTranslation(-186, 0));
+    CGAffineTransform goTranslation = CGAffineTransformConcat(originalDynasty.transform, CGAffineTransformMakeTranslation(-186, 0));//IOS7:-186
     CGAffineTransform goScale = CGAffineTransformMakeScale(0.3, 0.3);
     CGAffineTransform goTransform = CGAffineTransformConcat(goScale, goTranslation);
     CGAffineTransform comeTranslation = CGAffineTransformMakeTranslation(-186, 0);
@@ -119,7 +119,6 @@ typedef enum : NSUInteger {
     _imageXiZhou.transform = CGAffineTransformMakeScale(0.3, 0.3);
     _imageDongZhou.transform = CGAffineTransformMakeScale(0.3, 0.3);
     _imageQin.transform = CGAffineTransformMakeScale(0.3, 0.3);
-    
     //夏到早商
     [self dynastyExchangeAnimation:Destroy originalDynasty:_imageXia currentDynasty:_imageZaoShang originalMap:_imageviewXia currentMap:_imageviewZaoShang completeBlock:^{
         //早商到殷商
