@@ -68,7 +68,7 @@
     if (![fileManager fileExistsAtPath:storePath]) {
         NSString *strDefaultPath = [[NSBundle mainBundle] pathForResource:@"History" ofType:@"sqlite"];
         if (strDefaultPath) {
-//            [fileManager copyItemAtPath:strDefaultPath toPath:storePath error:nil];
+            [fileManager copyItemAtPath:strDefaultPath toPath:storePath error:nil];
         }
     }
     
