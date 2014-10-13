@@ -39,7 +39,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receivePushNotification:) name:PushNotification object:nil];
-//    [[UIController shareInstance] addDataToDB];
+    [[UIController shareInstance] addDataToDB];
     [self addArrowView];
     IntroduceViewController *introduceVC = [[IntroduceViewController alloc] init];
     [self presentViewController:introduceVC animated:NO completion:nil];

@@ -1465,7 +1465,7 @@
     entity0_3.super_id = @"12";
     entity0_3.story_id = @"12_3";
     entity0_3.name = @"后羿";
-    entity0_3.image = @"story2.png";
+    entity0_3.image = @"houyiTL.png";
     entity0_3.length = [NSNumber numberWithFloat:-2077];
     entity0_3.length = [NSNumber numberWithFloat:15];
     
@@ -1474,7 +1474,7 @@
     entity1.super_id = @"";
     entity1.story_id = @"13";
     entity1.name = @"早商建立";
-    entity1.image = @"story2.png";
+    entity1.image = @"zaoshangTL.png";
     entity1.startYear = [NSNumber numberWithFloat:-1700];
     entity1.length = [NSNumber numberWithFloat:300];
     
@@ -1483,7 +1483,7 @@
     entity1_1.super_id = @"13";
     entity1_1.story_id = @"13_1";
     entity1_1.name = @"早商建立";
-    entity1_1.image = @"story2.png";
+    entity1_1.image = @"zaoshangTL.png";
     entity1_1.startYear = [NSNumber numberWithFloat:-1700];
     entity1_1.length = [NSNumber numberWithFloat:100];
     
@@ -1492,7 +1492,7 @@
     entity1_2.super_id = @"13";
     entity1_2.story_id = @"13_2";
     entity1_2.name = @"伊尹还政";
-    entity1_2.image = @"story2.png";
+    entity1_2.image = @"yiyinhuanzhengTL.png";
     entity1_2.startYear = [NSNumber numberWithFloat:-1600];
     entity1_2.length = [NSNumber numberWithFloat:15];
     
@@ -1501,25 +1501,25 @@
     entity2.super_id = @"";
     entity2.story_id = @"14";
     entity2.name = @"殷商";
-    entity2.image = @"story3.png";
+    entity2.image = @"yinshangTL.png";
     entity2.startYear = [NSNumber numberWithFloat:-1361];
     entity2.length = [NSNumber numberWithFloat:256];
     
-    TimeLine *entity2_2 = [DBHelper insertObjectToEntity:@"TimeLine"];
-    entity2_2.level = @"1";
-    entity2_2.super_id = @"14";
-    entity2_2.story_id = @"14_2";
-    entity2_2.name = @"盘庚迁殷";
-    entity2_2.image = @"story2.png";
-    entity2_2.startYear = [NSNumber numberWithFloat:-1361];
-    entity2_2.length = [NSNumber numberWithFloat:15];
+    TimeLine *entity2_1 = [DBHelper insertObjectToEntity:@"TimeLine"];
+    entity2_1.level = @"1";
+    entity2_1.super_id = @"14";
+    entity2_1.story_id = @"14_1";
+    entity2_1.name = @"盘庚迁殷";
+    entity2_1.image = @"yinshangTL.png";
+    entity2_1.startYear = [NSNumber numberWithFloat:-1361];
+    entity2_1.length = [NSNumber numberWithFloat:15];
     
     TimeLine *entity3 = [DBHelper insertObjectToEntity:@"TimeLine"];
     entity3.level = @"0";
     entity3.super_id = @"";
     entity3.story_id = @"15";
     entity3.name = @"西周建立";
-    entity3.image = @"story1.png";
+    entity3.image = @"xizhoujianliTL.png";
     entity3.startYear = [NSNumber numberWithFloat:-1059];
     entity3.length = [NSNumber numberWithFloat:275];
     
@@ -1528,7 +1528,7 @@
     entity3_1.super_id = @"15";
     entity3_1.story_id = @"15_1";
     entity3_1.name = @"牧野之战";
-    entity3_1.image = @"story2.png";
+    entity3_1.image = @"muyezhizhanTL.png";
     entity3_1.startYear = [NSNumber numberWithFloat:-1059];
     entity3_1.length = [NSNumber numberWithFloat:1];
     
@@ -1537,7 +1537,7 @@
     entity3_2.super_id = @"15";
     entity3_2.story_id = @"15_2";
     entity3_2.name = @"孟津之誓";
-    entity3_2.image = @"story2.png";
+    entity3_2.image = @"mengjingzhimengTL.png";
     entity3_2.startYear = [NSNumber numberWithFloat:-1058];
     entity3_2.length = [NSNumber numberWithFloat:15];
     
@@ -1546,7 +1546,7 @@
     entity4.super_id = @"";
     entity4.story_id = @"16";
     entity4.name = @"东周";
-    entity4.image = @"story2.png";
+    entity4.image = @"dongzhouTL.png";
     entity4.startYear = [NSNumber numberWithFloat:-770];
     entity4.length = [NSNumber numberWithFloat:548];
     
@@ -1555,7 +1555,7 @@
     entity4_1.super_id = @"16";
     entity4_1.story_id = @"16_1";
     entity4_1.name = @"春秋开始";
-    entity4_1.image = @"story2.png";
+    entity4_1.image = @"chunqiukaishiTL.png";
     entity4_1.startYear = [NSNumber numberWithFloat:-770];
     entity4_1.length = [NSNumber numberWithFloat:85];
     
@@ -1564,7 +1564,7 @@
     entity4_2.super_id = @"16";
     entity4_2.story_id = @"16_2";
     entity4_2.name = @"齐桓公继位";
-    entity4_2.image = @"story2.png";
+    entity4_2.image = @"qihuangongdadiTL.png";
     entity4_2.startYear = [NSNumber numberWithFloat:-685];
     entity4_2.length = [NSNumber numberWithFloat:4];
     
@@ -1573,7 +1573,7 @@
     entity4_3.super_id = @"16";
     entity4_3.story_id = @"16_3";
     entity4_3.name = @"北杏之盟";
-    entity4_3.image = @"story2.png";
+    entity4_3.image = @"qihuangongdadiTL.png";
     entity4_3.startYear = [NSNumber numberWithFloat:-681];
     entity4_3.length = [NSNumber numberWithFloat:3];
     
@@ -1582,7 +1582,7 @@
     entity4_4.super_id = @"16";
     entity4_4.story_id = @"16_4";
     entity4_4.name = @"幽地之盟";
-    entity4_4.image = @"story2.png";
+    entity4_4.image = @"udizhimengTL.png";
     entity4_4.startYear = [NSNumber numberWithFloat:-678];
     entity4_4.length = [NSNumber numberWithFloat:22];
     
@@ -1591,7 +1591,7 @@
     entity4_5.super_id = @"16";
     entity4_5.story_id = @"16_5";
     entity4_5.name = @"召地之盟";
-    entity4_5.image = @"story2.png";
+    entity4_5.image = @"qihuangongdadiTL.png";
     entity4_5.startYear = [NSNumber numberWithFloat:-656];
     entity4_5.length = [NSNumber numberWithFloat:5];
     
@@ -1600,7 +1600,7 @@
     entity4_6.super_id = @"16";
     entity4_6.story_id = @"16_6";
     entity4_6.name = @"葵丘之会";
-    entity4_6.image = @"story2.png";
+    entity4_6.image = @"caiqiuzhimengTL.png";
     entity4_6.startYear = [NSNumber numberWithFloat:-651];
     entity4_6.length = [NSNumber numberWithFloat:19];
     
@@ -1609,7 +1609,7 @@
     entity4_7.super_id = @"16";
     entity4_7.story_id = @"16_7";
     entity4_7.name = @"城濮之战";
-    entity4_7.image = @"story2.png";
+    entity4_7.image = @"chengpuzhizhanTL.png";
     entity4_7.startYear = [NSNumber numberWithFloat:-632];
     entity4_7.length = [NSNumber numberWithFloat:4];
     
@@ -1618,7 +1618,7 @@
     entity4_8.super_id = @"16";
     entity4_8.story_id = @"16_8";
     entity4_8.name = @"楚穆王立";
-    entity4_8.image = @"story2.png";
+    entity4_8.image = @"chumugongTL.png";
     entity4_8.startYear = [NSNumber numberWithFloat:-628];
     entity4_8.length = [NSNumber numberWithFloat:1];
     
@@ -1627,7 +1627,7 @@
     entity4_9.super_id = @"16";
     entity4_9.story_id = @"16_9";
     entity4_9.name = @"崤之战";
-    entity4_9.image = @"story2.png";
+    entity4_9.image = @"shaozhizhanTL.png";
     entity4_9.startYear = [NSNumber numberWithFloat:-627];
     entity4_9.length = [NSNumber numberWithFloat:6];
     
@@ -1636,7 +1636,7 @@
     entity4_10.super_id = @"16";
     entity4_10.story_id = @"16_10";
     entity4_10.name = @"彭衙之战";
-    entity4_10.image = @"story2.png";
+    entity4_10.image = @"pengyazhizhanTL.png";
     entity4_10.startYear = [NSNumber numberWithFloat:-621];
     entity4_10.length = [NSNumber numberWithFloat:1];
     
@@ -1645,7 +1645,7 @@
     entity4_11.super_id = @"16";
     entity4_11.story_id = @"16_11";
     entity4_11.name = @"秦穆公去世";
-    entity4_11.image = @"story2.png";
+    entity4_11.image = @"qinmugongTL.png";
     entity4_11.startYear = [NSNumber numberWithFloat:-621];
     entity4_11.length = [NSNumber numberWithFloat:9];
     
@@ -1654,7 +1654,7 @@
     entity4_12.super_id = @"16";
     entity4_12.story_id = @"16_12";
     entity4_12.name = @"楚庄王立";
-    entity4_12.image = @"story2.png";
+    entity4_12.image = @"chuzhuangwangTL.png";
     entity4_12.startYear = [NSNumber numberWithFloat:-613];
     entity4_12.length = [NSNumber numberWithFloat:16];
     
@@ -1663,7 +1663,7 @@
     entity4_13.super_id = @"16";
     entity4_13.story_id = @"16_13";
     entity4_13.name = @"邲之战";
-    entity4_13.image = @"story2.png";
+    entity4_13.image = @"bizhizhanTL@2x.png";
     entity4_13.startYear = [NSNumber numberWithFloat:-597];
     entity4_13.length = [NSNumber numberWithFloat:6];
     
@@ -1672,7 +1672,7 @@
     entity4_14.super_id = @"16";
     entity4_14.story_id = @"16_14";
     entity4_14.name = @"楚庄王去世";
-    entity4_14.image = @"story2.png";
+    entity4_14.image = @"chuzhuangwangTL.png";
     entity4_14.startYear = [NSNumber numberWithFloat:-591];
     entity4_14.length = [NSNumber numberWithFloat:85];
     
@@ -1681,7 +1681,7 @@
     entity4_15.super_id = @"16";
     entity4_15.story_id = @"16_15";
     entity4_15.name = @"吴国伐楚";
-    entity4_15.image = @"story2.png";
+    entity4_15.image = @"wuguofachuTL.png";
     entity4_15.startYear = [NSNumber numberWithFloat:-506];
     entity4_15.length = [NSNumber numberWithFloat:31];
     
@@ -1690,7 +1690,7 @@
     entity4_16.super_id = @"16";
     entity4_16.story_id = @"16_16";
     entity4_16.name = @"战国开始";
-    entity4_16.image = @"story2.png";
+    entity4_16.image = @"zhanguokaishiTL.png";
     entity4_16.startYear = [NSNumber numberWithFloat:-475];
     entity4_16.length = [NSNumber numberWithFloat:119];
     
@@ -1699,7 +1699,7 @@
     entity4_17.super_id = @"16";
     entity4_17.story_id = @"16_17";
     entity4_17.name = @"商鞅变法";
-    entity4_17.image = @"story2.png";
+    entity4_17.image = @"shangyangbianfaTL.png";
     entity4_17.startYear = [NSNumber numberWithFloat:-356];
     entity4_17.length = [NSNumber numberWithFloat:32];
     
@@ -1708,7 +1708,7 @@
     entity4_18.super_id = @"16";
     entity4_18.story_id = @"16_18";
     entity4_18.name = @"张仪说楚";
-    entity4_18.image = @"story2.png";
+    entity4_18.image = @"zhangyishuichuTL.png";
     entity4_18.startYear = [NSNumber numberWithFloat:-314];
     entity4_18.length = [NSNumber numberWithFloat:56];
     
@@ -1717,7 +1717,7 @@
     entity4_19.super_id = @"16";
     entity4_19.story_id = @"16_19";
     entity4_19.name = @"长平之战";
-    entity4_19.image = @"story2.png";
+    entity4_19.image = @"changpingzhizhanTL.png";
     entity4_19.startYear = [NSNumber numberWithFloat:-260];
     entity4_19.length = [NSNumber numberWithFloat:39];
     
@@ -1726,7 +1726,7 @@
     entity4_20.super_id = @"16";
     entity4_20.story_id = @"16_20";
     entity4_20.name = @"秦统一天下";
-    entity4_20.image = @"story2.png";
+    entity4_20.image = @"qinshihuangTL.png";
     entity4_20.startYear = [NSNumber numberWithFloat:-221];
     entity4_20.length = [NSNumber numberWithFloat:15];
     
@@ -1735,7 +1735,7 @@
     entity5.super_id = @"";
     entity5.story_id = @"17";
     entity5.name = @"秦";
-    entity5.image = @"story3.png";
+    entity5.image = @"qinshihuangTL.png";
     entity5.startYear = [NSNumber numberWithFloat:-221];
     entity5.length = [NSNumber numberWithFloat:15];
     
@@ -1744,7 +1744,7 @@
     entity5_1.super_id = @"17";
     entity5_1.story_id = @"17_1";
     entity5_1.name = @"秦统一全国";
-    entity5_1.image = @"story2.png";
+    entity5_1.image = @"qinshihuangTL.png";
     entity5_1.startYear = [NSNumber numberWithFloat:-221];
     entity5_1.length = [NSNumber numberWithFloat:8];
     
@@ -1752,7 +1752,7 @@
     entity5_2.level = @"1";
     entity5_2.super_id = @"17";
     entity5_2.story_id = @"17_2";
-    entity5_2.name = @"焚书坑儒";
+    entity5_2.name = @"fenshukengruTL.png";
     entity5_2.image = @"story2.png";
     entity5_2.startYear = [NSNumber numberWithFloat:-213];
     entity5_2.length = [NSNumber numberWithFloat:1];
@@ -1762,7 +1762,7 @@
     entity5_3.super_id = @"17";
     entity5_3.story_id = @"17_3";
     entity5_3.name = @"修万里长城";
-    entity5_3.image = @"story2.png";
+    entity5_3.image = @"greatWallTL.png";
     entity5_3.startYear = [NSNumber numberWithFloat:-214];
     entity5_3.length = [NSNumber numberWithFloat:15];
     
