@@ -1752,8 +1752,8 @@
     entity5_2.level = @"1";
     entity5_2.super_id = @"17";
     entity5_2.story_id = @"17_2";
-    entity5_2.name = @"fenshukengruTL.png";
-    entity5_2.image = @"story2.png";
+    entity5_2.name = @"焚书坑儒";
+    entity5_2.image = @"fenshukengruTL.png";
     entity5_2.startYear = [NSNumber numberWithFloat:-213];
     entity5_2.length = [NSNumber numberWithFloat:1];
     

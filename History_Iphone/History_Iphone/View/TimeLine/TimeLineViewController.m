@@ -81,7 +81,6 @@
 }
 
 - (void)flowView:(PagedFlowView *)flowView didScrollToPageAtIndex:(NSInteger)index {
-    //    NSLog(@"Scrolled to page # %ld", (long)index);
     [timeLineView scrollToTime:index];
 }
 

@@ -66,7 +66,7 @@
 - (void)GexinSdkDidRegisterClient:(NSString *)clientId
 {
     // [4-EXT-1]: 个推SDK已注册
-    NSLog(@"个推注册成功, %@", clientId);
+//    NSLog(@"个推注册成功, %@", clientId);
 }
 
 - (void)GexinSdkDidReceivePayload:(NSString *)payloadId fromApplication:(NSString *)appId
@@ -85,7 +85,7 @@
 - (void)GexinSdkDidOccurError:(NSError *)error
 {
     // [EXT]:个推错误报告，集成步骤发生的任何错误都在这里通知，如果集成后，无法正常收到消息，查看这里的通知。
-    NSLog(@"%@", error.description);
+//    NSLog(@"%@", error.description);
 }
 
 @end

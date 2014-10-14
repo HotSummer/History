@@ -51,7 +51,7 @@ typedef enum : NSUInteger {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    [self performSelector:@selector(showAnimation) withObject:nil afterDelay:1.0];
+//    [self performSelector:@selector(showAnimation) withObject:nil afterDelay:1.0];
     
     
 }
@@ -68,6 +68,7 @@ typedef enum : NSUInteger {
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
+    [self showAnimation];
 }
 
 /**
@@ -88,6 +89,7 @@ typedef enum : NSUInteger {
     CGAffineTransform goTranslation = CGAffineTransformConcat(originalDynasty.transform, CGAffineTransformMakeTranslation(-186, 0));//IOS7:-186
     CGAffineTransform goScale = CGAffineTransformMakeScale(0.3, 0.3);
     CGAffineTransform goTransform = CGAffineTransformConcat(goScale, goTranslation);
+    
     CGAffineTransform comeTranslation = CGAffineTransformMakeTranslation(-186, 0);
     CGAffineTransform comeScale = CGAffineTransformMakeScale(1.0, 1.0);
     CGAffineTransform comeTransform = CGAffineTransformConcat(comeTranslation, comeScale);
@@ -96,10 +98,9 @@ typedef enum : NSUInteger {
         dynastyOriginalMap.alpha = 0;
         dynastyCurrentMap.alpha = 1;
         if (style == Move) {
-            originalDynasty.transform = goTransform;
+            originalDynasty.transform = (IOS8?goTranslation:goTransform);
         }
         currentDynasty.transform = comeTransform;
-        
     } completion:^(BOOL finished) {
         if (finished) {
             if (style == Destroy) {
@@ -114,11 +115,13 @@ typedef enum : NSUInteger {
 }
 
 - (void)showAnimation{
-    _imageZaoShang.transform = CGAffineTransformMakeScale(0.3, 0.3);
-    _imageYinShang.transform = CGAffineTransformMakeScale(0.3, 0.3);
-    _imageXiZhou.transform = CGAffineTransformMakeScale(0.3, 0.3);
-    _imageDongZhou.transform = CGAffineTransformMakeScale(0.3, 0.3);
-    _imageQin.transform = CGAffineTransformMakeScale(0.3, 0.3);
+    if (IOS7) {
+        _imageZaoShang.transform = CGAffineTransformMakeScale(0.3, 0.3);
+        _imageYinShang.transform = CGAffineTransformMakeScale(0.3, 0.3);
+        _imageXiZhou.transform = CGAffineTransformMakeScale(0.3, 0.3);
+        _imageDongZhou.transform = CGAffineTransformMakeScale(0.3, 0.3);
+        _imageQin.transform = CGAffineTransformMakeScale(0.3, 0.3);
+    }
     //夏到早商
     [self dynastyExchangeAnimation:Destroy originalDynasty:_imageXia currentDynasty:_imageZaoShang originalMap:_imageviewXia currentMap:_imageviewZaoShang completeBlock:^{
         //早商到殷商

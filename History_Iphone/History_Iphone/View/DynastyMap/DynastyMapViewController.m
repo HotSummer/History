@@ -97,7 +97,6 @@
 }
 
 - (void)flowView:(PagedFlowView *)flowView didScrollToPageAtIndex:(NSInteger)index {
-    NSLog(@"Scrolled to page # %ld", (long)index);
     //防止快速滑动导致index小于0 
     if (index < 0) {
         index = 0;
