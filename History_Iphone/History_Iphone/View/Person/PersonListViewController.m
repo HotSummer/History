@@ -131,6 +131,9 @@
         ((UIController *)[UIController shareInstance]).personListSiftCondition = (PersonListSiftCondition)iSelected;
         [tableview reloadData];
     }
+    if (iPreSelect != PersonListSiftNone) {
+        [self hideIndicatorView];
+    }
 }
 
 #pragma mark - SearchViewDelegate
