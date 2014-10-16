@@ -56,6 +56,11 @@
     [timerAnimation invalidate];
 }
 
+- (void)back:(id)sender{
+    [[UIController shareInstance] clearSearchAndSift];
+    [super back:sender];
+}
+
 - (void)loadSearchView{
     searchView = [[[NSBundle mainBundle] loadNibNamed:@"SearchView" owner:self options:nil] lastObject];
     searchView.frame = CGRectMake(0, 64, searchView.frame.size.width, searchView.frame.size.height);

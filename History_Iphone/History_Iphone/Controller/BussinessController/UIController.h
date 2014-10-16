@@ -46,6 +46,8 @@ typedef enum {
 - (NSArray *)searchDynastyList;
 
 #pragma mark - 历史故事
+//清空朝代的筛选条件
+- (void)clearDynastyCondition;
 //查询历史故事
 - (NSArray *)getStoryTitles;
 //获取包含搜索条件的朝代数据（显示section）

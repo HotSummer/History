@@ -60,6 +60,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)back:(id)sender{
+    [[UIController shareInstance] clearDynastyCondition];
+    [super back:sender];
+}
+
 - (void)loadDynastyCell{
     NSArray *arrDynasties = [[UIController shareInstance] getStoriesDynastyList];
     

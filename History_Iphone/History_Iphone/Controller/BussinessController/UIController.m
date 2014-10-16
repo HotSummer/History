@@ -61,6 +61,11 @@
 }
 
 #pragma mark - DynastyStory
+- (void)clearDynastyCondition{
+    storySearchWord = @"";
+    _selectedDynastyId = nil;
+}
+
 - (NSArray *)getStoryTitles{
     return [[MakeData shareInstance] searchDynastyStoryList];
 }
