@@ -45,7 +45,7 @@
 - (void)setNavTitle:(NSString *)navTitle{
     _navTitle = navTitle;
     UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(0, 64, 100, 44)];
-    lbl.font = [UIFont fontWithName:@"DIN Alternate" size:22.0];
+    lbl.font = [UIFont fontWithName:@"DIN Alternate" size:22.0];//
     lbl.textColor = [UIColor whiteColor];
     lbl.text = _navTitle;
     lbl.textAlignment = NSTextAlignmentCenter;

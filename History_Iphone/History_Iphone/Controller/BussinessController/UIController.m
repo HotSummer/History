@@ -136,7 +136,20 @@
 - (NSArray *)getAllPersonList{
     if (personList == nil) {
         NSArray *arr = [[MakeData shareInstance] searchPersonList];
-        personList = [[NSArray alloc] initWithArray:arr];
+        
+        NSArray *sortedPerdonList = [arr sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+            DynastyPersonList *person1 = (DynastyPersonList *)obj1;
+            DynastyPersonList *person2 = (DynastyPersonList *)obj2;
+            if ([person1.personId floatValue] < [person2.personId floatValue]) {
+                return NSOrderedAscending;
+            }
+            if ([person1.personId floatValue] > [person2.personId floatValue]) {
+                return NSOrderedDescending;
+            }
+            return NSOrderedSame;
+        }];
+        
+        personList = [[NSArray alloc] initWithArray:sortedPerdonList];
     }
     return personList;
 }
