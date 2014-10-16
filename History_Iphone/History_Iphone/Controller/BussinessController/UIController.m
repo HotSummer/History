@@ -202,6 +202,7 @@
 - (DynastyPersonDetail *)getPersonDetail{
     NSArray *arr = [[MakeData shareInstance] searchPersonDetail:currentPersonId];
     if (arr.count > 0) {
+        
         return (DynastyPersonDetail *)arr[0];
     }
     return nil;

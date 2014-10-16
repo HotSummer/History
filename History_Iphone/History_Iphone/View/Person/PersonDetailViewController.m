@@ -69,9 +69,6 @@
     lblId.text = personDetail.idNumber;
     imageviewIcon.image = [UIImage imageNamed:personDetail.image];
     CGSize size = MULTILINE_TEXTSIZE(personDetail.address, [UIFont systemFontOfSize:15.0], CGSizeMake(144, MAXFLOAT), NSLineBreakByTruncatingMiddle);
-//    CGSize size = [personDetail.address sizeWithFont:[UIFont systemFontOfSize:15.0]
-//                                   constrainedToSize:CGSizeMake(144, MAXFLOAT)
-//                                       lineBreakMode:NSLineBreakByTruncatingMiddle];
     NSInteger row = (NSInteger)(size.height/21.0);
     lblAddress.frame = CGRectMake(lblAddress.frame.origin.x, lblAddress.frame.origin.y, lblAddress.frame.size.width, (row+1)*21.0);
 }
@@ -79,11 +76,29 @@
 - (void)loadHistoryContributeCell{
     float fYPosition = 11;
     NSSet *set = personDetail.contributes;
-    for (Contribute *contribute in set) {
+    //按照contributeId排序
+    NSMutableArray *contributes = [NSMutableArray array];
+    for (Contribute *contribute in set){
+        [contributes addObject:contribute];
+    }
+    NSArray *sortContributes = [contributes sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        Contribute *contribute1 = (Contribute *)obj1;
+        Contribute *contribute2 = (Contribute *)obj2;
+        NSArray *id1s = [contribute1.contributeId componentsSeparatedByString:@"_"];
+        NSArray *id2s = [contribute2.contributeId componentsSeparatedByString:@"_"];
+        NSString *sortId1 = [id1s lastObject];
+        NSString *sortId2 = [id2s lastObject];
+        if ([sortId1 integerValue] < [sortId2 integerValue]) {
+            return NSOrderedAscending;
+        }
+        if ([sortId1 integerValue] > [sortId2 integerValue]) {
+            return NSOrderedDescending;
+        }
+        return NSOrderedSame;
+    }];
+    
+    for (Contribute *contribute in sortContributes) {
         CGSize size = MULTILINE_TEXTSIZE(contribute.contributeContent, [UIFont systemFontOfSize:15.0], CGSizeMake(300, MAXFLOAT), NSLineBreakByTruncatingMiddle);
-//        CGSize size = [contribute.contributeContent sizeWithFont:[UIFont systemFontOfSize:15.0]
-//                               constrainedToSize:CGSizeMake(300, MAXFLOAT)
-//                                   lineBreakMode:NSLineBreakByTruncatingMiddle];
         UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(10, fYPosition, 300, size.height)];
         lbl.numberOfLines = 0;
         lbl.text = contribute.contributeContent;
@@ -99,11 +114,30 @@
 - (void)loadEvalution{
     float fHeight = 12;
     NSSet *set = personDetail.comments;
-    for (Comment *comment in set) {
+    
+    //按照commentId排序
+    NSMutableArray *comments = [NSMutableArray array];
+    for (Comment *comment in set){
+        [comments addObject:comment];
+    }
+    NSArray *sortComments = [comments sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        Comment *comment1 = (Comment *)obj1;
+        Comment *comment2 = (Comment *)obj2;
+        NSArray *id1s = [comment1.commentId componentsSeparatedByString:@"_"];
+        NSArray *id2s = [comment2.commentId componentsSeparatedByString:@"_"];
+        NSString *sortId1 = [id1s lastObject];
+        NSString *sortId2 = [id2s lastObject];
+        if ([sortId1 integerValue] < [sortId2 integerValue]) {
+            return NSOrderedAscending;
+        }
+        if ([sortId1 integerValue] > [sortId2 integerValue]) {
+            return NSOrderedDescending;
+        }
+        return NSOrderedSame;
+    }];
+    
+    for (Comment *comment in sortComments) {
         CGSize size = MULTILINE_TEXTSIZE(comment.commentContent, [UIFont systemFontOfSize:15.0], CGSizeMake(300, MAXFLOAT), NSLineBreakByTruncatingMiddle);
-//        CGSize size = [comment.commentContent sizeWithFont:[UIFont systemFontOfSize:15.0]
-//                                                constrainedToSize:CGSizeMake(300, MAXFLOAT)
-//                                                    lineBreakMode:NSLineBreakByTruncatingMiddle];
         UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(10, fHeight, 300, MAX(47, size.height))];
         lbl.numberOfLines = 0;
         lbl.text = comment.commentContent;
