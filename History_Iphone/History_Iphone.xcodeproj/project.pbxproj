@@ -1899,7 +1899,7 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "156ea20f-4d25-464c-a801-9e3e997a8c34";
+				PROVISIONING_PROFILE = "fe318254-fbb5-45ca-9cdd-cb3ea142a0b1";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1933,7 +1933,7 @@
 					"$(PROJECT_DIR)/History_Iphone/Tools/GeTui/dist",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "156ea20f-4d25-464c-a801-9e3e997a8c34";
+				PROVISIONING_PROFILE = "fe318254-fbb5-45ca-9cdd-cb3ea142a0b1";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};

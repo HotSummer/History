@@ -41,7 +41,7 @@
                 </button>
                 <view clipsSubviews="YES" contentMode="scaleToFill" id="gS4-8q-bQx">
                     <rect key="frame" x="0.0" y="64" width="320" height="421"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="now_qin_map.png" id="6Yj-x2-Owv">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="421"/>
